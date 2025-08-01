@@ -8,7 +8,7 @@
   --color-foreground: var(--foreground);
   --color-navbar-primary: var(--navbar-primary);
   --color-navbar-border: var(--navbar-border);
-  --color-footer-background: var(--footer-background);
+  --color-footer-background: var(--navbar-primary);
   --color-footer-border: var(--navbar-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
