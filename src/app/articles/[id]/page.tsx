@@ -1,8 +1,8 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 
 // Mock article data - in a real app, this would come from a database
 const getArticle = (id: string) => {
@@ -36,13 +36,18 @@ const getArticle = (id: string) => {
       authorBio:
         "Sarah is a senior interior designer with over 15 years of experience in commercial and residential projects.",
     },
-  }
+  };
 
-  return articles[id as keyof typeof articles] || null
-}
+  return articles[id as keyof typeof articles] || null;
+};
 
-export default function ArticleDetailPage({ params }: { params: { id: string } }) {
-  const article = getArticle(params.id)
+export default async function ArticleDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const article = getArticle(id);
 
   if (!article) {
     return (
@@ -54,7 +59,7 @@ export default function ArticleDetailPage({ params }: { params: { id: string } }
           </Button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -71,7 +76,9 @@ export default function ArticleDetailPage({ params }: { params: { id: string } }
         {/* Article Header */}
         <div className="mb-8">
           <Badge className="mb-4">{article.category}</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">{article.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            {article.title}
+          </h1>
 
           <div className="flex items-center gap-6 text-muted-foreground mb-6">
             <div className="flex items-center">
@@ -97,7 +104,12 @@ export default function ArticleDetailPage({ params }: { params: { id: string } }
 
         {/* Featured Image */}
         <div className="relative h-64 md:h-96 rounded-lg overflow-hidden mb-8">
-          <Image src={article.image || "/placeholder.svg"} alt={article.title} fill className="object-cover" />
+          <Image
+            src={article.image || "/placeholder.svg"}
+            alt={article.title}
+            fill
+            className="object-cover"
+          />
         </div>
 
         {/* Article Content */}
@@ -125,5 +137,5 @@ export default function ArticleDetailPage({ params }: { params: { id: string } }
         </div>
       </div>
     </div>
-  )
+  );
 }

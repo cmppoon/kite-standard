@@ -56,8 +56,9 @@ const getProduct = (id: string) => {
   return products[id as keyof typeof products] || null
 }
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
-  const product = getProduct(params.id)
+export default async function ProductDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
+  const product = getProduct(id)
 
   if (!product) {
     return (
