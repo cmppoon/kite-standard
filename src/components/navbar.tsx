@@ -5,12 +5,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navigation = [
   { name: "หน้าแรก", href: "/" },
   { name: "สินค้า", href: "/products" },
-  { name: "แคตาล็อค", href: "/catalog" },
   { name: "บทความ", href: "/articles" },
   { name: "เกี่ยวกับเรา", href: "/about-us" },
   { name: "ติดต่อเรา", href: "/contact-us" },
@@ -19,6 +19,9 @@ const navigation = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname();
+
+  console.log("Current path:", path);
 
   return (
     <nav className="border-b bg-navbar-primary border-navbar-border sticky top-0 z-50">
@@ -42,7 +45,11 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white hover:text-accent-foreground transition-colors"
+                className={`hover:text-accent-foreground transition-colors ${
+                  path === item.href
+                    ? "underline underline-offset-8 text-accent-foreground"
+                    : "text-white"
+                }`}
               >
                 {item.name}
               </Link>
@@ -53,7 +60,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" className="text-white">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -63,7 +70,11 @@ export function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="text-lg hover:text-primary transition-colors"
+                      className={`text-lg hover:text-primary transition-colors ${
+                        path === item.href
+                          ? "underline underline-offset-8 text-accent-foreground"
+                          : ""
+                      }`}
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
