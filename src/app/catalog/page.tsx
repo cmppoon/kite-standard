@@ -199,7 +199,7 @@ export default function Page() {
                     className="border-primary text-primary hover:bg-primary hover:text-white flex-1"
                   >
                     <Link
-                      href={`/catalogs/แผ่นปิดรอยต่อ_สีดำ_KS.pdf`}
+                      href={catalog.url}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
