@@ -3,14 +3,14 @@
 import {
   Carousel,
   CarouselContent,
-  CarouselItem
+  CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
 const carouselItems = [
   {
-    alt: "อุปกรณ์ฝ้าเพดาน อุปกรณ์หลังคา ชุดครอบแห้ง",
+    alt: "งานฝ้าเพดาน งานผนัง แผ่นอะคูสติก",
     image: "/hero1.png",
   },
   {
@@ -20,6 +20,10 @@ const carouselItems = [
   {
     alt: "แผ่นปิดรอยต่อ",
     image: "/hero3.png",
+  },
+  {
+    alt: "อุปกรณ์ฝ้าเพดาน อุปกรณ์หลังคา ชุดครอบแห้ง",
+    image: "/hero4.png",
   },
 ];
 
@@ -36,12 +40,14 @@ export default function HeroCarousel() {
       <CarouselContent>
         {carouselItems.map((item, index) => (
           <CarouselItem key={index}>
-            <div className="relative h-[500px] w-full">
+            <div className="w-full relative aspect-[2560/947]">
               <Image
                 src={item.image}
-                alt={`${item.alt}`}
+                alt={item.alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-md"
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 1280px"
+                priority
               />
             </div>
           </CarouselItem>

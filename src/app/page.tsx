@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import WhyChooseUs from "@/components/whyChooseUs";
 import { productCategories } from "@/data/productCategories";
-import { ArrowRight, Contact, Mail, MessageSquare, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,7 +36,7 @@ export default function HomePage() {
           {productCategories.map((category) => (
             <Card
               key={category.id}
-              className="group hover:shadow-lg transition-shadow"
+              className="group hover:shadow-lg transition-shadow p-0"
             >
               <CardHeader className="p-0">
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -44,7 +44,7 @@ export default function HomePage() {
                     src={category.image || "/placeholder.svg"}
                     alt={`${category.name}`}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-xl"
                   />
                 </div>
               </CardHeader>

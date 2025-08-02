@@ -8,14 +8,14 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "CeilingPro - Premium Ceiling Solutions & Materials | Professional Installation",
+  title: "Kai Standard",
   description:
-    "Leading provider of premium ceiling materials, acoustic tiles, fire-resistant panels, and professional installation services. 25+ years experience serving residential and commercial clients nationwide.",
+    "ครบเครื่องเรื่องฝ้าเพดาน วัสดุฝ้าเพดานคุณภาพสูง บริการติดตั้งฝ้าเพดานมืออาชีพ",
   keywords:
     "ceiling materials, acoustic ceiling tiles, fire resistant ceiling, suspended ceiling, ceiling installation, commercial ceiling, residential ceiling",
-  authors: [{ name: "CeilingPro" }],
-  creator: "CeilingPro",
-  publisher: "CeilingPro",
+  authors: [{ name: "KaiStandard" }],
+  creator: "KaiStandard",
+  publisher: "KaiStandard",
   robots: "index, follow",
   openGraph: {
     type: "website",

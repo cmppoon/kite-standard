@@ -1,4 +1,4 @@
-import MapPageClient from "./MapPageClient"
+import MapPageClient from "@/app/map/MapPageClient"
 
 export const metadata = {
   title: "CeilingPro Locations & Service Areas | Find a Branch Near You",

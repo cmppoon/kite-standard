@@ -1,8 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -11,94 +8,35 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { productCategories } from "@/data/productCategories";
+import { products } from "@/data/products";
 import { Search } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 const categories = [
-  { id: "all", name: "All Products", count: 24 },
-  { id: "acoustic", name: "Acoustic Ceilings", count: 6 },
-  { id: "decorative", name: "Decorative Ceilings", count: 8 },
-  { id: "safety", name: "Fire-Resistant", count: 4 },
-  { id: "specialty", name: "Specialty Ceilings", count: 3 },
-  { id: "commercial", name: "Commercial", count: 5 },
-  { id: "residential", name: "Residential", count: 7 },
-];
-
-const products = [
-  {
-    id: 1,
-    name: "Premium Acoustic Ceiling",
-    category: "acoustic",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$45/sq ft",
-    description:
-      "High-performance acoustic ceiling tiles for superior sound control",
-    features: ["Sound absorption", "Easy installation", "Moisture resistant"],
-  },
-  {
-    id: 2,
-    name: "Luxury Coffered Ceiling",
-    category: "decorative",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$85/sq ft",
-    description: "Elegant coffered ceiling design for upscale interiors",
-    features: [
-      "Premium materials",
-      "Custom designs",
-      "Professional installation",
-    ],
-  },
-  {
-    id: 3,
-    name: "Fire-Resistant Ceiling",
-    category: "safety",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$55/sq ft",
-    description: "Fire-rated ceiling panels meeting all safety standards",
-    features: ["Fire rated", "Safety certified", "Durable construction"],
-  },
-  {
-    id: 4,
-    name: "Moisture-Resistant Ceiling",
-    category: "specialty",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$38/sq ft",
-    description: "Perfect for bathrooms and high-humidity environments",
-    features: ["Moisture proof", "Mold resistant", "Easy maintenance"],
-  },
-  {
-    id: 5,
-    name: "LED Integrated Ceiling",
-    category: "specialty",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$95/sq ft",
-    description: "Modern ceiling with integrated LED lighting system",
-    features: ["LED integrated", "Energy efficient", "Smart controls"],
-  },
-  {
-    id: 6,
-    name: "Suspended Grid Ceiling",
-    category: "commercial",
-    image: "/placeholder.svg?height=300&width=400",
-    price: "$25/sq ft",
-    description: "Professional suspended ceiling system for offices",
-    features: ["Easy access", "Professional look", "Cost effective"],
-  },
+  { id: -1, name: "ทั้งหมด", count: products.length },
+  ...productCategories.map((category) => ({
+    id: category.id,
+    name: category.name,
+    count : products.filter(product => product.categoryId === category.id).length,
+  })),
 ];
 
 export default function ProductsClientPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState(-1); // -1 for "All"
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
-      selectedCategory === "all" || product.category === selectedCategory;
-    const matchesSearch =
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      selectedCategory === -1 || product.categoryId === selectedCategory;
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  });
+  })
 
   return (
     <div className="min-h-screen bg-background">
@@ -106,7 +44,8 @@ export default function ProductsClientPage() {
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">สินค้าของเรา</h1>
           <p className="text-lg text-muted-foreground">
-            เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม
+            เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
+            อาคารพาณิชย์ และอุตสาหกรรม
           </p>
         </div>
 
@@ -160,7 +99,7 @@ export default function ProductsClientPage() {
           <div className="flex-1">
             <div className="mb-6 flex justify-between items-center">
               <p className="text-muted-foreground">
-                Showing {filteredProducts.length} products
+                กำลังแสดงสินค้าจำนวน {filteredProducts.length} รายการ
               </p>
             </div>
 
@@ -168,51 +107,42 @@ export default function ProductsClientPage() {
               {filteredProducts.map((product) => (
                 <Card
                   key={product.id}
-                  className="group hover:shadow-lg transition-shadow"
+                  className="group hover:shadow-lg transition-shadow flex flex-col h-full"
                 >
                   <CardHeader className="p-0">
                     <div className="relative h-48 overflow-hidden rounded-t-lg">
                       <Image
                         src={product.image || "/placeholder.svg"}
-                        alt={`${product.name} - ${
-                          product.category
-                        } ceiling material with ${product.features.join(", ")}`}
+                        alt={`${product.name}`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4">
-                    <CardTitle className="text-lg mb-2">
+                  <CardContent className="p-4 flex flex-col flex-1">
+                    <CardTitle className="text-lg mb-2 line-clamp-2">
                       {product.name}
                     </CardTitle>
                     <CardDescription className="text-sm mb-3">
                       {product.description}
                     </CardDescription>
 
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-1">
-                        {product.features.map((feature, index) => (
-                          <Badge
-                            key={index}
-                            variant="secondary"
-                            className="text-xs text-white"
-                          >
-                            {feature}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-semibold text-primary">
+                    <div className="mt-auto pt-2">
+                      <div className="text-lg font-semibold text-primary mb-4">
                         {product.price}
-                      </span>
-                      <Button asChild size="sm">
-                        <Link href={`/products/${product.id}`}>
-                          View Details
-                        </Link>
-                      </Button>
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <Button
+                          asChild
+                          size="sm"
+                          variant="outline"
+                          className="border-primary text-primary hover:bg-primary hover:text-white"
+                        >
+                          <Link href={`/products/${product.id}`}>
+                            ดูรายละเอียด
+                          </Link>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -222,7 +152,7 @@ export default function ProductsClientPage() {
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-muted-foreground">
-                  No products found matching your criteria.
+                  ไม่เจอสินค้าที่ตรงกับการค้นหาของคุณ
                 </p>
               </div>
             )}
