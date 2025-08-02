@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import type { Metadata } from "next";
-import { Sarabun } from "next/font/google";
+import { Kanit, Sarabun } from "next/font/google";
 import type React from "react";
 import "./globals.css";
 
@@ -10,6 +10,13 @@ const sarabun = Sarabun({
   weight: ["400", "700", "800"],
   variable: "--font-sarabun",
 });
+
+const kanit = Kanit({
+  subsets: ["thai"],
+  weight: ["400", "700", "800"],
+  variable: "--font-kanit",
+})
+
 
 export const metadata: Metadata = {
   title: "Kai Standard",
@@ -54,7 +61,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sarabun.className}`}>
+      <body className={`${sarabun.className} ${kanit.variable}`}>
         <Navbar />
         {children}
         <Footer />

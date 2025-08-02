@@ -19,29 +19,29 @@ export const metadata = {
     "ceiling design trends, ceiling installation guide, acoustic ceiling tips, fire safety ceiling standards, ceiling maintenance, ceiling design articles",
 };
 
-const featuredArticles = [
-  {
-    id: 1,
-    title: "2024 Ceiling Design Trends",
-    description: "Discover the latest trends in ceiling design and materials",
-    image: "/placeholder.svg?height=400&width=800",
-    category: "Design Trends",
-  },
-  {
-    id: 2,
-    title: "Acoustic Ceiling Installation Guide",
-    description: "Complete guide to professional acoustic ceiling installation",
-    image: "/placeholder.svg?height=400&width=800",
-    category: "Installation",
-  },
-  {
-    id: 3,
-    title: "Fire Safety in Ceiling Materials",
-    description: "Understanding fire ratings and safety standards for ceilings",
-    image: "/placeholder.svg?height=400&width=800",
-    category: "Safety",
-  },
-];
+// const featuredArticles = [
+//   {
+//     id: 1,
+//     title: "2024 Ceiling Design Trends",
+//     description: "Discover the latest trends in ceiling design and materials",
+//     image: "/placeholder.svg?height=400&width=800",
+//     category: "Design Trends",
+//   },
+//   {
+//     id: 2,
+//     title: "Acoustic Ceiling Installation Guide",
+//     description: "Complete guide to professional acoustic ceiling installation",
+//     image: "/placeholder.svg?height=400&width=800",
+//     category: "Installation",
+//   },
+//   {
+//     id: 3,
+//     title: "Fire Safety in Ceiling Materials",
+//     description: "Understanding fire ratings and safety standards for ceilings",
+//     image: "/placeholder.svg?height=400&width=800",
+//     category: "Safety",
+//   },
+// ];
 
 export default function ArticlesPage() {
   return (

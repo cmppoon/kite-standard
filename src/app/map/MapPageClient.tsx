@@ -7,8 +7,7 @@ import {
   Mail,
   MapPin,
   Navigation,
-  Phone,
-  SearchIcon,
+  Phone
 } from "lucide-react";
 import Image from "next/image";
 

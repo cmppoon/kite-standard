@@ -166,7 +166,7 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white font-kanit">
             แคตตาล็อกสินค้า
           </h1>
         </div>
