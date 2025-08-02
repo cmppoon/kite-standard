@@ -6,13 +6,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { articles } from "@/data/articles";
 import { Calendar, Clock } from "lucide-react";
 import Image from "next/image";
@@ -50,7 +43,6 @@ const featuredArticles = [
   },
 ];
 
-
 export default function ArticlesPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -81,7 +73,7 @@ export default function ArticlesPage() {
 
       {/* Articles Grid */}
       <section className="py-8 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-12">
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
               บทความล่าสุด
@@ -92,50 +84,56 @@ export default function ArticlesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.sort((a, b) => b.id - a.id).map((article) => (
-              <Card
-                key={article.id}
-                className="group hover:shadow-lg transition-shadow p-0"
-              >
-                <CardHeader className="p-0">
-                  <div className="relative h-48 overflow-hidden rounded-t-lg">
-                    <Image
-                      src={article.image}
-                      alt={`${article.title}`}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                </CardHeader>
-                <CardContent className="p-6 pt-0">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(article.date).toLocaleDateString("en-GB")}
+            {articles
+              .sort((a, b) => b.id - a.id)
+              .map((article) => (
+                <Card
+                  key={article.id}
+                  className="group hover:shadow-lg transition-shadow p-0"
+                >
+                  <CardHeader className="p-0">
+                    <div className="relative h-48 overflow-hidden rounded-t-lg">
+                      <Image
+                        src={article.image}
+                        alt={`${article.title}`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                  </div>
+                  </CardHeader>
+                  <CardContent className="p-6 pt-0">
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {new Date(article.date).toLocaleDateString("en-GB")}
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="h-4 w-4 mr-2" />
+                        ใช้เวลาอ่าน {article.readTime} นาที
+                      </div>
+                    </div>
 
-                  <CardTitle className="text-xl mb-3 line-clamp-2">
-                    {article.title}
-                  </CardTitle>
+                    <CardTitle className="text-xl mb-3 line-clamp-2">
+                      {article.title}
+                    </CardTitle>
 
-                  <CardDescription className="mb-4 line-clamp-3 min-h-[72px]">
-                    {article.excerpt}
-                  </CardDescription>
+                    <CardDescription className="mb-4 line-clamp-3 min-h-[72px]">
+                      {article.excerpt}
+                    </CardDescription>
 
-                  <div className="flex items-center justify-end">
-                    <Button
-                      asChild
-                      size="sm"
-                      variant="outline"
-                      className="border-primary text-primary hover:bg-primary hover:text-white"
-                    >
-                      <Link href={`/articles/${article.id}`}>อ่านต่อ</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="flex items-center justify-end">
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="border-primary text-primary hover:bg-primary hover:text-white"
+                      >
+                        <Link href={`/articles/${article.id}`}>อ่านต่อ</Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>

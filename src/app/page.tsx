@@ -44,7 +44,7 @@ export default function HomePage() {
                     src={category.image || "/placeholder.svg"}
                     alt={`${category.name}`}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300 rounded-xl"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </CardHeader>

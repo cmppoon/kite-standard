@@ -1,11 +1,15 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { Navbar } from "@/components/navbar"
-import Footer from "@/components/footer"
+import Footer from "@/components/footer";
+import { Navbar } from "@/components/navbar";
+import type { Metadata } from "next";
+import { Sarabun } from "next/font/google";
+import type React from "react";
+import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] })
+const sarabun = Sarabun({
+  subsets: ["thai"],
+  weight: ["400", "700", "800"],
+  variable: "--font-sarabun",
+});
 
 export const metadata: Metadata = {
   title: "Kai Standard",
@@ -21,8 +25,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ceilingpro.com",
-    siteName: "CeilingPro",
-    title: "CeilingPro - Premium Ceiling Solutions & Materials",
+    siteName: "Kai Standard",
+    title: "Kai Standard - Premium Ceiling Solutions & Materials",
     description:
       "Leading provider of premium ceiling materials and professional installation services with 25+ years of experience.",
     images: [
@@ -30,30 +34,31 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "CeilingPro - Premium Ceiling Solutions",
+        alt: "Kai Standard - Premium Ceiling Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "CeilingPro - Premium Ceiling Solutions & Materials",
-    description: "Leading provider of premium ceiling materials and professional installation services.",
+    description:
+      "Leading provider of premium ceiling materials and professional installation services.",
     images: ["/og-image.jpg"],
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${sarabun.className}`}>
         <Navbar />
         {children}
         <Footer />
       </body>
     </html>
-  )
+  );
 }

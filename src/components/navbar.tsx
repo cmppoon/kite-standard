@@ -22,8 +22,6 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const path = usePathname();
 
-  console.log("Current path:", path);
-
   return (
     <nav className="border-b bg-navbar-primary border-navbar-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,7 +34,7 @@ export function Navbar() {
                 width={50}
                 height={50}
               />
-              <span className="text-xl font-bold text-white">Kai Standard</span>
+              <span className="text-xl font-bold text-white" lang="en">Kai Standard</span>
             </Link>
           </div>
 
@@ -61,12 +59,16 @@ export function Navbar() {
           <div className="md:hidden flex items-center">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-white">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-white hover:text-white"
+                >
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <div className="flex flex-col space-y-4 mt-8">
+                <div className="flex flex-col space-y-4 mt-8 p-6">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}

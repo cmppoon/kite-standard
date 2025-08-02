@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto  py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 flex items-center text-white">
+            <h3 className="text-xl font-bold mb-4 flex items-center text-white" lang="en">
               <Image
                 src="/logo.png"
                 alt="Kai Standard Logo"
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t py-4 text-center text-white bg-footer-background border-white ">
+      <div className="border-t py-4 text-center text-white bg-footer-background border-white" lang="en">
         <p>&copy; 2025 Kai Standard. All rights reserved.</p>
       </div>
     </footer>

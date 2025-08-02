@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { articles } from "@/data/articles";
-import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -22,7 +22,9 @@ export default async function ArticleDetailPage({
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">ไม่พบบทความที่คุณต้องการ</h1>
+          <h1 className="text-2xl font-bold mb-4">
+            ไม่พบบทความที่คุณต้องการ
+          </h1>
           <Button
             asChild
             variant="outline"
@@ -60,6 +62,10 @@ export default async function ArticleDetailPage({
             <div className="flex items-center">
               <Calendar className="h-4 w-4 mr-2" />
               {new Date(article.date).toLocaleDateString("en-GB")}
+            </div>
+            <div className="flex items-center">
+              <Clock className="h-4 w-4 mr-2" />
+              ใช้เวลาอ่าน {article.readTime} นาที
             </div>
           </div>
         </div>

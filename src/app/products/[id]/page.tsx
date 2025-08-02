@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,10 +6,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowLeft, Check, Star } from "lucide-react";
 import { products } from "@/data/products";
+import { ArrowLeft, Check } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 // Mock product data - in a real app, this would come from a database
 const getProduct = (id: string) => {
