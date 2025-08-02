@@ -104,9 +104,9 @@ export default function ProductsClientPage() {
     <div className="min-h-screen bg-background">
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Our Products</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">สินค้าของเรา</h1>
           <p className="text-lg text-muted-foreground">
-            Explore our comprehensive range of premium ceiling solutions
+            เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function ProductsClientPage() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
-                placeholder="Search products..."
+                placeholder="ค้นหาสินค้า..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -126,7 +126,7 @@ export default function ProductsClientPage() {
 
             {/* Categories */}
             <div>
-              <h3 className="font-semibold mb-4">Categories</h3>
+              <h3 className="font-semibold mb-4">ประเภทสินค้า</h3>
               <div className="space-y-2">
                 {categories.map((category) => (
                   <button

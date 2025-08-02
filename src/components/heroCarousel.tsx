@@ -38,7 +38,7 @@ export default function HeroCarousel() {
           <CarouselItem key={index}>
             <div className="relative h-[500px] w-full">
               <Image
-                src={item.image || "/placeholder.svg"}
+                src={item.image}
                 alt={`${item.alt}`}
                 fill
                 className="object-cover"

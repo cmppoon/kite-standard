@@ -1,4 +1,4 @@
-import ProductsClientPage from "./ProductsClientPage"
+import ProductsClientPage from "@/app/products/ProductsClientPage"
 
 export const metadata = {
   title: "Premium Ceiling Products & Materials | Acoustic, Fire-Resistant & Decorative Ceilings",
