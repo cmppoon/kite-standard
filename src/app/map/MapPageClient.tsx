@@ -21,7 +21,7 @@ const locations = [
     email: "info@kaistandard.com",
     hours: "จันทร์ - ศุกร์ 07:30 - 18:00",
     imageSrc: "/images/locations/ny-office.jpg",
-    googleMapUrl: "https://maps.app.goo.gl/kGGsaYheDvaaZcpE7"
+    googleMapUrl: "https://maps.app.goo.gl/kCr3mPjbc1gWfGUk8"
   },
 ];
 
@@ -90,14 +90,6 @@ export default function MapPageClient() {
                       <Button size="sm" className="flex-1" onClick={() => window.open(location.googleMapUrl, "_blank")}>
                         <Navigation className="h-4 w-4 mr-2" />
                         เปิดใน Google Maps
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-primary text-primary hover:bg-secondary hover:border-secondary hover:text-white flex-1"
-                      >
-                        <SearchIcon className="h-4 w-4 mr-2" />
-                        ดูรูปแผนที่
                       </Button>
                     </div>
                   </CardContent>

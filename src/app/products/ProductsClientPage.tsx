@@ -14,6 +14,7 @@ import { products } from "@/data/products";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 const categories = [
@@ -21,12 +22,19 @@ const categories = [
   ...productCategories.map((category) => ({
     id: category.id,
     name: category.name,
-    count : products.filter(product => product.categoryId === category.id).length,
+    count: products.filter((product) => product.categoryId === category.id)
+      .length,
   })),
 ];
 
 export default function ProductsClientPage() {
-  const [selectedCategory, setSelectedCategory] = useState(-1); // -1 for "All"
+  const searchParams = useSearchParams();
+
+  const preselectedCategory = searchParams.get("category");
+
+  const [selectedCategory, setSelectedCategory] = useState(
+    preselectedCategory ? parseInt(preselectedCategory) : -1
+  ); // -1 for "All"
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) => {
@@ -36,7 +44,7 @@ export default function ProductsClientPage() {
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
-  })
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -131,7 +139,7 @@ export default function ProductsClientPage() {
                       <div className="text-lg font-semibold text-primary mb-4">
                         {product.price}
                       </div>
-                      <div className="flex justify-center items-center">
+                      <div className="flex justify-end items-center">
                         <Button
                           asChild
                           size="sm"
@@ -152,7 +160,7 @@ export default function ProductsClientPage() {
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-muted-foreground">
-                  ไม่เจอสินค้าที่ตรงกับการค้นหาของคุณ
+                  ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
                 </p>
               </div>
             )}

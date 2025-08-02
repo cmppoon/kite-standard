@@ -11,7 +11,7 @@ import { useState } from "react";
 const navigation = [
   { name: "หน้าแรก", href: "/" },
   { name: "สินค้า", href: "/products" },
-  { name: "แคตาล็อค", href: "/catalog" },
+  { name: "แคตตาล็อก", href: "/catalog" },
   { name: "บทความ", href: "/articles" },
   { name: "เกี่ยวกับเรา", href: "/about-us" },
   { name: "ติดต่อเรา", href: "/contact-us" },

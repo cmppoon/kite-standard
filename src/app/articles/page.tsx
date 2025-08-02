@@ -55,7 +55,7 @@ export default function ArticlesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Featured Articles Carousel */}
-      <section className="py-8">
+      {/* <section className="py-8">
         <div className="max-w-7xl mx-auto px-4">
           <Carousel className="w-full">
             <CarouselContent>
@@ -77,7 +77,7 @@ export default function ArticlesPage() {
             <CarouselNext className="right-4" />
           </Carousel>
         </div>
-      </section>
+      </section> */}
 
       {/* Articles Grid */}
       <section className="py-8 px-4">
@@ -95,27 +95,23 @@ export default function ArticlesPage() {
             {articles.sort((a, b) => b.id - a.id).map((article) => (
               <Card
                 key={article.id}
-                className="group hover:shadow-lg transition-shadow"
+                className="group hover:shadow-lg transition-shadow p-0"
               >
                 <CardHeader className="p-0">
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <Image
-                      src={article.image || "/placeholder.svg"}
+                      src={article.image}
                       alt={`${article.title}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </CardHeader>
-                <CardContent className="p-6">
+                <CardContent className="p-6 pt-0">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                     <div className="flex items-center">
                       <Calendar className="h-4 w-4 mr-1" />
                       {new Date(article.date).toLocaleDateString("en-GB")}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {article.readTime} นาที
                     </div>
                   </div>
 
@@ -127,10 +123,7 @@ export default function ArticlesPage() {
                     {article.excerpt}
                   </CardDescription>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground">
-                      เขียนโดย Kai Standard Team
-                    </span>
+                  <div className="flex items-center justify-end">
                     <Button
                       asChild
                       size="sm"
