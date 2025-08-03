@@ -60,7 +60,7 @@ export default function HomePage() {
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary hover:text-white"
                   >
-                    <Link href={`/products?category=${category.id}`}>
+                    <Link href={`/products/category/${category.slug}`}>
                       ดูรายละเอียด
                     </Link>
                   </Button>

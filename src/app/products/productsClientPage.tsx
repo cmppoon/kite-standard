@@ -87,7 +87,7 @@ export default function ProductsClientPage({
                         href={
                           category.id === -1
                             ? "/products"
-                            : `/products/categories/${category.slug}`
+                            : `/products/category/${category.slug}`
                         }
                       >
                         <span>{category.name}</span>
