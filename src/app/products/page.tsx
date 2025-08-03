@@ -1,4 +1,4 @@
-import ProductsClientPage from "@/app/products/ProductsClientPage";
+import ProductsClientPage from "@/app/products/productsClientPage";
 
 export const metadata = {
   title: "สินค้า",

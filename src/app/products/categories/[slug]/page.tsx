@@ -1,9 +1,14 @@
-import ProductsClientPage from "@/app/products/ProductsClientPage";
+import ProductsClientPage from "@/app/products/productsClientPage";
 import { productCategories } from "@/data/productCategories";
 import React from "react";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const category = getCategoryBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const category = getCategoryBySlug(slug);
   return {
     title: category ? category.name : "สินค้า",
     description:

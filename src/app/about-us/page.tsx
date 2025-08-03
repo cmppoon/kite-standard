@@ -12,8 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "เกี่ยวกับเรา",
+  title: "เกี่ยวกับเรา",
   description:
     "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
   keywords:
@@ -198,19 +197,10 @@ export default function Page() {
               </h2>
               <div className="text-muted-foreground space-y-4">
                 <p>
-                  Kai Standard เป็นผู้แทนจำหน่าย แผ่นยิปซัมและโครงคร่าว ตราช้าง
-                  อันดับ 1 รับประกันคุณภาพด้วยรางวัล ผู้แทนจำหน่ายยอดเยี่ยม 10
-                  ปีซ้อน
-                </p>
-                <p>
-                  บริษัทฯ เปิดให้บริการตั้งแต่ปี 2544 ปัจจุบันมี 5 สาขา ได้แก่
-                  สาขา รัตนาธิเบศร์, สาขา กาญจนาภิเษก, สาขา ลำลูกกา, สาขา
-                  ราชพฤกษ์ และ สาขา ศรีนครินทร์
-                </p>
-                <p>
-                  โครงการที่บริษัทฯ เคยร่วมงาน ได้แก่ พฤกษา, AP, Land & Houses,
-                  7-Eleven, Central, The Mall, Tesco Lotus, ธนาคารกสิกรไทย และ
-                  สนามบินสุวรรณภูมิ เป็นต้น
+                  บริษัท ไคสแตนดาร์ด จำกัด คือผู้นำด้านการจัดจำหน่าย
+                  โครงคร่าวฝ้าเพดาน งานฉาบ
+                  และผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร
+                  ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ
                 </p>
               </div>
             </div>
