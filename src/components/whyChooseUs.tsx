@@ -3,11 +3,11 @@ import React from "react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 px-4 bg-text-accent">
+    <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ทำไมต้องไคสแตนดาร์ด
+            ทำไมต้องเลือกเรา?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             เพราะเราไม่ใช่แค่ผู้จัดจำหน่าย
@@ -19,8 +19,8 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="text-center">
-            <CardContent className="pt-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CardContent className="pt-4">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">40+</span>
               </div>
               <CardTitle className="text-xl mb-3">ปีในวงการฝ้าเพดาน</CardTitle>
@@ -31,8 +31,8 @@ export default function WhyChooseUs() {
           </Card>
 
           <Card className="text-center">
-            <CardContent className="pt-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CardContent className="pt-4">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">24/7</span>
               </div>
               <CardTitle className="text-xl mb-3">
@@ -46,8 +46,8 @@ export default function WhyChooseUs() {
           </Card>
 
           <Card className="text-center">
-            <CardContent className="pt-8">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <CardContent className="pt-4">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">100%</span>
               </div>
               <CardTitle className="text-xl mb-3">

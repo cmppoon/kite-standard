@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ceilingpro.com"
+  const baseUrl = "https://kaistandard.com"
 
   // Static pages
   const staticPages = [

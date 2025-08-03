@@ -87,11 +87,11 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "CeilingPro",
+            name: "Kai Standard",
             description:
               "Leading provider of premium ceiling materials and professional installation services",
-            url: "https://ceilingpro.com",
-            logo: "https://ceilingpro.com/logo.png",
+            url: "https://kaistandard.com",
+            logo: "https://kaistandard.com/logo.png",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+1-555-123-4567",
@@ -107,9 +107,7 @@ export default function HomePage() {
               addressCountry: "US",
             },
             sameAs: [
-              "https://facebook.com/ceilingpro",
-              "https://twitter.com/ceilingpro",
-              "https://linkedin.com/company/ceilingpro",
+              "https://facebook.com/kaistandardds",
             ],
             foundingDate: "1999",
             numberOfEmployees: "100-500",

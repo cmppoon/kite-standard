@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://ceilingpro.com/sitemap.xml",
+    sitemap: "https://kaistandard.com/sitemap.xml",
   }
 }

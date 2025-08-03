@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ceilingpro.com",
+    url: "https://kaistandard.com",
     siteName: "Kai Standard",
     title: "Kai Standard - Premium Ceiling Solutions & Materials",
     description:
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CeilingPro - Premium Ceiling Solutions & Materials",
+    title: "Kai Standard - Premium Ceiling Solutions & Materials",
     description:
       "Leading provider of premium ceiling materials and professional installation services.",
     images: ["/og-image.jpg"],

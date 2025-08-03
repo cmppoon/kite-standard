@@ -9,7 +9,7 @@ interface SEOHeadProps {
 }
 
 export function EOHead({
-  title = "CeilingPro - Premium Ceiling Solutions & Materials",
+  title = "Kai Standard - Premium Ceiling Solutions & Materials",
   description = "Leading provider of premium ceiling materials and professional installation services with 25+ years of experience.",
   keywords = "ceiling materials, acoustic ceiling, fire resistant ceiling, ceiling installation",
   canonicalUrl,

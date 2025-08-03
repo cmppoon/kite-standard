@@ -1,4 +1,20 @@
-import React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import WhyChooseUs from "@/components/whyChooseUs";
+import {
+  ArrowRight,
+  Eye,
+  Heart,
+  Target
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
@@ -165,6 +181,130 @@ export default function Page() {
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white font-kanit">
             เกี่ยวกับเรา
           </h1>
+        </div>
+      </section>
+
+      {/* Company Story */}
+      <section className="py-16 px-4 bg-gradient-to-br from-accent/10 to-secondary/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">
+                เรื่องราวของเรา
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Kai Standard เป็นผู้แทนจำหน่าย แผ่นยิปซัมและโครงคร่าว ตราช้าง
+                  อันดับ 1 รับประกันคุณภาพด้วยรางวัล ผู้แทนจำหน่ายยอดเยี่ยม 10
+                  ปีซ้อน
+                </p>
+                <p>
+                  บริษัทฯ เปิดให้บริการตั้งแต่ปี 2544 ปัจจุบันมี 5 สาขา ได้แก่
+                  สาขา รัตนาธิเบศร์, สาขา กาญจนาภิเษก, สาขา ลำลูกกา, สาขา
+                  ราชพฤกษ์ และ สาขา ศรีนครินทร์
+                </p>
+                <p>
+                  โครงการที่บริษัทฯ เคยร่วมงาน ได้แก่ พฤกษา, AP, Land & Houses,
+                  7-Eleven, Central, The Mall, Tesco Lotus, ธนาคารกสิกรไทย และ
+                  สนามบินสุวรรณภูมิ เป็นต้น
+                </p>
+              </div>
+            </div>
+            <div className="relative h-96 rounded-lg overflow-hidden">
+              <Image
+                src="/placeholder.svg?height=400&width=600"
+                alt="Kai Standard team working on a ceiling installation project"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <WhyChooseUs />
+
+      {/* Mission, Vision, Values */}
+      <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              ความมุ่งมั่นของเรา
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              ก่อตั้งขึ้นจากค่านิยมที่มั่นคงและวิสัยทัศน์ที่ชัดเจนสำหรับอนาคตของโซลูชันฝ้าเพดาน
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="text-center border-primary/20">
+              <CardHeader>
+                <Target className="h-12 w-12 text-secondary mx-auto mb-2" />
+                <CardTitle className="text-xl text-accent">Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  ทำให้เรื่องฝ้าเพดานและฝาผนังเป็นเรื่องง่าย
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-secondary/20">
+              <CardHeader>
+                <Eye className="h-12 w-12 text-secondary mx-auto mb-2" />
+                <CardTitle className="text-xl text-accent">Vision</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  เป็นผู้แทนจำหน่ายฝ้าเพดานและฝาผนังที่ดีที่สุด
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-accent/20">
+              <CardHeader>
+                <Heart className="h-12 w-12 text-secondary mx-auto mb-2" />
+                <CardTitle className="text-xl text-accent">Values</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  มุ่งมั่นในคุณภาพ, ความซื่อสัตย์, นวัตกรรม
+                  และความพึงพอใจของลูกค้า
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">
+            พร้อมที่จะเริ่มโปรเจกต์ของคุณหรือยัง?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            ติดต่อเราวันนี้เพื่อรับคำปรึกษาและเริ่มต้นโปรเจกต์ของคุณ
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90"
+            >
+              <Link href="/contact-us">
+                ติดต่อเรา <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-secondary hover:text-white hover:border-secondary"
+            >
+              <Link href="/products">ชมสินค้าทั้งหมด</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </div>
