@@ -15,8 +15,7 @@ const kanit = Kanit({
   subsets: ["thai"],
   weight: ["400", "700", "800"],
   variable: "--font-kanit",
-})
-
+});
 
 export const metadata: Metadata = {
   title: "Kai Standard",

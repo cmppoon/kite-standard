@@ -45,7 +45,7 @@ export const metadata = {
 
 export default function ArticlesPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background min-h-screen">
       {/* Featured Articles Carousel */}
       {/* <section className="py-8">
         <div className="max-w-7xl mx-auto px-4">
@@ -72,24 +72,24 @@ export default function ArticlesPage() {
       </section> */}
 
       {/* Articles Grid */}
-      <section className="py-8 px-4">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-4 py-8">
+        <div className="mx-auto max-w-5xl">
           <div className="mb-12">
-            <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            <h1 className="mb-4 text-2xl font-bold md:text-3xl">
               บทความล่าสุด
             </h1>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-muted-foreground text-lg">
               ข้อมูลและข่าวสารเกี่ยวกับการออกแบบและติดตั้งฝ้าเพดาน
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {articles
               .sort((a, b) => b.id - a.id)
               .map((article) => (
                 <Card
                   key={article.id}
-                  className="group hover:shadow-lg transition-shadow p-0"
+                  className="group p-0 transition-shadow hover:shadow-lg"
                 >
                   <CardHeader className="p-0">
                     <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -97,23 +97,23 @@ export default function ArticlesPage() {
                         src={article.image}
                         alt={`${article.title}`}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   </CardHeader>
                   <CardContent className="p-6 pt-0">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                    <div className="text-muted-foreground mb-3 flex items-center gap-4 text-sm">
                       <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-1" />
+                        <Calendar className="mr-1 h-4 w-4" />
                         {new Date(article.date).toLocaleDateString("en-GB")}
                       </div>
                       <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-2" />
+                        <Clock className="mr-2 h-4 w-4" />
                         ใช้เวลาอ่าน {article.readTime} นาที
                       </div>
                     </div>
 
-                    <CardTitle className="text-xl mb-3 line-clamp-2">
+                    <CardTitle className="mb-3 line-clamp-2 text-xl">
                       {article.title}
                     </CardTitle>
 

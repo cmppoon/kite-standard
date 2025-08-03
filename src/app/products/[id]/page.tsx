@@ -29,9 +29,9 @@ export default async function ProductDetailPage({
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">
+          <h1 className="mb-4 text-2xl font-bold">
             ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
           </h1>
           <Button
@@ -47,26 +47,26 @@ export default async function ProductDetailPage({
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto max-w-7xl px-4 py-8">
         {/* Breadcrumb */}
         <div className="mb-8">
           <Button
             variant="ghost"
             asChild
-            className="mb-4  border-primary hover:bg-primary hover:text-white"
+            className="border-primary hover:bg-primary mb-4 hover:text-white"
           >
             <Link href="/products">
-              <ArrowLeft className="h-4 w-4 mr-2" />
+              <ArrowLeft className="mr-2 h-4 w-4" />
               กลับสู่หน้าสินค้าทั้งหมด
             </Link>
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="relative h-96 rounded-lg overflow-hidden">
+            <div className="relative h-96 overflow-hidden rounded-lg">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -94,11 +94,11 @@ export default async function ProductDetailPage({
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-              <p className="text-muted-foreground text-lg mb-6">
+              <h1 className="mb-4 text-3xl font-bold">{product.name}</h1>
+              <p className="text-muted-foreground mb-6 text-lg">
                 {product.description}
               </p>
-              <div className="text-3xl font-bold text-primary mb-6">
+              <div className="text-primary mb-6 text-3xl font-bold">
                 {product.price}
               </div>
             </div>
@@ -106,11 +106,11 @@ export default async function ProductDetailPage({
             {/* Features */}
             {product.features && product.features.length > 0 && (
               <div>
-                <h3 className="text-xl font-semibold mb-4">คุณสมบัติ</h3>
+                <h3 className="mb-4 text-xl font-semibold">คุณสมบัติ</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {product.features.map((feature, index) => (
                     <div key={index} className="flex items-center">
-                      <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <Check className="mr-3 h-5 w-5 flex-shrink-0 text-green-500" />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -187,7 +187,7 @@ export default async function ProductDetailPage({
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold mb-2">
+                      <h4 className="mb-2 font-semibold">
                         Installation Method
                       </h4>
                       <p className="text-muted-foreground">
@@ -196,14 +196,14 @@ export default async function ProductDetailPage({
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Tools Required</h4>
+                      <h4 className="mb-2 font-semibold">Tools Required</h4>
                       <p className="text-muted-foreground">
                         Standard ceiling installation tools, measuring
                         equipment, safety gear.
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Installation Time</h4>
+                      <h4 className="mb-2 font-semibold">Installation Time</h4>
                       <p className="text-muted-foreground">
                         Approximately 1-2 hours per 100 sq ft with professional
                         installation.

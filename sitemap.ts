@@ -1,7 +1,7 @@
-import type { MetadataRoute } from "next"
+import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kaistandard.com"
+  const baseUrl = "https://kaistandard.com";
 
   // Static pages
   const staticPages = [
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
-  ]
+  ];
 
   // Product pages
   const productPages = Array.from({ length: 10 }, (_, i) => ({
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
-  }))
+  }));
 
   // Article pages
   const articlePages = Array.from({ length: 6 }, (_, i) => ({
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.5,
-  }))
+  }));
 
-  return [...staticPages, ...productPages, ...articlePages]
+  return [...staticPages, ...productPages, ...articlePages];
 }

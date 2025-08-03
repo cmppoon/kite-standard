@@ -1,4 +1,3 @@
-
 export const productCategories = [
   {
     id: 1,

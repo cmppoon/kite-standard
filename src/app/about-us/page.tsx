@@ -7,23 +7,18 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import WhyChooseUs from "@/components/whyChooseUs";
-import {
-  ArrowRight,
-  Eye,
-  Heart,
-  Target
-} from "lucide-react";
+import { ArrowRight, Eye, Heart, Target } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
   return (
     <div className="min-h-screen">
-      <section className="relative py-12 px-4 overflow-hidden">
+      <section className="relative overflow-hidden px-4 py-12">
         {/* Background Pattern */}
         <div className="absolute inset-0">
           <svg
-            className="w-full h-full"
+            className="h-full w-full"
             viewBox="0 0 1200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -177,22 +172,22 @@ export default function Page() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white font-kanit">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <h1 className="font-kanit mb-6 text-3xl font-bold text-white md:text-4xl">
             เกี่ยวกับเรา
           </h1>
         </div>
       </section>
 
       {/* Company Story */}
-      <section className="py-16 px-4 bg-gradient-to-br from-accent/10 to-secondary/10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="from-accent/10 to-secondary/10 bg-gradient-to-br px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">
+              <h2 className="text-accent mb-6 text-3xl font-bold md:text-4xl">
                 เรื่องราวของเรา
               </h2>
-              <div className="space-y-4 text-muted-foreground">
+              <div className="text-muted-foreground space-y-4">
                 <p>
                   Kai Standard เป็นผู้แทนจำหน่าย แผ่นยิปซัมและโครงคร่าว ตราช้าง
                   อันดับ 1 รับประกันคุณภาพด้วยรางวัล ผู้แทนจำหน่ายยอดเยี่ยม 10
@@ -210,7 +205,7 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="relative h-96 rounded-lg overflow-hidden">
+            <div className="relative h-96 overflow-hidden rounded-lg">
               <Image
                 src="/placeholder.svg?height=400&width=600"
                 alt="Kai Standard team working on a ceiling installation project"
@@ -225,22 +220,22 @@ export default function Page() {
       <WhyChooseUs />
 
       {/* Mission, Vision, Values */}
-      <section className="py-16 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="from-primary/5 to-accent/5 bg-gradient-to-br px-4 py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               ความมุ่งมั่นของเรา
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
               ก่อตั้งขึ้นจากค่านิยมที่มั่นคงและวิสัยทัศน์ที่ชัดเจนสำหรับอนาคตของโซลูชันฝ้าเพดาน
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-primary/20">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <Card className="border-primary/20 gap-y-2 text-center">
               <CardHeader>
-                <Target className="h-12 w-12 text-secondary mx-auto mb-2" />
-                <CardTitle className="text-xl text-accent">Mission</CardTitle>
+                <Target className="text-secondary mx-auto h-12 w-12" />
+                <CardTitle className="text-accent text-xl">Mission</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
@@ -249,10 +244,10 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-secondary/20">
+            <Card className="border-primary/20 gap-y-2 text-center">
               <CardHeader>
-                <Eye className="h-12 w-12 text-secondary mx-auto mb-2" />
-                <CardTitle className="text-xl text-accent">Vision</CardTitle>
+                <Eye className="text-secondary mx-auto h-12 w-12" />
+                <CardTitle className="text-accent text-xl">Vision</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
@@ -261,10 +256,10 @@ export default function Page() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-accent/20">
+            <Card className="border-primary/20 gap-y-2 text-center">
               <CardHeader>
-                <Heart className="h-12 w-12 text-secondary mx-auto mb-2" />
-                <CardTitle className="text-xl text-accent">Values</CardTitle>
+                <Heart className="text-secondary mx-auto h-12 w-12" />
+                <CardTitle className="text-accent text-xl">Values</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
@@ -278,15 +273,15 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent">
+      <section className="bg-white px-4 py-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-accent mb-6 text-3xl font-bold md:text-4xl">
             พร้อมที่จะเริ่มโปรเจกต์ของคุณหรือยัง?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-muted-foreground mb-8 text-lg">
             ติดต่อเราวันนี้เพื่อรับคำปรึกษาและเริ่มต้นโปรเจกต์ของคุณ
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -300,7 +295,7 @@ export default function Page() {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-secondary hover:text-white hover:border-secondary"
+              className="border-primary text-primary hover:bg-secondary hover:border-secondary hover:text-white"
             >
               <Link href="/products">ชมสินค้าทั้งหมด</Link>
             </Button>

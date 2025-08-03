@@ -40,12 +40,12 @@ export default function HeroCarousel() {
       <CarouselContent>
         {carouselItems.map((item, index) => (
           <CarouselItem key={index}>
-            <div className="w-full relative aspect-[2560/947]">
+            <div className="relative aspect-[2560/947] w-full">
               <Image
                 src={item.image}
                 alt={item.alt}
                 fill
-                className="object-cover rounded-md"
+                className="rounded-md object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 1280px"
                 priority
               />

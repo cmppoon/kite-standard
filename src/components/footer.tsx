@@ -5,10 +5,13 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-primary border-t">
-      <div className="max-w-5xl mx-auto  py-12 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="mx-auto max-w-5xl px-4 py-12">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="text-xl font-bold mb-4 flex items-center text-white" lang="en">
+            <h3
+              className="mb-4 flex items-center text-xl font-bold text-white"
+              lang="en"
+            >
               <Image
                 src="/logo.png"
                 alt="Kai Standard Logo"
@@ -25,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-accent-foreground">
+            <h4 className="text-accent-foreground mb-4 font-semibold">
               สาขาทั้งหมด
             </h4>
             <ul className="space-y-2 text-white">
@@ -34,14 +37,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-accent-foreground">
+            <h4 className="text-accent-foreground mb-4 font-semibold">
               เกี่ยวกับเรา
             </h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   href="/products"
-                  className="text-white hover:text-accent-foreground"
+                  className="hover:text-accent-foreground text-white"
                 >
                   สินค้า
                 </Link>
@@ -49,7 +52,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/articles"
-                  className="text-white hover:text-accent-foreground"
+                  className="hover:text-accent-foreground text-white"
                 >
                   บทความ
                 </Link>
@@ -57,7 +60,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about-us"
-                  className="text-white hover:text-accent-foreground"
+                  className="hover:text-accent-foreground text-white"
                 >
                   เกี่ยวกับเรา
                 </Link>
@@ -65,7 +68,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact-us"
-                  className="text-white hover:text-accent-foreground"
+                  className="hover:text-accent-foreground text-white"
                 >
                   ติดต่อเรา
                 </Link>
@@ -73,7 +76,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/map"
-                  className="text-white hover:text-accent-foreground"
+                  className="hover:text-accent-foreground text-white"
                 >
                   แผนที่
                 </Link>
@@ -82,7 +85,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-accent-foreground">
+            <h4 className="text-accent-foreground mb-4 font-semibold">
               ข้อมูลติดต่อ
             </h4>
             <ul className="space-y-2 text-white">
@@ -94,7 +97,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t py-4 text-center text-white bg-footer-background border-white" lang="en">
+      <div
+        className="bg-footer-background border-t border-white py-4 text-center text-white"
+        lang="en"
+      >
         <p>&copy; 2025 Kai Standard. All rights reserved.</p>
       </div>
     </footer>

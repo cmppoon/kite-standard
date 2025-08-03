@@ -6,28 +6,26 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <section className="bg-secondary/5 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            ติดต่อเรา
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+    <section className="bg-secondary/5 px-4 py-16">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             ติดต่อผู้เชี่ยวชาญของเราเพื่อรับโซลูชันฝ้าเพดานที่ออกแบบเฉพาะสำหรับคุณ
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {/* Phone */}
-          <Card className="group hover:shadow-lg transition-all duration-300 border-primary/20 hover:border-primary/40">
+          <Card className="group border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Phone className="h-8 w-8 text-primary" />
+              <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+                <Phone className="text-primary h-8 w-8" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-accent">
+              <h3 className="text-accent mb-2 text-lg font-semibold">
                 โทรศัพท์
               </h3>
-              <p className="text-sm text-muted-foreground mb-3">
+              <p className="text-muted-foreground mb-3 text-sm">
                 จันทร์ - ศุกร์ 07:30 - 18:00
               </p>
               <a
@@ -40,15 +38,15 @@ export default function ContactUs() {
           </Card>
 
           {/* Line Contact */}
-          <Card className="group hover:shadow-lg transition-all duration-300 border-secondary/20 hover:border-secondary/40">
+          <Card className="group border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <MessageSquare className="h-8 w-8 text-accent" />
+              <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+                <MessageSquare className="text-accent h-8 w-8" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-accent">
+              <h3 className="text-accent mb-2 text-lg font-semibold">
                 ติดต่อทางไลน์
               </h3>
-              <p className="text-sm text-muted-foreground mb-3">
+              <p className="text-muted-foreground mb-3 text-sm">
                 สะดวก ตอบกลับรวดเร็ว
               </p>
               <a
@@ -63,13 +61,13 @@ export default function ContactUs() {
           </Card>
 
           {/* Email */}
-          <Card className="group hover:shadow-lg transition-all duration-300 border-accent/20 hover:border-accent/40">
+          <Card className="group border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                <Mail className="h-8 w-8 text-accent" />
+              <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+                <Mail className="text-accent h-8 w-8" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-accent">อีเมล</h3>
-              <p className="text-sm text-muted-foreground mb-3">
+              <h3 className="text-accent mb-2 text-lg font-semibold">อีเมล</h3>
+              <p className="text-muted-foreground mb-3 text-sm">
                 คำถามทั่วไปและการติดต่อธุรกิจ
               </p>
               <a
@@ -82,21 +80,21 @@ export default function ContactUs() {
           </Card>
 
           {/* Facebook */}
-          <Card className="group hover:shadow-lg transition-all duration-300 border-primary/20 hover:border-primary/40">
+          <Card className="group border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
                 <svg
-                  className="h-8 w-8 text-primary"
+                  className="text-primary h-8 w-8"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-accent">
+              <h3 className="text-accent mb-2 text-lg font-semibold">
                 Facebook
               </h3>
-              <p className="text-sm text-muted-foreground mb-3">
+              <p className="text-muted-foreground mb-3 text-sm">
                 ติดตามข่าวสารและโปรโมชั่นล่าสุด
               </p>
               <a

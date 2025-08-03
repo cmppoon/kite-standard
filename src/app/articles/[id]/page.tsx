@@ -20,11 +20,9 @@ export default async function ArticleDetailPage({
 
   if (!article) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">
-            ไม่พบบทความที่คุณต้องการ
-          </h1>
+          <h1 className="mb-4 text-2xl font-bold">ไม่พบบทความที่คุณต้องการ</h1>
           <Button
             asChild
             variant="outline"
@@ -38,40 +36,40 @@ export default async function ArticleDetailPage({
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto max-w-4xl px-4 py-8">
         {/* Breadcrumb */}
         <Button
           variant="ghost"
           asChild
-          className="mb-8 border-primary hover:bg-primary hover:text-white"
+          className="border-primary hover:bg-primary mb-8 hover:text-white"
         >
           <Link href="/articles">
-            <ArrowLeft className="h-4 w-4 mr-2" />
+            <ArrowLeft className="mr-2 h-4 w-4" />
             กลับสู่หน้าบทความทั้งหมด
           </Link>
         </Button>
 
         {/* Article Header */}
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6">
+          <h1 className="mb-6 text-3xl font-bold md:text-4xl">
             {article.title}
           </h1>
 
-          <div className="flex items-center gap-6 text-muted-foreground mb-6">
+          <div className="text-muted-foreground mb-6 flex items-center gap-6">
             <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-2" />
+              <Calendar className="mr-2 h-4 w-4" />
               {new Date(article.date).toLocaleDateString("en-GB")}
             </div>
             <div className="flex items-center">
-              <Clock className="h-4 w-4 mr-2" />
+              <Clock className="mr-2 h-4 w-4" />
               ใช้เวลาอ่าน {article.readTime} นาที
             </div>
           </div>
         </div>
 
         {/* Featured Image */}
-        <div className="relative w-full h-full aspect-square rounded-lg overflow-hidden mb-8">
+        <div className="relative mb-8 aspect-square h-full w-full overflow-hidden rounded-lg">
           <Image
             src={article.image || "/placeholder.svg"}
             alt={article.title}
@@ -82,7 +80,7 @@ export default async function ArticleDetailPage({
         </div>
 
         {/* Article Content */}
-        <div className="prose prose-lg max-w-none mb-12">
+        <div className="prose prose-lg mb-12 max-w-none">
           <div dangerouslySetInnerHTML={{ __html: article.content }} />
         </div>
       </div>

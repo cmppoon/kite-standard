@@ -33,7 +33,7 @@ export default function ProductsClientPage() {
   const preselectedCategory = searchParams.get("category");
 
   const [selectedCategory, setSelectedCategory] = useState(
-    preselectedCategory ? parseInt(preselectedCategory) : -1
+    preselectedCategory ? parseInt(preselectedCategory) : -1,
   ); // -1 for "All"
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -47,22 +47,22 @@ export default function ProductsClientPage() {
   });
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="bg-background min-h-screen">
+      <div className="mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">สินค้าของเรา</h1>
-          <p className="text-lg text-muted-foreground">
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl">สินค้าของเรา</h1>
+          <p className="text-muted-foreground text-lg">
             เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
             อาคารพาณิชย์ และอุตสาหกรรม
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col gap-8 lg:flex-row">
           {/* Sidebar */}
-          <div className="lg:w-64 space-y-6">
+          <div className="space-y-6 lg:w-64">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+              <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
               <Input
                 placeholder="ค้นหาสินค้า..."
                 value={searchTerm}
@@ -73,19 +73,19 @@ export default function ProductsClientPage() {
 
             {/* Categories */}
             <div>
-              <h3 className="font-semibold mb-4">ประเภทสินค้า</h3>
+              <h3 className="mb-4 font-semibold">ประเภทสินค้า</h3>
               <div className="space-y-2">
                 {categories.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
+                    className={`w-full rounded-md px-3 py-2 text-left transition-colors ${
                       selectedCategory === category.id
                         ? "bg-primary text-primary-foreground"
                         : "hover:bg-muted"
                     }`}
                   >
-                    <div className="flex justify-between items-center">
+                    <div className="flex items-center justify-between">
                       <span>{category.name}</span>
                       <span
                         className={`text-sm ${
@@ -105,17 +105,17 @@ export default function ProductsClientPage() {
 
           {/* Products Grid */}
           <div className="flex-1">
-            <div className="mb-6 flex justify-between items-center">
+            <div className="mb-6 flex items-center justify-between">
               <p className="text-muted-foreground">
                 กำลังแสดงสินค้าจำนวน {filteredProducts.length} รายการ
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredProducts.map((product) => (
                 <Card
                   key={product.id}
-                  className="group hover:shadow-lg transition-shadow flex flex-col h-full"
+                  className="group flex h-full flex-col transition-shadow hover:shadow-lg"
                 >
                   <CardHeader className="p-0">
                     <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -123,23 +123,23 @@ export default function ProductsClientPage() {
                         src={product.image || "/placeholder.svg"}
                         alt={`${product.name}`}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 flex flex-col flex-1">
-                    <CardTitle className="text-lg mb-2 line-clamp-2">
+                  <CardContent className="flex flex-1 flex-col p-4">
+                    <CardTitle className="mb-2 line-clamp-2 text-lg">
                       {product.name}
                     </CardTitle>
-                    <CardDescription className="text-sm mb-3">
+                    <CardDescription className="mb-3 text-sm">
                       {product.description}
                     </CardDescription>
 
                     <div className="mt-auto pt-2">
-                      <div className="text-lg font-semibold text-primary mb-4">
+                      <div className="text-primary mb-4 text-lg font-semibold">
                         {product.price}
                       </div>
-                      <div className="flex justify-end items-center">
+                      <div className="flex items-center justify-end">
                         <Button
                           asChild
                           size="sm"
@@ -158,7 +158,7 @@ export default function ProductsClientPage() {
             </div>
 
             {filteredProducts.length === 0 && (
-              <div className="text-center py-12">
+              <div className="py-12 text-center">
                 <p className="text-muted-foreground">
                   ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
                 </p>

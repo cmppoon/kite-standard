@@ -7,11 +7,11 @@ import Link from "next/link";
 export default function Page() {
   return (
     <div className="min-h-screen">
-      <section className="relative py-12 px-4 overflow-hidden">
+      <section className="relative overflow-hidden px-4 py-12">
         {/* Background Pattern */}
         <div className="absolute inset-0">
           <svg
-            className="w-full h-full"
+            className="h-full w-full"
             viewBox="0 0 1200 200"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -165,19 +165,19 @@ export default function Page() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white font-kanit">
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <h1 className="font-kanit mb-6 text-3xl font-bold text-white md:text-4xl">
             แคตตาล็อกสินค้า
           </h1>
         </div>
       </section>
 
-      <section className="py-16 px-4 max-w-3xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="mx-auto max-w-3xl px-4 py-16">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {catalogs.map((catalog) => (
             <Card
               key={catalog.id}
-              className="group hover:shadow-lg transition-shadow p-0"
+              className="group p-0 transition-shadow hover:shadow-lg"
             >
               <CardHeader className="p-0">
                 <div className="relative h-96 overflow-hidden rounded-t-lg">
@@ -185,18 +185,18 @@ export default function Page() {
                     src={catalog.image || "/placeholder.svg"}
                     alt={`${catalog.name}`}
                     fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               </CardHeader>
               <CardContent className="p-4 pt-0">
-                <CardTitle className="text-lg mb-2">{catalog.name}</CardTitle>
+                <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
                 <div className="flex items-center justify-center">
                   <Button
                     asChild
                     size="sm"
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-white flex-1"
+                    className="border-primary text-primary hover:bg-primary flex-1 hover:text-white"
                   >
                     <Link
                       href={catalog.url}

@@ -1,15 +1,20 @@
-import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
 import React from "react";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section className="bg-white px-4 py-16">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">
             ทำไมต้องเลือกเรา?
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             เพราะเราไม่ใช่แค่ผู้จัดจำหน่าย
             แต่เป็นโรงงานผู้เชี่ยวชาญที่อยู่ในวงการมากว่า 40 ปี
             โดยเฉพาะในงานที่ต้องใช้ความชำนาญสูงอย่างการทำลวดลาย
@@ -17,13 +22,13 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <Card className="text-center">
             <CardContent className="pt-4">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary">40+</span>
+              <div className="bg-secondary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                <span className="text-primary text-2xl font-bold">40+</span>
               </div>
-              <CardTitle className="text-xl mb-3">ปีในวงการฝ้าเพดาน</CardTitle>
+              <CardTitle className="mb-3 text-xl">ปีในวงการฝ้าเพดาน</CardTitle>
               <CardDescription>
                 ได้รับความไว้วางใจจากลูกค้าหลายพันรายทั่วประเทศมานานกว่า 40 ปี
               </CardDescription>
@@ -32,10 +37,10 @@ export default function WhyChooseUs() {
 
           <Card className="text-center">
             <CardContent className="pt-4">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary">24/7</span>
+              <div className="bg-secondary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                <span className="text-primary text-2xl font-bold">24/7</span>
               </div>
-              <CardTitle className="text-xl mb-3">
+              <CardTitle className="mb-3 text-xl">
                 พร้อมให้บริการตลอด 24 ชั่วโมง
               </CardTitle>
               <CardDescription>
@@ -47,10 +52,10 @@ export default function WhyChooseUs() {
 
           <Card className="text-center">
             <CardContent className="pt-4">
-              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary">100%</span>
+              <div className="bg-secondary/10 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full">
+                <span className="text-primary text-2xl font-bold">100%</span>
               </div>
-              <CardTitle className="text-xl mb-3">
+              <CardTitle className="mb-3 text-xl">
                 การรับประกันและความพึงพอใจ
               </CardTitle>
               <CardDescription>
