@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 export const metadata = {
   title:
-    "Premium Ceiling Products & Materials | Acoustic, Fire-Resistant & Decorative Ceilings",
+    "สินค้า",
   description:
     "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
   keywords:

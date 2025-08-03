@@ -18,9 +18,12 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "Kai Standard",
+  title: {
+    default: "ไคสแตนดาร์ด - ครบเครื่องเรื่องฝ้าเพดาน",
+    template: "%s - ไคสแตนดาร์ด",
+  },
   description:
-    "ครบเครื่องเรื่องฝ้าเพดาน วัสดุฝ้าเพดานคุณภาพสูง บริการติดตั้งฝ้าเพดานมืออาชีพ",
+    "ครบเครื่องเรื่องฝ้าเพดาน วัสดุฝ้าเพดานคุณภาพสูง และบริการติดตั้งระดับมืออาชีพ ด้วยประสบการณ์กว่า 40 ปี",
   keywords:
     "ceiling materials, acoustic ceiling tiles, fire resistant ceiling, suspended ceiling, ceiling installation, commercial ceiling, residential ceiling",
   authors: [{ name: "KaiStandard" }],
@@ -46,10 +49,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kai Standard - Premium Ceiling Solutions & Materials",
-    description:
-      "Leading provider of premium ceiling materials and professional installation services.",
-    images: ["/og-image.jpg"],
   },
 };
 

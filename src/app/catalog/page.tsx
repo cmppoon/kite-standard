@@ -4,6 +4,15 @@ import { catalogs } from "@/data/catalog";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title:
+    "แคตตาล็อก",
+  description:
+    "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
+  keywords:
+    "ceiling products, acoustic ceiling tiles, fire resistant ceiling panels, decorative ceiling materials, commercial ceiling solutions, suspended ceiling systems",
+};
+
 export default function Page() {
   return (
     <div className="min-h-screen">

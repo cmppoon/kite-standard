@@ -1,7 +1,7 @@
 import MapPageClient from "@/app/map/MapPageClient";
 
 export const metadata = {
-  title: "Kai Standard Locations & Service Areas | Find a Branch Near You",
+  title: "แผนที่",
   description:
     "Kai Standard locations across the United States. We serve 30+ states with professional ceiling installation and repair services. Contact your local branch today.",
   keywords:

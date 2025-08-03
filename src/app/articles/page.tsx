@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Ceiling Design Articles & Installation Guides | Expert Tips & Trends",
+  title: "บทความ",
   description:
     "Expert articles on ceiling design trends, installation guides, safety standards, and maintenance tips. Stay updated with the latest in ceiling technology and design.",
   keywords:
