@@ -1,22 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { articles } from "@/data/articles";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-// Mock article data - in a real app, this would come from a database
-const getArticle = (id: string) => {
-  const article = articles.filter((article) => article.id === parseInt(id, 10));
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles.find((article) => article.slug === decodeURIComponent(slug));
+
+  if (!article) {
+    return {
+      title: "ไม่พบบทความ",
+      description: "ไม่พบบทความที่คุณต้องการ",
+    };
+  }
+
+  return {
+    title: article.title,
+    description: article.excerpt,
+    keywords: "บทความ, ฝ้า, การออกแบบฝ้า, การติดตั้งฝ้า",
+    openGraph: {
+      url: article.image
+    }
+  };
+}
+
+const getArticle = (slug: string) => {
+  const decodedSlug = decodeURIComponent(slug);
+  const article = articles.filter((article) => article.slug === decodedSlug);
   return article.length > 0 ? article[0] : null;
 };
 
 export default async function ArticleDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const article = getArticle(id);
+  const { slug } = await params;
+  const article = getArticle(slug);
 
   if (!article) {
     return (

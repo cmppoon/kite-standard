@@ -14,27 +14,25 @@ import { products } from "@/data/products";
 import { Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 const categories = [
-  { id: -1, name: "ทั้งหมด", count: products.length },
+  { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
   ...productCategories.map((category) => ({
     id: category.id,
     name: category.name,
     count: products.filter((product) => product.categoryId === category.id)
       .length,
+    slug: category.slug,
   })),
 ];
 
-export default function ProductsClientPage() {
-  const searchParams = useSearchParams();
-
-  const preselectedCategory = searchParams.get("category");
-
-  const [selectedCategory, setSelectedCategory] = useState(
-    preselectedCategory ? parseInt(preselectedCategory) : -1,
-  ); // -1 for "All"
+export default function ProductsClientPage({
+  selectedCategory,
+}: {
+  selectedCategory: number;
+}) {
+  console.log("Selected Category:", selectedCategory);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) => {
@@ -75,30 +73,37 @@ export default function ProductsClientPage() {
             <div>
               <h3 className="mb-4 font-semibold">ประเภทสินค้า</h3>
               <div className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`w-full rounded-md px-3 py-2 text-left transition-colors ${
-                      selectedCategory === category.id
-                        ? "bg-primary text-primary-foreground"
-                        : "hover:bg-muted"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>{category.name}</span>
-                      <span
-                        className={`text-sm ${
-                          selectedCategory === category.id
-                            ? "text-white"
-                            : "text-muted-foreground"
-                        }`}
+                {categories.map((category) => {
+                  const isSelected = selectedCategory === category.id;
+
+                  return (
+                    <Button
+                      key={category.id}
+                      asChild
+                      variant={isSelected ? "default" : "ghost"}
+                      className={`w-full justify-between  ${
+                        isSelected ? "bg-primary text-primary-foreground" : "hover:bg-muted hover:text-foreground"
+                      }`}
+                    >
+                      <Link
+                        href={
+                          category.id === -1
+                            ? "/products"
+                            : `/products/categories/${category.slug}`
+                        }
                       >
-                        {category.count}
-                      </span>
-                    </div>
-                  </button>
-                ))}
+                        <span>{category.name}</span>
+                        <span
+                          className={`text-sm ${
+                            isSelected ? "text-white" : "text-muted-foreground"
+                          }`}
+                        >
+                          {category.count}
+                        </span>
+                      </Link>
+                    </Button>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -120,7 +125,7 @@ export default function ProductsClientPage() {
                   <CardHeader className="p-0">
                     <div className="relative h-48 overflow-hidden rounded-t-lg">
                       <Image
-                        src={product.image || "/placeholder.svg"}
+                        src={product.image}
                         alt={`${product.name}`}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"

@@ -1,9 +1,7 @@
 import ProductsClientPage from "@/app/products/ProductsClientPage";
-import { Suspense } from "react";
 
 export const metadata = {
-  title:
-    "สินค้า",
+  title: "สินค้า",
   description:
     "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
   keywords:
@@ -11,9 +9,5 @@ export const metadata = {
 };
 
 export default function ProductsPage() {
-  return (
-    <Suspense fallback={<div>กำลังโหลดสินค้า...</div>}>
-      <ProductsClientPage />
-    </Suspense>
-  );
+  return <ProductsClientPage selectedCategory={-1} />;
 }

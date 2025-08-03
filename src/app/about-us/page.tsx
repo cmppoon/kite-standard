@@ -216,8 +216,8 @@ export default function Page() {
             </div>
             <div className="relative h-96 overflow-hidden rounded-lg">
               <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Kai Standard team working on a ceiling installation project"
+                src="/about-us/about-us.webp"
+                alt="รูปภาพบริษัท Kai Standard"
                 fill
                 className="object-cover"
               />

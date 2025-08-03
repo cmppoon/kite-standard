@@ -128,7 +128,7 @@ export default function ArticlesPage() {
                         variant="outline"
                         className="border-primary text-primary hover:bg-primary hover:text-white"
                       >
-                        <Link href={`/articles/${article.id}`}>อ่านต่อ</Link>
+                        <Link href={`/articles/${article.slug}`}>อ่านต่อ</Link>
                       </Button>
                     </div>
                   </CardContent>
