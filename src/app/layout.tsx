@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://kaistandard.com",
     siteName: "Kai Standard",
-    title: "Kai Standard - Premium Ceiling Solutions & Materials",
+    title: "ไคสแตนดาร์ด - ครบเครื่องเรื่องฝ้าเพดาน",
     description:
-      "Leading provider of premium ceiling materials and professional installation services with 25+ years of experience.",
+      "ผู้นำด้านการจัดจำหน่ายโครงคร่าวฝ้าเพดาน งานฉาบและผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ",
     images: [
       {
         url: "/og-image.jpg",
