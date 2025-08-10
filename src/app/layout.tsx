@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://kaistandard.com",
-    siteName: "Kai Standard",
+    siteName: "ไคสแตนดาร์ด",
     title: "ไคสแตนดาร์ด - ครบเครื่องเรื่องฝ้าเพดาน",
     description:
       "ผู้นำด้านการจัดจำหน่ายโครงคร่าวฝ้าเพดาน งานฉาบและผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Kai Standard - Premium Ceiling Solutions",
+        alt: "Kai Standard - ครบเครื่องเรื่องฝ้าเพดาน",
       },
     ],
   },

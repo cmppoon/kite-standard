@@ -89,9 +89,9 @@ export default function HomePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "Kai Standard",
+            name: "ไคสแตนดาร์ด",
             description:
-              "Leading provider of premium ceiling materials and professional installation services",
+              "ผู้นำด้านการจัดจำหน่ายโครงคร่าวฝ้าเพดาน งานฉาบและผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ",
             url: "https://kaistandard.com",
             logo: "https://kaistandard.com/logo.png",
             contactPoint: {
