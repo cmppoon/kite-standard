@@ -23,7 +23,7 @@ export default function MapPage() {
         {/* Locations Grid */}
         <div className="grid grid-cols-1 gap-6">
           {locations.map((location) => (
-            <Card key={location.id} className="overflow-hidden">
+            <Card key={location.id} className="overflow-hidden py-0">
               <div className="md:flex">
                 <div className="relative w-full md:w-1/2">
                   <Image
@@ -34,7 +34,7 @@ export default function MapPage() {
                   />
                 </div>
 
-                <div className="w-full md:w-1/2">
+                <div className="w-full md:w-1/2 py-6 px-4">
                   <CardHeader>
                     <CardTitle className="flex items-center">
                       <MapPin className="mr-2 h-5 w-5" />

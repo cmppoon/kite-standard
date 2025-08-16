@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from "@/components/ui/card";
 import WhyChooseUs from "@/components/whyChooseUs";
 import { productCategories } from "@/data/productCategories";
@@ -36,7 +35,7 @@ export default function HomePage() {
           {productCategories.map((category) => (
             <Card
               key={category.id}
-              className="group p-0 transition-shadow hover:shadow-lg"
+              className="group gap-4 p-0 transition-shadow hover:shadow-lg"
             >
               <CardHeader className="p-0">
                 <div className="relative h-48 overflow-hidden rounded-t-lg">
@@ -48,17 +47,16 @@ export default function HomePage() {
                   />
                 </div>
               </CardHeader>
-              <CardContent className="p-4">
-                <CardTitle className="mb-2 text-lg">{category.name}</CardTitle>
-                <CardDescription className="mb-3 text-sm">
-                  {category.description}
-                </CardDescription>
+              <CardContent className="flex flex-1 flex-col justify-between pb-4">
+                <CardTitle className="mb-4 text-center text-lg">
+                  {category.name}
+                </CardTitle>
                 <div className="flex items-center justify-center">
                   <Button
                     asChild
                     size="sm"
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-white"
+                    className="border-primary text-primary hover:bg-primary flex-1 hover:text-white"
                   >
                     <Link href={`/products/category/${category.slug}`}>
                       ดูรายละเอียด
@@ -73,7 +71,7 @@ export default function HomePage() {
         <div className="mt-12 text-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/products">
-              ดูสินค้าทั้งหมด <ArrowRight className="ml-2 h-4 w-4" />
+              ดูสินค้าทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
             </Link>
           </Button>
         </div>

@@ -7,7 +7,7 @@ export const locations = [
     phone: "02-415-3676",
     email: "info@kaistandard.com",
     hours: "จันทร์ - ศุกร์ 07:30 - 18:00",
-    imageSrc: "/images/locations/ny-office.jpg",
+    imageSrc: "/map/แผนที่ร้าน.jpg",
     googleMapUrl: "https://maps.app.goo.gl/kCr3mPjbc1gWfGUk8",
   },
 ];
