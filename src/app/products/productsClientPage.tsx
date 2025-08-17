@@ -123,7 +123,7 @@ export default function ProductsClientPage({
                   className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg"
                 >
                   <CardHeader className="p-0">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
+                    <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
                       <Image
                         src={product.image}
                         alt={`${product.name}`}

@@ -49,7 +49,7 @@ export default async function ProductDetailPage({
     <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-8">
         {/* Breadcrumb */}
-        <div className="mb-8">
+        <div className="mb-2">
           <Button
             variant="ghost"
             asChild
@@ -65,7 +65,7 @@ export default async function ProductDetailPage({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="relative aspect-square w-full overflow-hidden rounded-lg">
+            <div className="relative aspect-[700/600] w-full overflow-hidden rounded-lg">
               <Image
                 src={product.image}
                 alt={product.name}
