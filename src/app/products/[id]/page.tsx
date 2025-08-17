@@ -79,7 +79,7 @@ export default async function ProductDetailPage({
           <div className="space-y-6">
             <div>
               <h1 className="mb-4 text-3xl font-bold">{product.name}</h1>
-              <p className="text-muted-foreground mb-6 text-lg">
+              <p className="text-muted-foreground mb-6 text-md">
                 {product.description}
               </p>
               <div className="text-primary mb-6 text-3xl font-bold">
