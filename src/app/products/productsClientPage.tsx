@@ -56,7 +56,7 @@ export default function ProductsClientPage({
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
-          <div className="space-y-6 lg:w-64">
+          <div className="space-y-6 lg:w-72">
             <div className="relative">
               <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
               <Input
@@ -79,8 +79,10 @@ export default function ProductsClientPage({
                       key={category.id}
                       asChild
                       variant={isSelected ? "default" : "ghost"}
-                      className={`w-full justify-between  ${
-                        isSelected ? "bg-primary text-primary-foreground" : "hover:bg-muted hover:text-foreground"
+                      className={`w-full justify-between ${
+                        isSelected
+                          ? "bg-primary text-primary-foreground"
+                          : "hover:bg-muted hover:text-foreground"
                       }`}
                     >
                       <Link
@@ -114,14 +116,14 @@ export default function ProductsClientPage({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
               {filteredProducts.map((product) => (
                 <Card
                   key={product.id}
-                  className="group flex h-full flex-col transition-shadow hover:shadow-lg"
+                  className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg"
                 >
                   <CardHeader className="p-0">
-                    <div className="relative h-48 overflow-hidden rounded-t-lg">
+                    <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
                       <Image
                         src={product.image}
                         alt={`${product.name}`}
@@ -134,7 +136,7 @@ export default function ProductsClientPage({
                     <CardTitle className="mb-2 line-clamp-2 text-lg">
                       {product.name}
                     </CardTitle>
-                    <CardDescription className="mb-3 text-sm">
+                    <CardDescription className="mb-3 line-clamp-5 text-sm">
                       {product.description}
                     </CardDescription>
 

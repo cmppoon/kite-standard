@@ -8,11 +8,10 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/products";
-import { ArrowLeft, Check } from "lucide-react";
+import { ArrowLeft, Check, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Mock product data - in a real app, this would come from a database
 const getProduct = (id: string) => {
   const product = products.filter((product) => product.id === parseInt(id, 10));
 
@@ -66,7 +65,7 @@ export default async function ProductDetailPage({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="relative h-96 overflow-hidden rounded-lg">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -74,21 +73,6 @@ export default async function ProductDetailPage({
                 className="object-cover"
               />
             </div>
-            {/* <div className="grid grid-cols-3 gap-4">
-              {product.images.slice(1).map((image, index) => (
-                <div
-                  key={index}
-                  className="relative h-24 rounded-lg overflow-hidden"
-                >
-                  <Image
-                    src={image || "/placeholder.svg"}
-                    alt={`${product.name} view ${index + 2}`}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform cursor-pointer"
-                  />
-                </div>
-              ))}
-            </div> */}
           </div>
 
           {/* Product Info */}
@@ -121,100 +105,85 @@ export default async function ProductDetailPage({
         </div>
 
         {/* Detailed Information Tabs */}
-        <div className="mt-16">
-          <Tabs defaultValue="specifications" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="specifications">Specifications</TabsTrigger>
-              <TabsTrigger value="applications">Applications</TabsTrigger>
-              <TabsTrigger value="installation">Installation</TabsTrigger>
-            </TabsList>
+        {(product.applications || product.optionalServices) && (
+          <div className="mt-16">
+            <Tabs
+              defaultValue={
+                product.applications ? "applications" : "optionalServices"
+              }
+              className="w-full"
+            >
+              <TabsList className="grid w-full grid-cols-2">
+                {product.applications && (
+                  <TabsTrigger value="applications">
+                    พื้นที่การใช้งาน
+                  </TabsTrigger>
+                )}
+                {product.optionalServices && (
+                  <TabsTrigger value="optionalServices">
+                    บริการเสริม
+                  </TabsTrigger>
+                )}
+              </TabsList>
 
-            <TabsContent value="specifications" className="mt-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Technical Specifications</CardTitle>
-                  <CardDescription>
-                    Detailed technical information and performance data
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {Object.entries(product.specifications).map(
-                      ([key, value]) => (
-                        <div
-                          key={key}
-                          className="flex justify-between py-2 border-b"
-                        >
-                          <span className="font-medium">{key}:</span>
-                          <span className="text-muted-foreground">{value}</span>
-                        </div>
-                      )
-                    )}
-                  </div> */}
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="applications" className="mt-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Ideal Applications</CardTitle>
-                  <CardDescription>
-                    Perfect environments and use cases for this product
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {product.applications.map((application, index) => (
-                      <div key={index} className="flex items-center">
-                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span>{application}</span>
+              {product.applications && (
+                <TabsContent value="applications" className="mt-8">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">
+                        พื้นที่การใช้งาน
+                      </CardTitle>
+                      <CardDescription>
+                        พื้นที่การใช้งานที่เหมาะสมกับสินค้านี้
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        {product.applications?.map((application, index) => (
+                          <div key={index} className="flex items-center">
+                            <Check className="mr-3 h-5 w-5 flex-shrink-0 text-green-500" />
+                            <span>{application}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div> */}
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="installation" className="mt-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Installation Information</CardTitle>
-                  <CardDescription>
-                    Professional installation guidelines and requirements
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="mb-2 font-semibold">
-                        Installation Method
-                      </h4>
-                      <p className="text-muted-foreground">
-                        Professional installation recommended. Standard
-                        suspended ceiling grid system required.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="mb-2 font-semibold">Tools Required</h4>
-                      <p className="text-muted-foreground">
-                        Standard ceiling installation tools, measuring
-                        equipment, safety gear.
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="mb-2 font-semibold">Installation Time</h4>
-                      <p className="text-muted-foreground">
-                        Approximately 1-2 hours per 100 sq ft with professional
-                        installation.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+              {product.optionalServices && (
+                <TabsContent value="optionalServices" className="mt-8">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">
+                        บริการเสริม
+                      </CardTitle>
+                      <CardDescription>
+                        บริการเสริมโดยผู้เชี่ยวชาญ
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {product.optionalServices.map((service, index) => (
+                          <div key={index} className="flex items-center">
+                            <Phone className="mr-3 h-5 w-5 flex-shrink-0 text-primary" />
+                            <div>
+                              <span className="font-semibold">
+                                {service.title}
+                              </span>
+                              <span className="text-muted-foreground mt-1 line-clamp-2">
+                                {service.description}
+                              </span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+            </Tabs>
+          </div>
+        )}
       </div>
     </div>
   );

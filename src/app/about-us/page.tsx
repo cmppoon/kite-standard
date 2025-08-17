@@ -196,11 +196,27 @@ export default function Page() {
                 เรื่องราวของเรา
               </h2>
               <div className="text-muted-foreground space-y-4">
-                <p>
-                  บริษัท ไคสแตนดาร์ด จำกัด คือผู้นำด้านการจัดจำหน่าย
-                  โครงคร่าวฝ้าเพดาน งานฉาบ
-                  และผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร
-                  ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ
+                <p className="text-justify">
+                  บริษัท ไคสแตนดาร์ด จำ กัด
+                  เป็นผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคามามากกว่า 40
+                  ปี
+                  โดยบริษัทมุ่งมั่นออกแบบและพัฒนานวัตกรรมในงานระบบฝ้าเพดานทั้งในด้านความสวยงาม
+                  และการใช้งาน เพื่อให้ลูกค้าทุกท่านมั่นใจในคุณภาพของผลิตภัณฑ์
+                  บริษัท ไคสแตนดาร์ด จำ กัด เริ่มดำ เนินกิจการตั้งแต่ปี พ.ศ.
+                  2527 โดยมีผลิตภัณฑ์ครอบคลุมตั้งแต่ แผ่นยิปซั่ม ฝ้าเพดาน
+                  ระบบผนัง ผลิตภัณฑ์กันซึม และแผ่นอคูสติค
+                </p>
+
+                <p className="text-justify">
+                  Kai Standard Co., Ltd. is a specialist in ceiling systems and
+                  roofing structures with over 40 years of experience. The
+                  company is dedicated to designing and innovating ceiling
+                  systems, focusing on both aesthetics and functionality to
+                  ensure that all customers are confident in the quality of our
+                  products. Kai Standard Co., Ltd. has been in operation since
+                  1984, offering a wide range of products including gypsum
+                  boards, ceiling systems, wall systems, waterproofing products,
+                  and acoustic panels.
                 </p>
               </div>
             </div>
@@ -287,7 +303,7 @@ export default function Page() {
               className="bg-primary hover:bg-primary/90"
             >
               <Link href="/contact-us">
-                ติดต่อเรา <ArrowRight className="h-4 w-4" />
+                ติดต่อเรา <ArrowRight className="-ml-1 h-4 w-4" />
               </Link>
             </Button>
             <Button

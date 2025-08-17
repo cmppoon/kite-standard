@@ -1,12 +1,7 @@
 import ContactUs from "@/components/contactUs";
 import HeroCarousel from "@/components/heroCarousel";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import WhyChooseUs from "@/components/whyChooseUs";
 import { productCategories } from "@/data/productCategories";
 import { ArrowRight } from "lucide-react";
@@ -31,14 +26,14 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
           {productCategories.map((category) => (
             <Card
               key={category.id}
               className="group gap-4 p-0 transition-shadow hover:shadow-lg"
             >
               <CardHeader className="p-0">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
+                <div className="relative w-full aspect-square overflow-hidden rounded-t-lg">
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={`${category.name}`}

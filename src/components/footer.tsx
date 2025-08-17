@@ -90,8 +90,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-white">
               <li>โทร: 02-415-3676</li>
-              <li>อีเมล: info@kaistandard.com</li>
-              <li>จันทร์ - ศุกร์ 07:30 - 18:00</li>
+              <li>อีเมล: sattawatt.sura@hotmail.com</li>
+              <li>จันทร์ - เสาร์ 07:00 - 17:00</li>
             </ul>
           </div>
         </div>

@@ -83,7 +83,7 @@ export default function ArticlesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {articles
               .sort((a, b) => b.id - a.id)
               .map((article) => (
@@ -92,7 +92,7 @@ export default function ArticlesPage() {
                   className="group p-0 transition-shadow hover:shadow-lg"
                 >
                   <CardHeader className="p-0">
-                    <div className="relative h-48 overflow-hidden rounded-t-lg">
+                    <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
                       <Image
                         src={article.image}
                         alt={`${article.title}`}
