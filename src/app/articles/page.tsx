@@ -19,58 +19,9 @@ export const metadata = {
     "ceiling design trends, ceiling installation guide, acoustic ceiling tips, fire safety ceiling standards, ceiling maintenance, ceiling design articles",
 };
 
-// const featuredArticles = [
-//   {
-//     id: 1,
-//     title: "2024 Ceiling Design Trends",
-//     description: "Discover the latest trends in ceiling design and materials",
-//     image: "/placeholder.svg?height=400&width=800",
-//     category: "Design Trends",
-//   },
-//   {
-//     id: 2,
-//     title: "Acoustic Ceiling Installation Guide",
-//     description: "Complete guide to professional acoustic ceiling installation",
-//     image: "/placeholder.svg?height=400&width=800",
-//     category: "Installation",
-//   },
-//   {
-//     id: 3,
-//     title: "Fire Safety in Ceiling Materials",
-//     description: "Understanding fire ratings and safety standards for ceilings",
-//     image: "/placeholder.svg?height=400&width=800",
-//     category: "Safety",
-//   },
-// ];
-
 export default function ArticlesPage() {
   return (
     <div className="bg-background min-h-screen">
-      {/* Featured Articles Carousel */}
-      {/* <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <Carousel className="w-full">
-            <CarouselContent>
-              {featuredArticles.map((article) => (
-                <CarouselItem key={article.id}>
-                  <div className="relative h-[400px] rounded-lg overflow-hidden">
-                    <Image
-                      src={article.image}
-                      alt={`${article.title}`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/50 flex items-end"></div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
-          </Carousel>
-        </div>
-      </section> */}
-
       {/* Articles Grid */}
       <section className="px-4 py-8">
         <div className="mx-auto max-w-5xl">

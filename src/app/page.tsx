@@ -19,7 +19,7 @@ export default function HomePage() {
       {/* Products Section */}
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">ประเภทสินค้า</h2>
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl">ประเภทสินค้า</h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
             อาคารพาณิชย์ และอุตสาหกรรม
@@ -76,7 +76,7 @@ export default function HomePage() {
       <WhyChooseUs />
 
       {/* Structured Data for SEO */}
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -107,7 +107,7 @@ export default function HomePage() {
             areaServed: "United States",
           }),
         }}
-      />
+      /> */}
     </div>
   );
 }

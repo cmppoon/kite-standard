@@ -3,12 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
-export default function ContactUs() {
+export default function ContactUs({
+  fromContactUs = false,
+}: {
+  fromContactUs?: boolean;
+}) {
   return (
     <section className="bg-secondary/5 px-4 py-16">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h2>
+          {fromContactUs ? (
+            <h1 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h1>
+          ) : (
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h2>
+          )}
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             ติดต่อผู้เชี่ยวชาญของเราเพื่อรับโซลูชันฝ้าเพดานที่ออกแบบเฉพาะสำหรับคุณ
           </p>
@@ -21,9 +29,15 @@ export default function ContactUs() {
               <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
                 <Phone className="text-primary h-8 w-8" />
               </div>
-              <h3 className="text-accent mb-2 text-lg font-semibold">
-                โทรศัพท์
-              </h3>
+              {fromContactUs ? (
+                <h2 className="text-accent mb-2 text-lg font-semibold">
+                  โทรศัพท์
+                </h2>
+              ) : (
+                <h3 className="text-accent mb-2 text-lg font-semibold">
+                  โทรศัพท์
+                </h3>
+              )}
               <p className="text-muted-foreground mb-3 text-sm">
                 จันทร์ - เสาร์ 07:00 - 17:00
               </p>
