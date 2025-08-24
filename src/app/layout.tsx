@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar";
 import type { Metadata } from "next";
 import { Kanit, Sarabun } from "next/font/google";
 import type React from "react";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const sarabun = Sarabun({
@@ -63,6 +64,7 @@ export default function RootLayout({
       <body className={`${sarabun.className} ${kanit.variable}`}>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
