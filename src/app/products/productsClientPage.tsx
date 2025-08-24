@@ -118,47 +118,45 @@ export default function ProductsClientPage({
 
             <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
               {filteredProducts.map((product) => (
-                <Card
+                <Link
                   key={product.id}
-                  className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg"
+                  href={`/products/${product.id}`}
+                  className="group flex h-full flex-col rounded-lg border transition-shadow hover:shadow-lg"
                 >
-                  <CardHeader className="p-0">
-                    <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
-                      <Image
-                        src={product.image}
-                        alt={`${product.name}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-1 flex-col p-4">
-                    <CardTitle className="mb-2 line-clamp-2 text-lg">
-                      {product.name}
-                    </CardTitle>
-                    <CardDescription className="mb-3 line-clamp-5 text-sm">
-                      {product.description}
-                    </CardDescription>
+                  <Card className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg">
+                    <CardHeader className="p-0">
+                      <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
+                        <Image
+                          src={product.image}
+                          alt={`${product.name}`}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                    </CardHeader>
+                    <CardContent className="flex flex-1 flex-col p-4">
+                      <CardTitle className="mb-2 line-clamp-2 text-lg">
+                        {product.name}
+                      </CardTitle>
+                      <CardDescription className="mb-3 line-clamp-5 text-sm">
+                        {product.description}
+                      </CardDescription>
 
-                    <div className="mt-auto pt-2">
-                      <div className="text-primary mb-4 text-lg font-semibold">
-                        {product.price}
+                      <div className="mt-auto pt-2">
+                        <div className="text-primary mb-4 text-lg font-semibold">
+                          {product.price}
+                        </div>
+                        <div className="flex items-center justify-end">
+                          <div className="flex items-center justify-end">
+                            <span className="border-primary text-primary group-hover:bg-primary rounded border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                              ดูรายละเอียด
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-end">
-                        <Button
-                          asChild
-                          size="sm"
-                          variant="outline"
-                          className="border-primary text-primary hover:bg-primary hover:text-white"
-                        >
-                          <Link href={`/products/${product.id}`}>
-                            ดูรายละเอียด
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
 

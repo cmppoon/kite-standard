@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -38,52 +37,46 @@ export default function ArticlesPage() {
             {articles
               .sort((a, b) => b.id - a.id)
               .map((article) => (
-                <Card
-                  key={article.id}
-                  className="group p-0 transition-shadow hover:shadow-lg"
-                >
-                  <CardHeader className="p-0">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
-                      <Image
-                        src={article.image}
-                        alt={`${article.title}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                  </CardHeader>
-                  <CardContent className="p-6 pt-0">
-                    <div className="text-muted-foreground mb-3 flex items-center gap-4 text-sm">
-                      <div className="flex items-center">
-                        <Calendar className="mr-1 h-4 w-4" />
-                        {new Date(article.date).toLocaleDateString("en-GB")}
+                <Link key={article.id} href={`/articles/${article.slug}`}>
+                  <Card className="group p-0 transition-shadow hover:shadow-lg">
+                    <CardHeader className="p-0">
+                      <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
+                        <Image
+                          src={article.image}
+                          alt={`${article.title}`}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
                       </div>
-                      <div className="flex items-center">
-                        <Clock className="mr-2 h-4 w-4" />
-                        ใช้เวลาอ่าน {article.readTime} นาที
+                    </CardHeader>
+                    <CardContent className="p-6 pt-0">
+                      <div className="text-muted-foreground mb-3 flex items-center gap-4 text-sm">
+                        <div className="flex items-center">
+                          <Calendar className="mr-1 h-4 w-4" />
+                          {new Date(article.date).toLocaleDateString("en-GB")}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="mr-2 h-4 w-4" />
+                          ใช้เวลาอ่าน {article.readTime} นาที
+                        </div>
                       </div>
-                    </div>
 
-                    <CardTitle className="mb-3 line-clamp-2 text-xl">
-                      {article.title}
-                    </CardTitle>
+                      <CardTitle className="mb-3 line-clamp-2 text-xl">
+                        {article.title}
+                      </CardTitle>
 
-                    <CardDescription className="mb-4 line-clamp-3 min-h-[72px]">
-                      {article.excerpt}
-                    </CardDescription>
+                      <CardDescription className="mb-4 line-clamp-3 min-h-[72px]">
+                        {article.excerpt}
+                      </CardDescription>
 
-                    <div className="flex items-center justify-end">
-                      <Button
-                        asChild
-                        size="sm"
-                        variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-white"
-                      >
-                        <Link href={`/articles/${article.slug}`}>อ่านต่อ</Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
+                      <div className="flex items-center justify-end">
+                        <span className="border-primary text-primary group-hover:bg-primary rounded border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                          อ่านต่อ
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
           </div>
         </div>

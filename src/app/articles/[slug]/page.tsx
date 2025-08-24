@@ -64,7 +64,7 @@ export default async function ArticleDetailPage({
         <Button
           variant="ghost"
           asChild
-          className="border-primary hover:bg-primary mb-8 hover:text-white"
+          className="border-primary hover:bg-primary mb-2 hover:text-white"
         >
           <Link href="/articles">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -74,7 +74,7 @@ export default async function ArticleDetailPage({
 
         {/* Article Header */}
         <div className="mb-8">
-          <h1 className="mb-6 text-3xl font-bold md:text-4xl">
+          <h1 className="mb-1 text-3xl font-bold md:text-4xl">
             {article.title}
           </h1>
 

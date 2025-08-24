@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary border-t">
       <div className="mx-auto max-w-5xl px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div>
             <h3
               className="mb-4 flex items-center text-xl font-bold text-white"
@@ -21,7 +21,7 @@ export default function Footer() {
               />
               Kai Standard
             </h3>
-            <p className="text-white">
+            <p className="text-white text-balance">
               ผู้นำด้านวัสดุฝ้าเพดานคุณภาพสูงและบริการติดตั้งมืออาชีพมายาวนานกว่า
               40 ปี
             </p>
@@ -47,6 +47,14 @@ export default function Footer() {
                   className="hover:text-accent-foreground text-white"
                 >
                   สินค้า
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/catalogs"
+                  className="hover:text-accent-foreground text-white"
+                >
+                  แคตตาล็อก
                 </Link>
               </li>
               <li>

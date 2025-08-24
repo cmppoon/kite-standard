@@ -4,9 +4,7 @@ export const metadata = {
   title:
     "ติดต่อ",
   description:
-    "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
-  keywords:
-    "ceiling products, acoustic ceiling tiles, fire resistant ceiling panels, decorative ceiling materials, commercial ceiling solutions, suspended ceiling systems",
+    "ผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคามามากกว่า 40 ปี มุ่งมั่นออกแบบและพัฒนานวัตกรรมในงานระบบฝ้าเพดานทั้งในด้านความสวยงาม และการใช้งาน",
 };
 
 export default function Page() {

@@ -1,16 +1,12 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { catalogs } from "@/data/catalog";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title:
-    "แคตตาล็อก",
+  title: "แคตตาล็อก",
   description:
-    "Browse our comprehensive collection of premium ceiling materials including acoustic tiles, fire-resistant panels, decorative ceilings, and commercial solutions. Professional installation available.",
-  keywords:
-    "ceiling products, acoustic ceiling tiles, fire resistant ceiling panels, decorative ceiling materials, commercial ceiling solutions, suspended ceiling systems",
+    "ผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคามามากกว่า 40 ปี มุ่งมั่นออกแบบและพัฒนานวัตกรรมในงานระบบฝ้าเพดานทั้งในด้านความสวยงาม และการใช้งาน",
 };
 
 export default function Page() {
@@ -184,40 +180,33 @@ export default function Page() {
       <section className="mx-auto max-w-3xl px-4 py-16">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {catalogs.map((catalog) => (
-            <Card
+            <Link
               key={catalog.id}
-              className="group p-0 transition-shadow hover:shadow-lg"
+              href={catalog.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <CardHeader className="p-0">
-                <div className="relative h-96 overflow-hidden rounded-t-lg">
-                  <Image
-                    src={catalog.image || "/placeholder.svg"}
-                    alt={`${catalog.name}`}
-                    fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="p-4 pt-0">
-                <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
-                <div className="flex items-center justify-center">
-                  <Button
-                    asChild
-                    size="sm"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary flex-1 hover:text-white"
-                  >
-                    <Link
-                      href={catalog.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ดาวน์โหลด
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+              <Card className="group p-0 transition-shadow hover:shadow-lg">
+                <CardHeader className="p-0">
+                  <div className="relative h-96 overflow-hidden rounded-t-lg">
+                    <Image
+                      src={catalog.image || "/placeholder.svg"}
+                      alt={`${catalog.name}`}
+                      fill
+                      className="object-contain transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </CardHeader>
+                <CardContent className="p-4 pt-0">
+                  <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
+                  <div className="flex items-center justify-center">
+                    <span className="border-primary text-primary group-hover:bg-primary flex-1 rounded border px-3 py-1 text-sm transition-colors group-hover:text-white text-center">
+                      ดูรายละเอียด
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>
