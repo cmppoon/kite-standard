@@ -200,7 +200,7 @@ export default function Page() {
                 <CardContent className="p-4 pt-0">
                   <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
                   <div className="flex items-center justify-center">
-                    <span className="border-primary text-primary group-hover:bg-primary flex-1 rounded border px-3 py-1 text-sm transition-colors group-hover:text-white text-center">
+                    <span className="border-primary text-primary group-hover:bg-primary flex-1 rounded-md border px-3 py-1 text-center text-sm transition-colors group-hover:text-white">
                       ดูรายละเอียด
                     </span>
                   </div>

@@ -32,7 +32,6 @@ export default function ProductsClientPage({
 }: {
   selectedCategory: number;
 }) {
-  console.log("Selected Category:", selectedCategory);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProducts = products.filter((product) => {
@@ -148,7 +147,7 @@ export default function ProductsClientPage({
                         </div>
                         <div className="flex items-center justify-end">
                           <div className="flex items-center justify-end">
-                            <span className="border-primary text-primary group-hover:bg-primary rounded border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                            <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
                               ดูรายละเอียด
                             </span>
                           </div>

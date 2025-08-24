@@ -26,40 +26,35 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 xl:grid-cols-4">
           {productCategories.map((category) => (
-            <Card
+            <Link
               key={category.id}
-              className="group gap-4 p-0 transition-shadow hover:shadow-lg"
+              href={`/products/category/${category.slug}`}
             >
-              <CardHeader className="p-0">
-                <div className="relative w-full aspect-square overflow-hidden rounded-t-lg">
-                  <Image
-                    src={category.image || "/placeholder.svg"}
-                    alt={`${category.name}`}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="flex flex-1 flex-col justify-between pb-4">
-                <CardTitle className="mb-4 text-center text-lg">
-                  {category.name}
-                </CardTitle>
-                <div className="flex items-center justify-center">
-                  <Button
-                    asChild
-                    size="sm"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary flex-1 hover:text-white"
-                  >
-                    <Link href={`/products/category/${category.slug}`}>
+              <Card className="group h-full gap-4 p-0 transition-shadow hover:shadow-lg">
+                <CardHeader className="p-0">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
+                    <Image
+                      src={category.image || "/placeholder.svg"}
+                      alt={`${category.name}`}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                </CardHeader>
+                <CardContent className="flex flex-1 flex-col justify-between pb-4">
+                  <CardTitle className="mb-4 text-center text-lg">
+                    {category.name}
+                  </CardTitle>
+                  <div className="flex items-center justify-center">
+                    <span className="border-primary text-primary group-hover:bg-primary flex-1 rounded-md border px-3 py-1 text-center text-sm transition-colors group-hover:text-white">
                       ดูรายละเอียด
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+                    </span>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 

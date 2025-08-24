@@ -70,7 +70,7 @@ export default function ArticlesPage() {
                       </CardDescription>
 
                       <div className="flex items-center justify-end">
-                        <span className="border-primary text-primary group-hover:bg-primary rounded border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                        <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
                           อ่านต่อ
                         </span>
                       </div>
