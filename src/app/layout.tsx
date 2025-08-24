@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Kanit, Sarabun } from "next/font/google";
 import type React from "react";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 const sarabun = Sarabun({
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
