@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const productPages: MetadataRoute.Sitemap = products.map((product) => ({
-    url: `${baseUrl}/products/${product.id}`,
+    url: `${baseUrl}/products/${product.slug}`,
     lastModified: new Date(),
   }));
 

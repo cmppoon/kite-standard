@@ -119,7 +119,7 @@ export default function ProductsClientPage({
               {filteredProducts.map((product) => (
                 <Link
                   key={product.id}
-                  href={`/products/${product.id}`}
+                  href={`/products/${product.slug}`}
                   className="group flex h-full flex-col rounded-lg border transition-shadow hover:shadow-lg"
                 >
                   <Card className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg">

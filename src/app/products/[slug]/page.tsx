@@ -12,8 +12,10 @@ import { ArrowLeft, Check, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const getProduct = (id: string) => {
-  const product = products.filter((product) => product.id === parseInt(id, 10));
+const getProductBySlug = (slug: string) => {
+  const decodedSlug = decodeURIComponent(slug);
+
+  const product = products.filter((product) => product.slug === decodedSlug);
 
   return product.length > 0 ? product[0] : null;
 };
@@ -21,10 +23,10 @@ const getProduct = (id: string) => {
 export default async function ProductDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
-  const product = getProduct(id);
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
 
   if (!product) {
     return (
@@ -79,7 +81,7 @@ export default async function ProductDetailPage({
           <div className="space-y-6">
             <div>
               <h1 className="mb-4 text-3xl font-bold">{product.name}</h1>
-              <p className="text-muted-foreground mb-6 text-md">
+              <p className="text-muted-foreground text-md mb-6">
                 {product.description}
               </p>
               <div className="text-primary mb-6 text-3xl font-bold">
@@ -165,7 +167,7 @@ export default async function ProductDetailPage({
                       <div className="space-y-4">
                         {product.optionalServices.map((service, index) => (
                           <div key={index} className="flex items-center">
-                            <Phone className="mr-3 h-5 w-5 flex-shrink-0 text-primary" />
+                            <Phone className="text-primary mr-3 h-5 w-5 flex-shrink-0" />
                             <div>
                               <span className="font-semibold">
                                 {service.title}

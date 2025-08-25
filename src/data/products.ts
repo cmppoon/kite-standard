@@ -3,6 +3,7 @@ export const products = [
     id: 1,
     categoryId: 1,
     name: "แผ่นยิปซัมชนิดธรรมดา 9 มม. ขอบลาด ขนาด 120 x 240 ซม.",
+    slug: "แผ่นยิปซัมชนิดธรรมดา-9-มม-ขอบลาด-ขนาด-120-x-240-ซม",
     price: "ราคา 125 บาท +VAT7%",
     image: "/products/ยิปซั่ม/ยิปซั่ม9มิล ขอบลาด.webp",
     description:
@@ -14,6 +15,7 @@ export const products = [
     id: 2,
     categoryId: 1,
     name: "แผ่นยิปซัมชนิดธรรมดา 12 มม. ขอบลาด ขนาด 120 x 240 ซม.",
+    slug: "แผ่นยิปซัมชนิดธรรมดา-12-มม-ขอบลาด-ขนาด-120-x-240-ซม",
     price: "ราคา 160 บาท +VAT7%",
     image: "/products/ยิปซั่ม/ยิปซั่ม12มิล ขอบลาด.webp",
     description:
@@ -25,6 +27,7 @@ export const products = [
     id: 3,
     categoryId: 1,
     name: "แผ่นยิปซัมชนิดทนชื้น 9 มม. ขอบลาด ขนาด 120 x 240 ซม.",
+    slug: "แผ่นยิปซัมชนิดทนชื้น-9-มม-ขอบลาด-ขนาด-120-x-240-ซม",
     price: "ราคา 170 บาท +VAT7%",
     image: "/products/ยิปซั่ม/ยิปซั่ม9มิล ทนชื้น.webp",
     description:
@@ -40,6 +43,7 @@ export const products = [
     id: 4,
     categoryId: 1,
     name: "แผ่นยิปซัมชนิดทนชื้น 12 มม. ขอบลาด ขนาด 120 x 240 ซม",
+    slug: "แผ่นยิปซัมชนิดทนชื้น-12-มม-ขอบลาด-ขนาด-120-x-240-ซม",
     price: "ราคา 190 บาท +VAT7%",
     image: "/products/ยิปซั่ม/ยิปซั่ม12มิล ทนชื้น.webp",
     description:
@@ -55,6 +59,7 @@ export const products = [
     id: 5,
     categoryId: 2,
     name: "แผ่นฝ้าอะคูสติก ขนาด 600x1200x12มม.",
+    slug: "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x12มม",
     price: "ราคา 120- ไม่รวม Vat 7%",
     image: "/products/อะคูสติก/อะคูสติก ขนาด 12mm.webp",
     description:
@@ -77,6 +82,7 @@ export const products = [
     id: 6,
     categoryId: 2,
     name: "แผ่นฝ้าอะคูสติก ขนาด 600x1200x14มม",
+    slug: "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x14มม",
     price: "ราคา 135- ไม่รวม Vat 7%",
     image: "/products/อะคูสติก/อะคูสติก ขนาด 14mm.webp",
     description:
@@ -99,6 +105,7 @@ export const products = [
     id: 7,
     categoryId: 2,
     name: "แผ่นฝ้าอะคูสติก ขนาด 600x1200x16มม.",
+    slug: "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x16มม",
     price: "ราคา 175- ไม่รวม Vat 7%",
     image: "/products/อะคูสติก/อะคูสติก ขนาด 16mm.webp",
     description:
@@ -121,6 +128,7 @@ export const products = [
     id: 8,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดธรรมดาขนาด 300 x 300 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดธรรมดาขนาด-300-x-300-x-9-มม",
     price: "ราคา 140-ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิส 30x30.webp",
     description:
@@ -136,6 +144,7 @@ export const products = [
     id: 9,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดธรรมดาขนาด 450 x 450 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดธรรมดาขนาด-450-x-450-x-9-มม",
     price: "ราคา 180- ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิส 45x45.webp",
     description:
@@ -151,6 +160,7 @@ export const products = [
     id: 10,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดธรรมดาขนาด 600 x 600 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดธรรมดาขนาด-600-x-600-x-9-มม",
     price: "ราคา 210- ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิส 60x60.webp",
     description:
@@ -166,6 +176,7 @@ export const products = [
     id: 11,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดทนชื้นขนาด 300 x 300 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดทนชื้นขนาด-300-x-300-x-9-มม",
     price: "ราคา 140- ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิสทนชื้น 30x30.webp",
     description:
@@ -181,6 +192,7 @@ export const products = [
     id: 12,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดทนชื้นขนาด 450 x 450 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดทนชื้นขนาด-450-x-450-x-9-มม",
     price: "ราคา 200- ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิสทนชื้น 45x45.webp",
     description:
@@ -196,6 +208,7 @@ export const products = [
     id: 13,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดทนชื้นขนาด 600 x 600 x 9 มม.",
+    slug: "ช่องเซอร์วิสชนิดทนชื้นขนาด-600-x-600-x-9-มม",
     price: "ราคา 250- ไม่รวม Vat 7%",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิสทนชื้น 60x60.webp",
     description:
@@ -211,6 +224,7 @@ export const products = [
     id: 14,
     categoryId: 3,
     name: "ช่องเซอร์วิสชนิดสั่งทำ",
+    slug: "ช่องเซอร์วิสชนิดสั่งทำ",
     price: "ราคา -",
     image: "/products/ช่องเซอร์วิส/ช่องเซอร์วิสขนาดสั่งทำ.webp",
     description:
@@ -226,6 +240,7 @@ export const products = [
     id: 15,
     categoryId: 4,
     name: "เทปผ้ายิปซัมปิดรอยต่อ 2.5 ซม.",
+    slug: "เทปผ้ายิปซัมปิดรอยต่อ-2.5-ซม",
     price: "ราคา 28 บาท +VAT7%",
     image: "/products/อุปกรณ์ช่างฝ้า/ผ้าฉาบยิปซั่ม.jpg",
     description:
@@ -235,6 +250,7 @@ export const products = [
     id: 16,
     categoryId: 4,
     name: "สกรูไดวอลล์ขนาด 1 นิ้ว",
+    slug: "สกรูไดวอลล์ขนาด-1-นิ้ว",
     price: "ราคา 75 บาท +VAT7%",
     image: "/products/อุปกรณ์ช่างฝ้า/สกรูไดวอลล์.jpg",
     description:
@@ -244,6 +260,7 @@ export const products = [
     id: 17,
     categoryId: 5,
     name: "แปหลังคา อลูซิงค์ หนา 0.55 มม. ยาว 6 เมตร",
+    slug: "แปหลังคา-อลูซิงค์-หนา-0.55-มม-ยาว-6-เมตร",
     price: "ราคา 175- ไม่รวม Vat 7%",
     image: "/products/แปหลังคา/แปอลูซิงค์ 0.55.webp",
     description:
@@ -258,6 +275,7 @@ export const products = [
     id: 18,
     categoryId: 5,
     name: "แปหลังคา อลูซิงค์ หนา 0.70 มม. ยาว 6 เมตร",
+    slug: "แปหลังคา-อลูซิงค์-หนา-0.70-มม-ยาว-6-เมตร",
     price: "ราคา 225-  ไม่รวม Vat 7%",
     image: "/products/แปหลังคา/แปอลูซิงค์ 0.70.webp",
     description:
@@ -272,6 +290,7 @@ export const products = [
     id: 19,
     categoryId: 5,
     name: "แปหลังคา อลูซิงค์ หนา 1.20 มม. ยาว 6 เมตร",
+    slug: "แปหลังคา-อลูซิงค์-หนา-1.20-มม-ยาว-6-เมตร",
     price: "ราคา 300- ไม่รวม Vat 7%",
     image: "/products/แปหลังคา/แปอลูซิงค์ 1.20.webp",
     description:
@@ -286,6 +305,7 @@ export const products = [
     id: 20,
     categoryId: 5,
     name: "แปหลังคากัลวาไนซ์ 0.55 มม. ยาว 6 เมตร",
+    slug: "แปหลังคากัลวาไนซ์-0.55-มม-ยาว-6-เมตร",
     price: "ราคา 100- ไม่รวม Vat 7%",
     image: "/products/แปหลังคา/แป 0.55.webp",
     description:
@@ -295,6 +315,7 @@ export const products = [
     id: 21,
     categoryId: 5,
     name: "แปหลังคากัลวาไนซ์ 0.70 มม. ยาว 6 เมตร",
+    slug: "แปหลังคากัลวาไนซ์-0.70-มม-ยาว-6-เมตร",
     price: "ราคา 150- ไม่รวม Vat 7%",
     image: "/products/แปหลังคา/แป 0.70.webp",
     description:
@@ -304,6 +325,7 @@ export const products = [
     id: 22,
     categoryId: 6,
     name: "แผ่นปิดรอยต่อ Fastech ขนาด 10 ซม. x 3 เมตร",
+    slug: "แผ่นปิดรอยต่อ-Fastech-ขนาด-10-ซม-x-3-เมตร",
     price: "ราคา 125 บาท +VAT7%",
     image: "/products/แผ่นปิดรอยต่อ/แผ่นปิดรอยต่อ หน้ากว้าง10ซม.webp",
     description:
@@ -319,6 +341,7 @@ export const products = [
     id: 23,
     categoryId: 6,
     name: "แผ่นปิดรอยต่อ Fastech ขนาด 20 ซม. x 3 เมตร",
+    slug: "แผ่นปิดรอยต่อ-Fastech-ขนาด-20-ซม-x-3-เมตร",
     price: "ราคา 200 บาท +VAT7%",
     image: "/products/แผ่นปิดรอยต่อ/แผ่นปิดรอยต่อ หน้ากว้าง20ซม.webp",
     description:
@@ -334,6 +357,7 @@ export const products = [
     id: 24,
     categoryId: 6,
     name: "แผ่นปิดรอยต่อ Fastech ขนาด 30 ซม. x 3 เมตร",
+    slug: "แผ่นปิดรอยต่อ-Fastech-ขนาด-30-ซม-x-3-เมตร",
     price: "ราคา 275 บาท +VAT7%",
     image: "/products/แผ่นปิดรอยต่อ/แผ่นปิดรอยต่อ หน้ากว้าง30ซม.webp",
     description:
@@ -349,6 +373,7 @@ export const products = [
     id: 25,
     categoryId: 6,
     name: "แผ่นปิดรอยต่อ Fastech ขนาด 30 ซม. x 10 เมตร",
+    slug: "แผ่นปิดรอยต่อ-Fastech-ขนาด-30-ซม-x-10-เมตร",
     price: "ราคา 1000 บาท +VAT7%",
     image: "/products/แผ่นปิดรอยต่อ/แผ่นปิดรอยต่อ หน้ากว้าง30ซม.webp",
     description:
@@ -364,6 +389,7 @@ export const products = [
     id: 26,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายวงกลม ขนาด 600x600x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายวงกลม-ขนาด-600x600x9มม",
     price: "ราคา 175- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน เจาะรู 60x60x9.webp",
     description:
@@ -390,6 +416,7 @@ export const products = [
     id: 27,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายวงกลม ขนาด 600x600x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายวงกลม-ขนาด-600x600x12มม",
     price: "ราคา 185- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน เจาะรู 60x60x12.webp",
     description:
@@ -416,6 +443,7 @@ export const products = [
     id: 28,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายวงกลม ขนาด 600x1200x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายวงกลม-ขนาด-600x1200x9มม",
     price: "ราคา 340- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน เจาะรู 60x120x9.webp",
     description:
@@ -442,6 +470,7 @@ export const products = [
     id: 29,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายวงกลม ขนาด 600x1200x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายวงกลม-ขนาด-600x1200x12มม",
     price: "ราคา 365- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน เจาะรู 60x120x12.webp",
     description:
@@ -468,6 +497,7 @@ export const products = [
     id: 30,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายธงชาติอังกฤษ ขนาด 600x600x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายธงชาติอังกฤษ-ขนาด-600x600x9มม",
     price: "ราคา 175- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน ธงชาติ 60x60x9.webp",
     description:
@@ -494,6 +524,7 @@ export const products = [
     id: 31,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายธงชาติอังกฤษ ขนาด 600x600x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายธงชาติอังกฤษ-ขนาด-600x600x12มม",
     price: "ราคา 185- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน ธงชาติ 60x60x12.webp",
     description:
@@ -520,6 +551,7 @@ export const products = [
     id: 32,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายธงชาติอังกฤษ ขนาด 600x1200x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายธงชาติอังกฤษ-ขนาด-600x1200x9มม",
     price: "ราคา 340- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน ธงชาติ 60x120x9.webp",
     description:
@@ -546,6 +578,7 @@ export const products = [
     id: 33,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายธงชาติอังกฤษ ขนาด 600x1200x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายธงชาติอังกฤษ-ขนาด-600x1200x12มม",
     price: "ราคา 365- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน ธงชาติ 60x120x12.webp",
     description:
@@ -572,6 +605,7 @@ export const products = [
     id: 34,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายสะกดจิต ขนาด 600x600x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายสะกดจิต-ขนาด-600x600x9มม",
     price: "ราคา 175- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน สะกดจิต 60x60x9.webp",
     description:
@@ -598,6 +632,7 @@ export const products = [
     id: 35,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายสะกดจิต ขนาด 600x600x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายสะกดจิต-ขนาด-600x600x12มม",
     price: "ราคา 185- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน สะกดจิต 60x60x12.webp",
     description:
@@ -624,6 +659,7 @@ export const products = [
     id: 36,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายสะกดจิต ขนาด 600x1200x9มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายสะกดจิต-ขนาด-600x1200x9มม",
     price: "ราคา 340- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน สะกดจิต 60x120x9.webp",
     description:
@@ -650,6 +686,7 @@ export const products = [
     id: 37,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน เจาะรูลายสะกดจิต ขนาด 600x1200x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-เจาะรูลายสะกดจิต-ขนาด-600x1200x12มม",
     price: "ราคา 365- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นลดเสียงสะท้อน สะกดจิต 60x120x12.webp",
     description:
@@ -676,6 +713,7 @@ export const products = [
     id: 38,
     categoryId: 7,
     name: "แผ่นฝ้าลดเสียงสะท้อน ปรุลายหนอน ขนาด 1200x2400x12มม.",
+    slug: "แผ่นฝ้าลดเสียงสะท้อน-ปรุลายหนอน-ขนาด-1200x2400x12มม",
     price: "ราคา 365- ไม่รวม Vat 7%",
     image: "/products/แผ่นลดเสียงสะท้อน/แผ่นปรุลาย 1.20x2.40.webp",
     description:
