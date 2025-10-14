@@ -7,7 +7,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import "./globals.css";
-import { AnalyticsTracker } from "@/app/analyticsTracker";
 
 const sarabun = Sarabun({
   subsets: ["thai"],
@@ -74,14 +73,11 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
         </Script>
       </head>
       <body className={`${sarabun.className} ${kanit.variable}`}>
-        <AnalyticsTracker />
         <Navbar />
         {children}
         <Analytics />
