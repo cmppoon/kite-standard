@@ -4,8 +4,10 @@ import type { Metadata } from "next";
 import { Kanit, Sarabun } from "next/font/google";
 import type React from "react";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import "./globals.css";
+import { AnalyticsTracker } from "@/app/analyticsTracker";
 
 const sarabun = Sarabun({
   subsets: ["thai"],
@@ -37,8 +39,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://kaistandard.com",
     siteName: "ไคสแตนดาร์ด",
-    title:
-      "ไคสแตนดาร์ด - ผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคา",
+    title: "ไคสแตนดาร์ด - ผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคา",
     description:
       "ผู้เชี่ยวชาญด้านงานระบบฝ้าเพดานและโครงหลังคามามากกว่า 40 ปี มุ่งมั่นออกแบบและพัฒนานวัตกรรมในงานระบบฝ้าเพดานทั้งในด้านความสวยงาม และการใช้งาน",
     images: [
@@ -62,7 +63,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th">
+      <head>
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body className={`${sarabun.className} ${kanit.variable}`}>
+        <AnalyticsTracker />
         <Navbar />
         {children}
         <Analytics />
