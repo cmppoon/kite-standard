@@ -38,7 +38,7 @@ export default function ArticlesPage() {
               .sort((a, b) => b.id - a.id)
               .map((article) => (
                 <Link key={article.id} href={`/articles/${article.slug}`}>
-                  <Card className="group p-0 transition-shadow hover:shadow-lg">
+                  <Card className="group flex h-full flex-col p-0 transition-shadow hover:shadow-lg">
                     <CardHeader className="p-0">
                       <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
                         <Image
@@ -49,7 +49,7 @@ export default function ArticlesPage() {
                         />
                       </div>
                     </CardHeader>
-                    <CardContent className="p-6 pt-0">
+                    <CardContent className="flex flex-1 flex-col justify-between p-6 pt-0">
                       <div className="text-muted-foreground mb-3 flex items-center gap-4 text-sm">
                         <div className="flex items-center">
                           <Calendar className="mr-1 h-4 w-4" />
