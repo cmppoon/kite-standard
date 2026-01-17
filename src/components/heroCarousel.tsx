@@ -11,19 +11,15 @@ import Image from "next/image";
 const carouselItems = [
   {
     alt: "งานฝ้าเพดาน งานผนัง แผ่นอะคูสติก",
-    image: "/hero1.png",
+    image: "/hero1.webp",
   },
   {
-    alt: "แผ่นฝ้าลดเสียงสะท้อน",
-    image: "/hero2.png",
+    alt: "แผ่นอะคูสติกจากโรงงาน",
+    image: "/hero2.webp",
   },
   {
-    alt: "แผ่นปิดรอยต่อ",
-    image: "/hero3.png",
-  },
-  {
-    alt: "อุปกรณ์ฝ้าเพดาน อุปกรณ์หลังคา ชุดครอบแห้ง",
-    image: "/hero4.png",
+    alt: "ช่องเซอร์วิส",
+    image: "/hero3.webp",
   },
 ];
 
