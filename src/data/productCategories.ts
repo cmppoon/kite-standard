@@ -33,7 +33,7 @@ export const productCategories = [
     id: 6,
     name: "แผ่นยิปซั่ม",
     slug: "แผ่นยิปซั่ม",
-    image: "/แผ่นยิปซั่ม.jpg",
+    image: "/แผ่นยิปซั่ม.webp",
   },
   {
     id: 7,
