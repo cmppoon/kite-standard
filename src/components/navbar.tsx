@@ -35,7 +35,7 @@ export function Navbar() {
                 height={50}
               />
               <span className="text-xl font-bold text-white" lang="en">
-                Kai Standard
+                Kai Standard ส่งด่วนจากโรงงานภายในวัน
               </span>
             </Link>
           </div>

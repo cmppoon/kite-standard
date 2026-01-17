@@ -21,7 +21,7 @@ export default function Footer() {
               />
               Kai Standard
             </h3>
-            <p className="text-white text-balance">
+            <p className="text-balance text-white">
               ผู้นำด้านวัสดุฝ้าเพดานคุณภาพสูงและบริการติดตั้งมืออาชีพมายาวนานกว่า
               40 ปี
             </p>
@@ -32,7 +32,14 @@ export default function Footer() {
               สาขาทั้งหมด
             </h4>
             <ul className="space-y-2 text-white">
-              <li>สาขาบางบอน</li>
+              <li>
+                <Link
+                  href="/map"
+                  className="hover:text-accent-foreground text-white"
+                >
+                  สาขาบางบอน
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -97,8 +104,22 @@ export default function Footer() {
               ข้อมูลติดต่อ
             </h4>
             <ul className="space-y-2 text-white">
-              <li>โทร: 02-415-3676</li>
-              <li>อีเมล: sattawatt.sura@hotmail.com</li>
+              <li>
+                <a href="tel:+6624153676">
+                  โทร:{" "}
+                  <span className="hover:text-accent-foreground text-white">
+                    02-415-3676
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:sattawatt.sura@hotmail.com">
+                  อีเมล:{" "}
+                  <span className="hover:text-accent-foreground text-white">
+                    sattawatt.sura@hotmail.com
+                  </span>
+                </a>
+              </li>
               <li>จันทร์ - เสาร์ 07:00 - 17:00</li>
             </ul>
           </div>
@@ -109,7 +130,7 @@ export default function Footer() {
         className="bg-footer-background border-t border-white py-4 text-center text-white"
         lang="en"
       >
-        <p>&copy; 2025 Kai Standard. All rights reserved.</p>
+        <p>&copy; 2026 Kai Standard. All rights reserved.</p>
       </div>
     </footer>
   );

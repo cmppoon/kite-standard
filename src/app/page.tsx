@@ -68,7 +68,7 @@ export default function HomePage() {
       </section>
 
       <ContactUs />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
 
       {/* Structured Data for SEO */}
       {/* <script
