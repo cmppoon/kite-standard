@@ -4,7 +4,7 @@ import { customers } from "@/data/customers";
 
 export default function OurCustomers() {
   return (
-    <section className="bg-primary/5 px-4 py-16">
+    <section className="bg-white px-4 py-16">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h1 className="mb-4 text-3xl font-bold md:text-4xl">ลูกค้าของเรา</h1>
