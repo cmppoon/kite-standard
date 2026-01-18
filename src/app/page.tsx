@@ -1,8 +1,9 @@
+import BgPattern from "@/components/bgPattern";
 import ContactUs from "@/components/contactUs";
 import HeroCarousel from "@/components/heroCarousel";
+import OurCustomers from "@/components/ourCustomers";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import WhyChooseUs from "@/components/whyChooseUs";
 import { productCategories } from "@/data/productCategories";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -14,6 +15,26 @@ export default function HomePage() {
       {/* Hero Carousel */}
       <section className="relative">
         <HeroCarousel />
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative px-4 py-16">
+        <BgPattern />
+
+        <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
+          <Button
+            asChild
+            className="rounded-3xl bg-[#02C300] px-6 py-6 text-white hover:bg-[#02C300]/90"
+          >
+            <Link
+              href="https://line.me/ti/p/@kaistandard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="text-lg font-bold">ปรึกษาราคาโครงการ</span>
+            </Link>
+          </Button>
+        </div>
       </section>
 
       {/* Products Section */}
@@ -67,6 +88,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <OurCustomers />
       <ContactUs />
       {/* <WhyChooseUs /> */}
 

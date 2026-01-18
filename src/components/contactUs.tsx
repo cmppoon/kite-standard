@@ -53,9 +53,9 @@ export default function ContactUs({
           {/* Line Contact */}
           <Card className="group border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
-              <div className="from-primary/10 to-primary/20 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#37B70A]/90 bg-gradient-to-br transition-transform group-hover:scale-110">
                 <svg
-                  className="text-primary h-8 w-8"
+                  className="h-8 w-8 text-white"
                   viewBox="0 0 50 50"
                   width="1em"
                   height="1em"

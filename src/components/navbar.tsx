@@ -35,13 +35,13 @@ export function Navbar() {
                 height={50}
               />
               <span className="text-xl font-bold text-white" lang="en">
-                Kai Standard ส่งด่วนจากโรงงานภายในวัน
+                Kai Standard
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
+          <div className="hidden items-center space-x-4 lg:space-x-8 md:flex">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -55,6 +55,19 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
+            <Button
+              asChild
+              size={"sm"}
+              className="rounded-3xl bg-[#02C300] text-white hover:bg-[#02C300]/90 max-lg:hidden"
+            >
+              <Link
+                href="https://line.me/ti/p/@kaistandard"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="font-bold">ติดต่อขอใบเสนอราคา</span>
+              </Link>
+            </Button>
           </div>
 
           {/* Mobile Navigation */}
@@ -85,6 +98,18 @@ export function Navbar() {
                       {item.name}
                     </Link>
                   ))}
+                  <Button
+                    asChild
+                    className="rounded-3xl bg-[#02C300] text-white hover:bg-[#02C300]/90"
+                  >
+                    <Link
+                      href="https://line.me/ti/p/@kaistandard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="font-bold">ติดต่อขอใบเสนอราคา</span>
+                    </Link>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

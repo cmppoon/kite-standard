@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import "./globals.css";
+import FloatingContactButtons from "@/components/floatingContactButtons";
 
 const sarabun = Sarabun({
   subsets: ["thai"],
@@ -94,6 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Analytics />
         <SpeedInsights />
         <Footer />
+        <FloatingContactButtons />
       </body>
     </html>
   );
