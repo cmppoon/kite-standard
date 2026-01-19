@@ -41,4 +41,10 @@ export const productCategories = [
     slug: "อุปกรณ์ช่างฝ้า",
     image: "/อุปกรณ์ช่างฝ้า.jpg",
   },
+  {
+    id: 8,
+    name: "แผ่นฝ้าทีบาร์",
+    slug: "แผ่นฝ้าทีบาร์",
+    image: "/ฝ้าทีบาร์.jpg",
+  },
 ];
