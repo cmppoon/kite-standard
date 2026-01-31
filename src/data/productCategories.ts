@@ -13,8 +13,8 @@ export const productCategories = [
   },
   {
     id: 3,
-    name: "แปหลังคา",
-    slug: "แปหลังคา",
+    name: "แปหลังคา แปสำเร็จรูป",
+    slug: "แปหลังคา แปสำเร็จรูป",
     image: "/แปอลูซิงค์.png",
   },
   {
