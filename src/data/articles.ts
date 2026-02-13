@@ -153,4 +153,50 @@ export const articles = [
 <p>.</p>
 <p>เห็นมั้ยครับแค่เรื่องความสูงฝ้าเพดาน ก็ส่งกับกับการออกแบบและบรรยากาศภายในห้องแล้วครับ เพราะฉะนั้นอย่าลืมคำนึงถึงความสูงต่ำของฝ้าเพดานก่อนติดตั้งนะครับ&nbsp;</p> `,
   },
+  {
+    id: 8,
+    title: "แผ่นฝ้าอะคูสติกคืออะไร?",
+    slug: "แผ่นฝ้าอะคูสติกคืออะไร",
+    excerpt:
+      "ทำไมต้องมีติดไว้ถ้าไม่อยากให้เสียงก้อง!",
+    image: "/articles/article8.jpg",
+    date: "2025-02-15",
+    readTime: "3",
+    content: `
+   <div class="" data-block="true" data-editor="503h8" data-offset-key="979ao-0-0">
+<div class="_1mf _1mj" data-offset-key="979ao-0-0"><span data-offset-key="979ao-0-0"><span data-text="true">แผ่นฝ้าอะคูสติก... คืออะไร? ทำไมต้องมีติดไว้ถ้าไม่อยากให้เสียงก้อง!</span></span></div>
+<div class="_1mf _1mj" data-offset-key="979ao-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="979ao-0-0">เวลาเราทำออฟฟิศหรือห้องใหม่ หลายคนมักจะมองข้ามเรื่องเสียงไปครับ พอเข้าใช้งานจริงถึงเพิ่งรู้ว่า "เสียงมันก้องจนคุยไม่รู้เรื่อง" ปัญหานี้แก้ได้ด้วยสิ่งที่เรียกว่า "แผ่นฝ้าอะคูสติก" ครับ</div>
+<div class="_1mf _1mj" data-offset-key="979ao-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="979ao-0-0">แผ่นฝ้าอะคูสติก คืออะไร?</div>
+<div class="_1mf _1mj" data-offset-key="979ao-0-0">คือแผ่นวัสดุที่ทำมาจาก Mineral Fiber ที่มีคุณสมบัติส่วนลดเสียงสะท้อน มักใช้ร่วมกับโครงทีบาร์ หรือ หากต้องการความสวยงามก็สามารถติดตั้งระบบฉาบเรียบได้เหมือนกันครับ</div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="cfumg-0-0">
+<div class="_1mf _1mj" data-offset-key="cfumg-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="cfumg-0-0">ทำไมต้องใช้?</div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="b85jl-0-0">
+<div class="_1mf _1mj" data-offset-key="b85jl-0-0"><span data-offset-key="b85jl-0-0"><span data-text="true">เพราะแผ่นอะคูสติกนั้นช่วยลดเสียงสะท้อน ปัญหาที่มักเกิดขึ้นในห้องประชุม ห้องสัมมนานั่นเองครับ โดยค่าคุณสมบัติหลักที่เราต้องให้ความสนใจคือค่า NRC ค่าที่บ่งบอกความสามารถในการลดเสียงสะท้อนครับ</span></span></div>
+<div class="_1mf _1mj" data-offset-key="b85jl-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="b85jl-0-0">ห้องหรืออาคารแบบไหนที่เหมาะ?</div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="6detb-0-0">
+<div class="_1mf _1mj" data-offset-key="6detb-0-0"><span data-offset-key="6detb-0-0"><span data-text="true">เหมาะกับอาคารที่มีครใช้งานเยอะและมีการใช้เสียงโต้ตอบกันครับเช่น อาคารสำนักงาน ห้แงประชุม โรงพยาบาล ธนาคาร เป็นต้นครับ แต่ ให้หลีกเลี่ยงการใช้ในห้องที่มีความชื้นสูงครับ</span></span></div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="f2snh-0-0">
+<div class="_1mf _1mj" data-offset-key="f2snh-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="f2snh-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="f2snh-0-0">ท่านไหนต้องปรึกษาเรื่องเสียงก้อง สามารถปรึกษาไคสบอยได้ทุกเมื่อเลยนะครับ ไม่มีค่าใช้จ่าย!</div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="7gsf7-0-0">
+<div class="_1mf _1mj" data-offset-key="7gsf7-0-0">&nbsp;</div>
+<div class="_1mf _1mj" data-offset-key="7gsf7-0-0">สนใจติดต่อ</div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="1m800-0-0">
+<div class="_1mf _1mj" data-offset-key="1m800-0-0"><span data-offset-key="1m800-0-0"><span data-text="true">https://www.kaistandard.com/</span></span></div>
+</div>
+<div class="" data-block="true" data-editor="503h8" data-offset-key="cim0o-0-0">
+<div class="_1mf _1mj" data-offset-key="cim0o-0-0"><span data-offset-key="cim0o-0-0"><span data-text="true">Line@: @kaistandard</span></span></div>
+</div>,
+  }, 
 ];
