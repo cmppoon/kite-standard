@@ -155,11 +155,11 @@ export const articles = [
   },
  {
     id: 8,
-    title: "แผ่นอะคูสคืออะไร?",
-    slug: "แผ่นอะคูสคืออะไร",
+    title: "แผ่นอะคูสติกคืออะไร?",
+    slug: "แผ่นอะคูสติกคืออะไร",
     excerpt:
       "แผนอะคูสติกทำไมถึงต้องใช้ในห้องที่เสียงก้องและมีเสียงสะท้อน",
-    image: "/articles/article8.jpg",
+    image: "/articles/article8.png",
     date: "2025-02-15",
     readTime: "4",
     content: `
