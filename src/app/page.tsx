@@ -8,6 +8,11 @@ import { productCategories } from "@/data/productCategories";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "ไคสแตนดาร์ด | แผ่นอะคูสติก ลดเสียงสะท้อน ฝ้าเพดาน กรุงเทพ บางบอน",
+  description:
+    "จำหน่ายแผ่นอะคูสติก แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดานคุณภาพสูง ราคาโครงการ ประสบการณ์กว่า 40 ปี เหมาะสำหรับห้องประชุม สำนักงาน มหาวิทยาลัย โทร 02-415-3676",
+};
 
 export default function HomePage() {
   return (
