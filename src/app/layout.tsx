@@ -36,7 +36,7 @@ const sarabun = Sarabun({
                                             robots: "index, follow",
                                               openGraph: {
                                                   type: "website",
-                                                      locale: "en_US",
+                                                      locale: "th_TH",
                                                           url: "https://kaistandard.com",
                                                               siteName: "ไคสแตนดาร์ด",
                                                                   title: "ไคสแตนดาร์ด | ผู้เชี่ยวชาญแผ่นอะคูสติกและผู้ผลิตยิปซั่มลดเสียงสะท้อน",
