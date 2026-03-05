@@ -29,7 +29,7 @@ const sarabun = Sarabun({
                           description:
                               "จำหน่ายแผ่นอะคูสติก แผ่นฝ้าลดเสียงสะท้อน ฝ้าเพดานคุณภาพสูง ผลิตเองประสบการณ์กว่า 40 ปี เหมาะสำหรับห้องประชุม สำนักงาน โรงแรม มหาวิทยาลัย โทร 02-415-3676",
                                 keywords:
-                                    "ceiling materials, acoustic ceiling tiles, fire resistant ceiling, suspended ceiling, ceiling installation, commercial ceiling, residential ceiling",
+                                    "แผ่นอะคูสติก, แผ่นฝ้าลดเสียงสะท้อน, ฝ้าเพดานกันเสียง, แผ่นยิปซั่มลดเสียงสะท้อน, ฝ้าอะคูสติก, แผ่นซับเสียง, ฝ้าห้องประชุม, แผ่นฝ้าซับเสียง, ฝ้ากันเสียงสะท้อน, แผ่นยิปซั่มดูดซับเสียง, ฝ้าเพดานห้องประชุม, แผ่นฝ้าทีบาร์, โครงเคร่าฝ้าเพดาน, ช่องเซอร์วิส, แปหลังคา, ร้านวัสดุก่อสร้างบางบอน, วัสดุก่อสร้างกรุงเทพ, ไคสแตนดาร์ด",
                                       authors: [{ name: "KaiStandard" }],
                                         creator: "KaiStandard",
                                           publisher: "KaiStandard",
