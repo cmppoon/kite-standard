@@ -9,6 +9,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/products";
 import { ArrowLeft, Check, Phone } from "lucide-react";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,23 +29,8 @@ export default async function ProductDetailPage({
   const { slug } = await params;
   const product = getProductBySlug(slug);
 
-  if (!product) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <h1 className="mb-4 text-2xl font-bold">
-            ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
-          </h1>
-          <Button
-            asChild
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-white"
-          >
-            <Link href="/products">กลับสู่หน้าสินค้าทั้งหมด</Link>
-          </Button>
-        </div>
-      </div>
-    );
+   if (!product) {
+    notFound();
   }
 
   return (
