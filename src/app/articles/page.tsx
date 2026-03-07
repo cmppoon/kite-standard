@@ -11,11 +11,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "บทความ",
+  title: "บทความ | ความรู้แผ่นอะคูสติก ฝ้าเพดาน ลดเสียงสะท้อน",
   description:
-    "Expert articles on ceiling design trends, installation guides, safety standards, and maintenance tips. Stay updated with the latest in ceiling technology and design.",
+    "บทความความรู้เกี่ยวกับแผ่นอะคูสติก ฝ้าอะคูสติก การลดเสียงสะท้อน วิธีติดตั้งฝ้าเพดาน และเคล็ดลับการเลือกวัสดุ จากผู้เชี่ยวชาญประสบการณ์กว่า 40 ปี",
   keywords:
-    "ceiling design trends, ceiling installation guide, acoustic ceiling tips, fire safety ceiling standards, ceiling maintenance, ceiling design articles",
+    "แผ่นอะคูสติก, ฝ้าอะคูสติก, ลดเสียงสะท้อน, วิธีติดตั้งฝ้าเพดาน, แผ่นฝ้ากันเสียง, บทความฝ้าเพดาน",
 };
 
 export default function ArticlesPage() {
