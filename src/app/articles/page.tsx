@@ -1,16 +1,7 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { articles } from "@/data/articles";
-import { Calendar, Clock } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import type { Metadata } from "next";
+import ArticlesClientPage from "./articlesClientPage";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "บทความ | ความรู้แผ่นอะคูสติก ฝ้าเพดาน ลดเสียงสะท้อน",
   description:
     "บทความความรู้เกี่ยวกับแผ่นอะคูสติก ฝ้าอะคูสติก การลดเสียงสะท้อน วิธีติดตั้งฝ้าเพดาน และเคล็ดลับการเลือกวัสดุ จากผู้เชี่ยวชาญประสบการณ์กว่า 40 ปี",
@@ -19,68 +10,5 @@ export const metadata = {
 };
 
 export default function ArticlesPage() {
-  return (
-    <div className="bg-background min-h-screen">
-      {/* Articles Grid */}
-      <section className="px-4 py-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-12">
-            <h1 className="mb-4 text-2xl font-bold md:text-3xl">
-              บทความล่าสุด
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              ข้อมูลและข่าวสารเกี่ยวกับการออกแบบและติดตั้งฝ้าเพดาน
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {articles
-              .sort((a, b) => b.id - a.id)
-              .map((article) => (
-                <Link key={article.id} href={`/articles/${article.slug}`}>
-                  <Card className="group flex h-full flex-col p-0 transition-shadow hover:shadow-lg">
-                    <CardHeader className="p-0">
-                      <div className="relative aspect-square w-full overflow-hidden rounded-t-lg">
-                        <Image
-                          src={article.image}
-                          alt={`${article.title}`}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex flex-1 flex-col justify-between p-6 pt-0">
-                      <div className="text-muted-foreground mb-3 flex items-center gap-4 text-sm">
-                        <div className="flex items-center">
-                          <Calendar className="mr-1 h-4 w-4" />
-                          {new Date(article.date).toLocaleDateString("en-GB")}
-                        </div>
-                        <div className="flex items-center">
-                          <Clock className="mr-2 h-4 w-4" />
-                          ใช้เวลาอ่าน {article.readTime} นาที
-                        </div>
-                      </div>
-
-                      <CardTitle className="mb-3 line-clamp-2 text-xl">
-                        {article.title}
-                      </CardTitle>
-
-                      <CardDescription className="mb-4 line-clamp-3 min-h-[72px]">
-                        {article.excerpt}
-                      </CardDescription>
-
-                      <div className="flex items-center justify-end">
-                        <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
-                          อ่านต่อ
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+  return <ArticlesClientPage />;
 }
