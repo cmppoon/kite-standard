@@ -93,7 +93,7 @@ function calculateConcealed(input: ConcealedInput): CalculatorResult {
       { name: "พุกเหล็ก 3/16", qty: expansionBolt, unit: "ตัว" },
       { name: "ฉากยึดท้องพื้น", qty: boltAngle, unit: "ชิ้น" },
       { name: "ลวด 3มิล ยาว 3 เมตร", qty: wire, unit: "เส้น" },
-      { name: "สกรูยิงแผ่นยิปซัม 25 มม. (500 ตัว/กล่อง)", qty: screw, unit: "กล่อง" },
+      { name: "สกรูยิงแผ่นยิปซัม", qty: screw, unit: "กล่อง" },
       { name: "ตะปูคอนกรีต", qty: nail, unit: "กล่อง" },
       { name: "ปูนฉาบรอยต่อ", qty: cement, unit: "ถุง" },
       { name: "เทปผ้ายิปซัมปิดรอยต่อ", qty: tape, unit: "ห่อ" },
