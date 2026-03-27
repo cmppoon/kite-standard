@@ -13,6 +13,7 @@ const navigation = [
   { name: "สินค้า", href: "/products" },
   { name: "แคตตาล็อก", href: "/catalogs" },
   { name: "บทความ", href: "/articles" },
+  { name: "คำนวณฝ้า", href: "/calculator" },
   { name: "เกี่ยวกับเรา", href: "/about-us" },
   { name: "ติดต่อเรา", href: "/contact-us" },
   { name: "แผนที่", href: "/map" },

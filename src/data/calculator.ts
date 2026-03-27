@@ -84,20 +84,19 @@ function calculateConcealed(input: ConcealedInput): CalculatorResult {
   return {
     area,
     materials: [
-      { name: "แผ่นยิปซัม 9 มม. ขนาด 1200×2400 มม.", qty: gypsumBoard, unit: "แผ่น" },
-      { name: "โครงฝ้าฉาบเรียบ ยาว 4000 มม.", qty: mainFrame, unit: "เส้น" },
-      { name: "โครงริม ยาว 2400 มม.", qty: wallAngle, unit: "เส้น" },
+      { name: "แผ่นยิปซัม ขนาด 1200×2400 มม.", qty: gypsumBoard, unit: "แผ่น" },
+      { name: "โครงซีลาย ยาว 4 เมตร.", qty: mainFrame, unit: "เส้น" },
+      { name: "โครงริม ยาว 2.4 เมตร.", qty: wallAngle, unit: "เส้น" },
       { name: "คลิปล็อก", qty: clip, unit: "ชิ้น" },
       { name: "สปริงล็อก", qty: springLock, unit: "ชิ้น" },
       { name: "ขอล็อกโครง", qty: hookLock, unit: "ชิ้น" },
-      { name: "พุกเหล็ก 1.5 หุน", qty: expansionBolt, unit: "ตัว" },
+      { name: "พุกเหล็ก 3/16", qty: expansionBolt, unit: "ตัว" },
       { name: "ฉากยึดท้องพื้น", qty: boltAngle, unit: "ชิ้น" },
-      { name: "ลวดแขวน ยาว 3000 มม.", qty: wire, unit: "เส้น" },
-      { name: "ตัวต่อโครง", qty: connector, unit: "ชิ้น" },
+      { name: "ลวด 3มิล ยาว 3 เมตร", qty: wire, unit: "เส้น" },
       { name: "สกรูยิงแผ่นยิปซัม 25 มม. (500 ตัว/กล่อง)", qty: screw, unit: "กล่อง" },
-      { name: "ตะปูคอนกรีต (500 ก./กล่อง)", qty: nail, unit: "กล่อง" },
-      { name: "ปูนฉาบรอยต่อ (25 กก./ถุง)", qty: cement, unit: "ถุง" },
-      { name: "เทปผ้ายิปซัมปิดรอยต่อ (3 ม้วน/ห่อ)", qty: tape, unit: "ห่อ" },
+      { name: "ตะปูคอนกรีต", qty: nail, unit: "กล่อง" },
+      { name: "ปูนฉาบรอยต่อ", qty: cement, unit: "ถุง" },
+      { name: "เทปผ้ายิปซัมปิดรอยต่อ", qty: tape, unit: "ห่อ" },
     ],
   }
 }

@@ -170,7 +170,7 @@ export default function CeilingCalculator() {
           </div>
 
           <p className="text-xs text-gray-400">
-            * คำนวณเบื้องต้นจากสูตรมาตรฐาน รวมเผื่อสูญเสีย 5% แล้ว
+            * คำนวณเบื้องต้นโดยเผื่อค่าเสียหาย 5% 
           </p>
         </div>
       )}
