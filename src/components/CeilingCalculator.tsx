@@ -1,13 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { calculate, type TileSize, type GridSystem, type CalculatorResult } from "@/data/calculator"
+import { calculate, type TileSize, type CalculatorResult } from "@/data/calculator"
 
 export default function CeilingCalculator() {
   const [width, setWidth] = useState("")
   const [length, setLength] = useState("")
   const [tileSize, setTileSize] = useState<TileSize>("600x600")
-  const [gridSystem, setGridSystem] = useState<GridSystem>("G")
   const [result, setResult] = useState<CalculatorResult | null>(null)
   const [error, setError] = useState("")
 
@@ -21,7 +20,7 @@ export default function CeilingCalculator() {
       return
     }
 
-    const res = calculate({ width: w, length: l, tileSize, gridSystem })
+    const res = calculate({ width: w, length: l, tileSize })
     setResult(res)
   }
 
@@ -84,26 +83,6 @@ export default function CeilingCalculator() {
         </div>
       </div>
 
-      {/* ระบบโครง */}
-      <div>
-        <label className="block text-sm text-gray-600 mb-2">ระบบโครง</label>
-        <div className="flex rounded-lg border border-gray-200 overflow-hidden w-fit">
-          {(["G", "M"] as GridSystem[]).map((s) => (
-            <button
-              key={s}
-              onClick={() => setGridSystem(s)}
-              className={`px-4 py-2 text-sm transition-colors ${
-                gridSystem === s
-                  ? "bg-gray-100 font-medium text-gray-900"
-                  : "text-gray-500 hover:bg-gray-50"
-              }`}
-            >
-              {s === "G" ? "ระบบยิปซัม (G)" : "ระบบเมตริก (M)"}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {error && <p className="text-sm text-red-500">{error}</p>}
 
       <button
@@ -116,7 +95,7 @@ export default function CeilingCalculator() {
       {/* ผลลัพธ์ */}
       {result && (
         <div className="space-y-4">
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             <div className="bg-gray-50 rounded-lg p-4">
               <p className="text-xs text-gray-500 mb-1">พื้นที่รวม</p>
               <p className="text-xl font-semibold text-gray-900">{result.area.toFixed(2)}</p>
@@ -126,11 +105,6 @@ export default function CeilingCalculator() {
               <p className="text-xs text-gray-500 mb-1">แผ่นฝ้า</p>
               <p className="text-xl font-semibold text-gray-900">{result.tileCount}</p>
               <p className="text-xs text-gray-400">แผ่น (+5% เผื่อตัด)</p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-4">
-              <p className="text-xs text-gray-500 mb-1">กล่องแผ่นฝ้า</p>
-              <p className="text-xl font-semibold text-gray-900">{result.tileBoxes}</p>
-              <p className="text-xs text-gray-400">กล่อง ({result.tilesPerBox} แผ่น/กล่อง)</p>
             </div>
           </div>
 

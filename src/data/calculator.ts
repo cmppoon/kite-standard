@@ -1,11 +1,9 @@
 export type TileSize = "600x600" | "600x1200"
-export type GridSystem = "G" | "M"
 
 export interface CalculatorInput {
   width: number
   length: number
   tileSize: TileSize
-  gridSystem: GridSystem
 }
 
 export interface MaterialItem {
@@ -17,8 +15,6 @@ export interface MaterialItem {
 export interface CalculatorResult {
   area: number
   tileCount: number
-  tileBoxes: number
-  tilesPerBox: number
   materials: MaterialItem[]
 }
 
@@ -27,81 +23,59 @@ const TILE_AREA: Record<TileSize, number> = {
   "600x1200": 0.72,
 }
 
-const TILES_PER_BOX: Record<TileSize, number> = {
-  "600x600": 10,
-  "600x1200": 8,
-}
-
-const MAIN_RUNNER_LENGTH: Record<GridSystem, number> = {
-  G: 3.63,
-  M: 3.60,
-}
-
 export function calculate(input: CalculatorInput): CalculatorResult {
-  const { width, length, tileSize, gridSystem } = input
+  const { width, length, tileSize } = input
 
   const area = width * length
-  const perimeter = 2 * (width + length)
 
-  const tileUnitArea = TILE_AREA[tileSize]
-  const tilesPerBox = TILES_PER_BOX[tileSize]
-  const tileCount = Math.ceil((area / tileUnitArea) * 1.05)
-  const tileBoxes = Math.ceil(tileCount / tilesPerBox)
+  const tileCount = Math.ceil(area / TILE_AREA[tileSize] * 1.05)
 
-  const mainRunnerLength = MAIN_RUNNER_LENGTH[gridSystem]
-  const mainRows = Math.ceil(width / 1.2) + 1
-  const mainRunnerPerRow = Math.ceil(length / mainRunnerLength)
-  const mainRunnerQty = Math.ceil(mainRows * mainRunnerPerRow * 1.05)
-
-  const crossRunnerQty = Math.ceil(
-    Math.ceil(width / 0.6) * Math.ceil(length / 0.6) * 1.05
-  )
-
-  const lAngleQty = Math.ceil((perimeter / 3.0) * 1.1)
-
-  const hangPoints = Math.ceil(area / 1.44) + Math.ceil(perimeter / 1.2)
-
-  const nailBoxes = Math.ceil(((perimeter / 0.3) * 2) / 50)
+  const mainRunner  = Math.ceil(area / 2.5)       // ทีเมน
+  const crossRunner = Math.ceil(area * 1.25)       // ทีซอย
+  const lAngle      = Math.ceil(area / 4)          // ฉากริม
+  const wire        = Math.ceil(area / 3)          // ลวด
+  const hangPoint   = Math.ceil(area)              // ฉากยึด, สปริง, ตะขอ, พุ๊ก
+  const nail        = Math.ceil(area / 250)        // ตะปู (กล่อง)
 
   const materials: MaterialItem[] = [
     {
-      name: `โครงฝ้าทีบาร์ หลัก (${mainRunnerLength * 1000} มม.) ระบบ${gridSystem}`,
-      qty: mainRunnerQty,
+      name: "โครงทีเมนเหล็กอบสี 1\" ยาว 4.23 เมตร",
+      qty: mainRunner,
       unit: "เส้น",
     },
     {
-      name: "โครงฝ้าทีบาร์ ซอย (600 มม.)",
-      qty: crossRunnerQty,
+      name: "โครงทีซอยเหล็กอบสี 1\" ยาว 0.60 เมตร",
+      qty: crossRunner,
       unit: "เส้น",
     },
     {
-      name: "โครงริมทีบาร์ L-angle (3000 มม.)",
-      qty: lAngleQty,
+      name: "ฉาก 3/4\" ยาว 4 เมตร",
+      qty: lAngle,
       unit: "เส้น",
     },
     {
-      name: "พุกเหล็ก 1.5 หุน",
-      qty: hangPoints,
+      name: "พุกเหล็ก 3/16",
+      qty: hangPoint,
       unit: "ตัว",
     },
     {
       name: "ฉากยึดท้องพื้น",
-      qty: hangPoints,
+      qty: hangPoint,
       unit: "ตัว",
     },
     {
-      name: "ลวดแขวน (3000 มม.)",
-      qty: hangPoints,
+      name: "ลวด 3มิล ยาว 3 เมตร",
+      qty: wire,
       unit: "เส้น",
     },
     {
       name: "สปริงล็อก",
-      qty: hangPoints,
+      qty: hangPoint,
       unit: "ตัว",
     },
     {
       name: "ตะปูคอนกรีต",
-      qty: nailBoxes,
+      qty: nail,
       unit: "กล่อง",
     },
   ]
@@ -109,8 +83,6 @@ export function calculate(input: CalculatorInput): CalculatorResult {
   return {
     area,
     tileCount,
-    tileBoxes,
-    tilesPerBox,
     materials,
   }
 }
