@@ -39,7 +39,7 @@ export const productCategories = [
     id: 7,
     name: "โครงเคร่าฝ้าเพดาน",
     slug: "โครงเคร่าฝ้าเพดาน",
-    image: "/อุปกรณ์ช่างฝ้า.jpg",
+    image: "/ซีลาย.jpg",
   },
   {
     id: 8,
