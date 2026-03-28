@@ -1655,4 +1655,3 @@ export const products = [
     applications: ["ฝ้าเพดาน ฝ้าทีบาร์"],
   },
 ];
-];
