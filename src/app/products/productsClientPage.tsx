@@ -53,9 +53,10 @@ export default function ProductsClientPage({
     : categories.find((c) => c.id === selectedCategory)?.name}
 </h1>
           <p className="text-muted-foreground text-lg">
-            เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
-            อาคารพาณิชย์ และอุตสาหกรรม
-          </p>
+  {selectedCategory === -1
+    ? "เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม"
+    : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
+</p>
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
