@@ -47,7 +47,7 @@ export default function ProductsClientPage({
     <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8">
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">
+          <h1 className="mb-4 text-3xl font-bold md:text-2xl">
   {selectedCategory === -1
     ? "สินค้าของเรา"
     : categories.find((c) => c.id === selectedCategory)?.name}
