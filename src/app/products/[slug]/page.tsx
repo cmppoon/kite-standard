@@ -217,6 +217,52 @@ export default async function ProductDetailPage({
             </Tabs>
           </div>
         )}
+
+        {/* Related Products */}
+        {(() => {
+          const related = products
+            .filter(
+              (p) =>
+                p.categoryId === product.categoryId &&
+                p.slug !== product.slug
+            )
+            .slice(0, 4);
+
+          if (related.length === 0) return null;
+
+          return (
+            <div className="mt-16">
+              <h2 className="mb-6 text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                {related.map((item) => (
+                  <Link
+                    key={item.id}
+                    href={`/products/${item.slug}`}
+                    className="group rounded-lg border transition-shadow hover:shadow-md"
+                  >
+                    <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-3">
+                      <p className="line-clamp-2 text-sm font-medium">
+                        {item.name}
+                      </p>
+                      <p className="text-primary mt-1 text-sm font-semibold">
+                        {item.price}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
+
       </div>
     </div>
   );
