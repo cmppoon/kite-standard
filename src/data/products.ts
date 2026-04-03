@@ -521,7 +521,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -548,7 +548,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -575,7 +575,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -603,7 +603,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -630,7 +630,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -658,7 +658,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -686,7 +686,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -714,7 +714,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -868,7 +868,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
@@ -896,7 +896,7 @@ export const products = [
     ],
     optionalServices: [
       {
-        title: "บริการบังใบ",
+        title: "ติดต่อขอใบเสนอราคาโครงการ",
         description: "โปรดติดต่อพนักงานขาย",
       },
     ],
