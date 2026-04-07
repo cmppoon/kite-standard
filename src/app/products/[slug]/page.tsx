@@ -31,7 +31,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const canonicalUrl = `https://www.kaistandard.com/products/${encodeURIComponent(slug)}`;
+  const canonicalUrl = `https://www.kaistandard.com/products/${slug}`;
 
   return {
     title: `${product.name} | ไคสแตนดาร์ด ราคาโรงงาน`,
