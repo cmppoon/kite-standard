@@ -71,7 +71,7 @@ export const customers = [
   },
   {
     id: 15,
-    image: "/customers/customer14.webp",
+    image: "/customers/customer15.webp",
     name: "Customer 15",
   },
 ];
