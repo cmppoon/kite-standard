@@ -70,7 +70,7 @@ export default function Page() {
           <BgPattern />
           <div className="relative z-10 mx-auto max-w-4xl text-center">
             <h1 className="font-kanit mb-6 text-3xl font-bold text-white md:text-4xl">
-              เกี่ยวกับเรา | ไคสแตนดาร์ด ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี
+              เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี
             </h1>
           </div>
         </section>
@@ -115,7 +115,7 @@ export default function Page() {
         <section className="px-4 py-16">
           <div className="mx-auto max-w-6xl">
             <h2 className="text-accent mb-8 text-center text-3xl font-bold md:text-4xl">
-              ผลงานและบรรยากาศของเรา
+              ผลงานที่ผ่านมา
             </h2>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
               {galleryImages.map((img, index) => (
