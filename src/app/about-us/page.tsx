@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "เกี่ยวกับเรา | ไคสแตนดาร์ด ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี",
+  title: "เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี",
   description:
     "ไคสแตนดาร์ด ผู้ผลิตและจำหน่ายแผ่นอะคูสติก ฝ้าอะคูสติก ฝ้าลดเสียงสะท้อน ราคาโรงงาน สอบถามโทร 02-415-3676",
 };
@@ -137,7 +137,7 @@ export default function Page() {
         <section className="from-primary/5 to-accent/5 bg-gradient-to-br px-4 py-16">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+              <h2 className="text-accent mb-4 text-3xl font-bold md:text-4xl">
                 ความมุ่งมั่นของเรา
               </h2>
               <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
@@ -179,21 +179,6 @@ export default function Page() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </section>
-
-        {/* Address */}
-        <section className="bg-white px-4 py-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <address className="not-italic">
-              <p className="text-muted-foreground text-sm">
-                <strong className="text-foreground">บริษัท ไคสแตนดาร์ด จำกัด</strong>
-                {" · "}YOUR_STREET_ADDRESS แขวงบางบอน เขตบางบอน กรุงเทพมหานคร YOUR_POSTCODE
-                {" · "}
-                <a href="tel:+6624153676" className="text-primary">โทร 02-415-3676</a>
-                {" · "}จันทร์–เสาร์ 07:00–17:00
-              </p>
-            </address>
           </div>
         </section>
 
