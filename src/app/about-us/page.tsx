@@ -12,7 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี",
+  title: "เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดาน",
   description:
     "ไคสแตนดาร์ด ผู้ผลิตและจำหน่ายแผ่นอะคูสติก ฝ้าอะคูสติก ฝ้าลดเสียงสะท้อน ราคาโรงงาน สอบถามโทร 02-415-3676",
 };
@@ -70,7 +70,7 @@ export default function Page() {
           <BgPattern />
           <div className="relative z-10 mx-auto max-w-4xl text-center">
             <h1 className="font-kanit mb-6 text-3xl font-bold text-white md:text-4xl">
-              เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดานกว่า 40 ปี
+              เกี่ยวกับเรา | ผู้ผลิตและจัดจำหน่ายแผ่นอะคูสติก ฝ้าเพดาน
             </h1>
           </div>
         </section>
