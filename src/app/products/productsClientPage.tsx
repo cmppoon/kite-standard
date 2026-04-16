@@ -16,6 +16,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+const ACOUSTIC_CATEGORY_ID = 1;
+
 const categories = [
   { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
   ...productCategories.map((category) => ({
@@ -27,12 +29,97 @@ const categories = [
   })),
 ];
 
+// FIX 1 — Trust bar (acoustic category only)
+function AcousticTrustBar() {
+  return (
+    <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+      {[
+        { val: "40+ ปี", sub: "ประสบการณ์" },
+        { val: "ราคาโรงงาน", sub: "ผู้ผลิตและผู้จัดจำหน่าย" },
+        { val: "ส่งทั่วไทย", sub: "สต็อกพร้อมส่ง" },
+        { val: "รับโครงการ", sub: "ทุกขนาด" },
+      ].map((item) => (
+        <div
+          key={item.val}
+          className="bg-muted rounded-lg border px-3 py-2 text-center"
+        >
+          <p className="text-sm font-medium">{item.val}</p>
+          <p className="text-muted-foreground text-xs">{item.sub}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// FIX 2 — Project pricing bar (acoustic category only)
+function AcousticProjectBar() {
+  return (
+    <div className="mb-6 flex flex-col items-start gap-3 rounded-lg border border-green-200 bg-green-50 px-4 py-3 sm:flex-row sm:items-center">
+      <p className="flex-1 text-sm text-green-800">
+        ราคาพิเศษสำหรับงานโครงการ — ติดต่อรับใบเสนอราคาได้เลย
+      </p>
+      <Link
+        href="https://line.me/ti/p/@kaistandard"
+        target="_blank"
+        className="shrink-0 rounded-md bg-green-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-800"
+      >
+        ขอราคาโครงการ
+      </Link>
+    </div>
+  );
+}
+
+// FIX 4 — Content section at bottom (acoustic category only)
+function AcousticContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">
+        แผ่นอะคูสติกคืออะไร และเลือกแบบไหนดี?
+      </h2>
+      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+        แผ่นอะคูสติก (Acoustic Board) คือวัสดุฝ้าเพดานที่ผลิตจากใยแร่
+        ออกแบบมาเพื่อดูดซับเสียงสะท้อนและลดเสียงก้องภายในห้อง
+        ต่างจากฝ้าทั่วไปที่สะท้อนเสียงกลับ
+        แผ่นอะคูสติกจะดูดซับคลื่นเสียงไว้ทำให้เสียงในห้องชัดขึ้นและสบายหูมากขึ้น
+        ค่า NRC (Noise Reduction Coefficient)
+        คือตัวชี้วัดประสิทธิภาพ ยิ่งสูงยิ่งดูดซับเสียงได้มาก
+        แผ่นของไคสแตนดาร์ดมีค่า NRC 0.55–0.65 ขึ้นอยู่กับความหนา
+        เหมาะสำหรับทั้งงานโครงการขนาดใหญ่และงานตกแต่งภายใน
+      </p>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {[
+          {
+            title: "ห้องประชุม / สำนักงาน",
+            text: "แนะนำ 600×1200×12mm. หรือ 14mm. ติดตั้งง่าย ราคาคุ้มค่า เสียงชัดในระยะ",
+          },
+          {
+            title: "โรงพยาบาล / มหาวิทยาลัย / โรงแรม",
+            text: "แนะนำ 600×1200×16mm. ประสิทธิภาพสูงสุด รับงานโครงการใหญ่",
+          },
+          {
+            title: "ธนาคาร / อาคารสำนักงานราชการ",
+            text: "โครงการที่ผ่านมานิยมรุ่นขอบบังใบ ซ่อนโครงทีบาร์ หน้าตาเรียบร้อย",
+          },
+        ].map((card) => (
+          <div key={card.title} className="bg-muted rounded-lg p-4">
+            <p className="mb-1 text-sm font-medium">{card.title}</p>
+            <p className="text-muted-foreground text-xs leading-relaxed">
+              {card.text}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ProductsClientPage({
   selectedCategory,
 }: {
   selectedCategory: number;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
+  const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
@@ -46,17 +133,25 @@ export default function ProductsClientPage({
   return (
     <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-8">
-        <div className="mb-8">
-          <h1 className="mb-4 text-3xl font-bold md:text-2xl">
-  {selectedCategory === -1
-    ? "สินค้าของเรา"
-    : categories.find((c) => c.id === selectedCategory)?.name}
-</h1>
-          <p className="text-muted-foreground text-sm">
-  {selectedCategory === -1
-    ? "เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม"
-    : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
-</p>
+        <div className="mb-6">
+          <h1 className="mb-2 text-3xl font-bold md:text-2xl">
+            {selectedCategory === -1
+              ? "สินค้าของเรา"
+              : categories.find((c) => c.id === selectedCategory)?.name}
+          </h1>
+          <p className="text-muted-foreground mb-4 text-sm">
+            {selectedCategory === -1
+              ? "เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม"
+              : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
+          </p>
+
+          {/* FIX 1 + FIX 2 — acoustic category only */}
+          {isAcoustic && (
+            <>
+              <AcousticTrustBar />
+              <AcousticProjectBar />
+            </>
+          )}
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
@@ -71,13 +166,11 @@ export default function ProductsClientPage({
               />
             </div>
 
-            {/* Categories */}
             <div>
               <h3 className="mb-4 font-semibold">ประเภทสินค้า</h3>
               <div className="space-y-2">
                 {categories.map((category) => {
                   const isSelected = selectedCategory === category.id;
-
                   return (
                     <Button
                       key={category.id}
@@ -145,17 +238,14 @@ export default function ProductsClientPage({
                       <CardDescription className="mb-3 line-clamp-5 text-sm">
                         {product.description}
                       </CardDescription>
-
                       <div className="mt-auto pt-2">
                         <div className="text-primary mb-4 text-lg font-semibold">
                           {product.price}
                         </div>
                         <div className="flex items-center justify-end">
-                          <div className="flex items-center justify-end">
-                            <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
-                              ดูรายละเอียด
-                            </span>
-                          </div>
+                          <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                            ดูรายละเอียด
+                          </span>
                         </div>
                       </div>
                     </CardContent>
@@ -170,6 +260,11 @@ export default function ProductsClientPage({
                   ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
                 </p>
               </div>
+            )}
+
+            {/* FIX 4 — content section, acoustic category only */}
+            {isAcoustic && filteredProducts.length > 0 && (
+              <AcousticContentSection />
             )}
           </div>
         </div>
