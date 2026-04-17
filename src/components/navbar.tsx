@@ -61,11 +61,7 @@ export function Navbar() {
               size={"sm"}
               className="rounded-3xl bg-[#02C300] text-white hover:bg-[#02C300]/90 max-lg:hidden"
             >
-              <Link
-                href="https://line.me/ti/p/@kaistandard"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link href="https://line.me/R/ti/p/@kaistandard">
                 <span className="font-bold">ติดต่อขอใบเสนอราคา</span>
               </Link>
             </Button>
@@ -103,11 +99,7 @@ export function Navbar() {
                     asChild
                     className="rounded-3xl bg-[#02C300] text-white hover:bg-[#02C300]/90"
                   >
-                    <Link
-                      href="https://line.me/ti/p/@kaistandard"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <Link href="https://line.me/R/ti/p/@kaistandard">
                       <span className="font-bold">ติดต่อขอใบเสนอราคา</span>
                     </Link>
                   </Button>
