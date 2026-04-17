@@ -41,10 +41,10 @@ function AcousticTrustBar() {
       ].map((item) => (
         <div
           key={item.val}
-          className="bg-primary rounded-lg px-3 py-2 text-center"
+          className="rounded-lg border bg-white px-3 py-2 text-center"
         >
-          <p className="text-primary-foreground text-sm font-medium">{item.val}</p>
-          <p className="text-primary-foreground/70 text-xs">{item.sub}</p>
+          <p className="text-sm font-medium text-gray-900">{item.val}</p>
+          <p className="text-xs text-gray-500">{item.sub}</p>
         </div>
       ))}
     </div>
@@ -54,14 +54,14 @@ function AcousticTrustBar() {
 // FIX 2 — Project pricing bar (acoustic category only)
 function AcousticProjectBar() {
   return (
-    <div className="mb-6 flex flex-col items-start gap-3 rounded-lg bg-green-600 px-4 py-3 sm:flex-row sm:items-center">
-      <p className="flex-1 text-sm font-medium text-white">
-        ราคาพิเศษสำหรับงานโครงการ — ติดต่อรับใบเสนอราคาได้เลย
+    <div className="mb-6 flex flex-col items-start gap-3 rounded-lg border bg-white px-4 py-3 sm:flex-row sm:items-center">
+      <p className="flex-1 text-sm text-gray-700">
+        ราคาพิเศษสำหรับงานโครงการ — ติดต่อรับใบเสนอราคา
       </p>
       <Link
         href="https://line.me/ti/p/@kaistandard"
         target="_blank"
-        className="shrink-0 rounded-md border border-white px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white hover:text-green-700"
+        className="shrink-0 rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
       >
         ขอราคาโครงการ
       </Link>
@@ -101,9 +101,9 @@ function AcousticContentSection() {
             text: "โครงการที่ผ่านมานิยมรุ่นขอบบังใบ ซ่อนโครงทีบาร์ หน้าตาเรียบร้อย",
           },
         ].map((card) => (
-          <div key={card.title} className="bg-primary rounded-lg p-4">
-            <p className="text-primary-foreground mb-1 text-sm font-medium">{card.title}</p>
-            <p className="text-primary-foreground/70 text-xs leading-relaxed">
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">
               {card.text}
             </p>
           </div>
