@@ -31,11 +31,7 @@ export default function HomePage() {
             asChild
             className="rounded-3xl bg-[#02C300] px-6 py-6 text-white hover:bg-[#02C300]/90"
           >
-            <Link
-              href="https://line.me/ti/p/@kaistandard"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://line.me/R/ti/p/@kaistandard">
               <span className="text-lg font-bold">ปรึกษาราคาโครงการ</span>
             </Link>
           </Button>
