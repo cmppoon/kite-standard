@@ -110,7 +110,7 @@ export default async function ProductDetailPage({
                 {product.price}
               </div>
 
-              {/* FIX 3 — Dual CTA: Phone + Line */}
+              {/* Dual CTA: Phone + Line */}
               <div className="mb-6 flex gap-3">
                 <a
                   href="tel:024153676"
@@ -120,9 +120,7 @@ export default async function ProductDetailPage({
                   โทร 02-415-3676
                 </a>
                 <Link
-                  href="https://line.me/ti/p/@kaistandard"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://line.me/R/ti/p/@kaistandard"
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#06C755] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#05b04c]"
                 >
                   <svg className="h-4 w-4" viewBox="0 0 50 50" fill="currentColor">
@@ -132,7 +130,7 @@ export default async function ProductDetailPage({
                 </Link>
               </div>
 
-              {/* FIX 2 — Spec table (acoustic only) */}
+              {/* Spec table (acoustic only) */}
               {isAcoustic && (
                 <div>
                   <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
@@ -174,7 +172,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        {/* FIX 4 — Application cards (acoustic only) */}
+        {/* Application cards (acoustic only) */}
         {isAcoustic && (
           <div className="mt-12 border-t pt-10">
             <h2 className="mb-6 text-2xl font-semibold">พื้นที่การใช้งาน</h2>
