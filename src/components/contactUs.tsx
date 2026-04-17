@@ -71,9 +71,7 @@ export default function ContactUs({
                 สะดวก ตอบกลับรวดเร็ว
               </p>
               <a
-                href="https://line.me/ti/p/@kaistandard"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="https://line.me/R/ti/p/@kaistandard"
                 className="text-accent hover:text-accent/80 font-medium transition-colors"
               >
                 @kaistandard
