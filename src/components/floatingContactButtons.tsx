@@ -24,9 +24,7 @@ export default function FloatingContactButtons() {
         className="h-14 w-14 rounded-full bg-[#37B70A] shadow-lg hover:bg-green-600"
       >
         <Link
-          href="https://line.me/ti/p/@kaistandard"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://line.me/R/ti/p/@kaistandard"
           aria-label="Open LINE QR Code"
         >
           <svg
