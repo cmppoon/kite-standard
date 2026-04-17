@@ -13,6 +13,17 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
+const ACOUSTIC_CATEGORY_ID = 1;
+
+const acousticApplications = [
+  { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
+  { title: "โรงพยาบาล / คลินิก", text: "สร้างสภาพแวดล้อมเงียบสงบสำหรับผู้ป่วย ลดการรบกวนระหว่างห้อง" },
+  { title: "มหาวิทยาลัย / โรงเรียน", text: "ลดเสียงสะท้อนในห้องเรียนและห้องบรรยาย ช่วยให้ได้ยินเสียงครูผู้สอนชัดเจน" },
+  { title: "ธนาคาร / อาคารราชการ", text: "เหมาะกับโครงการที่เน้นเสียงสงบ แนะนำรุ่นขอบบังใบสำหรับหน้าตาเรียบร้อย" },
+  { title: "โรงแรม / รีสอร์ท", text: "ควบคุมเสียงในล็อบบี้และห้องพัก เพิ่มความเป็นส่วนตัวและบรรยากาศระดับพรีเมียม" },
+  { title: "บ้านพักอาศัย", text: "ลดเสียงสะท้อนในห้องนั่งเล่นและห้องทำงาน ติดตั้งง่ายบนโครงทีบาร์มาตรฐาน" },
+];
+
 const getProductBySlug = (slug: string) => {
   const decodedSlug = decodeURIComponent(slug);
   const product = products.filter((product) => product.slug === decodedSlug);
@@ -56,6 +67,8 @@ export default async function ProductDetailPage({
     notFound();
   }
 
+  const isAcoustic = product.categoryId === ACOUSTIC_CATEGORY_ID;
+
   return (
     <div className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-8">
@@ -97,27 +110,51 @@ export default async function ProductDetailPage({
                 {product.price}
               </div>
 
-              <Button
-                asChild
-                className="rounded-3xl bg-[#02C300] px-6 py-6 text-white hover:bg-[#02C300]/90"
-              >
+              {/* FIX 3 — Dual CTA: Phone + Line */}
+              <div className="mb-6 flex gap-3">
+                <a
+                  href="tel:024153676"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                >
+                  <Phone className="h-4 w-4" />
+                  โทร 02-415-3676
+                </a>
                 <Link
                   href="https://line.me/ti/p/@kaistandard"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#06C755] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#05b04c]"
                 >
-                  <svg
-                    className="!h-8 !w-8 text-white"
-                    viewBox="0 0 50 50"
-                    fill="currentColor"
-                  >
-                    <path d="M 9 4 C 6.24 4 4 6.24 4 9 L 4 41 C 4 43.76 6.24 46 9 46 L 41 46 C 43.76 46 46 43.76 46 41 L 46 9 C 46 6.24 43.76 4 41 4 L 9 4 z M 25 11 C 33.27 11 40 16.359219 40 22.949219 C 40 25.579219 38.959297 27.960781 36.779297 30.300781 C 35.209297 32.080781 32.660547 34.040156 30.310547 35.660156 C 27.960547 37.260156 25.8 38.519609 25 38.849609 C 24.68 38.979609 24.44 39.039062 24.25 39.039062 C 23.59 39.039062 23.649219 38.340781 23.699219 38.050781 C 23.739219 37.830781 23.919922 36.789063 23.919922 36.789062 C 23.969922 36.419063 24.019141 35.830937 23.869141 35.460938 C 23.699141 35.050938 23.029062 34.840234 22.539062 34.740234 C 15.339063 33.800234 10 28.849219 10 22.949219 C 10 16.359219 16.73 11 25 11 z M 23.992188 18.998047 C 23.488379 19.007393 23 19.391875 23 20 L 23 26 C 23 26.552 23.448 27 24 27 C 24.552 27 25 26.552 25 26 L 25 23.121094 L 27.185547 26.580078 C 27.751547 27.372078 29 26.973 29 26 L 29 20 C 29 19.448 28.552 19 28 19 C 27.448 19 27 19.448 27 20 L 27 23 L 24.814453 19.419922 C 24.602203 19.122922 24.294473 18.992439 23.992188 18.998047 z M 15 19 C 14.448 19 14 19.448 14 20 L 14 26 C 14 26.552 14.448 27 15 27 L 18 27 C 18.552 27 19 26.552 19 26 C 19 25.448 18.552 25 18 25 L 16 25 L 16 20 C 16 19.448 15.552 19 15 19 z M 21 19 C 20.448 19 20 19.448 20 20 L 20 26 C 20 26.552 20.448 27 21 27 C 21.552 27 22 26.552 22 26 L 22 20 C 22 19.448 21.552 19 21 19 z M 31 19 C 30.448 19 30 19.448 30 20 L 30 26 C 30 26.552 30.448 27 31 27 L 34 27 C 34.552 27 35 26.552 35 26 C 35 25.448 34.552 25 34 25 L 32 25 L 32 24 L 34 24 C 34.553 24 35 23.552 35 23 C 35 22.448 34.553 22 34 22 L 32 22 L 32 21 L 34 21 C 34.552 21 35 20.552 35 20 C 35 19.448 34.552 19 34 19 L 31 19 z"></path>
+                  <svg className="h-4 w-4" viewBox="0 0 50 50" fill="currentColor">
+                    <path d="M 9 4 C 6.24 4 4 6.24 4 9 L 4 41 C 4 43.76 6.24 46 9 46 L 41 46 C 43.76 46 46 43.76 46 41 L 46 9 C 46 6.24 43.76 4 41 4 L 9 4 z M 25 11 C 33.27 11 40 16.359219 40 22.949219 C 40 25.579219 38.959297 27.960781 36.779297 30.300781 C 35.209297 32.080781 32.660547 34.040156 30.310547 35.660156 C 27.960547 37.260156 25.8 38.519609 25 38.849609 C 24.68 38.979609 24.44 39.039062 24.25 39.039062 C 23.59 39.039062 23.649219 38.340781 23.699219 38.050781 C 23.739219 37.830781 23.919922 36.789063 23.919922 36.789062 C 23.969922 36.419063 24.019141 35.830937 23.869141 35.460938 C 23.699141 35.050938 23.029062 34.840234 22.539062 34.740234 C 15.339063 33.800234 10 28.849219 10 22.949219 C 10 16.359219 16.73 11 25 11 z M 23.992188 18.998047 C 23.488379 19.007393 23 19.391875 23 20 L 23 26 C 23 26.552 23.448 27 24 27 C 24.552 27 25 26.552 25 26 L 25 23.121094 L 27.185547 26.580078 C 27.751547 27.372078 29 26.973 29 26 L 29 20 C 29 19.448 28.552 19 28 19 C 27.448 19 27 19.448 27 20 L 27 23 L 24.814453 19.419922 C 24.602203 19.122922 24.294473 18.992439 23.992188 18.998047 z M 15 19 C 14.448 19 14 19.448 14 20 L 14 26 C 14 26.552 14.448 27 15 27 L 18 27 C 18.552 27 19 26.552 19 26 C 19 25.448 18.552 25 18 25 L 16 25 L 16 20 C 16 19.448 15.552 19 15 19 z M 21 19 C 20.448 19 20 19.448 20 20 L 20 26 C 20 26.552 20.448 27 21 27 C 21.552 27 22 26.552 22 26 L 22 20 C 22 19.448 21.552 19 21 19 z M 31 19 C 30.448 19 30 19.448 30 20 L 30 26 C 30 26.552 30.448 27 31 27 L 34 27 C 34.552 27 35 26.552 35 26 C 35 25.448 34.552 25 34 25 L 32 25 L 32 24 L 34 24 C 34.553 24 35 23.552 35 23 C 35 22.448 34.553 22 34 22 L 32 22 L 32 21 L 34 21 C 34.552 21 35 20.552 35 20 C 35 19.448 34.552 19 34 19 L 31 19 z" />
                   </svg>
-                  <span className="text-lg font-bold">
-                    สอบถามและสั่งซื้อผ่านไลน์
-                  </span>
+                  Line @kaistandard
                 </Link>
-              </Button>
+              </div>
+
+              {/* FIX 2 — Spec table (acoustic only) */}
+              {isAcoustic && (
+                <div>
+                  <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
+                  <table className="w-full text-sm">
+                    <tbody>
+                      {[
+                        ["ขนาด", product.name.includes("1200") ? "600 × 1200 มม." : "600 × 600 มม."],
+                        ["ความหนา", (() => { const m = product.name.match(/(\d+)มม/); return m ? `${m[1]} มม.` : "-"; })()],
+                        ["ค่าดูดซับเสียง NRC", product.name.includes("16") ? "0.65+" : "0.55 – 0.60"],
+                        ["จำนวนต่อกล่อง", product.name.includes("12มม") ? "12 แผ่น" : "10 แผ่น"],
+                        ["วัสดุ", "ใยแร่ เคลือบสีขาวสำเร็จรูป"],
+                        ["ระบบติดตั้ง", "โครงทีบาร์ / ฝ้าฉาบเรียบ"],
+                      ].map(([label, value]) => (
+                        <tr key={label} className="border-b last:border-0">
+                          <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
+                          <td className="py-2 font-medium">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </div>
 
             {/* Features */}
@@ -137,8 +174,23 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        {/* Detailed Information Tabs */}
-        {(product.applications || product.optionalServices) && (
+        {/* FIX 4 — Application cards (acoustic only) */}
+        {isAcoustic && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-6 text-2xl font-semibold">พื้นที่การใช้งาน</h2>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {acousticApplications.map((app) => (
+                <div key={app.title} className="rounded-lg border bg-white p-4">
+                  <p className="mb-1 text-sm font-semibold text-gray-900">{app.title}</p>
+                  <p className="text-xs leading-relaxed text-gray-500">{app.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Tabs for non-acoustic products */}
+        {!isAcoustic && (product.applications || product.optionalServices) && (
           <div className="mt-16">
             <Tabs
               defaultValue={
