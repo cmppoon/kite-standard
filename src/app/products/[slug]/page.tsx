@@ -114,7 +114,7 @@ export default async function ProductDetailPage({
               <div className="mb-6 flex gap-3">
                 <a
                   href="tel:024153676"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
                 >
                   <Phone className="h-4 w-4" />
                   โทร 02-415-3676
@@ -132,45 +132,58 @@ export default async function ProductDetailPage({
                 </Link>
               </div>
 
-              {/* FIX 2 — Spec table (acoustic only) */}
-              {isAcoustic && (
-                <div>
-                  <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
-                  <table className="w-full text-sm">
-                    <tbody>
-                      {[
-                        ["ขนาด", product.name.includes("1200") ? "600 × 1200 มม." : "600 × 600 มม."],
-                        ["ความหนา", (() => { const m = product.name.match(/(\d+)มม/); return m ? `${m[1]} มม.` : "-"; })()],
-                        ["ค่าดูดซับเสียง NRC", product.name.includes("16") ? "0.65+" : "0.55 – 0.60"],
-                        ["จำนวนต่อกล่อง", product.name.includes("12มม") ? "12 แผ่น" : "10 แผ่น"],
-                        ["วัสดุ", "ใยแร่ เคลือบสีขาวสำเร็จรูป"],
-                        ["ระบบติดตั้ง", "โครงทีบาร์ / ฝ้าฉาบเรียบ"],
-                      ].map(([label, value]) => (
-                        <tr key={label} className="border-b last:border-0">
-                          <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
-                          <td className="py-2 font-medium">{value}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-            </div>
-
-            {/* Features */}
-            {product.features && product.features.length > 0 && (
-              <div>
-                <h3 className="mb-4 text-xl font-semibold">คุณสมบัติ</h3>
-                <div className="grid grid-cols-1 gap-2">
-                  {product.features.map((feature, index) => (
-                    <div key={index} className="flex items-center">
-                      <Check className="mr-3 h-5 w-5 flex-shrink-0 text-green-500" />
-                      <span>{feature}</span>
+              {/* FIX 2 — Spec table + Features side by side on desktop */}
+              {isAcoustic ? (
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                  <div>
+                    <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
+                    <table className="w-full table-fixed text-sm">
+                      <tbody>
+                        {[
+                          ["ขนาด", product.name.includes("1200") ? "600 × 1200 มม." : "600 × 600 มม."],
+                          ["ความหนา", (() => { const m = product.name.match(/(\d+)มม/); return m ? `${m[1]} มม.` : "-"; })()],
+                          ["ค่าดูดซับเสียง NRC", product.name.includes("16") ? "0.65+" : "0.55 – 0.60"],
+                          ["จำนวนต่อกล่อง", product.name.includes("12มม") ? "12 แผ่น" : "10 แผ่น"],
+                          ["วัสดุ", "ใยแร่ เคลือบสีขาวสำเร็จรูป"],
+                          ["ระบบติดตั้ง", "โครงทีบาร์ / ฝ้าฉาบเรียบ"],
+                        ].map(([label, value]) => (
+                          <tr key={label} className="border-b last:border-0">
+                            <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
+                            <td className="py-2 font-medium">{value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {product.features && product.features.length > 0 && (
+                    <div>
+                      <h3 className="mb-3 text-lg font-semibold">คุณสมบัติ</h3>
+                      <div className="grid grid-cols-1 gap-2">
+                        {product.features.map((feature, index) => (
+                          <div key={index} className="flex items-center">
+                            <Check className="mr-3 h-5 w-5 flex-shrink-0 text-green-500" />
+                            <span className="text-sm">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
+                  )}
                 </div>
-              </div>
-            )}
+              ) : (
+                product.features && product.features.length > 0 && (
+                  <div>
+                    <h3 className="mb-4 text-xl font-semibold">คุณสมบัติ</h3>
+                    <div className="grid grid-cols-1 gap-2">
+                      {product.features.map((feature, index) => (
+                        <div key={index} className="flex items-center">
+                          <Check className="mr-3 h-5 w-5 flex-shrink-0 text-green-500" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )
+              )}
           </div>
         </div>
 
@@ -267,6 +280,25 @@ export default async function ProductDetailPage({
                 </TabsContent>
               )}
             </Tabs>
+          </div>
+        )}
+
+        {/* Delivery photo grid (acoustic only) */}
+        {isAcoustic && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-6 text-2xl font-semibold">ภาพสินค้าที่ส่งแล้ว</h2>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+              {[1,2,3,4,5,6,7,8].map((n) => (
+                <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/products/อะคูสติก/delivered/delivery-${n}.webp`}
+                    alt={`ภาพสินค้าที่ส่งแล้ว ${n}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
