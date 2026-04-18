@@ -29,8 +29,8 @@ const categories = [
   })),
 ];
 
-// FIX 1 — Trust bar (acoustic category only)
-function AcousticTrustBar() {
+// Trust bar — all category pages
+function TrustBar() {
   return (
     <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
       {[
@@ -51,8 +51,8 @@ function AcousticTrustBar() {
   );
 }
 
-// FIX 2 — Project pricing bar (acoustic category only)
-function AcousticProjectBar() {
+// Project pricing bar — all category pages
+function ProjectBar() {
   return (
     <div className="mb-6 flex flex-col items-start gap-3 rounded-lg border bg-white px-4 py-3 sm:flex-row sm:items-center">
       <p className="flex-1 text-sm text-gray-700">
@@ -69,7 +69,7 @@ function AcousticProjectBar() {
   );
 }
 
-// FIX 4 — Content section at bottom (acoustic category only)
+// Content section at bottom — acoustic category only
 function AcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -120,6 +120,7 @@ export default function ProductsClientPage({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
+  const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
     const matchesCategory =
@@ -145,11 +146,11 @@ export default function ProductsClientPage({
               : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
-          {/* FIX 1 + FIX 2 — acoustic category only */}
-          {isAcoustic && (
+          {/* Trust bar + CTA — all category pages */}
+          {isCategoryPage && (
             <>
-              <AcousticTrustBar />
-              <AcousticProjectBar />
+              <TrustBar />
+              <ProjectBar />
             </>
           )}
         </div>
@@ -262,7 +263,7 @@ export default function ProductsClientPage({
               </div>
             )}
 
-            {/* FIX 4 — content section, acoustic category only */}
+            {/* Content section — acoustic category only */}
             {isAcoustic && filteredProducts.length > 0 && (
               <AcousticContentSection />
             )}
