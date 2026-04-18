@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ACOUSTIC_CATEGORY_ID = 1;
+const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 
 const acousticApplications = [
   { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
@@ -29,6 +30,38 @@ const getProductBySlug = (slug: string) => {
   const product = products.filter((product) => product.slug === decodedSlug);
   return product.length > 0 ? product[0] : null;
 };
+
+type Product = NonNullable<ReturnType<typeof getProductBySlug>>;
+
+function parseGypsumAcousticSpec(product: Product) {
+  const name = product.name;
+
+  const sizeMatch = name.match(/(\d+)x(\d+)x/i);
+  const size = sizeMatch ? `${sizeMatch[1]} × ${sizeMatch[2]} มม.` : "-";
+
+  const is1200x240 = name.includes("1200x240") || name.includes("120x240") || name.includes("240");
+
+  const thickMatch = name.match(/x(\d+)มม/i);
+  const thickness = thickMatch ? `${thickMatch[1]} มม.` : "-";
+  const thicknessNum = thickMatch ? parseInt(thickMatch[1]) : 0;
+
+  let boxCount = "-";
+  if (is1200x240) {
+    boxCount = "ไม่มีกล่อง";
+  } else if (thicknessNum === 9) {
+    boxCount = "8 แผ่น / กล่อง";
+  } else if (thicknessNum === 12) {
+    boxCount = "6 แผ่น / กล่อง";
+  }
+
+  const feat0 = product.features?.[0] ?? "";
+  const modelMatch = feat0.match(/รุ่น\s+(KS-\d+\s+[^|]+)/);
+  const model = modelMatch ? modelMatch[1].trim() : "-";
+  const perfMatch = feat0.match(/ฉลุลาย\s+([\d.]+%)/);
+  const perfPct = perfMatch ? perfMatch[1] : "-";
+
+  return { size, thickness, boxCount, model, perfPct };
+}
 
 export async function generateMetadata({
   params,
@@ -68,6 +101,8 @@ export default async function ProductDetailPage({
   }
 
   const isAcoustic = product.categoryId === ACOUSTIC_CATEGORY_ID;
+  const isGypsumAcoustic = product.categoryId === GYPSUM_ACOUSTIC_CATEGORY_ID;
+  const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
 
   return (
     <div className="bg-background min-h-screen">
@@ -130,7 +165,7 @@ export default async function ProductDetailPage({
                 </Link>
               </div>
 
-              {/* Spec table (acoustic only) */}
+              {/* Spec table — acoustic (categoryId 1) */}
               {isAcoustic && (
                 <div>
                   <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
@@ -143,6 +178,32 @@ export default async function ProductDetailPage({
                         ["จำนวนต่อกล่อง", product.name.includes("12มม") ? "12 แผ่น" : "10 แผ่น"],
                         ["วัสดุ", "ใยแร่ เคลือบสีขาวสำเร็จรูป"],
                         ["ระบบติดตั้ง", "โครงทีบาร์ / ฝ้าฉาบเรียบ"],
+                      ].map(([label, value]) => (
+                        <tr key={label} className="border-b last:border-0">
+                          <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
+                          <td className="py-2 font-medium">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Spec table — gypsum acoustic (categoryId 5) */}
+              {isGypsumAcoustic && gypsumSpec && (
+                <div>
+                  <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
+                  <table className="w-full table-fixed text-sm">
+                    <tbody>
+                      {[
+                        ["ขนาด", gypsumSpec.size],
+                        ["ความหนา", gypsumSpec.thickness],
+                        ["รุ่น / ลาย", gypsumSpec.model],
+                        ["% ฉลุลาย", gypsumSpec.perfPct],
+                        ["มาตรฐาน", "BS 1230 + มอก. 219-2552"],
+                        ["ระบบไฟ", "ไม่ลามไฟ Class 0 : BS 476 Part 6&7"],
+                        ["ด้านหลัง", "PE Foam"],
+                        ["จำนวนต่อกล่อง", gypsumSpec.boxCount],
                       ].map(([label, value]) => (
                         <tr key={label} className="border-b last:border-0">
                           <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
@@ -172,7 +233,7 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
-        {/* Application cards (acoustic only) */}
+        {/* Application cards — acoustic only */}
         {isAcoustic && (
           <div className="mt-12 border-t pt-10">
             <h2 className="mb-6 text-2xl font-semibold">พื้นที่การใช้งาน</h2>
@@ -187,38 +248,27 @@ export default async function ProductDetailPage({
           </div>
         )}
 
-        {/* Tabs for non-acoustic products */}
-        {!isAcoustic && (product.applications || product.optionalServices) && (
+        {/* Tabs for non-acoustic / non-gypsum-acoustic products */}
+        {!isAcoustic && !isGypsumAcoustic && (product.applications || product.optionalServices) && (
           <div className="mt-16">
             <Tabs
-              defaultValue={
-                product.applications ? "applications" : "optionalServices"
-              }
+              defaultValue={product.applications ? "applications" : "optionalServices"}
               className="w-full"
             >
               <TabsList className="grid w-full grid-cols-2">
                 {product.applications && (
-                  <TabsTrigger value="applications">
-                    พื้นที่การใช้งาน
-                  </TabsTrigger>
+                  <TabsTrigger value="applications">พื้นที่การใช้งาน</TabsTrigger>
                 )}
                 {product.optionalServices && (
-                  <TabsTrigger value="optionalServices">
-                    บริการเสริม
-                  </TabsTrigger>
+                  <TabsTrigger value="optionalServices">บริการเสริม</TabsTrigger>
                 )}
               </TabsList>
-
               {product.applications && (
                 <TabsContent value="applications" className="mt-8">
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">
-                        พื้นที่การใช้งาน
-                      </CardTitle>
-                      <CardDescription>
-                        พื้นที่การใช้งานที่เหมาะสมกับสินค้านี้
-                      </CardDescription>
+                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">พื้นที่การใช้งาน</CardTitle>
+                      <CardDescription>พื้นที่การใช้งานที่เหมาะสมกับสินค้านี้</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -237,12 +287,8 @@ export default async function ProductDetailPage({
                 <TabsContent value="optionalServices" className="mt-8">
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">
-                        บริการเสริม
-                      </CardTitle>
-                      <CardDescription>
-                        บริการเสริมโดยผู้เชี่ยวชาญ
-                      </CardDescription>
+                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">บริการเสริม</CardTitle>
+                      <CardDescription>บริการเสริมโดยผู้เชี่ยวชาญ</CardDescription>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
@@ -250,12 +296,8 @@ export default async function ProductDetailPage({
                           <div key={index} className="flex items-center">
                             <Phone className="text-primary mr-3 h-5 w-5 flex-shrink-0" />
                             <div>
-                              <span className="font-semibold">
-                                {service.title}
-                              </span>
-                              <span className="text-muted-foreground mt-1 line-clamp-2">
-                                {service.description}
-                              </span>
+                              <span className="font-semibold">{service.title}</span>
+                              <span className="text-muted-foreground mt-1 line-clamp-2">{service.description}</span>
                             </div>
                           </div>
                         ))}
@@ -268,12 +310,12 @@ export default async function ProductDetailPage({
           </div>
         )}
 
-        {/* Delivery photo grid (acoustic only) */}
+        {/* Delivery photo grid — acoustic (categoryId 1) */}
         {isAcoustic && (
           <div className="mt-12 border-t pt-10">
             <h2 className="mb-6 text-2xl font-semibold">ภาพสินค้าที่ส่งแล้ว</h2>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-              {[1,2,3,4,5,6,7,8].map((n) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
                 <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg">
                   <Image
                     src={`/products/อะคูสติก/delivered/delivery-${n}.webp`}
@@ -287,18 +329,31 @@ export default async function ProductDetailPage({
           </div>
         )}
 
+        {/* Delivery photo grid — gypsum acoustic (categoryId 5) */}
+        {isGypsumAcoustic && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-6 text-2xl font-semibold">ภาพสินค้าที่ส่งแล้ว</h2>
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                  <Image
+                    src={`/products/แผ่นลดเสียงสะท้อน/delivered/delivery-${n}.webp`}
+                    alt={`ภาพสินค้าที่ส่งแล้ว ${n}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Related Products */}
         {(() => {
           const related = products
-            .filter(
-              (p) =>
-                p.categoryId === product.categoryId &&
-                p.slug !== product.slug
-            )
+            .filter((p) => p.categoryId === product.categoryId && p.slug !== product.slug)
             .slice(0, 4);
-
           if (related.length === 0) return null;
-
           return (
             <div className="mt-16">
               <h2 className="mb-6 text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
@@ -318,12 +373,8 @@ export default async function ProductDetailPage({
                       />
                     </div>
                     <div className="p-3">
-                      <p className="line-clamp-2 text-sm font-medium">
-                        {item.name}
-                      </p>
-                      <p className="text-primary mt-1 text-sm font-semibold">
-                        {item.price}
-                      </p>
+                      <p className="line-clamp-2 text-sm font-medium">{item.name}</p>
+                      <p className="text-primary mt-1 text-sm font-semibold">{item.price}</p>
                     </div>
                   </Link>
                 ))}
