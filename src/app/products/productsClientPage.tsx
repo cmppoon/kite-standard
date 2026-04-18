@@ -17,16 +17,18 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ACOUSTIC_CATEGORY_ID = 1;
+const SERVICE_HATCH_CATEGORY_ID = 2;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
+const GYPSUM_CATEGORY_ID = 6;
 const CEILING_FRAME_CATEGORY_ID = 7;
+const TBAR_CATEGORY_ID = 8;
 
 const categories = [
   { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
   ...productCategories.map((category) => ({
     id: category.id,
     name: category.name,
-    count: products.filter((product) => product.categoryId === category.id)
-      .length,
+    count: products.filter((product) => product.categoryId === category.id).length,
     slug: category.slug,
   })),
 ];
@@ -40,10 +42,7 @@ function TrustBar() {
         { val: "ส่งทั่วไทย", sub: "สต็อกพร้อมส่ง" },
         { val: "รับโครงการ", sub: "ทุกขนาด" },
       ].map((item) => (
-        <div
-          key={item.val}
-          className="rounded-lg border bg-white px-3 py-2 text-center"
-        >
+        <div key={item.val} className="rounded-lg border bg-white px-3 py-2 text-center">
           <p className="text-sm font-medium text-gray-900">{item.val}</p>
           <p className="text-xs text-gray-500">{item.sub}</p>
         </div>
@@ -71,33 +70,21 @@ function ProjectBar() {
 function AcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
-      <h2 className="mb-3 text-xl font-semibold">
-        แผ่นอะคูสติกคืออะไร และเลือกแบบไหนดี?
-      </h2>
+      <h2 className="mb-3 text-xl font-semibold">แผ่นอะคูสติกคืออะไร และเลือกแบบไหนดี?</h2>
       <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
         แผ่นอะคูสติก (Acoustic Board) คือวัสดุฝ้าเพดานที่ผลิตจากใยแร่
         ออกแบบมาเพื่อดูดซับเสียงสะท้อนและลดเสียงก้องภายในห้อง
         ต่างจากฝ้าทั่วไปที่สะท้อนเสียงกลับ
         แผ่นอะคูสติกจะดูดซับคลื่นเสียงไว้ทำให้เสียงในห้องชัดขึ้นและสบายหูมากขึ้น
-        ค่า NRC (Noise Reduction Coefficient)
-        คือตัวชี้วัดประสิทธิภาพ ยิ่งสูงยิ่งดูดซับเสียงได้มาก
+        ค่า NRC (Noise Reduction Coefficient) คือตัวชี้วัดประสิทธิภาพ ยิ่งสูงยิ่งดูดซับเสียงได้มาก
         แผ่นของไคสแตนดาร์ดมีค่า NRC 0.55–0.65 ขึ้นอยู่กับความหนา
         เหมาะสำหรับทั้งงานโครงการขนาดใหญ่และงานตกแต่งภายใน
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {[
-          {
-            title: "ห้องประชุม / สำนักงาน",
-            text: "แนะนำ 600×1200×12mm. หรือ 14mm. ติดตั้งง่าย ราคาคุ้มค่า เสียงชัดในระยะ",
-          },
-          {
-            title: "โรงพยาบาล / มหาวิทยาลัย / โรงแรม",
-            text: "แนะนำ 600×1200×16mm. ประสิทธิภาพสูงสุด รับงานโครงการใหญ่",
-          },
-          {
-            title: "ธนาคาร / อาคารสำนักงานราชการ",
-            text: "โครงการที่ผ่านมานิยมรุ่นขอบบังใบ ซ่อนโครงทีบาร์ หน้าตาเรียบร้อย",
-          },
+          { title: "ห้องประชุม / สำนักงาน", text: "แนะนำ 600×1200×12mm. หรือ 14mm. ติดตั้งง่าย ราคาคุ้มค่า เสียงชัดในระยะ" },
+          { title: "โรงพยาบาล / มหาวิทยาลัย / โรงแรม", text: "แนะนำ 600×1200×16mm. ประสิทธิภาพสูงสุด รับงานโครงการใหญ่" },
+          { title: "ธนาคาร / อาคารสำนักงานราชการ", text: "โครงการที่ผ่านมานิยมรุ่นขอบบังใบ ซ่อนโครงทีบาร์ หน้าตาเรียบร้อย" },
         ].map((card) => (
           <div key={card.title} className="rounded-lg border bg-white p-4">
             <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
@@ -105,6 +92,19 @@ function AcousticContentSection() {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+function ServiceHatchContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">ช่องเซอร์วิสคืออะไร?</h2>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        ช่องเซอร์วิสคือช่องที่เหมือนกับประตูของฝ้าเพดานติดตั้งในระบบฉาบเรียบ
+        เพื่อเข้าไปทำการซ่อมแซมงานระบบข้างบน ทั้งงานระบบไฟฟ้า ประปา
+        หรือระบบระบายอากาศ เป็นต้น มีทั้งแบบธรรมดาและทนชื้น
+      </p>
     </div>
   );
 }
@@ -112,23 +112,12 @@ function AcousticContentSection() {
 function GypsumAcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
-      <h2 className="mb-3 text-xl font-semibold">
-        แผ่นยิปซั่มลดเสียงสะท้อน เหมาะกับพื้นที่ไหนบ้าง?
-      </h2>
+      <h2 className="mb-3 text-xl font-semibold">แผ่นยิปซั่มลดเสียงสะท้อน เหมาะกับพื้นที่ไหนบ้าง?</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {[
-          {
-            title: "โรงเรียน / มหาลัย",
-            text: "อาคารหรือห้องเรียนมีการใช้มากเป็นลำดับต้นๆเนื่องด้วยมีการใช้งานจำนวนมาก แผ่นยิปซั่มลดเสียงสะท้อนเป็นวัสดุลดเสียงก้องที่สามารถควบคุมช่วยลดต้นทุนได้มาก",
-          },
-          {
-            title: "โถง / โรงพยาบาล",
-            text: "เนื่องด้วยมีพื้นที่และมีความสูงที่มากกว่าพื้นที่ทั่วไป ทำให้มีเสียงก้องมาก การใช้แผ่นยิปซั่มลดเสียงสะท้อนสามารถช่วยควบคุมเสียงได้ดีโดยเฉพาะกับห้องที่มีความสูง",
-          },
-          {
-            title: "ห้องประชุม",
-            text: "ห้องประชุมหรือสำนักงานมักจะมีการพูดคุยงานกันเกิดขึ้นและเสียงสะท้อนจะมากตาม แผ่นยิปซั่มลดเสียงสะท้อนช่วยลดปัญหาดังกล่าวได้ดี สามารถเลือกใช้ระบบทีบาร์และฉาบเรียบ",
-          },
+          { title: "โรงเรียน / มหาลัย", text: "อาคารหรือห้องเรียนมีการใช้มากเป็นลำดับต้นๆเนื่องด้วยมีการใช้งานจำนวนมาก แผ่นยิปซั่มลดเสียงสะท้อนเป็นวัสดุลดเสียงก้องที่สามารถควบคุมช่วยลดต้นทุนได้มาก" },
+          { title: "โถง / โรงพยาบาล", text: "เนื่องด้วยมีพื้นที่และมีความสูงที่มากกว่าพื้นที่ทั่วไป ทำให้มีเสียงก้องมาก การใช้แผ่นยิปซั่มลดเสียงสะท้อนสามารถช่วยควบคุมเสียงได้ดีโดยเฉพาะกับห้องที่มีความสูง" },
+          { title: "ห้องประชุม", text: "ห้องประชุมหรือสำนักงานมักจะมีการพูดคุยงานกันเกิดขึ้นและเสียงสะท้อนจะมากตาม แผ่นยิปซั่มลดเสียงสะท้อนช่วยลดปัญหาดังกล่าวได้ดี สามารถเลือกใช้ระบบทีบาร์และฉาบเรียบ" },
         ].map((card) => (
           <div key={card.title} className="rounded-lg border bg-white p-4">
             <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
@@ -140,22 +129,45 @@ function GypsumAcousticContentSection() {
   );
 }
 
+function GypsumContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">แผ่นยิปซั่มคืออะไร?</h2>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        วัสดุตกแต่งภายใน ใช้สำหรับปิดผิวโครงเคร่าฝ้าเพดานหรือผนัง ติดตั้งได้ง่าย
+        มีทั้งรูปแบบธรรมดาและทนชื้น นิยมใช้กับอาคารทั่วไป สำนักงาน หรือบ้าน
+      </p>
+    </div>
+  );
+}
+
 function CeilingFrameContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
-      <h2 className="mb-3 text-xl font-semibold">
-        เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?
-      </h2>
+      <h2 className="mb-3 text-xl font-semibold">เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?</h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {[
-          {
-            title: "ระบบทีบาร์",
-            text: "ใช้กับอาคารสำนักงาน อาคารราชการ เหมาะสำหรับพื้นที่ที่ไม่ต้องการความยุ่งยากในการดูแลและติดตั้ง สามารถใช้ได้กับแผ่นขนาด 60x120ซม. และ 60x60ซม.",
-          },
-          {
-            title: "ระบบฉาบเรียบ",
-            text: "เหมาะกับอาคารที่ต้องการความสวยงามไม่ต้องการโชว์ตัวโครงแผ่น อาทิเช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำใช้แผ่นที่มีขนาด 120x240ซม. เพื่อประหยัดเวลาในการติดตั้ง",
-          },
+          { title: "ระบบทีบาร์", text: "ใช้กับอาคารสำนักงาน อาคารราชการ เหมาะสำหรับพื้นที่ที่ไม่ต้องการความยุ่งยากในการดูแลและติดตั้ง สามารถใช้ได้กับแผ่นขนาด 60x120ซม. และ 60x60ซม." },
+          { title: "ระบบฉาบเรียบ", text: "เหมาะกับอาคารที่ต้องการความสวยงามไม่ต้องการโชว์ตัวโครงแผ่น อาทิเช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำใช้แผ่นที่มีขนาด 120x240ซม. เพื่อประหยัดเวลาในการติดตั้ง" },
+        ].map((card) => (
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TBarContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">แผ่นฝ้าทีบาร์เลือกแบบไหนดี?</h2>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {[
+          { title: "แบบลดเสียงสะท้อน", text: "เหมาะสำหรับอาคารที่มีการเกิดเสียงพูดคุยกันมาก เช่น ออฟฟิศ ห้องประชุม อาคารสาธารณะ มีขนาด 60x60ซม. และ 60x120ซม. เพื่อให้เหมาะสมกับขนาดของห้อง มีน้ำหนักที่เบาและเป็นวัสดุลดเสียงสะท้อนที่คุ้มค่า" },
+          { title: "แบบเรียบ", text: "เหมาะสำหรับอาคารที่ต้องการโดดเด่นด้วยหน้าตาที่เรียบและสามารถทำความสะอาดได้ง่าย" },
         ].map((card) => (
           <div key={card.title} className="rounded-lg border bg-white p-4">
             <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
@@ -174,8 +186,11 @@ export default function ProductsClientPage({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
+  const isServiceHatch = selectedCategory === SERVICE_HATCH_CATEGORY_ID;
   const isGypsumAcoustic = selectedCategory === GYPSUM_ACOUSTIC_CATEGORY_ID;
+  const isGypsum = selectedCategory === GYPSUM_CATEGORY_ID;
   const isCeilingFrame = selectedCategory === CEILING_FRAME_CATEGORY_ID;
+  const isTBar = selectedCategory === TBAR_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -246,11 +261,7 @@ export default function ProductsClientPage({
                         }
                       >
                         <span>{category.name}</span>
-                        <span
-                          className={`text-sm ${
-                            isSelected ? "text-white" : "text-muted-foreground"
-                          }`}
-                        >
+                        <span className={`text-sm ${isSelected ? "text-white" : "text-muted-foreground"}`}>
                           {category.count}
                         </span>
                       </Link>
@@ -312,21 +323,16 @@ export default function ProductsClientPage({
 
             {filteredProducts.length === 0 && (
               <div className="py-12 text-center">
-                <p className="text-muted-foreground">
-                  ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ
-                </p>
+                <p className="text-muted-foreground">ไม่พบสินค้าที่ตรงกับการค้นหาของคุณ</p>
               </div>
             )}
 
-            {isAcoustic && filteredProducts.length > 0 && (
-              <AcousticContentSection />
-            )}
-            {isGypsumAcoustic && filteredProducts.length > 0 && (
-              <GypsumAcousticContentSection />
-            )}
-            {isCeilingFrame && filteredProducts.length > 0 && (
-              <CeilingFrameContentSection />
-            )}
+            {isAcoustic && filteredProducts.length > 0 && <AcousticContentSection />}
+            {isServiceHatch && filteredProducts.length > 0 && <ServiceHatchContentSection />}
+            {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticContentSection />}
+            {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
+            {isCeilingFrame && filteredProducts.length > 0 && <CeilingFrameContentSection />}
+            {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
           </div>
         </div>
       </div>
