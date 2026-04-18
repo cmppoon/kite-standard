@@ -16,28 +16,39 @@ export default function CeilingCalculator() {
   const [result, setResult] = useState<CalculatorResult | null>(null)
   const [error, setError] = useState("")
 
+  const runCalculate = (type: CeilingType, w: string, l: string, size: TileSize) => {
+    setError("")
+    const wNum = parseFloat(w)
+    const lNum = parseFloat(l)
+    if (!wNum || !lNum || wNum <= 0 || lNum <= 0) return
+    const res = calculate(
+      type === "tbar"
+        ? { type: "tbar", width: wNum, length: lNum, tileSize: size }
+        : { type: "concealed", width: wNum, length: lNum }
+    )
+    setResult(res)
+  }
+
   const handleCalculate = () => {
     setError("")
     const w = parseFloat(width)
     const l = parseFloat(length)
-
     if (!w || !l || w <= 0 || l <= 0) {
       setError("กรุณากรอกความกว้างและความยาวให้ถูกต้อง")
       return
     }
-
-    const res = calculate(
-      ceilingType === "tbar"
-        ? { type: "tbar", width: w, length: l, tileSize }
-        : { type: "concealed", width: w, length: l }
-    )
-    setResult(res)
+    runCalculate(ceilingType, width, length, tileSize)
   }
 
   const handleTypeChange = (t: CeilingType) => {
     setCeilingType(t)
     setResult(null)
     setError("")
+  }
+
+  const handleTileSizeChange = (s: TileSize) => {
+    setTileSize(s)
+    runCalculate(ceilingType, width, length, s)
   }
 
   return (
@@ -114,7 +125,7 @@ export default function CeilingCalculator() {
             {(["600x600", "600x1200"] as TileSize[]).map((s) => (
               <button
                 key={s}
-                onClick={() => setTileSize(s)}
+                onClick={() => handleTileSizeChange(s)}
                 className={`px-4 py-2 text-sm transition-colors ${
                   tileSize === s
                     ? "bg-gray-100 font-medium text-gray-900"
@@ -170,7 +181,7 @@ export default function CeilingCalculator() {
           </div>
 
           <p className="text-xs text-gray-400">
-            * คำนวณเบื้องต้นโดยเผื่อค่าเสียหาย 5% 
+            * คำนวณเบื้องต้นโดยเผื่อค่าเสียหาย 5%
           </p>
         </div>
       )}

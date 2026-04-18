@@ -30,13 +30,15 @@ function calculateTbar(input: TbarInput): CalculatorResult {
   const { width, length, tileSize } = input
   const area = width * length
 
-  const tileCount     = Math.ceil(area / TILE_AREA[tileSize] * 1.05)
-  const mainRunner    = Math.ceil(area / 2.5)
-  const crossRunner   = Math.ceil(area * 1.25)
-  const lAngle        = Math.ceil(area / 4)
-  const wire          = Math.ceil(area / 3)
-  const hangPoint     = Math.ceil(area)
-  const nail          = Math.ceil(area / 250)
+  const tileCount   = Math.ceil((area / TILE_AREA[tileSize]) * 1.05)
+  const mainRunner  = Math.ceil(area / 2.5)
+  const crossRunner = tileSize === "600x1200"
+    ? Math.ceil((area * 1.25) / 2)
+    : Math.ceil(area * 1.25)
+  const lAngle      = Math.ceil(area / 4)
+  const wire        = Math.ceil(area / 3)
+  const hangPoint   = Math.ceil(area)
+  const nail        = Math.ceil(area / 250)
 
   return {
     area,
