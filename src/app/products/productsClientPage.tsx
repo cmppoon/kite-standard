@@ -18,6 +18,7 @@ import { useState } from "react";
 
 const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
+const CEILING_FRAME_CATEGORY_ID = 7;
 
 const categories = [
   { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
@@ -30,7 +31,6 @@ const categories = [
   })),
 ];
 
-// Trust bar — all category pages
 function TrustBar() {
   return (
     <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -52,7 +52,6 @@ function TrustBar() {
   );
 }
 
-// Project pricing bar — all category pages
 function ProjectBar() {
   return (
     <div className="mb-6 flex flex-col items-start gap-3 rounded-lg border bg-white px-4 py-3 sm:flex-row sm:items-center">
@@ -69,7 +68,6 @@ function ProjectBar() {
   );
 }
 
-// Content section — acoustic category only
 function AcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -111,7 +109,6 @@ function AcousticContentSection() {
   );
 }
 
-// Content section — แผ่นยิปซั่มลดเสียงสะท้อน category only
 function GypsumAcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -143,6 +140,33 @@ function GypsumAcousticContentSection() {
   );
 }
 
+function CeilingFrameContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">
+        เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?
+      </h2>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {[
+          {
+            title: "ระบบทีบาร์",
+            text: "ใช้กับอาคารสำนักงาน อาคารราชการ เหมาะสำหรับพื้นที่ที่ไม่ต้องการความยุ่งยากในการดูแลและติดตั้ง สามารถใช้ได้กับแผ่นขนาด 60x120ซม. และ 60x60ซม.",
+          },
+          {
+            title: "ระบบฉาบเรียบ",
+            text: "เหมาะกับอาคารที่ต้องการความสวยงามไม่ต้องการโชว์ตัวโครงแผ่น อาทิเช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำใช้แผ่นที่มีขนาด 120x240ซม. เพื่อประหยัดเวลาในการติดตั้ง",
+          },
+        ].map((card) => (
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ProductsClientPage({
   selectedCategory,
 }: {
@@ -151,6 +175,7 @@ export default function ProductsClientPage({
   const [searchTerm, setSearchTerm] = useState("");
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
   const isGypsumAcoustic = selectedCategory === GYPSUM_ACOUSTIC_CATEGORY_ID;
+  const isCeilingFrame = selectedCategory === CEILING_FRAME_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -177,7 +202,6 @@ export default function ProductsClientPage({
               : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
-          {/* Trust bar + CTA — all category pages */}
           {isCategoryPage && (
             <>
               <TrustBar />
@@ -294,12 +318,14 @@ export default function ProductsClientPage({
               </div>
             )}
 
-            {/* Content sections */}
             {isAcoustic && filteredProducts.length > 0 && (
               <AcousticContentSection />
             )}
             {isGypsumAcoustic && filteredProducts.length > 0 && (
               <GypsumAcousticContentSection />
+            )}
+            {isCeilingFrame && filteredProducts.length > 0 && (
+              <CeilingFrameContentSection />
             )}
           </div>
         </div>
