@@ -17,6 +17,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const ACOUSTIC_CATEGORY_ID = 1;
+const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 
 const categories = [
   { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
@@ -59,8 +60,7 @@ function ProjectBar() {
         ราคาพิเศษสำหรับงานโครงการ — ติดต่อรับใบเสนอราคา
       </p>
       <Link
-        href="https://line.me/ti/p/@kaistandard"
-        target="_blank"
+        href="https://line.me/R/ti/p/@kaistandard"
         className="shrink-0 rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
       >
         ขอราคาโครงการ
@@ -69,7 +69,7 @@ function ProjectBar() {
   );
 }
 
-// Content section at bottom — acoustic category only
+// Content section — acoustic category only
 function AcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -103,9 +103,39 @@ function AcousticContentSection() {
         ].map((card) => (
           <div key={card.title} className="rounded-lg border bg-white p-4">
             <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
-            <p className="text-xs leading-relaxed text-gray-500">
-              {card.text}
-            </p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Content section — แผ่นยิปซั่มลดเสียงสะท้อน category only
+function GypsumAcousticContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">
+        แผ่นยิปซั่มลดเสียงสะท้อน เหมาะกับพื้นที่ไหนบ้าง?
+      </h2>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {[
+          {
+            title: "โรงเรียน / มหาลัย",
+            text: "อาคารหรือห้องเรียนมีการใช้มากเป็นลำดับต้นๆเนื่องด้วยมีการใช้งานจำนวนมาก แผ่นยิปซั่มลดเสียงสะท้อนเป็นวัสดุลดเสียงก้องที่สามารถควบคุมช่วยลดต้นทุนได้มาก",
+          },
+          {
+            title: "โถง / โรงพยาบาล",
+            text: "เนื่องด้วยมีพื้นที่และมีความสูงที่มากกว่าพื้นที่ทั่วไป ทำให้มีเสียงก้องมาก การใช้แผ่นยิปซั่มลดเสียงสะท้อนสามารถช่วยควบคุมเสียงได้ดีโดยเฉพาะกับห้องที่มีความสูง",
+          },
+          {
+            title: "ห้องประชุม",
+            text: "ห้องประชุมหรือสำนักงานมักจะมีการพูดคุยงานกันเกิดขึ้นและเสียงสะท้อนจะมากตาม แผ่นยิปซั่มลดเสียงสะท้อนช่วยลดปัญหาดังกล่าวได้ดี สามารถเลือกใช้ระบบทีบาร์และฉาบเรียบ",
+          },
+        ].map((card) => (
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
           </div>
         ))}
       </div>
@@ -120,6 +150,7 @@ export default function ProductsClientPage({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
+  const isGypsumAcoustic = selectedCategory === GYPSUM_ACOUSTIC_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -263,9 +294,12 @@ export default function ProductsClientPage({
               </div>
             )}
 
-            {/* Content section — acoustic category only */}
+            {/* Content sections */}
             {isAcoustic && filteredProducts.length > 0 && (
               <AcousticContentSection />
+            )}
+            {isGypsumAcoustic && filteredProducts.length > 0 && (
+              <GypsumAcousticContentSection />
             )}
           </div>
         </div>
