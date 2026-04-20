@@ -67,6 +67,18 @@ function ProjectBar() {
   );
 }
 
+function KaiStandardContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">ทำไมต้องไคสแตนดาร์ด</h2>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        เพราะเราเป็นผู้เชี่ยวชาญฝ้าเพดาน แผ่นอะคูสติก ยิปซั่มอะคูสติกมากกว่า 40 ปี
+        ครอบคลุมโครงการทั่วประเทศ จัดส่งทั้งโครงการเอกชนและงานราชการ
+      </p>
+    </div>
+  );
+}
+
 function AcousticContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -217,12 +229,8 @@ export default function ProductsClientPage({
               : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
-          {isCategoryPage && (
-            <>
-              <TrustBar />
-              <ProjectBar />
-            </>
-          )}
+          <TrustBar />
+          <ProjectBar />
         </div>
 
         <div className="flex flex-col gap-8 lg:flex-row">
@@ -327,6 +335,7 @@ export default function ProductsClientPage({
               </div>
             )}
 
+            {selectedCategory === -1 && filteredProducts.length > 0 && <KaiStandardContentSection />}
             {isAcoustic && filteredProducts.length > 0 && <AcousticContentSection />}
             {isServiceHatch && filteredProducts.length > 0 && <ServiceHatchContentSection />}
             {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticContentSection />}
