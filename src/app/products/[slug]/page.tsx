@@ -15,6 +15,7 @@ import Link from "next/link";
 
 const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
+const CEILING_FRAME_CATEGORY_ID = 7;
 
 const acousticApplications = [
   { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
@@ -102,6 +103,7 @@ export default async function ProductDetailPage({
 
   const isAcoustic = product.categoryId === ACOUSTIC_CATEGORY_ID;
   const isGypsumAcoustic = product.categoryId === GYPSUM_ACOUSTIC_CATEGORY_ID;
+  const isCeilingFrame = product.categoryId === CEILING_FRAME_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
 
   return (
@@ -248,8 +250,8 @@ export default async function ProductDetailPage({
           </div>
         )}
 
-        {/* Tabs for non-acoustic / non-gypsum-acoustic products */}
-        {!isAcoustic && !isGypsumAcoustic && (product.applications || product.optionalServices) && (
+        {/* Tabs for non-acoustic / non-gypsum-acoustic / non-ceiling-frame products */}
+        {!isAcoustic && !isGypsumAcoustic && !isCeilingFrame && (product.applications || product.optionalServices) && (
           <div className="mt-16">
             <Tabs
               defaultValue={product.applications ? "applications" : "optionalServices"}
@@ -346,6 +348,55 @@ export default async function ProductDetailPage({
               ))}
             </div>
           </div>
+        )}
+
+        {/* Ceiling frame guide + calculator link + delivery photos (categoryId 7) */}
+        {isCeilingFrame && (
+          <>
+            <div className="mt-12 border-t pt-10">
+              <h2 className="mb-6 text-2xl font-semibold">เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?</h2>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {[
+                  {
+                    title: "ระบบทีบาร์",
+                    text: "เหมาะกับอาคารสำนักงานและอาคารราชการที่ต้องการความสะดวกในการดูแลและติดตั้ง รองรับแผ่นขนาด 60×120 ซม. และ 60×60 ซม.",
+                  },
+                  {
+                    title: "ระบบฉาบเรียบ",
+                    text: "เหมาะกับอาคารที่เน้นความสวยงามและไม่ต้องการโชว์โครงแผ่น เช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำแผ่นขนาด 120×240 ซม. เพื่อลดเวลาการติดตั้ง",
+                  },
+                ].map((card) => (
+                  <div key={card.title} className="rounded-lg border bg-white p-4">
+                    <p className="mb-1 text-sm font-semibold text-gray-900">{card.title}</p>
+                    <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6">
+                <Link
+                  href="/calculator"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700"
+                >
+                  คำนวณปริมาณวัสดุ →
+                </Link>
+              </div>
+            </div>
+            <div className="mt-12 border-t pt-10">
+              <h2 className="mb-6 text-2xl font-semibold">ภาพสินค้าที่ส่งแล้ว</h2>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                  <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                    <Image
+                      src={`/products/อุปกรณ์ช่างฝ้า/delivered/delivery-${n}.webp`}
+                      alt={`ภาพสินค้าที่ส่งแล้ว ${n}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
         )}
 
         {/* Related Products */}
