@@ -8,11 +8,18 @@ import { productCategories } from "@/data/productCategories";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+
 export const metadata = {
   title: "ไคสแตนดาร์ด | แผ่นอะคูสติก ลดเสียงสะท้อน ฝ้าเพดาน กรุงเทพ บางบอน",
   description:
     "จำหน่ายแผ่นอะคูสติก แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดานคุณภาพสูง ราคาโครงการ ประสบการณ์กว่า 40 ปี เหมาะสำหรับห้องประชุม สำนักงาน มหาวิทยาลัย โทร 02-415-3676",
 };
+
+const YOUTUBE_SHORTS = [
+  { id: "hhirS7T8xgI", title: "แผ่นอะคูสติก KAI Standard" },
+  { id: "rMDtN0heUKU", title: "ลดเสียงสะท้อนด้วยแผ่นอะคูสติก" },
+  { id: "nWjAdj6F_fE", title: "ฝ้าเพดานคุณภาพสูง" },
+];
 
 export default function HomePage() {
   return (
@@ -25,7 +32,6 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="relative px-4 py-16">
         <BgPattern />
-
         <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
           <Button
             asChild
@@ -41,7 +47,9 @@ export default function HomePage() {
       {/* Products Section */}
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">ประเภทสินค้า</h1>
+          <h1 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
+            ประเภทสินค้า
+          </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
             อาคารพาณิชย์ และอุตสาหกรรม
@@ -91,41 +99,50 @@ export default function HomePage() {
 
       <OurCustomers />
       <ContactUs />
-      {/* <WhyChooseUs /> */}
 
-      {/* Structured Data for SEO */}
-      {/* <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "ไคสแตนดาร์ด",
-            description:
-              "ผู้นำด้านการจัดจำหน่ายโครงคร่าวฝ้าเพดาน งานฉาบและผลิตภัณฑ์ที่เกี่ยวข้องกับระบบฝ้า-ผนัง แบบครบวงจร ทั้งปลีกและส่ง ครอบคลุมลูกค้าทั้งในประเทศและต่างประเทศ",
-            url: "https://kaistandard.com",
-            logo: "https://kaistandard.com/logo.png",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+1-555-123-4567",
-              contactType: "customer service",
-              availableLanguage: "English",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "123 Ceiling Street",
-              addressLocality: "New York",
-              addressRegion: "NY",
-              postalCode: "10001",
-              addressCountry: "US",
-            },
-            sameAs: ["https://facebook.com/kaistandardds"],
-            foundingDate: "1999",
-            numberOfEmployees: "100-500",
-            areaServed: "United States",
-          }),
-        }}
-      /> */}
+      {/* YouTube Shorts Section */}
+      <section className="mx-auto max-w-7xl px-4 py-16">
+        <div className="mb-12 text-center">
+          <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
+            วิดีโอแนะนำ
+          </h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
+            ชมวิดีโอสั้นความรู้เรื่องฝ้าเพดานและแผ่นอะคูสติก
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {YOUTUBE_SHORTS.map((video) => (
+            <div key={video.id} className="flex flex-col items-center">
+              <div className="w-full overflow-hidden rounded-xl shadow-md" style={{ aspectRatio: "9/16", maxHeight: "540px" }}>
+                <iframe
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                  style={{ aspectRatio: "9/16" }}
+                />
+              </div>
+              <p className="text-muted-foreground mt-3 text-center text-sm">
+                {video.title}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+            <Link
+              href="https://www.youtube.com/@kaistandard1984/shorts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ดูวิดีโอทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }

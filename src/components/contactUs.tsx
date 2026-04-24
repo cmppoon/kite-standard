@@ -13,16 +13,20 @@ export default function ContactUs({
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           {fromContactUs ? (
-            <h1 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h1>
+            <h1 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
+              ติดต่อเรา
+            </h1>
           ) : (
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">ติดต่อเรา</h2>
+            <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
+              ติดต่อเรา
+            </h2>
           )}
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
             ติดต่อผู้เชี่ยวชาญของเราเพื่อรับโซลูชันฝ้าเพดานที่ออกแบบเฉพาะสำหรับคุณ
           </p>
         </div>
 
-        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
           {/* Phone */}
           <Card className="group border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
             <CardContent className="p-6 text-center">
@@ -126,13 +130,42 @@ export default function ContactUs({
               </a>
             </CardContent>
           </Card>
+
+          {/* YouTube */}
+          <Card className="group border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-lg">
+            <CardContent className="p-6 text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-600 transition-transform group-hover:scale-110">
+                <svg
+                  className="h-8 w-8 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-red-600">
+                YouTube
+              </h3>
+              <p className="text-muted-foreground mb-3 text-sm">
+                ดูวิดีโอแนะนำสินค้าและความรู้
+              </p>
+              <a
+                href="https://www.youtube.com/@kaistandard1984/shorts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-red-600 transition-colors hover:text-red-500"
+              >
+                คลิกที่นี่เพื่อเยี่ยมชม
+              </a>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="text-center">
           <Button
             asChild
             size="lg"
-            className="bg-secondary hover:bg-secondary/90"
+            className="bg-primary hover:bg-primary/90"
           >
             <Link href="/map">สาขาทั้งหมด</Link>
           </Button>

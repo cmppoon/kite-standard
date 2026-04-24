@@ -7,7 +7,7 @@ export default function OurCustomers() {
     <section className="bg-white px-4 py-16">
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
-          <h1 className="mb-4 text-3xl font-bold md:text-4xl">ลูกค้าและโครงการที่ใช้ผลิตภัณฑ์ของเรา</h1>
+          <h1 className="mb-4 text-3xl font-bold md:text-4xl text-primary">ลูกค้าและโครงการที่ใช้ผลิตภัณฑ์ของเรา</h1>
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5 gap-y-12">
