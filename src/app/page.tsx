@@ -16,9 +16,9 @@ export const metadata = {
 };
 
 const YOUTUBE_SHORTS = [
-  { id: "hhirS7T8xgI", title: "แผ่นอะคูสติก KAI Standard" },
-  { id: "rMDtN0heUKU", title: "ลดเสียงสะท้อนด้วยแผ่นอะคูสติก" },
-  { id: "nWjAdj6F_fE", title: "ฝ้าเพดานคุณภาพสูง" },
+  { id: "hhirS7T8xgI", title: "แผ่นอะคูสติก VS แผ่นยิปซั่ม?" },
+  { id: "rMDtN0heUKU", title: "ระบบฝ้าฉาบเรียบหรือทีบาร์ดีกว่ากัน?" },
+  { id: "nWjAdj6F_fE", title: "แผ่นฝ้าอะคูสติก พื้นที่ไหนไม่ควรขาด!" },
 ];
 
 export default function HomePage() {
@@ -51,8 +51,7 @@ export default function HomePage() {
             ประเภทสินค้า
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย
-            อาคารพาณิชย์ และอุตสาหกรรม
+            ประเภทสินค้าฝ้าเพดาน แผ่นอะคูสติกและโครงผนัง สำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอาคารสำนักงาน
           </p>
         </div>
 
@@ -104,10 +103,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="mb-12 text-center">
           <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
-            วิดีโอแนะนำ
+            วิดีโอแนะนำฝ้าเพดาน
           </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            ชมวิดีโอสั้นความรู้เรื่องฝ้าเพดานและแผ่นอะคูสติก
+            Short video ความรู้ดีๆ สำหรับฝ้าเพดาน
           </p>
         </div>
 

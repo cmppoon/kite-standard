@@ -22,7 +22,7 @@ export default function ContactUs({
             </h2>
           )}
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            ติดต่อผู้เชี่ยวชาญของเราเพื่อรับโซลูชันฝ้าเพดานที่ออกแบบเฉพาะสำหรับคุณ
+            ติดต่อผู้เชี่ยวชาญเพื่อรับโซลูชันฝ้าเพดานที่หรือคำแนะนำแผ่นลดเสียงสะท้อน
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function ContactUs({
               </p>
               <a
                 href="mailto:sattawatt.sura@hotmail.com"
-                className="text-accent hover:text-accent/80 font-medium transition-colors"
+                className="text-accent hover:text-accent/80 break-all text-sm font-medium transition-colors"
               >
                 sattawatt.sura@hotmail.com
               </a>
