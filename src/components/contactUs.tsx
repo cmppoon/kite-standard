@@ -130,6 +130,7 @@ export default function ContactUs({
               </a>
             </CardContent>
           </Card>
+        </div>
 
         <div className="text-center">
           <Button
