@@ -9,9 +9,10 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const category = getCategoryBySlug(slug);
- const descriptionMap: Record<string, string> = {
+
+  const descriptionMap: Record<string, string> = {
     แผ่นอะคูสติก:
-      "แผ่นอะคูสติกลดเสียงสะท้อน คุณภาพสูง ผลิตเองโดยไคสแตนดาร์ด เหมาะสำหรับห้องประชุม สำนักงาน โรงแรม มหาวิทยาลัย หลากหลายขนาดและลาย สอบถามราคาได้เลย โทร 02-415-3676",
+      "แผ่นอะคูสติก ราคา 65-263 บาท/แผ่น เหมาะสำหรับห้องประชุม สำนักงาน โรงแรม มหาวิทยาลัย NRC 0.55-0.65 สต็อกพร้อมส่ง โทร 02-415-3676",
     แผ่นยิปซั่มลดเสียงสะท้อน:
       "แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดานกันเสียง คุณภาพสูง ราคาโรงงาน จัดส่งทั่วกรุงเทพและปริมณฑล สอบถาม Line @kaistandard",
     แผ่นยิปซั่ม:
@@ -35,7 +36,7 @@ export async function generateMetadata({
 
   return {
     title: category
-      ? `${category.name} | ไคสแตนดาร์ด ราคาโรงงาน`
+      ? `${category.name} ราคาโรงงาน | ไคสแตนดาร์ด`
       : "สินค้า | ไคสแตนดาร์ด",
     description,
   };
