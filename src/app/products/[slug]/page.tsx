@@ -26,6 +26,28 @@ const acousticApplications = [
   { title: "บ้านพักอาศัย", text: "ลดเสียงสะท้อนในห้องนั่งเล่นและห้องทำงาน ติดตั้งง่ายบนโครงทีบาร์มาตรฐาน" },
 ];
 
+const getSizeCm = (name: string): { cm: string; mmFull: string; cmShort: string } | null => {
+  const match = name.match(/(\d+)\s*x\s*(\d+)(?:\s*x\s*(\d+))?\s*มม/i);
+  if (!match) return null;
+  const w = parseInt(match[1]);
+  const h = parseInt(match[2]);
+  const t = match[3] ? parseInt(match[3]) : null;
+  const wCm = w / 10;
+  const hCm = h / 10;
+  const cmShort = `${wCm}×${hCm}ซม.`;
+  const cm = t
+    ? `${w}×${h}×${t} มม. (${wCm}×${hCm}ซม.×${t} มม.)`
+    : `${w}×${h} มม. (${wCm}×${hCm}ซม.)`;
+  const mmFull = t ? `${w}×${h}×${t} มม.` : `${w}×${h} มม.`;
+  return { cm, mmFull, cmShort };
+};
+
+const formatTitle = (name: string): string => {
+  const size = getSizeCm(name);
+  if (!size) return name;
+  return name.replace(/ขนาด[\s\-]+\d+\s*x\s*\d+(?:\s*x\s*\d+)?\s*มม\.?/i, `ขนาด ${size.cm}`);
+};
+
 const getProductBySlug = (slug: string) => {
   const decodedSlug = decodeURIComponent(slug);
   const product = products.filter((product) => product.slug === decodedSlug);
@@ -38,7 +60,9 @@ function parseGypsumAcousticSpec(product: Product) {
   const name = product.name;
 
   const sizeMatch = name.match(/(\d+)x(\d+)x/i);
-  const size = sizeMatch ? `${sizeMatch[1]} × ${sizeMatch[2]} มม.` : "-";
+  const size = sizeMatch
+    ? `${sizeMatch[1]}×${sizeMatch[2]} มม. (${parseInt(sizeMatch[1]) / 10}×${parseInt(sizeMatch[2]) / 10}ซม.)`
+    : "-";
 
   const is1200x240 = name.includes("1200x240") || name.includes("120x240") || name.includes("240");
 
@@ -79,10 +103,10 @@ export async function generateMetadata({
   const canonicalUrl = `https://www.kaistandard.com/products/${slug}`;
 
   return {
-    title: `${product.name} | ไคสแตนดาร์ด ราคาโรงงาน`,
+    title: `${formatTitle(product.name)} | ไคสแตนดาร์ด ราคาโรงงาน`,
     description: product.description
       ? `${product.description} สอบถามราคาโทร 02-415-3676`
-      : `${product.name} คุณภาพสูง ราคาโรงงาน จากไคสแตนดาร์ด ประสบการณ์กว่า 40 ปี สอบถามราคาโทร 02-415-3676`,
+      : `${formatTitle(product.name)} คุณภาพสูง ราคาโรงงาน จากไคสแตนดาร์ด ประสบการณ์กว่า 40 ปี สอบถามราคาโทร 02-415-3676`,
     alternates: {
       canonical: canonicalUrl,
     },
@@ -107,7 +131,7 @@ export default async function ProductDetailPage({
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
 
   return (
-    <div className="bg-background min-h-screen">
+    <main className="bg-background min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-8">
         {/* Breadcrumb */}
         <div className="mb-2">
@@ -131,6 +155,8 @@ export default async function ProductDetailPage({
                 src={product.image}
                 alt={product.name}
                 fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -139,13 +165,13 @@ export default async function ProductDetailPage({
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="mb-4 text-3xl font-bold">{product.name}</h1>
+              <h1 className="mb-3 text-3xl font-bold">{product.name}</h1>
+              <div className="text-primary mb-4 text-3xl font-bold">
+                {product.price}
+              </div>
               <p className="text-muted-foreground text-md mb-6">
                 {product.description}
               </p>
-              <div className="text-primary mb-6 text-3xl font-bold">
-                {product.price}
-              </div>
 
               {/* Dual CTA: Phone + Line */}
               <div className="mb-6 flex gap-3">
@@ -170,11 +196,17 @@ export default async function ProductDetailPage({
               {/* Spec table — acoustic (categoryId 1) */}
               {isAcoustic && (
                 <div>
-                  <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
+                  <h2 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h2>
                   <table className="w-full table-fixed text-sm">
                     <tbody>
                       {[
-                        ["ขนาด", product.name.includes("1200") ? "600 × 1200 มม." : "600 × 600 มม."],
+                        ["ขนาด", (() => {
+                          const m = product.name.match(/(\d+)\s*x\s*(\d+)/i);
+                          if (!m) return "600×600 มม. (60×60ซม.)";
+                          const wCm = parseInt(m[1]) / 10;
+                          const hCm = parseInt(m[2]) / 10;
+                          return `${m[1]}×${m[2]} มม. (${wCm}×${hCm}ซม.)`;
+                        })()],
                         ["ความหนา", (() => { const m = product.name.match(/(\d+)มม/); return m ? `${m[1]} มม.` : "-"; })()],
                         ["ค่าดูดซับเสียง NRC", product.name.includes("16") ? "0.65+" : "0.55 – 0.60"],
                         ["จำนวนต่อกล่อง", product.name.includes("12มม") ? "12 แผ่น" : "10 แผ่น"],
@@ -194,7 +226,7 @@ export default async function ProductDetailPage({
               {/* Spec table — gypsum acoustic (categoryId 5) */}
               {isGypsumAcoustic && gypsumSpec && (
                 <div>
-                  <h3 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h3>
+                  <h2 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h2>
                   <table className="w-full table-fixed text-sm">
                     <tbody>
                       {[
@@ -220,7 +252,7 @@ export default async function ProductDetailPage({
               {/* Features */}
               {product.features && product.features.length > 0 && (
                 <div>
-                  <h3 className="mb-4 text-xl font-semibold">คุณสมบัติ</h3>
+                  <h2 className="mb-4 text-xl font-semibold">คุณสมบัติ</h2>
                   <div className="grid grid-cols-1 gap-2">
                     {product.features.map((feature, index) => (
                       <div key={index} className="flex items-center">
@@ -435,6 +467,6 @@ export default async function ProductDetailPage({
         })()}
 
       </div>
-    </div>
+    </main>
   );
 }
