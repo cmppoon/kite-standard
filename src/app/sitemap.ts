@@ -3,7 +3,7 @@ import { products } from "@/data/products";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://kaistandard.com";
+  const baseUrl = "https://www.kaistandard.com";
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}`, lastModified: new Date() },
