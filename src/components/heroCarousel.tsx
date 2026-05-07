@@ -29,7 +29,9 @@ export default function HeroCarousel() {
       className="w-full"
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 8000,
+          stopOnInteraction: true,
+          stopOnMouseEnter: true,
         }),
       ]}
     >
