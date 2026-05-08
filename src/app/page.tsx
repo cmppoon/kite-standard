@@ -15,12 +15,6 @@ export const metadata = {
     "จำหน่ายแผ่นอะคูสติก แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดานคุณภาพสูง ราคาโครงการ ประสบการณ์กว่า 40 ปี เหมาะสำหรับห้องประชุม สำนักงาน มหาวิทยาลัย โทร 02-415-3676",
 };
 
-const YOUTUBE_SHORTS = [
-  { id: "hhirS7T8xgI", title: "แผ่นอะคูสติก VS แผ่นยิปซั่ม?" },
-  { id: "rMDtN0heUKU", title: "ระบบฝ้าฉาบเรียบหรือทีบาร์ดีกว่ากัน?" },
-  { id: "nWjAdj6F_fE", title: "แผ่นฝ้าอะคูสติก พื้นที่ไหนไม่ควรขาด!" },
-];
-
 export default function HomePage() {
   return (
     <div className="min-h-screen">
@@ -98,50 +92,6 @@ export default function HomePage() {
 
       <OurCustomers />
       <ContactUs />
-
-      {/* YouTube Shorts Section */}
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <div className="mb-12 text-center">
-          <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
-            วิดีโอแนะนำฝ้าเพดาน
-          </h2>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            Short video ความรู้ดีๆ สำหรับฝ้าเพดาน
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {YOUTUBE_SHORTS.map((video) => (
-            <div key={video.id} className="flex flex-col items-center">
-              <div className="w-full overflow-hidden rounded-xl shadow-md" style={{ aspectRatio: "9/16", maxHeight: "540px" }}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id}`}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
-                  style={{ aspectRatio: "9/16" }}
-                />
-              </div>
-              <p className="text-muted-foreground mt-3 text-center text-sm">
-                {video.title}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link
-              href="https://www.youtube.com/@kaistandard1984/shorts"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ดูวิดีโอทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-      </section>
     </div>
   );
 }
