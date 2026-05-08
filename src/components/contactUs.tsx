@@ -28,15 +28,13 @@ export default function ContactUs({
           {/* Phone */}
           <Card className="group border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
             <CardContent className="p-3 text-center">
-              <h3 className="text-accent mb-2 text-sm font-semibold">
-                โทรศัพท์
-              </h3>
-              <div className="from-primary/10 to-primary/20 mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+              <h3 className="text-primary mb-3 text-lg font-bold">Phone</h3>
+              <div className="from-primary/10 to-primary/20 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
                 <Phone className="text-primary h-5 w-5" />
               </div>
               <a
                 href="tel:+6624153676"
-                className="text-accent hover:text-accent/80 mb-1 block text-xs font-medium transition-colors"
+                className="text-accent hover:text-accent/80 mb-2 block text-sm font-medium transition-colors"
               >
                 02-415-3676
               </a>
@@ -51,8 +49,8 @@ export default function ContactUs({
           {/* LINE */}
           <Card className="group border-secondary/20 hover:border-secondary/40 transition-all duration-300 hover:shadow-md">
             <CardContent className="p-3 text-center">
-              <h3 className="text-accent mb-2 text-sm font-semibold">LINE</h3>
-              <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-[#37B70A]/90 transition-transform group-hover:scale-110">
+              <h3 className="text-primary mb-3 text-lg font-bold">LINE</h3>
+              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#37B70A]/90 transition-transform group-hover:scale-110">
                 <svg
                   className="h-5 w-5 text-white"
                   viewBox="0 0 50 50"
@@ -63,7 +61,7 @@ export default function ContactUs({
               </div>
               <a
                 href="https://line.me/R/ti/p/@kaistandard"
-                className="text-accent hover:text-accent/80 mb-1 block text-xs font-medium transition-colors"
+                className="text-accent hover:text-accent/80 mb-2 block text-sm font-medium transition-colors"
               >
                 @kaistandard
               </a>
@@ -76,13 +74,13 @@ export default function ContactUs({
           {/* Email */}
           <Card className="group border-accent/20 hover:border-accent/40 transition-all duration-300 hover:shadow-md">
             <CardContent className="p-3 text-center">
-              <h3 className="text-accent mb-2 text-sm font-semibold">อีเมล</h3>
-              <div className="from-primary/10 to-primary/20 mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+              <h3 className="text-primary mb-3 text-lg font-bold">Email</h3>
+              <div className="from-primary/10 to-primary/20 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
                 <Mail className="text-accent h-5 w-5" />
               </div>
               <a
                 href="mailto:sattawatt.sura@hotmail.com"
-                className="text-accent hover:text-accent/80 mb-1 block text-xs font-medium transition-colors"
+                className="text-accent hover:text-accent/80 mb-2 block text-sm font-medium transition-colors"
               >
                 Email
               </a>
@@ -95,10 +93,8 @@ export default function ContactUs({
           {/* Facebook */}
           <Card className="group border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-md">
             <CardContent className="p-3 text-center">
-              <h3 className="text-accent mb-2 text-sm font-semibold">
-                Facebook
-              </h3>
-              <div className="from-primary/10 to-primary/20 mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
+              <h3 className="text-primary mb-3 text-lg font-bold">Facebook</h3>
+              <div className="from-primary/10 to-primary/20 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br transition-transform group-hover:scale-110">
                 <svg
                   className="text-primary h-5 w-5"
                   fill="currentColor"
@@ -111,7 +107,7 @@ export default function ContactUs({
                 href="https://www.facebook.com/kaistandardds/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 mb-1 block text-xs font-medium transition-colors"
+                className="text-accent hover:text-accent/80 mb-2 block text-sm font-medium transition-colors"
               >
                 Facebook
               </a>
@@ -124,10 +120,8 @@ export default function ContactUs({
           {/* YouTube */}
           <Card className="group border-red-200 hover:border-red-400 transition-all duration-300 hover:shadow-md">
             <CardContent className="p-3 text-center">
-              <h3 className="text-accent mb-2 text-sm font-semibold">
-                YouTube
-              </h3>
-              <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 transition-transform group-hover:scale-110">
+              <h3 className="text-primary mb-3 text-lg font-bold">YouTube</h3>
+              <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-red-100 transition-transform group-hover:scale-110">
                 <svg
                   className="h-5 w-5 text-red-600"
                   fill="currentColor"
@@ -140,7 +134,7 @@ export default function ContactUs({
                 href="https://www.youtube.com/@kaistandard1984/shorts"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent hover:text-accent/80 mb-1 block text-xs font-medium transition-colors"
+                className="text-accent hover:text-accent/80 mb-2 block text-sm font-medium transition-colors"
               >
                 YouTube
               </a>
