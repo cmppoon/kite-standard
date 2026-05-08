@@ -59,12 +59,12 @@ export const customers = [
     image: "/customers/customer12.webp",
     name: "Customer 12",
   },
-   {
+  {
     id: 13,
     image: "/customers/customer13.webp",
     name: "Customer 13",
   },
-   {
+  {
     id: 14,
     image: "/customers/customer14.webp",
     name: "Customer 14",
@@ -73,5 +73,30 @@ export const customers = [
     id: 15,
     image: "/customers/customer15.webp",
     name: "Customer 15",
+  },
+  {
+    id: 16,
+    image: "/customers/customer16.webp",
+    name: "Customer 16",
+  },
+  {
+    id: 17,
+    image: "/customers/customer17.webp",
+    name: "Customer 17",
+  },
+  {
+    id: 18,
+    image: "/customers/customer18.webp",
+    name: "Customer 18",
+  },
+  {
+    id: 19,
+    image: "/customers/customer19.webp",
+    name: "Customer 19",
+  },
+  {
+    id: 20,
+    image: "/customers/customer20.webp",
+    name: "Customer 20",
   },
 ];

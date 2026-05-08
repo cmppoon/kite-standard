@@ -1,8 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { customers } from "@/data/customers";
 
 export default function OurCustomers() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section className="bg-white px-4 py-16">
       <div className="mx-auto max-w-6xl">
@@ -11,10 +15,12 @@ export default function OurCustomers() {
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5 gap-y-12">
-          {customers.map((customer) => (
+          {customers.map((customer, index) => (
             <div
               key={customer.id}
-              className="relative mx-auto h-24 w-full"
+              className={`relative mx-auto h-24 w-full ${
+                !showAll && index >= 6 ? "hidden md:block" : ""
+              }`}
             >
               <Image
                 src={customer.image}
@@ -25,6 +31,17 @@ export default function OurCustomers() {
             </div>
           ))}
         </div>
+
+        {!showAll && (
+          <div className="mt-8 text-center md:hidden">
+            <button
+              onClick={() => setShowAll(true)}
+              className="rounded-md border-2 border-primary px-6 py-2 text-primary font-semibold hover:bg-primary hover:text-white transition-colors"
+            >
+              ดูเพิ่มเติม
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
