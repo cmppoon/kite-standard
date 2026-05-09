@@ -69,13 +69,13 @@ export default function HomePage() {
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Light dark overlay — half of original */}
-              <div className="absolute inset-0 bg-black/25" />
+              {/* Left-to-right dark gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-8">
                 <h3 className="text-2xl font-bold text-white drop-shadow-md">
                   {category.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-white/90 drop-shadow-md">
+                <p className="mt-1 max-w-[60%] text-sm font-medium text-white/90 drop-shadow-md">
                   {category.description}
                 </p>
                 <span className="mt-2 inline-block text-sm font-medium text-white/85 drop-shadow-md">
