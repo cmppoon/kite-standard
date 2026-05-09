@@ -60,23 +60,25 @@ export default function HomePage() {
             <Link
               key={category.id}
               href={`/products/category/${category.slug}`}
-              className="group relative block h-80 overflow-hidden bg-gray-100"
+              className="group relative block h-80 overflow-hidden"
             >
               <Image
                 src={category.image || "/placeholder.svg"}
                 alt={category.name}
                 fill
                 sizes="(max-width: 640px) 100vw, 50vw"
-                className="object-contain"
+                className="object-cover"
               />
+              {/* Light dark overlay — half of original */}
+              <div className="absolute inset-0 bg-black/25" />
               <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <h3 className="text-2xl font-bold text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+                <h3 className="text-2xl font-bold text-white drop-shadow-md">
                   {category.name}
                 </h3>
-                <p className="mt-1 text-sm font-medium text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+                <p className="mt-1 text-sm font-medium text-white/90 drop-shadow-md">
                   {category.description}
                 </p>
-                <span className="mt-2 inline-block text-sm font-medium text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+                <span className="mt-2 inline-block text-sm font-medium text-white/85 drop-shadow-md">
                   ดูรายละเอียด →
                 </span>
               </div>
