@@ -70,7 +70,7 @@ export default function HomePage() {
                 className="object-cover"
               />
               <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <div className="inline-block max-w-[85%] rounded-lg border-2 border-white bg-white/15 px-5 py-4 text-white backdrop-blur-md transition-colors group-hover:bg-white group-hover:text-primary">
+                <div className="bg-primary inline-block w-fit max-w-[85%] rounded-lg px-5 py-3 text-white transition-colors group-hover:bg-white group-hover:text-primary">
                   <h3 className="text-lg font-bold leading-tight sm:text-xl">
                     {category.name}
                   </h3>
