@@ -69,18 +69,15 @@ export default function HomePage() {
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover"
               />
-              {/* Left-to-right dark gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8">
-                <h3 className="text-2xl font-bold text-white drop-shadow-md">
-                  {category.name}
-                </h3>
-                <p className="mt-1 max-w-[60%] text-sm font-medium text-white/90 drop-shadow-md">
-                  {category.description}
-                </p>
-                <span className="mt-2 inline-block text-sm font-medium text-white/85 drop-shadow-md">
-                  ดูรายละเอียด →
-                </span>
+              <div className="absolute inset-0 flex flex-col justify-end p-6">
+                <div className="inline-block max-w-[85%] rounded-lg border-2 border-white bg-white/15 px-5 py-4 text-white backdrop-blur-md transition-colors group-hover:bg-white group-hover:text-primary">
+                  <h3 className="text-lg font-bold leading-tight sm:text-xl">
+                    {category.name}
+                  </h3>
+                  <p className="mt-1 text-xs font-medium leading-snug opacity-95 sm:text-sm">
+                    {category.description}
+                  </p>
+                </div>
               </div>
             </Link>
           ))}
