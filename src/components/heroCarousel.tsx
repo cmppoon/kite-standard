@@ -36,7 +36,7 @@ export default function HeroCarousel() {
       <CarouselContent>
         {carouselItems.map((item, index) => (
           <CarouselItem key={index}>
-            <div className="relative aspect-[2560/947] w-full">
+            <div className="relative aspect-[2560/947] max-h-[55vh] w-full">
               <Image
                 src={item.image}
                 alt={item.alt}
