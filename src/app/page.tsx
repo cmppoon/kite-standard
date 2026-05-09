@@ -44,8 +44,8 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="mx-auto max-w-7xl px-4 py-16">
-        <div className="mb-12 text-center">
+      <section className="py-16">
+        <div className="mx-auto mb-12 max-w-7xl px-4 text-center">
           <h1 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
             ประเภทสินค้า
           </h1>
@@ -55,12 +55,12 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-0 sm:grid-cols-2">
           {homepageCategories.map((category) => (
             <Link
               key={category.id}
               href={`/products/category/${category.slug}`}
-              className="group relative block h-72 overflow-hidden rounded-xl"
+              className="group relative block h-80 overflow-hidden"
             >
               <Image
                 src={category.image || "/placeholder.svg"}
@@ -69,17 +69,14 @@ export default function HomePage() {
                 sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              {/* Dark overlay */}
-              <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 group-hover:bg-black/40" />
-              {/* Text */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <h3 className="text-xl font-bold text-white drop-shadow-md">
+              <div className="absolute inset-0 flex flex-col justify-end p-8">
+                <h3 className="text-2xl font-bold text-[#1a56c4] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                   {category.name}
                 </h3>
-                <p className="mt-1 text-sm text-white/85">
+                <p className="mt-1 text-sm font-medium text-[#1a56c4] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                   {category.description}
                 </p>
-                <span className="mt-2 inline-block text-sm text-white/75 transition-colors duration-300 group-hover:text-white">
+                <span className="mt-2 inline-block text-sm font-medium text-[#1a56c4] drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
                   ดูรายละเอียด →
                 </span>
               </div>
@@ -87,7 +84,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mx-auto mt-12 max-w-7xl px-4 text-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/products">
               ดูสินค้าทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
