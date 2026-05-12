@@ -28,14 +28,13 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-16">
-        <div className="mx-auto mb-12 max-w-7xl px-4 text-center">
-          <h1 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
-            Our Products
+      <section className="py-12">
+        <div className="mx-auto mb-6 max-w-7xl px-4 text-center">
+          <h1 className="text-primary mb-2 text-3xl font-bold md:text-4xl">
+            ผลิตภัณฑ์
           </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            ฝ้าเพดาน แผ่นอะคูสติกและโครงผนัง สำหรับการใช้งานในห้องประชุม
-            อาคารพาณิชย์ และอาคารสำนักงาน
+          <p className="text-muted-foreground mx-auto max-w-2xl text-base">
+            แผ่นอะคูสและแผ่นยิปซั่มลดเสียงสะท้อน
           </p>
         </div>
 
@@ -67,7 +66,7 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mx-auto mt-12 max-w-7xl px-4 text-center">
+        <div className="mx-auto mt-8 max-w-7xl px-4 text-center">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/products">
               ดูสินค้าทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
@@ -76,7 +75,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section — moved below product cards */}
+      {/* CTA Section — below product cards */}
       <section className="relative bg-gradient-to-b from-[#b8d4e8] to-[#5b8fbd] px-4 py-12">
         <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
           <Button
