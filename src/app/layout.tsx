@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import type { Metadata } from "next";
-import { IBM_Plex_Sans_Thai, Kanit } from "next/font/google";
+import { Kanit, Prompt } from "next/font/google";
 import type React from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -9,10 +9,10 @@ import Script from "next/script";
 import "./globals.css";
 import FloatingContactButtons from "@/components/floatingContactButtons";
 
-const ibmPlexSansThai = IBM_Plex_Sans_Thai({
+const prompt = Prompt({
   subsets: ["thai"],
   weight: ["400", "700"],
-  variable: "--font-ibm-plex-sans-thai",
+  variable: "--font-prompt",
 });
 
 const kanit = Kanit({
@@ -90,7 +90,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${ibmPlexSansThai.className} ${kanit.variable}`}>
+      <body className={`${prompt.className} ${kanit.variable}`}>
         <Navbar />
         {children}
         <Analytics />
