@@ -3,7 +3,6 @@ import HeroCarousel from "@/components/heroCarousel";
 import OurCustomers from "@/components/ourCustomers";
 import { Button } from "@/components/ui/button";
 import { productCategories } from "@/data/productCategories";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,13 +27,13 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="py-12">
+      <section className="bg-secondary/5 py-12">
         <div className="mx-auto mb-6 max-w-7xl px-4 text-center">
           <h1 className="text-primary mb-2 text-3xl font-bold md:text-4xl">
             ผลิตภัณฑ์
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-base">
-            แผ่นอะคูสติก แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดาน
+            แผ่นอะคูสและแผ่นยิปซั่มลดเสียงสะท้อน
           </p>
         </div>
 
@@ -65,18 +64,10 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-
-        <div className="mx-auto mt-8 max-w-7xl px-4 text-center">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href="/products">
-              ดูสินค้าทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
       </section>
 
       {/* CTA Section — below product cards */}
-      <section className="relative bg-gradient-to-b from-[#b8d4e8] to-[#5b8fbd] px-4 py-12">
+      <section className="bg-primary relative px-4 py-12">
         <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
           <Button
             asChild
