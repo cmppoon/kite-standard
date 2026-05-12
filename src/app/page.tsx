@@ -1,4 +1,3 @@
-import BgPattern from "@/components/bgPattern";
 import ContactUs from "@/components/contactUs";
 import HeroCarousel from "@/components/heroCarousel";
 import OurCustomers from "@/components/ourCustomers";
@@ -28,30 +27,15 @@ export default function HomePage() {
         <HeroCarousel />
       </section>
 
-      {/* CTA Section */}
-      <section className="relative px-4 py-6">
-        <BgPattern />
-        <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
-          <Button
-            asChild
-            className="rounded-3xl bg-[#02C300] px-6 py-6 text-white hover:bg-[#02C300]/90"
-          >
-            <Link href="https://line.me/R/ti/p/@kaistandard">
-              <span className="text-lg font-bold">ปรึกษาราคาโครงการ</span>
-            </Link>
-          </Button>
-        </div>
-      </section>
-
       {/* Products Section */}
       <section className="py-16">
         <div className="mx-auto mb-12 max-w-7xl px-4 text-center">
           <h1 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
-            ประเภทสินค้า
+            Our Products
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            ประเภทสินค้าฝ้าเพดาน แผ่นอะคูสติกและโครงผนัง
-            สำหรับการใช้งานในห้องประชุม อาคารพาณิชย์ และอาคารสำนักงาน
+            ฝ้าเพดาน แผ่นอะคูสติกและโครงผนัง สำหรับการใช้งานในห้องประชุม
+            อาคารพาณิชย์ และอาคารสำนักงาน
           </p>
         </div>
 
@@ -87,6 +71,22 @@ export default function HomePage() {
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
             <Link href="/products">
               ดูสินค้าทั้งหมด <ArrowRight className="-ml-1 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* CTA Section — moved below product cards */}
+      <section className="relative bg-gradient-to-b from-[#b8d4e8] to-[#5b8fbd] px-4 py-12">
+        <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
+          <Button
+            asChild
+            className="rounded-3xl bg-[#02C300] px-8 py-7 text-white hover:bg-[#02C300]/90"
+          >
+            <Link href="https://line.me/R/ti/p/@kaistandard">
+              <span className="text-lg font-bold">
+                ขอใบเสนอราคาด่วนภายใน 15 นาที
+              </span>
             </Link>
           </Button>
         </div>
