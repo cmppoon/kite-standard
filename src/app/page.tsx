@@ -33,7 +33,7 @@ export default function HomePage() {
             ผลิตภัณฑ์
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-base">
-            แผ่นอะคูสและแผ่นยิปซั่มลดเสียงสะท้อน
+            แผ่นอะคูสติกและแผ่นยิปซั่มลดเสียงสะท้อน
           </p>
         </div>
 
