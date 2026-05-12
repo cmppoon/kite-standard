@@ -1,7 +1,7 @@
 import Footer from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import type { Metadata } from "next";
-import { Kanit, Sarabun } from "next/font/google";
+import { IBM_Plex_Sans_Thai, Kanit } from "next/font/google";
 import type React from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -9,10 +9,10 @@ import Script from "next/script";
 import "./globals.css";
 import FloatingContactButtons from "@/components/floatingContactButtons";
 
-const sarabun = Sarabun({
+const ibmPlexSansThai = IBM_Plex_Sans_Thai({
   subsets: ["thai"],
-  weight: ["400", "700", "800"],
-  variable: "--font-sarabun",
+  weight: ["400", "700"],
+  variable: "--font-ibm-plex-sans-thai",
 });
 
 const kanit = Kanit({
@@ -90,7 +90,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${sarabun.className} ${kanit.variable}`}>
+      <body className={`${ibmPlexSansThai.className} ${kanit.variable}`}>
         <Navbar />
         {children}
         <Analytics />
