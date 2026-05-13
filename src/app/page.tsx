@@ -26,15 +26,39 @@ export default function HomePage() {
         <HeroCarousel />
       </section>
 
+      {/* CTA Section — image background */}
+      <section className="relative overflow-hidden px-4 py-12">
+        <Image
+          src="/cta-bg.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          aria-hidden="true"
+        />
+        <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
+          <Button
+            asChild
+            className="rounded-3xl bg-[#02C300] px-8 py-7 text-white hover:bg-[#02C300]/90"
+          >
+            <Link href="https://line.me/R/ti/p/@kaistandard">
+              <span className="text-lg font-bold">
+                ขอใบเสนอราคาด่วนภายใน 15 นาที
+              </span>
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       {/* Products Section */}
-      <section className="bg-secondary/5 py-12">
+      <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-4">
           <div className="mb-8 text-center">
             <h1 className="text-primary mb-2 text-3xl font-bold md:text-4xl">
               ผลิตภัณฑ์
             </h1>
             <p className="text-muted-foreground mx-auto max-w-2xl text-base">
-              แผ่นอะคูสและแผ่นยิปซั่มลดเสียงสะท้อน
+              แผ่นอะคูสติกและแผ่นยิปซั่มลดเสียงสะท้อน
             </p>
           </div>
 
@@ -65,22 +89,6 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section — below product cards */}
-      <section className="bg-primary relative px-4 py-12">
-        <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
-          <Button
-            asChild
-            className="rounded-3xl bg-[#02C300] px-8 py-7 text-white hover:bg-[#02C300]/90"
-          >
-            <Link href="https://line.me/R/ti/p/@kaistandard">
-              <span className="text-lg font-bold">
-                ขอใบเสนอราคาด่วนภายใน 15 นาที
-              </span>
-            </Link>
-          </Button>
         </div>
       </section>
 
