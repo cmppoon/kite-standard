@@ -1515,5 +1515,174 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 24,
+    title: "ยิปซั่มลดเสียงสะท้อนคืออะไร?",
+    slug: "ยิปซั่มลดเสียงสะท้อนคืออะไร",
+    excerpt: "ยิปซั่มลดเสียงสะท้อนคืออะไร ต่างจากยิปซั่มธรรมดายังไง และเหมาะกับงานแบบไหน มาดูคำตอบและข้อมูลที่ควรรู้ก่อนเลือกใช้ในโครงการ",
+    image: "/articles/article24.webp",
+    date: "2026-05-13",
+    readTime: "4",
+    content: `
+<h1>ยิปซั่มลดเสียงสะท้อนคืออะไร?</h1>
 
+<p>สวัสดีครับ วันนี้มาพูดถึง "ยิปซั่มลดเสียงสะท้อน" มาดูกันว่ามันคืออะไร ต่างจากยิปซั่มธรรมดายังไง และเหมาะกับงานแบบไหนบ้าง เป็นหนึ่งในวัสดุทำฝ้าเพดานที่น่าสนใจจนไม่อยากให้มองข้ามครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ยิปซั่มลดเสียงสะท้อนคืออะไร?</strong>
+
+<p>ยิปซั่มลดเสียงสะท้อน หรือที่หลายคนเรียกกันว่า "ฝ้ายิปซั่มอะคูสติก" คือแผ่นยิปซั่มที่ถูกออกแบบมาให้ช่วยดูดซับคลื่นเสียง ลดเสียงก้องในห้องลงได้ ต่างจากยิปซั่มธรรมดาที่ผิวเรียบทึบ ซึ่งคลื่นเสียงจะกระทบแล้วสะท้อนกลับเข้ามาในห้องทำให้เกิดเสียงก้อง</p>
+
+<p>จุดสังเกตง่ายๆ คือแผ่นจะมีการเจาะรูบนหน้าแผ่น ด้านหลังบุเยื่อหรือวัสดุซับเสียง ที่ทำหน้าที่ดักจับและดูดซับคลื่นเสียงไม่ให้สะท้อนกลับออกมา ค่าที่ใช้วัดความสามารถในการดูดซับเสียงเรียกว่า NRC (Noise Reduction Coefficient) ยิ่งค่าสูงยิ่งดูดซับเสียงได้ดีครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ยิปซั่มธรรมดา vs ยิปซั่มลดเสียงสะท้อน</strong>
+
+<table style="width:100%; border-collapse:collapse; margin: 1rem 0; font-size: 14px; color:#333;">
+  <thead>
+    <tr style="background:#1a73e8; color:#fff;">
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: left; color:#fff;">หัวข้อ</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: left; color:#fff;">ยิปซั่มธรรมดา</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: left; color:#fff;">ยิปซั่มลดเสียงสะท้อน</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#fff;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ผิวหน้าแผ่น</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">เรียบทึบ</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">เจาะรู</td>
+    </tr>
+    <tr style="background:#f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ค่า NRC</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ต่ำมาก</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">สูงกว่า</td>
+    </tr>
+    <tr style="background:#fff;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ด้านหลังแผ่น</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">กระดาษทั่วไป</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">บุวัสดุซับเสียง</td>
+    </tr>
+    <tr style="background:#f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">น้ำหนัก</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">แผ่นยิปซั่มทั่วไป</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ใกล้เคียง</td>
+    </tr>
+    <tr style="background:#fff;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ราคา</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ถูก</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">สูงกว่า 2-4 เท่า</td>
+    </tr>
+    <tr style="background:#f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">เหมาะกับ</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">บ้านพักทั่วไป งานปิดฝ้าทั่วไป</td>
+      <td style="padding: 10px; border: 1px solid #ddd; color:#333;">ห้องประชุม ออฟฟิศ ร้านอาหาร ออดิทอเรียม</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">พื้นที่ไหนเหมาะกับยิปซั่มลดเสียงสะท้อน?</strong>
+
+<p>ไม่ใช่ทุกห้องที่ต้องใช้ยิปซั่มลดเสียงสะท้อน แต่พื้นที่เหล่านี้ควรใช้เพื่อการใช้งานที่ดีกว่าครับ:</p>
+
+<ul>
+  <li>ห้องประชุมในออฟฟิศ — เพื่อให้เสียงพูดชัด ไม่ก้อง สะท้อนไปมา</li>
+  <li>ออฟฟิศ — ลดเสียงรบกวนข้ามโต๊ะ และเสียงโทรศัพท์</li>
+  <li>ร้านอาหาร คาเฟ่ — เพิ่มประสบการณ์ลูกค้า และลดเสียงดังจากการตะโกนรับออเดอร์</li>
+  <li>โรงเรียน ห้องเรียน — เพิ่มสมาธิ ลดเสียงรบกวนในคาบเรียน</li>
+  <li>โรงพยาบาล คลินิก — ลดเสียงรบกวน เหมาะกับเวลาพยาบาล หมอ คุยกับผู้มาใช้งาน</li>
+  <li>ห้องประชุม — ลดเสียงแทรกซ้อนขณะพูดคุยระหว่างประชุม</li>
+</ul>
+
+<p>หากอยากดูรายละเอียดเพิ่มเติมว่าแต่ละพื้นที่ต้องการคุณสมบัติแบบไหน อ่านต่อได้ที่ <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ข้อดี-ข้อจำกัด ที่พี่ๆ ต้องรู้</strong>
+
+<p><strong>ข้อดี:</strong></p>
+<ul>
+  <li>ลดเสียงสะท้อนในห้องได้</li>
+  <li>หน้าแผ่นเจาะรูดูเรียบหรู ทันสมัย ใช้ได้ทั้งงาน Modern และ Minimal</li>
+  <li>มีคุณสมบัติทนไฟเหมือนยิปซั่มทั่วไป</li>
+</ul>
+
+<p><strong>ข้อจำกัด:</strong></p>
+<ul>
+  <li>ราคาสูงกว่ายิปซั่มธรรมดา 2-4 เท่า</li>
+  <li>ถ้าใช้น้อยเกินไป เช่น ปิดเฉพาะบางจุดในห้องใหญ่ ผลลัพธ์อาจไม่ชัด</li>
+  <li>การทำความสะอาดยากกว่ายิปซั่มผิวเรียบ เพราะมีรูเจาะ</li>
+  <li>แผ่นหาได้ค่อนข้างยากในตลาด ต้องใช้เวลาในการผลิต</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">วิธีเลือกยิปซั่มลดเสียงสะท้อนให้เหมาะกับงาน</strong>
+
+<p>ก่อนตัดสินใจสั่ง ลองพิจารณา 3 ปัจจัยนี้ครับ:</p>
+
+<p><strong>1. ขนาดและปริมาตรของห้อง</strong> — ห้องใหญ่เพดานสูง เสียงก้องเยอะ ต้องเลือกแผ่นที่ค่า NRC สูง และคำนวณพื้นที่ฝ้าให้พอเพียง โดยทั่วไปควรปิดฝ้าอะคูสติกอย่างน้อย 60-70% ของพื้นที่ฝ้าทั้งหมด</p>
+
+<p><strong>2. ลักษณะการใช้งาน</strong> — ห้องประชุมเน้นเสียงพูด อาจใช้เฉพาะจุดก็เพียงพอ แต่หากพื้นที่ใหญ่ควรใช้ให้ครอบคลุม</p>
+
+<p><strong>3. งบประมาณ</strong> — ถ้างบจำกัด อาจผสมระหว่างฝ้ายิปซั่มลดเสียงสะท้อนกับ <a href="/products/category/แผ่นอะคูสติก">แผ่นอะคูสติก</a> ชนิดอื่น เช่น แผ่นอะคูสติก mineral fiber หรือ PET เพื่อให้ได้ผลลัพธ์ที่คุ้มราคา</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<h3>NRC คืออะไร ค่าเท่าไหร่ถึงเรียกว่าดูดซับเสียงได้ดี?</h3>
+<p>NRC (Noise Reduction Coefficient) คือค่าที่บอกความสามารถในการดูดซับเสียง มีค่าตั้งแต่ 0.00 ถึง 1.00 ค่ายิ่งสูงยิ่งดูดซับเสียงได้ดี โดยทั่วไปถ้า NRC 0.50 ขึ้นไปถือว่าใช้งานได้ดี</p>
+
+<h3>ใช้ยิปซั่มลดเสียงสะท้อนแทนแผ่นอะคูสติกได้ไหม?</h3>
+<p>ได้ครับ แต่ต้องดูที่ค่า NRC ของแต่ละแบบ ยิปซั่มลดเสียงสะท้อนเหมาะกับงานที่ต้องการผิวเรียบเนียนเป็นหนึ่งเดียวกับฝ้า ส่วนแผ่นอะคูสติก mineral fiber หรือ PET จะดูดซับเสียงได้สูงกว่าและราคาคุ้มกว่าในบางกรณี</p>
+
+<h3>ราคายิปซั่มลดเสียงสะท้อนแพงกว่ายิปซั่มธรรมดาเท่าไหร่?</h3>
+<p>โดยทั่วไปแพงกว่ายิปซั่มธรรมดาประมาณ 2-4 เท่า ขึ้นอยู่กับยี่ห้อ ความหนา และชนิดของแผ่นด้านหลัง อีกทั้งเป็นสินค้าสั่งผลิต</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; margin-top:24px; border-radius:6px;">
+  <p style="font-weight:600; margin:0 0 8px; color:#fff; font-size:16px;">สนใจฝ้ายิปซั่มลดเสียงสะท้อนสำหรับโปรเจกต์?</p>
+  <p style="margin:0 0 14px; color:#fff;">ปรึกษาทีมไคสได้เลย ช่วยแนะนำชนิดแผ่นและค่า NRC ที่เหมาะกับงานของพี่ๆ พร้อมเสนอราคาโครงการ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-size:14px; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "NRC คืออะไร ค่าเท่าไหร่ถึงเรียกว่าดูดซับเสียงได้ดี?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NRC (Noise Reduction Coefficient) คือค่าที่บอกความสามารถในการดูดซับเสียง มีค่าตั้งแต่ 0.00 ถึง 1.00 ค่ายิ่งสูงยิ่งดูดซับเสียงได้ดี โดยทั่วไปถ้า NRC 0.50 ขึ้นไปถือว่าใช้งานได้ดี"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ใช้ยิปซั่มลดเสียงสะท้อนแทนแผ่นอะคูสติกได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ แต่ต้องดูที่ค่า NRC ของแต่ละแบบ ยิปซั่มลดเสียงสะท้อนเหมาะกับงานที่ต้องการผิวเรียบเนียนเป็นหนึ่งเดียวกับฝ้า ส่วนแผ่นอะคูสติก mineral fiber หรือ PET จะดูดซับเสียงได้สูงกว่าและราคาคุ้มกว่าในบางกรณี"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ราคายิปซั่มลดเสียงสะท้อนแพงกว่ายิปซั่มธรรมดาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โดยทั่วไปแพงกว่ายิปซั่มธรรมดาประมาณ 2-4 เท่า ขึ้นอยู่กับยี่ห้อ ความหนา และชนิดของแผ่นด้านหลัง อีกทั้งเป็นสินค้าสั่งผลิต"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
