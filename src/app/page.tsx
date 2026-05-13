@@ -28,41 +28,43 @@ export default function HomePage() {
 
       {/* Products Section */}
       <section className="bg-secondary/5 py-12">
-        <div className="mx-auto mb-6 max-w-7xl px-4 text-center">
-          <h1 className="text-primary mb-2 text-3xl font-bold md:text-4xl">
-            ผลิตภัณฑ์
-          </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-base">
-            แผ่นอะคูสติกและแผ่นยิปซั่มลดเสียงสะท้อน
-          </p>
-        </div>
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="mb-8 text-center">
+            <h1 className="text-primary mb-2 text-3xl font-bold md:text-4xl">
+              ผลิตภัณฑ์
+            </h1>
+            <p className="text-muted-foreground mx-auto max-w-2xl text-base">
+              แผ่นอะคูสและแผ่นยิปซั่มลดเสียงสะท้อน
+            </p>
+          </div>
 
-        <div className="grid w-full grid-cols-1 gap-0 sm:grid-cols-2">
-          {homepageCategories.map((category) => (
-            <Link
-              key={category.id}
-              href={`/products/category/${category.slug}`}
-              className="group relative block h-80 overflow-hidden"
-            >
-              <Image
-                src={category.image || "/placeholder.svg"}
-                alt={category.name}
-                fill
-                sizes="(max-width: 640px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 flex flex-col justify-end p-6">
-                <div className="bg-primary inline-block w-fit max-w-[85%] rounded-lg px-5 py-3 text-white transition-colors group-hover:bg-white group-hover:text-primary">
-                  <h3 className="text-lg font-bold leading-tight sm:text-xl">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
+            {homepageCategories.map((category) => (
+              <Link
+                key={category.id}
+                href={`/products/category/${category.slug}`}
+                className="group flex flex-col"
+              >
+                <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-[#c5d9f0] bg-white">
+                  <Image
+                    src={category.image || "/placeholder.svg"}
+                    alt={category.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <h3 className="text-primary text-sm font-bold leading-tight sm:text-base">
                     {category.name}
                   </h3>
-                  <p className="mt-1 text-xs font-medium leading-snug opacity-95 sm:text-sm">
+                  <p className="text-muted-foreground mt-1 text-xs leading-snug">
                     {category.description}
                   </p>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
