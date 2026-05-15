@@ -1690,7 +1690,7 @@ export const articles = [
     title: "ฝ้ามีลวดลาย แต่งห้องยังไงให้ดูดี?",
     slug: "ฝ้ามีลวดลาย-แต่งห้องยังไงให้ดูดี",
     excerpt: "อยากให้ฝ้าดูมีดีไซน์ แต่ไม่รู้จะเลือกแบบไหน? ไคสบอยรวมลวดลายฝ้ายอดนิยมพร้อมหลักการจับคู่กับห้องให้ดูดีโดยไม่ดูรก",
-    image: "/articles/article24.webp",
+    image: "/articles/article25.webp",
     date: "2026-05-15",
     readTime: "5",
     content: `
@@ -1729,9 +1729,9 @@ export const articles = [
     </tr>
     <tr style="background:#f8f9fc;">
       <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลายรูพรุน</td>
-      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">อะคูสติก</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">อะคูสติก, ยิปซั่ม</td>
       <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">โรงภาพยนตร์, สตูดิโอ</td>
-      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลดเสียงสะท้อนสูงสุด</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ดูดซับเสียงได้ดีแต่ต้องมีวัสดุซับเสียงเพิ่ม</td>
     </tr>
     <tr style="background:#eef2f7;">
       <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลายพลาสเตอร์</td>
