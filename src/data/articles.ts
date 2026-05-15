@@ -1685,4 +1685,140 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 25,
+    title: "ฝ้ามีลวดลาย แต่งห้องยังไงให้ดูดี?",
+    slug: "ฝ้ามีลวดลาย-แต่งห้องยังไงให้ดูดี",
+    excerpt: "อยากให้ฝ้าดูมีดีไซน์ แต่ไม่รู้จะเลือกแบบไหน? ไคสบอยรวมลวดลายฝ้ายอดนิยมพร้อมหลักการจับคู่กับห้องให้ดูดีโดยไม่ดูรก",
+    image: "/articles/article24.webp",
+    date: "2026-05-15",
+    readTime: "5",
+    content: `
+<p style="font-size:28px; font-weight:700; margin:0 0 1rem;">ฝ้ามีลวดลาย แต่งห้องยังไงให้ดูดี?</p>
+ 
+<p>เคยมั้ยครับ บางครั้งอยากให้ฝ้าดูมีดีไซน์ แต่บางทีก็งงว่าจะเลือกแบบไหนดี? ไคสบอยจะมาช่วยให้พี่ๆ เข้าใจว่า ลวดลายบนฝ้าแต่ละแบบมีไว้ทำอะไร และควรเลือกใช้แบบไหนถึงจะดูดี</p>
+ 
+<p>&nbsp;</p>
+ 
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">ลวดลายบนแผ่นฝ้าทีบาร์</strong>
+ 
+<p>แผ่นลวดลายมักทำจากแผ่นยิปซั่ม แผ่น PVC หรือแผ่นอะคูสติกมีลวดลายที่ผลิตมาจากโรงงานโดยตรง ซึ่งลวดลายเหล่านี้ไม่ได้แค่สวยงาม แต่มีผลต่อประสิทธิภาพการดูดซับเสียงด้วยครับ ลวดลายยอดนิยมมีดังนี้:</p>
+ 
+<ul>
+  <li><strong>ลายจุดหรือลายหนอน</strong> — ลายหนอนหรือลายจุด ดูดซับเสียงได้ดี เหมาะกับห้องประชุม ออฟฟิศ</li>
+  <li><strong>ลายรูพรุน</strong> — มีรูเจาะเต็มผิว เสียงทะลุผ่านเข้าไปสู่วัสดุดูดซับด้านหลัง เหมาะกับโรงภาพยนตร์ ห้องสตูดิโอ</li>
+  <li><strong>ลายพลาสเตอร์</strong> — พิมพ์ลายลงบนผิวแผ่น ให้ดูเป็นธรรมชาติมากขึ้น มีนูนมีมิติ นอกจากนี้หากจับคู่สีสามารถเพิ่มความหรูหราในงบประมาณที่จำกัดอีกด้วย</li>
+  <li><strong>ลายนูนจาก PVC</strong> — ข้อดีคือทำความสะอาดได้ง่ายมากและมีลวดลายให้เลือกเยอะ มีความนูนแต่ไม่เท่าแบบพลาสเตอร์</li>
+</ul>
+ 
+<table style="width:100%; border-collapse:collapse; font-size:14px; margin-top:12px;">
+  <thead>
+    <tr style="background:#1a73e8;">
+      <th style="padding:10px 12px; text-align:left; color:#fff;">ลวดลาย</th>
+      <th style="padding:10px 12px; text-align:left; color:#fff;">วัสดุ</th>
+      <th style="padding:10px 12px; text-align:left; color:#fff;">เหมาะกับ</th>
+      <th style="padding:10px 12px; text-align:left; color:#fff;">ข้อดีพิเศษ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลายจุด / ลายหนอน</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">อะคูสติก, ยิปซั่ม</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ห้องประชุม, ออฟฟิศ</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ดูดซับเสียงได้ดี</td>
+    </tr>
+    <tr style="background:#f8f9fc;">
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลายรูพรุน</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">อะคูสติก</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">โรงภาพยนตร์, สตูดิโอ</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลดเสียงสะท้อนสูงสุด</td>
+    </tr>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ลายพลาสเตอร์</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">ยิปซั่ม, อะคูสติก</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">โรงแรม, บ้านหรู, คาเฟ่</td>
+      <td style="padding:10px 12px; border-bottom:1px solid #d0d7e3; color:#1a1a1a;">นูนมีมิติ, จับคู่สีได้</td>
+    </tr>
+    <tr style="background:#f8f9fc;">
+      <td style="padding:10px 12px; color:#1a1a1a;">ลายนูน PVC</td>
+      <td style="padding:10px 12px; color:#1a1a1a;">PVC</td>
+      <td style="padding:10px 12px; color:#1a1a1a;">ห้องน้ำ, ครัว, พื้นที่ชื้น</td>
+      <td style="padding:10px 12px; color:#1a1a1a;">ทำความสะอาดง่าย, ลายให้เลือกเยอะ</td>
+    </tr>
+  </tbody>
+</table>
+ 
+<p style="margin-top:12px;">อยากรู้จักแผ่นอะคูสติกเพิ่มเติม ดูได้ที่ <a href="/products/category/แผ่นอะคูสติก">หมวดหมู่แผ่นอะคูสติก KAI Standard</a> ได้เลยครับ</p>
+ 
+<p>&nbsp;</p>
+ 
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">หลักการจับคู่ลวดลายกับห้อง</strong>
+ 
+<p>ไม่ว่าจะเลือกฝ้าแบบไหน มีหลักง่ายๆ ที่ไคสบอยแนะนำเสมอคือ <strong>"1 ห้อง 1 texture หลัก"</strong> ครับ</p>
+ 
+<ul>
+  <li><strong>โทนสีผนัง</strong> — ถ้าผนังมีลวดลายอยู่แล้ว เลือกฝ้าเรียบ หรือ texture เบาๆ เพื่อให้ห้องไม่ดูแน่นหรือแย่งลวดลายกันเอง</li>
+  <li><strong>แสงในห้อง</strong> — texture นูนมาก + แสง downlight จะเกิดเงาชัด ทำให้มีมิติขึ้น เหมาะกับห้องที่ต้องการบรรยากาศ แต่ไม่เหมาะกับออฟฟิศ เพราะแสงที่ได้อาจไม่เพียงพอต่อการทำงาน เหมาะกับโถงหรือพื้นที่ที่ต้องการเอฟเฟ็กต์จากการเล่นแสงเงา</li>
+  <li><strong>สไตล์ห้อง</strong> — ถ้ามินิมอลแล้วต้องการลวดลาย ให้เลือกลายที่ดูต่อกันเป็นผืนเดียวกัน หากเป็นแนวหรูหราสามารถใช้ลวดลายได้เต็มที่แต่ต้องควบคุมแสงเงาให้ดี</li>
+</ul>
+ 
+<p>&nbsp;</p>
+ 
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">ข้อควรระวัง: ลวดลายเยอะเกินไปทำให้ห้องดูรก</strong>
+ 
+<p>ข้อผิดพลาดที่พบบ่อยที่สุดคือ ใส่ลวดลายทุกพื้นผิวพร้อมกันครับ เช่น ผนังลายอิฐ + ฝ้ามีลาย + พื้นลายไม้ → ห้องจะดูหนักและดูรก</p>
+<p>กฎเหล็กคือ <strong>"เลือก 1 พื้นผิวหลัก"</strong> ให้โดดเด่น แล้วให้ส่วนอื่นเรียบครับ ฝ้าเป็นพื้นที่ขนาดใหญ่ ถ้าจะใช้ลวดลายต้องมั่นใจว่ามันช่วยเสริมห้อง ไม่ใช่แย่งกันเด่น อาจจะไม่จำเป็นต้องใช้ทั้งผืนฝ้า แต่เฉพาะส่วนก็จะช่วยไม่ดูรกเกินไปครับ</p>
+ 
+<p>&nbsp;</p>
+ 
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+ 
+<p><strong>Q: ฝ้าลายอะคูสติกกับฝ้าฉาบเรียบ ต่างกันยังไง?</strong><br />A: ต่างกันที่ฟังก์ชันครับ ฝ้าฉาบเรียบเน้นความเรียบอย่างเดียว ส่วนแผ่นอะคูสติกลวดลายสวยและดูดซับเสียงได้ด้วย ถ้าห้องมีปัญหาเรื่องเสียงสะท้อน แนะนำแผ่นอะคูสติกครับ</p>
+<p>&nbsp;</p>
+<p><strong>Q: ห้องนอนบ้านใช้ฝ้า texture ได้ไหม?</strong><br />A: ได้ครับ แต่ควรเลือก texture เบาๆ ไม่ควรใช้ลายที่หนักเกินไปในห้องนอน เพราะจะทำให้ห้องดูอึดอัด</p>
+<p>&nbsp;</p>
+<p><strong>Q: ฝ้าแบบมีลวดลายใช้สีอะไรดี?</strong><br />A: ต้องบอกว่าหากมีช่างหรือทีมที่มีฝีมือ การใช้สีกับฝ้าที่มีลวดลายจะช่วยให้ฝ้าเด่นขึ้นมากๆ ครับ แต่ทั้งนี้ต้องดูว่าฝ้าดังกล่าวควรทาสีทับหรือไม่ ไม่ว่าจะเป็นความยากง่ายในการทาหรือคุณสมบัติเหมาะแก่การทาทับหรือไม่ หากทาได้จะทำให้ได้ฝ้าที่โดดเด่นและหรูหราในงบที่จำกัดมากครับ ทั้งนี้ไม่ควรมีลวดลายอื่นอีกในห้องไม่ว่าจะเป็นผนังหรือพื้น</p>
+ 
+<p>&nbsp;</p>
+ 
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; margin:0 0 8px; color:#fff; font-size:16px;">เลือกฝ้าลวดลายไม่ถูก ให้ไคสบอยช่วย</p>
+  <p style="margin:0 0 16px; color:#fff; font-size:14px;">บอกสไตล์ห้องและงบประมาณ ทีมงานจะแนะนำแผ่นที่เหมาะกับโปรเจกต์ของพี่ๆ โดยตรง</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-size:14px; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+ 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ฝ้าลายอะคูสติกกับฝ้าฉาบเรียบ ต่างกันยังไง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ต่างกันที่ฟังก์ชันครับ ฝ้าฉาบเรียบเน้นความเรียบอย่างเดียว ส่วนแผ่นอะคูสติกลวดลายสวยและดูดซับเสียงได้ด้วย ถ้าห้องมีปัญหาเรื่องเสียงสะท้อน แนะนำแผ่นอะคูสติกครับ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องนอนบ้านใช้ฝ้า texture ได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ แต่ควรเลือก texture เบาๆ ไม่ควรใช้ลายที่หนักเกินไปในห้องนอน เพราะจะทำให้ห้องดูอึดอัด"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าแบบมีลวดลายใช้สีอะไรดี?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "หากมีช่างหรือทีมที่มีฝีมือ การใช้สีกับฝ้าที่มีลวดลายจะช่วยให้ฝ้าเด่นขึ้นมากๆ แต่ทั้งนี้ต้องดูว่าฝ้าดังกล่าวควรทาสีทับหรือไม่ หากทาได้จะทำให้ได้ฝ้าที่โดดเด่นและหรูหราในงบที่จำกัด ทั้งนี้ไม่ควรมีลวดลายอื่นอีกในห้องไม่ว่าจะเป็นผนังหรือพื้น"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
