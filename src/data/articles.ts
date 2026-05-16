@@ -2022,5 +2022,5 @@ export const articles = [
 }
 </script>
     `,
-
+  },
 ];
