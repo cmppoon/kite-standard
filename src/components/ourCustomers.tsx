@@ -19,7 +19,7 @@ export default function OurCustomers() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-8 gap-y-12 md:grid-cols-5">
+        <div className="mt-8 grid grid-cols-3 gap-8 gap-y-12 md:grid-cols-6">
           {customers.map((customer, index) => (
             <div
               key={customer.id}
