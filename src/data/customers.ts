@@ -99,4 +99,24 @@ export const customers = [
     image: "/customers/customer20.webp",
     name: "Customer 20",
   },
+  {
+    id: 21,
+    image: "/customers/customer21.webp",
+    name: "Customer 21",
+  },
+  {
+    id: 22,
+    image: "/customers/customer22.webp",
+    name: "Customer 22",
+  },
+  {
+    id: 23,
+    image: "/customers/customer23.webp",
+    name: "Customer 23",
+  },
+  {
+    id: 24,
+    image: "/customers/customer24.webp",
+    name: "Customer 24",
+  },
 ];
