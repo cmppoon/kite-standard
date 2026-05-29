@@ -23,6 +23,8 @@ const GYPSUM_CATEGORY_ID = 6;
 const CEILING_FRAME_CATEGORY_ID = 7;
 const TBAR_CATEGORY_ID = 8;
 
+const PRODUCTS_PER_PAGE = 12;
+
 const categories = [
   { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
   ...productCategories.map((category) => ({
@@ -197,6 +199,7 @@ export default function ProductsClientPage({
   selectedCategory: number;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
   const isServiceHatch = selectedCategory === SERVICE_HATCH_CATEGORY_ID;
   const isGypsumAcoustic = selectedCategory === GYPSUM_ACOUSTIC_CATEGORY_ID;
@@ -213,6 +216,14 @@ export default function ProductsClientPage({
       .includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const safePage = Math.min(currentPage, Math.max(1, totalPages));
+  const startIndex = (safePage - 1) * PRODUCTS_PER_PAGE;
+  const paginatedProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + PRODUCTS_PER_PAGE
+  );
 
   return (
     <div className="bg-background min-h-screen">
@@ -240,7 +251,10 @@ export default function ProductsClientPage({
               <Input
                 placeholder="ค้นหาสินค้า..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) => {
+                  setSearchTerm(e.target.value);
+                  setCurrentPage(1);
+                }}
                 className="pl-10"
               />
             </div>
@@ -289,7 +303,7 @@ export default function ProductsClientPage({
             </div>
 
             <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-              {filteredProducts.map((product) => (
+              {paginatedProducts.map((product) => (
                 <Link
                   key={product.id}
                   href={`/products/${product.slug}`}
@@ -328,6 +342,39 @@ export default function ProductsClientPage({
                 </Link>
               ))}
             </div>
+
+            {totalPages > 1 && (
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+                <Button
+                  variant="ghost"
+                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                  disabled={safePage === 1}
+                >
+                  ก่อนหน้า
+                </Button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={safePage === page ? "default" : "ghost"}
+                    onClick={() => setCurrentPage(page)}
+                    className={
+                      safePage === page
+                        ? "bg-primary text-primary-foreground"
+                        : ""
+                    }
+                  >
+                    {page}
+                  </Button>
+                ))}
+                <Button
+                  variant="ghost"
+                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={safePage === totalPages}
+                >
+                  ถัดไป
+                </Button>
+              </div>
+            )}
 
             {filteredProducts.length === 0 && (
               <div className="py-12 text-center">
