@@ -55,4 +55,11 @@ export const productCategories = [
     image: "/ฝ้าทีบาร์.webp",
     description: "แผ่นฝ้าเพดานฉลุลาย",
   },
+  {
+    id: 9,
+    name: "แผ่นซับเสียง",
+    slug: "แผ่นซับเสียง",
+    image: "/acousticboard.webp",
+    description: "แผ่นซับเสียงตกแต่งผนัง",
+  },
 ];
