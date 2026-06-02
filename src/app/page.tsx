@@ -12,7 +12,7 @@ export const metadata = {
     "จำหน่ายแผ่นอะคูสติก แผ่นยิปซั่มลดเสียงสะท้อน ฝ้าเพดานคุณภาพสูง ราคาโครงการ ประสบการณ์กว่า 40 ปี เหมาะสำหรับห้องประชุม สำนักงาน มหาวิทยาลัย โทร 02-415-3676",
 };
 
-const HOMEPAGE_CATEGORY_IDS = [1, 2, 5, 8];
+const HOMEPAGE_CATEGORY_IDS = [1, 2, 5, 8, 9];
 
 export default function HomePage() {
   const homepageCategories = productCategories.filter((c) =>
@@ -62,19 +62,21 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-5">
             {homepageCategories.map((category) => (
               <Link
                 key={category.id}
                 href={`/products/category/${category.slug}`}
-                className="group flex flex-col"
+                className={`group flex flex-col ${
+                  category.id === 1 ? "col-span-2 md:col-span-1" : ""
+                }`}
               >
                 <div className="relative aspect-square w-full overflow-hidden rounded-lg border border-[#c5d9f0] bg-white">
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={category.name}
                     fill
-                    sizes="(max-width: 640px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, 20vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
