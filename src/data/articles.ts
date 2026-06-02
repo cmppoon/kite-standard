@@ -2297,5 +2297,124 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 29,
+    title: "ฝ้าอะคูสติกคืออะไร? \"ลดเสียงก้อง\" กับ \"ลดเสียงทะลุ\" ต่างกันยังไง",
+    slug: "ฝ้าอะคูสติกคืออะไร-ลดเสียงก้องกับลดเสียงทะลุต่างกันยังไง",
+    excerpt: "ฝ้าอะคูสติกช่วยลดเสียงก้องในห้อง แต่ไม่ได้กันเสียงทะลุระหว่างห้อง มาทำความเข้าใจความต่างของสองเรื่องนี้แบบง่ายๆ พร้อมตารางเปรียบเทียบ",
+    image: "/articles/article29.webp",
+    date: "2026-06-02",
+    readTime: "5",
+    content: `
+<p style="font-size:28px; font-weight:700;">ฝ้าอะคูสติกคืออะไร? "ลดเสียงก้อง" กับ "ลดเสียงทะลุ" ต่างกันยังไง</p>
 
+<p>สวัสดีครับ วันนี้มาพูดถึงเรื่องที่พี่ๆ หลายคนเข้าใจสลับกันบ่อยมาก นั่นคือเรื่อง "ฝ้าอะคูสติก" กับคำว่า "ลดเสียงก้อง" และ "ลดเสียงทะลุ" ครับ บางทีลูกค้าโทรมาบอกว่าอยากติดฝ้าอะคูสติกเพื่อกันเสียงจากห้องข้างๆ ซึ่งจริงๆ แล้วมันคนละเรื่องกันเลยนะครับ วันนี้ไคสจะอธิบายให้เข้าใจง่ายๆ ในรอบเดียว</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">ฝ้าอะคูสติกคืออะไร</strong>
+<p>ฝ้าอะคูสติก (Acoustic Ceiling) คือฝ้าเพดานที่ออกแบบมาให้มีคุณสมบัติ "ดูดซับเสียง" โดยเฉพาะครับ เนื้อวัสดุจะมีรูพรุนหรือโครงสร้างที่ช่วยจับคลื่นเสียง ไม่ให้สะท้อนกลับเข้ามาในห้อง ผลคือเสียงในห้องจะไม่ก้อง ฟังชัดขึ้น พูดคุยก็ง่ายขึ้นครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">ความเข้าใจผิดที่เจอบ่อย: ดูดซับเสียง ≠ กันเสียง</strong>
+<p>หลายคนคิดว่าติดฝ้าอะคูสติกแล้วเสียงจากห้องข้างๆ จะหายไป จริงๆ แล้วไม่ใช่ครับ ฝ้าอะคูสติกทำหน้าที่ "ลดเสียงก้องภายในห้องเดียวกัน" ไม่ได้ทำหน้าที่ "กันเสียงทะลุระหว่างห้อง" ทั้งสองอย่างนี้ใช้หลักการคนละแบบ และวัดด้วยค่าคนละตัวกันเลยครับ แม้ว่าฝ้าอะคูสติกจะสามารถช่วยลดได้ก็จริงแต่ไม่ถึงกับถูกจุดครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:18px; display:block; margin:1.25rem 0 0.5rem;">1. ลดเสียงก้อง (Sound Absorption)</strong>
+<p>คือการลดการสะท้อนของเสียงภายในห้องเดียวกัน วัดด้วยค่า NRC (Noise Reduction Coefficient) มีค่าระหว่าง 0–1 ยิ่งสูงยิ่งดูดซับเสียงได้ดี เช่น NRC 0.50 หมายถึงดูดซับเสียงได้ครึ่งหนึ่ง นี่คือสิ่งที่ฝ้าอะคูสติกทำได้ดีครับ</p>
+
+<strong style="font-size:18px; display:block; margin:1.25rem 0 0.5rem;">2. ลดเสียงผ่าน (Sound Insulation)</strong>
+<p>คือการกันไม่ให้เสียงทะลุผ่านผนังหรือฝ้าไปอีกห้องหนึ่ง พูดง่ายๆคือวลาเราเสียงดังแล้วข้างห้องจะไม่ได้ยินนั่นเองครับ ซึ่งมีกรรมวิธีกันเสียงทะลุมีมากมายหลายแบบครับ การใช้ฉนวนเองก็เป็นหนึ่งในวิธีที่นิยมครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">เปรียบเทียบให้เห็นภาพชัดๆ</strong>
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">ลดเสียงก้อง (ดูดซับเสียง)</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">ลดเสียงผ่าน (กันเสียง)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เป้าหมาย</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ลดการสะท้อนในห้องเดียวกัน</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">กันเสียงทะลุระหว่างห้อง</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">หลักการ</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">วัสดุพรุน ดูดซับคลื่นเสียง</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">วัสดุมวลหนา ทึบ กันการส่งผ่าน</td>
+    </tr>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ฝ้าอะคูสติกช่วยได้ไหม</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ช่วยได้ดีมาก ✓</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ช่วยได้น้อย ต้องเสริมระบบกันเสียง</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ตัวอย่างปัญหา</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ห้องประชุมพูดแล้วเสียงก้อง</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ได้ยินเสียงจากห้องข้างๆ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:20px; display:block; margin:1.75rem 0 0.75rem;">แล้วฝ้าอะคูสติกเหมาะกับงานแบบไหน</strong>
+<p>ฝ้าอะคูสติกเหมาะกับพื้นที่ที่ต้องการเสียงคมชัด ไม่ก้อง เช่น ห้องประชุม ห้องเรียน คาเฟ่ ร้านอาหาร ออฟฟิศแบบเปิด หรือโถงต้อนรับ ถ้าพี่ๆ อยากดูว่าพื้นที่แบบไหนบ้างที่ขาดฝ้าอะคูสติกไม่ได้ อ่านเพิ่มเติมได้ที่ <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">บทความนี้</a> ครับ และดูสินค้าแผ่นอะคูสติกทั้งหมดได้ที่ <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">หมวดแผ่นอะคูสติก</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ติดฝ้าอะคูสติกแล้วเสียงจากห้องข้างๆ จะเงียบลงไหม?<br /><strong>A:</strong> ไม่ได้ผลโดยตรงครับ ฝ้าอะคูสติกออกแบบมาเพื่อลดเสียงก้องภายในห้องเดียวกัน ไม่ได้ทำหน้าที่กันเสียงทะลุระหว่างห้อง ถ้าอยากกันเสียงจากห้องข้างๆ ต้องใช้ระบบกันเสียงเทียบแทนครับ</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ถ้าอยากได้ทั้งลดเสียงก้องและกันเสียงผ่าน ต้องทำยังไง?<br /><strong>A:</strong> ต้องใช้สองระบบร่วมกันครับ — ใช้ฝ้าอะคูสติกสำหรับดูดซับเสียงลดเสียงก้อง ควบคู่กับระบบกันเสียง เช่น ผนัง2ชั้น ฉนวนกันเสียงเสียงไม่ให้ทะลุระหว่างห้อง</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ถ้าก่อสร้างเสร็จแล้วสามารถกันเสียงทะลุวิธีไหนได้บ้าง?<br /><strong>A:</strong> อาจจะไม่ได้ผลทั้งหมดแต่หลายครั้งที่ปัญหามักตามมาหลังก่อสร้างเสร็จ เบื้องต้นใช้เฟอนิเจอร์ที่ซับเสียงได้ดีเช่น โซฟา พรหม เป็นต้นครับ หรือ ติดตั้งฉนวนซับเสียงที่สามารถใช้กาวตะปูติดที่ผนังก็สามารถช่วยลดได้ครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 6px;">อยากได้คำแนะนำเรื่องฝ้าอะคูสติกสำหรับโปรเจกต์ของคุณ?</p>
+  <p style="color:#fff; margin:0 0 14px;">ทีมงาน KAI Standard พร้อมช่วยเลือกวัสดุที่เหมาะกับงานของพี่ๆ ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ติดฝ้าอะคูสติกแล้วเสียงจากห้องข้างๆ จะเงียบลงไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ได้ผลโดยตรงครับ ฝ้าอะคูสติกออกแบบมาเพื่อลดเสียงก้องภายในห้องเดียวกัน ไม่ได้ทำหน้าที่กันเสียงทะลุระหว่างห้อง ถ้าอยากกันเสียงจากห้องข้างๆ ต้องใช้ระบบกันเสียงเทียบแทนครับ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ถ้าอยากได้ทั้งลดเสียงก้องและกันเสียงผ่าน ต้องทำยังไง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ต้องใช้สองระบบร่วมกันครับ — ใช้ฝ้าอะคูสติกสำหรับดูดซับเสียงลดเสียงก้อง ควบคู่กับระบบกันเสียง เช่น ผนัง2ชั้น ฉนวนกันเสียงเสียงไม่ให้ทะลุระหว่างห้อง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ถ้าก่อสร้างเสร็จแล้วสามารถกันเสียงทะลุวิธีไหนได้บ้าง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "อาจจะไม่ได้ผลทั้งหมดแต่หลายครั้งที่ปัญหามักตามมาหลังก่อสร้างเสร็จ เบื้องต้นใช้เฟอนิเจอร์ที่ซับเสียงได้ดีเช่น โซฟา พรหม เป็นต้นครับ หรือ ติดตั้งฉนวนซับเสียงที่สามารถใช้กาวตะปูติดที่ผนังก็สามารถช่วยลดได้ครับ"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
