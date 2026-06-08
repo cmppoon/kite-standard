@@ -2417,4 +2417,123 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 30,
+    title: "แผ่นฝ้าอะคูสติก NRC 0.50 หมายถึงอะไร? เข้าใจง่ายใน 5 นาที",
+    slug: "แผ่นฝ้าอะคูสติก-nrc-0.50-หมายถึงอะไร",
+    excerpt: "NRC 0.50 บนสเปกแผ่นฝ้าอะคูสติกหมายความว่าอะไร ดูดซับเสียงได้แค่ไหน และเหมาะกับงานแบบไหน อ่านเข้าใจง่ายใน 5 นาที",
+    image: "/articles/article30.webp",
+    date: "2026-06-08",
+    readTime: "5",
+    content: `
+<p style="font-size:28px; font-weight:700; margin:0 0 0.5rem;">แผ่นฝ้าอะคูสติก NRC 0.50 หมายถึงอะไร? เข้าใจง่ายใน 5 นาที</p>
+
+<p>สวัสดีครับ วันนี้มาพูดถึงค่าตัวเลขเล็กๆ ที่พี่ๆ มักเห็นบนสเปกแผ่นฝ้าอะคูสติกกันบ่อยๆ นั่นคือค่า "NRC" โดยเฉพาะค่า NRC 0.50 ว่ามันหมายความว่าอะไรกันแน่ แล้วเอามาใช้เลือกแผ่นฝ้ายังไงให้เหมาะกับงานของเรา เดี๋ยวไคสบอยอธิบายให้ฟังแบบง่ายๆ ครับ</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">NRC คืออะไร?</strong>
+<p>NRC ย่อมาจาก <strong>Noise Reduction Coefficient</strong> เป็นค่าที่บอกว่าวัสดุชิ้นนั้น "ดูดซับเสียง" ได้ดีแค่ไหน มีค่าตั้งแต่ 0 ถึง 1 ครับ</p>
+<p>ค่านี้ได้มาจากการนำค่าการดูดซับเสียงที่ 4 ความถี่ คือ 250, 500, 1,000 และ 2,000 Hz มาเฉลี่ยกัน ซึ่งทั้ง 4 ความถี่นี้เป็นย่านของเสียงพูดคุยทั่วไป เลยใช้บอกได้ดีว่าวัสดุช่วยลดเสียงก้องในห้องได้แค่ไหน</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แล้ว NRC 0.50 หมายความว่าอะไร?</strong>
+<p>ค่า NRC 0.50 หมายความว่า แผ่นฝ้าตัวนั้นดูดซับเสียงที่ตกกระทบลงไปได้ประมาณ <strong>50%</strong> ครับ พูดง่ายๆ คือเสียงที่วิ่งเข้าหาฝ้า ครึ่งหนึ่งถูกดูดซับเข้าไป ไม่สะท้อนกลับลงมาในห้อง</p>
+<p>NRC 0.50 เป็นค่าระดับกลางที่ <strong>ทำงานได้จริง</strong> ในพื้นที่ใช้งานทั่วไป ช่วยลดเสียงก้อง เสียงสะท้อนในห้องให้อยู่ในระดับที่สบายหู ฟังเสียงพูดคุยได้ชัดขึ้น โดยไม่ต้องลงทุนเกินความจำเป็นครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">NRC 0.50 เหมาะกับงานแบบไหน?</strong>
+<p>ค่านี้ตอบโจทย์พื้นที่ทั่วไปที่ต้องการลดเสียงก้องให้อยู่ในระดับที่ฟังสบาย เช่น</p>
+<p>• ออฟฟิศและห้องทำงานทั่วไป<br />
+- ห้องประชุมขนาดเล็ก-กลาง<br />
+- ร้านค้า ร้านอาหาร โถงทางเดิน<br />
+- ห้องเรียน ห้องสัมมนา</p>
+<p>ถ้าพี่ๆ ยังไม่แน่ใจว่าพื้นที่ของตัวเองจำเป็นต้องใช้ฝ้าอะคูสติกไหม ลองอ่านเพิ่มได้ที่ <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a> ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ตารางอ้างอิงค่า NRC แบบเข้าใจง่าย</strong>
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">ค่า NRC</th>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">ความหมาย</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.00</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">สะท้อนเสียงทั้งหมด เช่น ผนังคอนกรีต กระจก</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.50</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ดูดซับเสียงได้ประมาณครึ่งหนึ่ง เหมาะกับพื้นที่ใช้งานทั่วไป</td>
+    </tr>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.70 ขึ้นไป</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ดูดซับเสียงได้สูง เหมาะกับงานเฉพาะทาง เช่น ห้องอัดเสียง หอประชุม</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ระวังสับสน: NRC ไม่ใช่ค่ากันเสียงระหว่างห้อง</strong>
+<p>จุดนี้สำคัญมากครับ ค่า NRC บอกแค่เรื่อง <strong>การดูดซับเสียงภายในห้อง</strong> (ลดเสียงก้อง เสียงสะท้อน) ไม่ได้บอกว่าฝ้าจะ "กันเสียง" ไม่ให้ทะลุไปห้องข้างๆ ได้แค่ไหน</p>
+<p>ถ้าพี่ๆ ต้องการกันเสียงระหว่างห้อง ต้องไปดูค่าคนละตัวกัน คือค่า STC หรือ Rw ครับ ดังนั้นเวลาเลือกของ ดูให้ตรงกับเป้าหมายว่าเราอยากแก้ปัญหาเสียงแบบไหน</p>
+<p>ดูแผ่นอะคูสติกทั้งหมดของเราได้ที่ <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">หมวดแผ่นอะคูสติก</a> ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> NRC 0.50 ถือว่าดีไหม?<br /><strong>A:</strong> ถือว่าเป็นค่าระดับกลางที่ใช้งานได้ดีในพื้นที่ทั่วไปครับ ช่วยลดเสียงก้องในห้องได้อย่างเห็นผล เหมาะกับออฟฟิศ ห้องประชุม ร้านค้า โดยไม่ต้องลงทุนสูงเกินจำเป็น</p>
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> เลือกค่า NRC ยังไงให้เหมาะกับห้อง?<br /><strong>A:</strong> ดูจากลักษณะการใช้งานของห้องเป็นหลักครับ ห้องทั่วไปที่ต้องการลดเสียงก้องให้ฟังสบาย ค่า NRC ระดับ 0.50 ก็ตอบโจทย์ได้ดี ถ้าไม่แน่ใจ ทักมาให้ทีมไคสช่วยแนะนำตามงานจริงได้เลย</p>
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ค่า NRC ใช้บอกการกันเสียงระหว่างห้องได้ไหม?<br /><strong>A:</strong> ไม่ได้ครับ NRC บอกแค่การดูดซับเสียงภายในห้อง ถ้าต้องการกันเสียงทะลุระหว่างห้อง ต้องดูค่า STC หรือ Rw แทน</p>
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 8px;">ไม่แน่ใจว่าควรเลือกค่า NRC เท่าไหร่?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทักมาคุยกับทีมงานไคสได้เลยครับ เราช่วยแนะนำแผ่นฝ้าอะคูสติกให้เหมาะกับงานและงบของพี่ๆ</p>
+  <a href="https://line.me/ti/p/@kaistandard" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "NRC 0.50 ถือว่าดีไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ถือว่าเป็นค่าระดับกลางที่ใช้งานได้ดีในพื้นที่ทั่วไป ช่วยลดเสียงก้องในห้องได้อย่างเห็นผล เหมาะกับออฟฟิศ ห้องประชุม ร้านค้า โดยไม่ต้องลงทุนสูงเกินจำเป็น"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "เลือกค่า NRC ยังไงให้เหมาะกับห้อง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ดูจากลักษณะการใช้งานของห้องเป็นหลัก ห้องทั่วไปที่ต้องการลดเสียงก้องให้ฟังสบาย ค่า NRC ระดับ 0.50 ก็ตอบโจทย์ได้ดี หากไม่แน่ใจ สามารถปรึกษาทีมงานเพื่อแนะนำตามงานจริงได้"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ค่า NRC ใช้บอกการกันเสียงระหว่างห้องได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ได้ NRC บอกแค่การดูดซับเสียงภายในห้อง หากต้องการกันเสียงทะลุระหว่างห้อง ต้องดูค่า STC หรือ Rw แทน"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
