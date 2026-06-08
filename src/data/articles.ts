@@ -2463,7 +2463,7 @@ export const articles = [
   <tbody>
     <tr>
       <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.00</td>
-      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">สะท้อนเสียงทั้งหมด เช่น ผนังคอนกรีต กระจก</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">สะท้อนเสียงทั้งหมด</td>
     </tr>
     <tr>
       <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.50</td>
@@ -2471,7 +2471,7 @@ export const articles = [
     </tr>
     <tr>
       <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.70 ขึ้นไป</td>
-      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ดูดซับเสียงได้สูง เหมาะกับงานเฉพาะทาง เช่น ห้องอัดเสียง หอประชุม</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ดูดซับเสียงได้สูง เหมาะกับงานเฉพาะทาง เช่น ห้องอัดเสียง </td>
     </tr>
   </tbody>
 </table>
