@@ -2735,5 +2735,133 @@ export const articles = [
 <\/script>
     `,
   },
+{
+    id: 33,
+    title: "STC คืออะไร? ค่ากันเสียงที่ต้องรู้ก่อนเลือกผนังและฝ้า",
+    slug: "stc-คืออะไร",
+    excerpt: "ทำความเข้าใจค่า STC (Sound Transmission Class) ค่ากันเสียงข้ามห้อง ต่างจาก NRC ยังไง และควรเลือกเท่าไหร่ให้เหมาะกับงานโครงการ",
+    image: "/articles/article33.webp",
+    date: "2026-06-19",
+    readTime: "4 นาที",
+    content: `
+<p style="font-size:28px; font-weight:700; margin:0 0 16px; color:#1a1a1a;">STC คืออะไร? ค่ากันเสียงที่ต้องรู้ก่อนเลือกผนังและฝ้า</p>
 
+<p>วันนี้ไคสบอยมาพูดถึงคำว่า "STC" ที่พี่ๆ สถาปนิกและผู้รับเหมาน่าจะเคยเห็นในสเปกวัสดุกันบ่อยๆ แต่อาจยังไม่แน่ใจว่ามันคืออะไร แล้วต่างจาก NRC ยังไง วันนี้เรามาทำความเข้าใจกันแบบง่ายๆ กันครับ</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">STC คืออะไร?</strong>
+<p>STC ย่อมาจาก <strong>Sound Transmission Class</strong> เป็นค่ามาตรฐานที่ใช้บอกความสามารถของวัสดุหรือโครงสร้าง เช่น ผนัง ฝ้า ประตู หน้าต่าง ในการ "กันเสียง" ไม่ให้ทะลุผ่านจากห้องหนึ่งไปอีกห้องหนึ่ง หรือถ้าให้พูดง่ายๆ คือ ค่ายิ่งสูง = กันเสียงข้ามห้องได้ดียิ่งขึ้นครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ค่า STC แต่ละระดับบอกอะไรเราบ้าง</strong>
+<table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:14px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">ค่า STC</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">สิ่งที่คุณจะได้ยินจากอีกห้อง</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">25</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ได้ยินเสียงพูดปกติชัดเจน</td></tr>
+<tr><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">30</td><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ได้ยินเสียงพูดดังๆ ค่อนข้างชัด</td></tr>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">35</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงพูดดังได้ยินแผ่วๆ ฟังไม่ออกเป็นคำ</td></tr>
+<tr><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">40</td><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงพูดดังแทบไม่ได้ยิน</td></tr>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">45</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ต้องตั้งใจฟังถึงจะได้ยินเสียงพูดดัง</td></tr>
+<tr><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">50</td><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ได้ยินเสียงดังมากแค่แผ่วๆ ถือว่าเงียบดี</td></tr>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">55–60+</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เป็นส่วนตัวสูงมาก แทบไม่ได้ยินเสียงข้ามห้อง</td></tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามยอดฮิต STC ต่างจาก NRC ยังไง?</strong>
+<p>นี่คือจุดที่หลายคนเข้าใจผิดบ่อยที่สุดครับ ทั้งสองค่าเกี่ยวกับเสียงก็จริง แต่คนละหน้าที่กันเลย</p>
+<table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:14px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">STC</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">NRC</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">วัดอะไร</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">การกันเสียงผ่านข้ามห้อง</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">การดูดซับเสียงในห้อง</td></tr>
+<tr><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แก้ปัญหาอะไร</td><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงรบกวนจากห้องข้างๆ</td><td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงก้อง/สะท้อนในห้อง</td></tr>
+<tr><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ค่ายิ่งสูง</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">กันเสียงได้ดีขึ้น</td><td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ดูดซับเสียงได้ดีขึ้น</td></tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ค่า STC ของผนัง/ฝ้าทั่วไปอยู่ที่เท่าไหร่?</strong>
+<p>ผนังยิปซัมโครงคร่าวชั้นเดียวทั่วไปจะอยู่ราวๆ STC 33–35 ส่วนผนังที่บุยิปซัมสองชั้นและเติมฉนวนใยแก้วตรงกลาง สามารถดันขึ้นไปได้ถึง STC 45–50+ ครับ ดังนั้นถ้าโปรเจกต์ต้องการความเป็นส่วนตัวสูง เช่น ห้องประชุม ห้องนอนโรงแรม หรือห้องพักผู้ป่วย การออกแบบผนังและการเลือกวัสดุจึงสำคัญมากครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกวัสดุยังไงให้ได้ค่า STC ตามต้องการ</strong>
+<p>หัวใจของการกันเสียงคือ "มวล + การแยกชั้น + การปิดรอยรั่ว" ครับ ยิ่งผนังหนาแน่นและมีหลายชั้น เสียงก็ยิ่งผ่านยาก แต่แน่นอนครับ ยิ่งหนามากยิ่งหลายชั้นมาก พื้นที่ก็จะลดลงไปอีก เลยเป็นเหตุผลว่าทำไมต้องมีวัสดุกันเสียงครับ หากต้องการตัวช่วยจัดการเรื่องเสียงในงานโครงการ ดูสินค้ากลุ่ม <a href="/products/category/แผ่นซับเสียง" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียง</a> ของไคสได้เลย และถ้าอยากรู้ว่าพื้นที่แบบไหนจำเป็นต้องจัดการเสียงเป็นพิเศษ อ่านต่อได้ที่ <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a> ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> STC กับ NRC ต่างกันยังไง?<br /><strong>A:</strong> STC วัดความสามารถในการกันเสียงไม่ให้ผ่านข้ามห้อง ส่วน NRC วัดความสามารถในการดูดซับเสียงภายในห้อง คนละหน้าที่กันครับ</p>
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> เพิ่มค่า STC ของผนังเดิมได้ยังไง?<br /><strong>A:</strong> ทำได้โดยการเพิ่มชั้นยิปซัม เติมฉนวนในโพรงผนัง แยกโครงคร่าวสองด้านออกจากกัน และปิดรอยรั่วรอบขอบให้สนิทครับ</p>
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ค่า STC สูง แปลว่าเสียงในห้องจะไม่ก้องด้วยไหม?<br /><strong>A:</strong> ไม่ครับ STC แก้เรื่องเสียงข้ามห้องเท่านั้น ถ้าอยากลดเสียงก้องในห้อง ต้องดูที่ค่า NRC และใช้วัสดุดูดซับเสียงแทน</p>
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ถามแบบชาวบ้านเลย ข้างห้องบ่นเสียงดังแสดงว่าต้องทำให้ STC สูงใช่มั้ย<br /><strong>A:</strong> ใช่ครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px;">มีโปรเจกต์ที่ต้องจัดการเรื่องเสียงอยู่ใช่ไหม?</p>
+  <p style="color:#fff;">ทีมงานไคสยินดีช่วยแนะนำวัสดุและค่า STC/NRC ที่เหมาะกับงานของพี่ๆ ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" style="background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "STC กับ NRC ต่างกันยังไง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "STC วัดความสามารถในการกันเสียงไม่ให้ผ่านข้ามห้อง ส่วน NRC วัดความสามารถในการดูดซับเสียงภายในห้อง คนละหน้าที่กัน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "เพิ่มค่า STC ของผนังเดิมได้ยังไง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ทำได้โดยการเพิ่มชั้นยิปซัม เติมฉนวนในโพรงผนัง แยกโครงคร่าวสองด้านออกจากกัน และปิดรอยรั่วรอบขอบให้สนิท"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ค่า STC สูง แปลว่าเสียงในห้องจะไม่ก้องด้วยไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ STC แก้เรื่องเสียงข้ามห้องเท่านั้น ถ้าอยากลดเสียงก้องในห้อง ต้องดูที่ค่า NRC และใช้วัสดุดูดซับเสียงแทน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ข้างห้องบ่นเสียงดัง แสดงว่าต้องทำให้ STC สูงใช่ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช่ครับ"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
