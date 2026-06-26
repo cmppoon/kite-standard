@@ -62,4 +62,11 @@ export const productCategories = [
     image: "/acousticboard.webp",
     description: "แผ่นซับเสียงตกแต่งผนัง",
   },
+    {
+    id: 10,
+    name: "ฉนวนกันความร้อน",
+    slug: "ฉนวนกันความร้อน",
+    image: "/ฉนวนกันความร้อน.webp",
+    description: "",
+  },
 ];
