@@ -59,7 +59,7 @@ export const productCategories = [
     id: 9,
     name: "แผ่นซับเสียง",
     slug: "แผ่นซับเสียง",
-    image: "/acousticboard.webp",
+    image: "/acousticfelt.webp",
     description: "แผ่นซับเสียงตกแต่งผนัง",
   },
     {
