@@ -38,7 +38,7 @@ export async function generateMetadata({
 
   return {
     title: category
-      ? `${category.name} ราคาโรงงาน | ไคสแตนดาร์ด`
+      ? `${category.name} ราคาโรงงาน`
       : "สินค้า | ไคสแตนดาร์ด",
     description,
   };
