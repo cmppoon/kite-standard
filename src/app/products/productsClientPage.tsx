@@ -35,6 +35,41 @@ const categories = [
   })),
 ];
 
+const ACOUSTIC_FAQS = [
+  {
+    q: "แผ่นอะคูสติกไคสแตนดาร์ดราคาเท่าไหร่?",
+    a: "ราคาเริ่มต้นประมาณ 65–263 บาทต่อแผ่น ขึ้นอยู่กับขนาดและความหนา (ยังไม่รวม VAT 7%) งานโครงการมีราคาพิเศษ ขอใบเสนอราคาได้ที่ 02-415-3676 หรือ Line @kaistandard",
+  },
+  {
+    q: "แผ่นอะคูสติกต่างจากฝ้าเพดานทั่วไปอย่างไร?",
+    a: "โดยทั่วไปเวลาเกิดเสียง เสียงจะสะท้อนกลับเข้าห้อง แต่แผ่นอะคูสติกผลิตจากใยแร่ที่ดูดซับคลื่นเสียง ช่วยลดเสียงก้องและเสียงสะท้อน ทำให้เสียงพูดในห้องชัดเจนขึ้น ฟังรู้เรื่องมากขึ้นครับ",
+  },
+  {
+    q: "ค่า NRC คืออะไร ควรเลือกเท่าไหร่?",
+    a: "NRC (Noise Reduction Coefficient) คือค่าวัดความสามารถในการดูดซับเสียง ยิ่งสูงยิ่งดูดซับได้มาก แผ่นของไคสแตนดาร์ดมีค่า NRC 0.55–0.65 ขึ้นอยู่กับความหนา ห้องประชุมทั่วไปเลือก 0.55 ขึ้นไปก็เพียงพอครับ",
+  },
+  {
+    q: "ควรเลือกความหนาแบบไหน (12 / 14 / 16 มม.)?",
+    a: "12 มม. เหมาะกับสำนักงานและห้องประชุมทั่วไป, 14 มม. สำหรับห้องที่ต้องการความชัดของเสียงมากขึ้น, 16 มม. ให้ประสิทธิภาพสูงสุด เหมาะกับโรงพยาบาล โรงแรม และงานโครงการใหญ่ ทั้งนี้ขึ้นกับงบประมาณและสเปคที่ระบุมาด้วยครับ",
+  },
+  {
+    q: "แผ่นอะคูสติกติดตั้งกับระบบไหนได้บ้าง?",
+    a: "ติดตั้งได้ 2 ระบบครับ ทั้งบนโครงทีบาร์ (T-Bar) และแบบฝ้าฉาบเรียบ น้ำหนักเบา ติดตั้งง่าย รวดเร็ว แบบฉาบเรียบจะต้องมียิปซั่มเดิมเป็นฐานรองก่อนเพื่อความสะดวกในการติดตั้งครับ",
+  },
+  {
+    q: "เหมาะกับห้องหรืออาคารแบบไหนบ้าง?",
+    a: "เหมาะกับห้องประชุม สำนักงาน โรงพยาบาล มหาวิทยาลัย โรงเรียน โรงแรม ธนาคาร และอาคารราชการ ทุกพื้นที่ที่ต้องการลดเสียงก้องและเสียงสะท้อนครับ แต่ไม่แนะนำให้ใช้ในพื้นที่ที่มีโอกาสเจอความชื้นมากครับ",
+  },
+  {
+    q: "มีสต็อกพร้อมส่งและจัดส่งที่ไหนบ้าง?",
+    a: "มีสต็อกพร้อมส่ง จัดส่งทั่วประเทศ รองรับทั้งงานโครงการเอกชนและงานราชการครับ กรณีประเภทสินค้าสั่งผลิตไม่เกิน 1-7 วัน ทั้งนี้ขึ้นกับจำนวนครับ",
+  },
+  {
+    q: "ขอราคาโครงการอย่างไร?",
+    a: "โทร 02-415-3676 หรือทัก Line @kaistandard เพื่อขอใบเสนอราคาและคำแนะนำจากทีมงานผู้เชี่ยวชาญกว่า 40 ปี",
+  },
+];
+
 function TrustBar() {
   return (
     <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -106,6 +141,49 @@ function AcousticContentSection() {
           </div>
         ))}
       </div>
+    </div>
+  );
+}
+
+function AcousticFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ACOUSTIC_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {ACOUSTIC_FAQS.map((item) => (
+          <details
+            key={item.q}
+            className="group rounded-lg border bg-white"
+          >
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   );
 }
@@ -384,6 +462,7 @@ export default function ProductsClientPage({
 
             {selectedCategory === -1 && filteredProducts.length > 0 && <KaiStandardContentSection />}
             {isAcoustic && filteredProducts.length > 0 && <AcousticContentSection />}
+            {isAcoustic && filteredProducts.length > 0 && <AcousticFaqSection />}
             {isServiceHatch && filteredProducts.length > 0 && <ServiceHatchContentSection />}
             {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticContentSection />}
             {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
