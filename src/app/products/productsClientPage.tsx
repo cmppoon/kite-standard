@@ -22,6 +22,7 @@ const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 const GYPSUM_CATEGORY_ID = 6;
 const CEILING_FRAME_CATEGORY_ID = 7;
 const TBAR_CATEGORY_ID = 8;
+const SOUND_ABSORB_CATEGORY_ID = 9;
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -67,6 +68,37 @@ const ACOUSTIC_FAQS = [
   {
     q: "ขอราคาโครงการอย่างไร?",
     a: "โทร 02-415-3676 หรือทัก Line @kaistandard เพื่อขอใบเสนอราคาและคำแนะนำจากทีมงานผู้เชี่ยวชาญกว่า 40 ปี",
+  },
+];
+
+const SOUND_ABSORB_FAQS = [
+  {
+    q: "แผ่นซับเสียง KS-501 คืออะไร ต่างจากแผ่นอะคูสติกฝ้าเพดานอย่างไร?",
+    a: "KS-501 เป็นแผ่นซับเสียงโพลีเอสเตอร์สำหรับบุผนัง ส่วนแผ่นอะคูสติกเป็นฝ้าเพดาน ทั้งคู่ช่วยลดเสียงสะท้อน แต่ KS-501 เน้นติดผนังและตกแต่งได้สวยงาม ค่าดูดซับเสียง NRC 0.80",
+  },
+  {
+    q: "แผ่นซับเสียงกันเสียงทะลุผนัง (soundproof) ได้ไหม?",
+    a: "KS-501 เน้นดูดซับเสียงสะท้อนภายในห้องให้เสียงคมชัดขึ้น ไม่ใช่การกันเสียงลอดผ่านผนัง หากต้องการกันเสียงเข้า-ออกห้อง แนะนำใช้ร่วมกับฉนวนกันเสียง SCG Zoundblock",
+  },
+  {
+    q: "ถ้าลดเสียงระหว่างห้องเลือกชนิดไหนดี?",
+    a: "แนะนำเลือกสินค้าที่มีค่า STC สูง อาทิเช่น ฉนวนกันเสียง SCG รุ่น Cylence Zoundblock",
+  },
+  {
+    q: "มีขนาด สี และราคาเท่าไหร่?",
+    a: "มี 3 ขนาด: 60x60, 60x120, 60x240 ซม. หนา 9มม. ราคา 400 / 700 / 1,200 บาท (+VAT 7%) เฉดสีนอกเหนือจากขาว ดำ เทา โปรดสอบถามพนักงานขาย",
+  },
+  {
+    q: "แผ่นซับเสียงติดตั้งอย่างไร?",
+    a: "ติดตั้งง่ายด้วยกาว น้ำหนักเบา เหมาะกับงาน DIY และงานตกแต่งผนังทั่วไป",
+  },
+  {
+    q: "อยากได้แผ่นซับเสียงแบบหุ้มผ้า มีทางเลือกอื่นไหม?",
+    a: "มี รุ่น SCG Cylence Zandera เป็นแผ่นกลาสวูลหุ้มผ้า หนา 25 มม. สำหรับงานตกแต่งพรีเมียม เป็นสินค้าสั่งผลิต ใช้เวลาประมาณ 2-3 สัปดาห์",
+  },
+  {
+    q: "สั่งซื้อหรือขอราคาโครงการอย่างไร?",
+    a: "โทร 02-415-3676 หรือทัก Line @kaistandard เพื่อขอใบเสนอราคาและคำแนะนำจากทีมงาน",
   },
 ];
 
@@ -271,6 +303,73 @@ function TBarContentSection() {
   );
 }
 
+function SoundAbsorbContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">แผ่นซับเสียงโพลีเอสเตอร์คืออะไร และเลือกแบบไหนดี?</h2>
+      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+        แผ่นซับเสียงโพลีเอสเตอร์ (Polyester / PET Acoustic Panel) เป็นวัสดุซับเสียงที่ทำจากเส้นใยโพลีเอสเตอร์ (PET)
+        อัดขึ้นรูปเป็นแผ่น ผิวสัมผัสนุ่มแบบสักหลาด (เฟลท์) เนื้อในมีรูพรุนจำนวนมาก
+        เมื่อเสียงเดินทางมากระทบ เนื้อวัสดุจะเก็บพลังงานเสียงส่วนหนึ่งเอาไว้แทนการสะท้อนกลับ
+        ผลคือเสียงก้องและเสียงสะท้อนภายในห้องลดลง รุ่น KS-501 ของไคสแตนดาร์ดให้ค่าดูดซับเสียง NRC 0.80 (Class B)
+        มีให้เลือกทั้งสีขาว เทา ดำ และหลายขนาด เหมาะกับทั้งงานตกแต่งผนังและการควบคุมเสียงภายในห้อง
+      </p>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {[
+          { title: "ห้องประชุม / สำนักงาน", text: "เหมาะสำหรับการประชุมหรือสำนักงาน บุผนังช่วยลดเสียงก้องในห้องประชุมและออฟฟิศ โดยเฉพาะออฟฟิศแบบเปิด ค่าดูดซับเสียง NRC 0.80 ทำให้เสียงพูดชัดขึ้น มีสีขาว เทา ดำ เลือกให้เข้ากับโทนออฟฟิศสไตล์โมเดิร์น" },
+          { title: "โฮมเธียเตอร์ / ห้องฟังเพลง / ห้องอัดคอนเทนต์", text: "เหมาะกับห้องดูหนัง ฟังเพลง และห้องไลฟ์สดที่ต้องการเสียงคมชัด ติดตั้งง่ายด้วยกาว เหมาะกับงาน DIY หรือการไลฟ์สตรีมในห้องขนาดเล็กอีกด้วย" },
+          { title: "คาเฟ่ / ร้านค้า / โชว์รูม", text: "สลับสีแผ่นสร้างลวดลายบนผนังได้อิสระ ทั้งซับเสียงและเป็นของตกแต่ง ผลิตจากใยโพลีเอสเตอร์รีไซเคิล สำหรับร้านค้าและคาเฟ่ที่มีเสียงคนจอแจตลอด ช่วยลดเสียงก้องได้มาก" },
+        ].map((card) => (
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SoundAbsorbFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: SOUND_ABSORB_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {SOUND_ABSORB_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 export default function ProductsClientPage({
   selectedCategory,
 }: {
@@ -284,6 +383,7 @@ export default function ProductsClientPage({
   const isGypsum = selectedCategory === GYPSUM_CATEGORY_ID;
   const isCeilingFrame = selectedCategory === CEILING_FRAME_CATEGORY_ID;
   const isTBar = selectedCategory === TBAR_CATEGORY_ID;
+  const isSoundAbsorb = selectedCategory === SOUND_ABSORB_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -468,6 +568,8 @@ export default function ProductsClientPage({
             {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
             {isCeilingFrame && filteredProducts.length > 0 && <CeilingFrameContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
+            {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbContentSection />}
+            {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
           </div>
         </div>
       </div>
