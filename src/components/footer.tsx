@@ -90,6 +90,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/faq"
+                  className="hover:text-accent-foreground text-white"
+                >
+                  คำถามที่พบบ่อย
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/map"
                   className="hover:text-accent-foreground text-white"
                 >
