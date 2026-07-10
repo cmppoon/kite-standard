@@ -24,6 +24,8 @@ const CEILING_FRAME_CATEGORY_ID = 7;
 const TBAR_CATEGORY_ID = 8;
 const SOUND_ABSORB_CATEGORY_ID = 9;
 
+const ROOF_BATTEN_CATEGORY_ID = 3;
+
 const PRODUCTS_PER_PAGE = 12;
 
 const categories = [
@@ -99,6 +101,21 @@ const SOUND_ABSORB_FAQS = [
   {
     q: "สั่งซื้อหรือขอราคาโครงการอย่างไร?",
     a: "โทร 02-415-3676 หรือทัก Line @kaistandard เพื่อขอใบเสนอราคาและคำแนะนำจากทีมงาน",
+  },
+];
+
+const ROOF_BATTEN_FAQS = [
+  {
+    q: "แปหลังคาอลูซิงค์กับกัลวาไนซ์ ต่างกันอย่างไร?",
+    a: "อลูซิงค์เคลือบอะลูมิเนียม-สังกะสี ทนสนิมและการกัดกร่อนได้ดีกว่า เหมาะกับงานที่ต้องการอายุการใช้งานยาว ส่วนกัลวาไนซ์เคลือบสังกะสี ราคาย่อมเยากว่า เหมาะกับงานทั่วไป เลือกตามงบและสภาพหน้างาน",
+  },
+  {
+    q: "ควรเลือกแปหลังคาความหนาเท่าไหร่?",
+    a: "ขึ้นอยู่กับระยะห่างจันทันและน้ำหนักแผ่นหลังคา งานทั่วไปนิยม 0.55 มม. หากระยะห่างมากหรือรับน้ำหนักสูง แนะนำ 0.70–1.00 มม. เพื่อความแข็งแรงและลดการแอ่นตัว",
+  },
+  {
+    q: "แปหลังคา กับ เหล็กกล่อง ต่างกันยังไง?",
+    a: "แปหลังคาเป็นเหล็กรูปพรรณที่ออกแบบมาเพื่อรองรับแผ่นหลังคาโดยเฉพาะ รับน้ำหนักได้ดีและติดตั้งได้รวดเร็วกว่า จึงเป็นตัวเลือกที่นิยมสำหรับอาคาร โรงงาน และโกดังที่ใช้หลังคาเมทัลชีทหรือวัสดุมุงทั่วไป ส่วนเหล็กกล่องมีข้อดีที่ใช้ทำผนังได้ด้วย จึงยืดหยุ่นในการใช้งานมากกว่า",
   },
 ];
 
@@ -370,6 +387,60 @@ function SoundAbsorbFaqSection() {
   );
 }
 
+function RoofBattenContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">แปหลังคาอะไร? เลือกใช้ยังไง?</h2>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        แปหลังคา คือเหล็กโครงสร้างที่ติดตั้งบนจันทัน ทำหน้าที่รองรับแผ่นหลังคาหรือเมทัลชีท
+        ให้ยึดแน่นและกระจายน้ำหนักอย่างสม่ำเสมอ เลือกความหนาให้เหมาะกับระยะห่างจันทัน
+        และน้ำหนักหลังคา ยิ่งหนายิ่งรับแรงได้มาก เหมาะทั้งงานบ้านพักอาศัยและงานโครงการ
+        โดยเฉพาะโรงงานที่ต้องการควบคุมค่าก่อสร้าง
+      </p>
+    </div>
+  );
+}
+
+function RoofBattenFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ROOF_BATTEN_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {ROOF_BATTEN_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 export default function ProductsClientPage({
   selectedCategory,
 }: {
@@ -384,6 +455,7 @@ export default function ProductsClientPage({
   const isCeilingFrame = selectedCategory === CEILING_FRAME_CATEGORY_ID;
   const isTBar = selectedCategory === TBAR_CATEGORY_ID;
   const isSoundAbsorb = selectedCategory === SOUND_ABSORB_CATEGORY_ID;
+  const isRoofBatten = selectedCategory === ROOF_BATTEN_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -570,6 +642,8 @@ export default function ProductsClientPage({
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbContentSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
+            {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
+            {isRoofBatten && filteredProducts.length > 0 && <RoofBattenFaqSection />}
           </div>
         </div>
       </div>
