@@ -3124,4 +3124,132 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 36,
+    title: "ซีลายคืออะไร? รู้จักโครงคร่าวฝ้าฉาบเรียบที่ช่างนิยมใช้",
+    slug: "ซีลายคืออะไร",
+    excerpt: "ซีลาย (C-Line) คือโครงคร่าวเหล็กชุบสังกะสีสำหรับฝ้าฉาบเรียบ รู้จักข้อดีข้อเสีย ความต่างจากโครงที-บาร์ และข้อควรระวังตอนติดตั้ง",
+    image: "/articles/article36.webp",
+    date: "2026-07-20",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700; margin:0 0 4px;">ซีลายคืออะไร? รู้จักโครงคร่าวฝ้าฉาบเรียบที่ช่างนิยมใช้</p>
+
+<p style="margin:12px 0 0;">สวัสดีครับ วันนี้มาพูดถึงวัสดุที่อยู่เบื้องหลังฝ้าเพดานฉาบเรียบสวย ๆ เกือบทุกงาน นั่นก็คือ "ซีลาย" (C-Line) ตัวที่คอยรับน้ำหนักแผ่นฝ้ายิปซัมเอาไว้ทั้งหมด แต่หลายคนกลับมองข้าม บทความนี้จะพาไปรู้จักตั้งแต่ซีลายคืออะไร ข้อดีข้อเสีย ต่างจากโครงที-บาร์ยังไง ไปจนถึงข้อควรระวังตอนติดตั้งครับ</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ซีลายคืออะไร</strong>
+<p>ซีลาย หรือ C-Line คือ โครงคร่าวสำหรับติดตั้งฝ้าเพดานฉาบเรียบ มีหน้าตัดเป็นรูปตัว "C" ผลิตจากเหล็กชุบสังกะสี (กัลวาไนซ์) จึงแข็งแรง น้ำหนักเบา และไม่เป็นสนิมง่าย นิยมใช้คู่กับแผ่นยิปซัมบอร์ดเพื่อขึ้นโครงฝ้า ทำให้ได้ฝ้าเพดานผิวเรียบเนียนเป็นผืนเดียว เหมาะกับงานตกแต่งภายในทั้งบ้านพักอาศัย อาคารสำนักงาน โรงงาน ไปจนถึงห้างสรรพสินค้า</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ข้อดี–ข้อเสียของซีลาย</strong>
+<p><strong>ข้อดี</strong><br />
+- น้ำหนักเบากว่าโครงไม้ ขนย้ายและติดตั้งง่าย ลดภาระโครงสร้าง<br />
+- ทนสนิม เพราะเคลือบสังกะสี เหมาะกับอากาศชื้นบ้านเรา<br />
+- ไม่บิดงอ ยืดหดน้อยกว่าไม้ ฝ้าจึงไม่แอ่นตามกาลเวลา<br />
+- ได้ฝ้าผิวเรียบเนียนเป็นผืนเดียว ดูเรียบหรู ไม่เห็นรอยต่อ<br />
+- มีเกรดที่ผ่าน มอก. ให้เลือกใช้ตามงาน</p>
+<p><strong>ข้อเสีย</strong><br />
+- ฝ้าฉาบเรียบเปิดซ่อมยาก ต้องเผื่อช่องเซอร์วิสไว้สำหรับงานระบบด้านบน<br />
+- ต้องอาศัยช่างมีฝีมือ ทำระนาบให้เรียบ ถ้าฝีมือไม่ดีจะเห็นเป็นคลื่น<br />
+- ไม่ได้ช่วยเรื่องดูดซับเสียงเหมือนฝ้าอะคูสติก<br />
+- งานฉาบและทาสีใช้เวลามากกว่าฝ้าที-บาร์แบบวางแผ่น<br />
+- หากมีน้ำรั่วซึมจากด้านบน แผ่นยิปซัมเสียหายง่าย (แม้ตัวโครงจะทนสนิม)</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ซีลาย vs โครงที-บาร์ ต่างกันยังไง</strong>
+<p>หลายคนสับสนระหว่างซีลายกับโครงที-บาร์ จริง ๆ แล้วใช้กับฝ้าคนละแบบครับ:</p>
+<table style="width:100%; border-collapse:collapse; margin:12px 0; font-size:15px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ซีลาย (C-Line)</th>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">โครงที-บาร์ (T-Bar)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ลักษณะฝ้า</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ฝ้าฉาบเรียบเป็นผืนเดียว</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ฝ้าเป็นช่องตาราง วางแผ่นลงในโครง</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แผ่นที่ใช้คู่กัน</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แผ่นยิปซัมบอร์ด</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แผ่นอะคูสติก / แผ่นที-บาร์</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เข้าถึงงานระบบด้านบน</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ต้องเปิดช่องเซอร์วิสไว้</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ยกแผ่นออกได้แทบทุกช่อง</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เรื่องเสียง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ไม่ได้เน้นดูดซับเสียง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เลือกแผ่นอะคูสติกช่วยลดเสียงก้องได้</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">งานที่เหมาะ</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">บ้าน คอนโด ห้องที่ต้องการผิวเรียบ</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ออฟฟิศ ห้องประชุมที่ต้องการคุมเสียง</td>
+</tr>
+</tbody>
+</table>
+<p>ถ้างานของคุณเน้นเรื่องการควบคุมเสียงหรือลดเสียงก้อง เช่น ห้องประชุม ออฟฟิศ หรือร้านอาหาร ระบบที-บาร์คู่กับแผ่นอะคูสติกจะตอบโจทย์กว่า อ่านเพิ่มได้ที่ <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a> หรือดู <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติก</a> ทั้งหมดของเราครับ</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ข้อควรระวังตอนติดตั้ง</strong>
+<p>• <strong>ระยะห่างของโครง</strong> — ห่างเกินไปฝ้าจะแอ่นหรือรับน้ำหนักไม่ไหว<br />
+- <strong>ต้องได้ระนาบ (เลเวล)</strong> — ถ้าโครงไม่เรียบ ฝ้าที่ฉาบออกมาจะเป็นคลื่น เห็นชัดเวลาโดนแสง<br />
+- <strong>ยึดกับโครงสร้างให้แน่น</strong> — จุดแขวนต้องมั่นคง ไม่งั้นฝ้าสั่นหรือร้าวตามรอยต่อ<br />
+- <strong>เผื่อช่องเซอร์วิส</strong> — ฝ้าฉาบเรียบเปิดยาก ควรวางตำแหน่งช่องเซอร์วิสไว้ตั้งแต่แรกสำหรับงานระบบ</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ซีลายใช้กับฝ้าอะคูสติกได้ไหม?<br /><strong>A:</strong> โดยทั่วไปฝ้าอะคูสติกจะใช้ระบบโครงที-บาร์ที่วางแผ่นเป็นช่อง ๆ มากกว่า เพราะถอดเข้าออกและซ่อมบำรุงง่าย ส่วนซีลายเหมาะกับฝ้าฉาบเรียบผืนเดียว ถ้าต้องการทั้งผิวเรียบและดูดซับเสียง แนะนำปรึกษาทีมงานเพื่อเลือกระบบให้เหมาะกับงาน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าฉาบเรียบใช้ฝ้าทีบาร์ทำแทนได้ไหม?<br /><strong>A:</strong> ไม่ควรอย่างยิ่ง ฝ้าระบบฉาบเรียบใช้ซีลาย ฝ้าทีบาร์ใช้ระบบทีเมนและทีซอย เนื่องจากทั้ง2โครงถูกออกแบบมาเพื่อจุดประสงค์ที่แตกต่างกัน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ซีลายราคาเท่าไหร่?<br /><strong>A:</strong> ราคาขึ้นอยู่กับความหนาของเหล็ก ความยาว และปริมาณสั่ง แนะนำทักมาสอบถามทาง LINE เพื่อรับราคาที่เหมาะสมกับงบประมาณครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+<p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 6px;">สนใจซีลายหรือระบบฝ้าเพดานสำหรับงานโครงการ?</p>
+<p style="color:#fff; margin:0 0 14px;">ทีมงาน KAI Standard พร้อมช่วยเลือกโครงและแผ่นฝ้าให้เหมาะกับหน้างานของคุณ พร้อมใบเสนอราคา</p>
+<a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ซีลายใช้กับฝ้าอะคูสติกได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โดยทั่วไปฝ้าอะคูสติกจะใช้ระบบโครงที-บาร์ที่วางแผ่นเป็นช่อง ๆ มากกว่า เพราะถอดเข้าออกและซ่อมบำรุงง่าย ส่วนซีลายเหมาะกับฝ้าฉาบเรียบผืนเดียว ถ้าต้องการทั้งผิวเรียบและดูดซับเสียง แต่สามารถทำฝ้าระบบฉาบเรียบได้เช่นกันแต่มีขั้นตอนที่มากกว่า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าฉาบเรียบใช้ฝ้าทีบาร์ทำแทนได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ควรอย่างยิ่ง ฝ้าระบบฉาบเรียบใช้ซีลาย ฝ้าทีบาร์ใช้ระบบทีเมนและทีซอย เนื่องจากทั้ง2โครงถูกออกแบบมาเพื่อจุดประสงค์ที่แตกต่างกัน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ซีลายราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ราคาขึ้นอยู่กับความหนาของเหล็ก ความยาว และปริมาณสั่ง สามารถสอบถามพนักงานขายได้ทุกเมื่อเลยครับ"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
