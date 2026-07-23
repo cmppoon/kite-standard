@@ -28,6 +28,10 @@ const ROOF_BATTEN_CATEGORY_ID = 3;
 
 const PRODUCTS_PER_PAGE = 12;
 
+// Ceiling framework page only: 11 keeps ระบบฉาบเรียบ (7) + ระบบทีบาร์ (4) whole on
+// page 1, so อะไหล่ (6) sits alone on page 2. Other categories stay at 12.
+const CEILING_FRAME_PRODUCTS_PER_PAGE = 11;
+
 type Product = (typeof products)[number];
 
 const CEILING_FRAME_GROUPS = [
@@ -596,12 +600,15 @@ export default function ProductsClientPage({
     return matchesCategory && matchesSearch;
   });
 
-  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+  const perPage = isCeilingFrame
+    ? CEILING_FRAME_PRODUCTS_PER_PAGE
+    : PRODUCTS_PER_PAGE;
+  const totalPages = Math.ceil(filteredProducts.length / perPage);
   const safePage = Math.min(currentPage, Math.max(1, totalPages));
-  const startIndex = (safePage - 1) * PRODUCTS_PER_PAGE;
+  const startIndex = (safePage - 1) * perPage;
   const paginatedProducts = filteredProducts.slice(
     startIndex,
-    startIndex + PRODUCTS_PER_PAGE
+    startIndex + perPage
   );
 
   return (
@@ -683,8 +690,8 @@ export default function ProductsClientPage({
               <div className="space-y-8">
                 {groupCeilingFrameProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
-                    <h2 className="mb-3 inline-block rounded-md bg-green-50 px-3 py-1 text-sm font-medium text-green-900">
-                      {section.label} · {section.items.length}
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
                     </h2>
                     <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
