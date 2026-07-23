@@ -28,15 +28,81 @@ const ROOF_BATTEN_CATEGORY_ID = 3;
 
 const PRODUCTS_PER_PAGE = 12;
 
-const categories = [
-  { id: -1, name: "ทั้งหมด", count: products.length, slug: "all" },
-  ...productCategories.map((category) => ({
-    id: category.id,
-    name: category.name,
-    count: products.filter((product) => product.categoryId === category.id).length,
-    slug: category.slug,
-  })),
+// Sidebar grouping: these two categories move to the bottom under "หลังคา"
+const ROOF_GROUP_IDS = [3, 4];
+
+const allCategories = productCategories.map((category) => ({
+  id: category.id,
+  name: category.name,
+  count: products.filter((product) => product.categoryId === category.id).length,
+  slug: category.slug,
+}));
+
+const ALL_PRODUCTS_ITEM = {
+  id: -1,
+  name: "ทั้งหมด",
+  count: products.length,
+  slug: "all",
+};
+
+// Used for the page title lookup
+const categories = [ALL_PRODUCTS_ITEM, ...allCategories];
+
+const CATEGORY_GROUPS = [
+  {
+    label: "ฝ้าเพดาน / โครงผนัง",
+    items: allCategories.filter((c) => !ROOF_GROUP_IDS.includes(c.id)),
+  },
+  {
+    label: "หลังคา",
+    items: allCategories.filter((c) => ROOF_GROUP_IDS.includes(c.id)),
+  },
 ];
+
+type SidebarCategory = {
+  id: number;
+  name: string;
+  count: number;
+  slug: string;
+};
+
+function CategoryButton({
+  category,
+  selectedCategory,
+}: {
+  category: SidebarCategory;
+  selectedCategory: number;
+}) {
+  const isSelected = selectedCategory === category.id;
+  return (
+    <Button
+      asChild
+      variant={isSelected ? "default" : "ghost"}
+      className={`w-full justify-between ${
+        isSelected
+          ? "bg-primary text-primary-foreground"
+          : "hover:bg-muted hover:text-foreground"
+      }`}
+    >
+      <Link
+        href={
+          category.id === -1
+            ? "/products"
+            : `/products/category/${category.slug}`
+        }
+      >
+        <span>{category.name}</span>
+        <span
+          className={`text-sm ${
+            isSelected ? "text-white" : "text-muted-foreground"
+          }`}
+        >
+          {category.count}
+        </span>
+      </Link>
+    </Button>
+  );
+}
 
 const ACOUSTIC_FAQS = [
   {
@@ -511,36 +577,30 @@ export default function ProductsClientPage({
 
             <div>
               <h3 className="mb-4 font-semibold">ประเภทสินค้า</h3>
+
               <div className="space-y-2">
-                {categories.map((category) => {
-                  const isSelected = selectedCategory === category.id;
-                  return (
-                    <Button
-                      key={category.id}
-                      asChild
-                      variant={isSelected ? "default" : "ghost"}
-                      className={`w-full justify-between ${
-                        isSelected
-                          ? "bg-primary text-primary-foreground"
-                          : "hover:bg-muted hover:text-foreground"
-                      }`}
-                    >
-                      <Link
-                        href={
-                          category.id === -1
-                            ? "/products"
-                            : `/products/category/${category.slug}`
-                        }
-                      >
-                        <span>{category.name}</span>
-                        <span className={`text-sm ${isSelected ? "text-white" : "text-muted-foreground"}`}>
-                          {category.count}
-                        </span>
-                      </Link>
-                    </Button>
-                  );
-                })}
+                <CategoryButton
+                  category={ALL_PRODUCTS_ITEM}
+                  selectedCategory={selectedCategory}
+                />
               </div>
+
+              {CATEGORY_GROUPS.map((group) => (
+                <div key={group.label} className="mt-5">
+                  <p className="text-muted-foreground mb-2 px-3 text-xs font-semibold">
+                    {group.label}
+                  </p>
+                  <div className="space-y-2">
+                    {group.items.map((category) => (
+                      <CategoryButton
+                        key={category.id}
+                        category={category}
+                        selectedCategory={selectedCategory}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
