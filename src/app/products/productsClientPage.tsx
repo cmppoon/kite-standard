@@ -28,6 +28,27 @@ const ROOF_BATTEN_CATEGORY_ID = 3;
 
 const PRODUCTS_PER_PAGE = 12;
 
+type Product = (typeof products)[number];
+
+const CEILING_FRAME_GROUPS = [
+  { label: "ระบบฉาบเรียบ", ids: [48, 49, 95, 94, 50, 97, 96] },
+  { label: "ระบบทีบาร์", ids: [46, 99, 98, 47] },
+  { label: "อะไหล่", ids: [52, 40, 53, 54, 41, 51] },
+];
+
+function groupCeilingFrameProducts(items: Product[]) {
+  const labelOf = (id: number) =>
+    CEILING_FRAME_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
+  const sections: { label: string; items: Product[] }[] = [];
+  for (const product of items) {
+    const label = labelOf(product.id);
+    const last = sections[sections.length - 1];
+    if (last && last.label === label) last.items.push(product);
+    else sections.push({ label, items: [product] });
+  }
+  return sections;
+}
+
 // Sidebar grouping: these two categories move to the bottom under "หลังคา"
 const ROOF_GROUP_IDS = [3, 4];
 
@@ -186,6 +207,46 @@ const ROOF_BATTEN_FAQS = [
     a: "แปหลังคาเป็นเหล็กรูปพรรณที่ออกแบบมาเพื่อรองรับแผ่นหลังคาโดยเฉพาะ รับน้ำหนักได้ดีและติดตั้งได้รวดเร็วกว่า จึงเป็นตัวเลือกที่นิยมสำหรับอาคาร โรงงาน และโกดังที่ใช้หลังคาเมทัลชีทหรือวัสดุมุงทั่วไป ส่วนเหล็กกล่องมีข้อดีที่ใช้ทำผนังได้ด้วย จึงยืดหยุ่นในการใช้งานมากกว่า",
   },
 ];
+
+function ProductCard({ product }: { product: Product }) {
+  return (
+    <Link
+      href={`/products/${product.slug}`}
+      className="group flex h-full flex-col rounded-lg border transition-shadow hover:shadow-lg"
+    >
+      <Card className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg">
+        <CardHeader className="p-0">
+          <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
+            <Image
+              src={product.image}
+              alt={`${product.name}`}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </CardHeader>
+        <CardContent className="flex flex-1 flex-col p-4">
+          <CardTitle className="mb-2 line-clamp-2 text-lg">
+            {product.name}
+          </CardTitle>
+          <CardDescription className="mb-3 line-clamp-5 text-sm">
+            {product.description}
+          </CardDescription>
+          <div className="mt-auto pt-2">
+            <div className="text-primary mb-4 text-lg font-semibold">
+              {product.price}
+            </div>
+            <div className="flex items-center justify-end">
+              <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
+                ดูรายละเอียด
+              </span>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  );
+}
 
 function TrustBar() {
   return (
@@ -618,46 +679,28 @@ export default function ProductsClientPage({
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-              {paginatedProducts.map((product) => (
-                <Link
-                  key={product.id}
-                  href={`/products/${product.slug}`}
-                  className="group flex h-full flex-col rounded-lg border transition-shadow hover:shadow-lg"
-                >
-                  <Card className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg">
-                    <CardHeader className="p-0">
-                      <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
-                        <Image
-                          src={product.image}
-                          alt={`${product.name}`}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex flex-1 flex-col p-4">
-                      <CardTitle className="mb-2 line-clamp-2 text-lg">
-                        {product.name}
-                      </CardTitle>
-                      <CardDescription className="mb-3 line-clamp-5 text-sm">
-                        {product.description}
-                      </CardDescription>
-                      <div className="mt-auto pt-2">
-                        <div className="text-primary mb-4 text-lg font-semibold">
-                          {product.price}
-                        </div>
-                        <div className="flex items-center justify-end">
-                          <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
-                            ดูรายละเอียด
-                          </span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </div>
+            {isCeilingFrame ? (
+              <div className="space-y-8">
+                {groupCeilingFrameProducts(paginatedProducts).map((section) => (
+                  <div key={section.label}>
+                    <h2 className="mb-3 inline-block rounded-md bg-green-50 px-3 py-1 text-sm font-medium text-green-900">
+                      {section.label} · {section.items.length}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                {paginatedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            )}
 
             {totalPages > 1 && (
               <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
