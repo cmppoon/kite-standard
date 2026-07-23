@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { productCategories } from "@/data/productCategories";
 import { products } from "@/data/products";
-import { Search } from "lucide-react";
+import { Home, LayoutGrid, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -51,10 +51,12 @@ const categories = [ALL_PRODUCTS_ITEM, ...allCategories];
 const CATEGORY_GROUPS = [
   {
     label: "ฝ้าเพดาน / โครงผนัง",
+    icon: LayoutGrid,
     items: allCategories.filter((c) => !ROOF_GROUP_IDS.includes(c.id)),
   },
   {
     label: "หลังคา",
+    icon: Home,
     items: allCategories.filter((c) => ROOF_GROUP_IDS.includes(c.id)),
   },
 ];
@@ -585,22 +587,26 @@ export default function ProductsClientPage({
                 />
               </div>
 
-              {CATEGORY_GROUPS.map((group) => (
-                <div key={group.label} className="mt-5">
-                  <p className="text-muted-foreground mb-2 px-3 text-xs font-semibold">
-                    {group.label}
-                  </p>
-                  <div className="space-y-2">
-                    {group.items.map((category) => (
-                      <CategoryButton
-                        key={category.id}
-                        category={category}
-                        selectedCategory={selectedCategory}
-                      />
-                    ))}
+              {CATEGORY_GROUPS.map((group) => {
+                const GroupIcon = group.icon;
+                return (
+                  <div key={group.label} className="mt-5">
+                    <div className="mb-2 flex items-center gap-2 rounded-md bg-blue-50 px-3 py-2 text-xs font-medium text-blue-900">
+                      <GroupIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                      <span>{group.label}</span>
+                    </div>
+                    <div className="space-y-2">
+                      {group.items.map((category) => (
+                        <CategoryButton
+                          key={category.id}
+                          category={category}
+                          selectedCategory={selectedCategory}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
