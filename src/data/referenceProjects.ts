@@ -91,4 +91,9 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref15.webp",
     caption: "จัดส่งแผ่นยิปซั่มลดเสียงสะท้อน ณ มหาวิทยาลัยวลัยลักษณ์",
   },
+  {
+    id: 16,
+    image: "/reference/ref16.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ สำนักงานสาธารณะสุขจังหวัดลำพูน",
+  },
 ];
