@@ -96,4 +96,14 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref16.webp",
     caption: "จัดส่งแผ่นอะคูสติก ณ สำนักงานสาธารณะสุขจังหวัดลำพูน",
   },
+  {
+    id: 17,
+    image: "/reference/ref17.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ Fisher & Paykel Appliances (Thailand) Co.,Ltd",
+  },
+  {
+    id: 18,
+    image: "/reference/ref18.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ 42 grand residence",
+  },
 ];
