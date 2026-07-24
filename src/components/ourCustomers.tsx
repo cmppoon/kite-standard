@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { customers } from "@/data/customers";
 
 export default function OurCustomers() {
@@ -47,6 +48,15 @@ export default function OurCustomers() {
             </button>
           </div>
         )}
+
+        <div className="mt-10 text-center">
+          <Link
+            href="/reference"
+            className="bg-primary hover:bg-primary/90 inline-block rounded-md px-8 py-3 font-semibold text-white transition-colors"
+          >
+            ดูโครงการที่จัดส่ง
+          </Link>
+        </div>
       </div>
     </section>
   );
