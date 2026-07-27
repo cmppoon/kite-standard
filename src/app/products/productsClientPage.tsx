@@ -79,26 +79,22 @@ function groupAcousticProducts(items: Product[]) {
   return sections;
 }
 
-// Gypsum sound-reduction page only: group the 14 products by hole pattern.
-// The id order matches src/data/products.ts, so each group stays contiguous.
+// Gypsum sound-reduction page only: group the 14 products by SIZE, big sheets first.
+// File order is sorted by pattern, not size, so this builds sections by group
+// membership (in the order below) rather than by contiguous file position.
 const GYPSUM_ACOUSTIC_GROUPS = [
-  { label: "ลายวงกลม", ids: [23, 24, 25, 26] },
-  { label: "ลายธงชาติอังกฤษ", ids: [27, 28, 29, 30] },
-  { label: "ลายสะกดจิต", ids: [31, 32, 33, 34] },
-  { label: "แผ่นใหญ่ 1200×2400", ids: [43, 44] },
+  { label: "ขนาด 1.20 × 2.40 ม.", ids: [43, 44] },
+  { label: "ขนาด 60 × 120 ซม.", ids: [25, 26, 29, 30, 33, 34] },
+  { label: "ขนาด 60 × 60 ซม.", ids: [23, 24, 27, 28, 31, 32] },
 ];
 
 function groupGypsumAcousticProducts(items: Product[]) {
-  const labelOf = (id: number) =>
-    GYPSUM_ACOUSTIC_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
-  const sections: { label: string; items: Product[] }[] = [];
-  for (const product of items) {
-    const label = labelOf(product.id);
-    const last = sections[sections.length - 1];
-    if (last && last.label === label) last.items.push(product);
-    else sections.push({ label, items: [product] });
-  }
-  return sections;
+  return GYPSUM_ACOUSTIC_GROUPS.map((g) => ({
+    label: g.label,
+    items: g.ids
+      .map((id) => items.find((p) => p.id === id))
+      .filter((p): p is Product => p !== undefined),
+  })).filter((section) => section.items.length > 0);
 }
 
 // Sidebar grouping: these two categories move to the bottom under "หลังคา"
