@@ -37,7 +37,7 @@ type Product = (typeof products)[number];
 const CEILING_FRAME_GROUPS = [
   { label: "ระบบฉาบเรียบ", ids: [48, 49, 95, 94, 50, 97, 96] },
   { label: "ระบบทีบาร์", ids: [46, 99, 98, 47] },
-  { label: "อะไหล่", ids: [52, 40, 53, 54, 41, 51] },
+  { label: "อะไหล่", ids: [52, 40, 53, 54, 41, 51, 100, 101, 102, 103] },
 ];
 
 function groupCeilingFrameProducts(items: Product[]) {
