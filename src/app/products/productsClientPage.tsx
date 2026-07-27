@@ -36,6 +36,9 @@ const CEILING_FRAME_PRODUCTS_PER_PAGE = 11;
 // group headings) on ONE page so grouping never splits across pages.
 const GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE = 100;
 
+// T-bar panel page only: same reason — keep all products on ONE page.
+const TBAR_PRODUCTS_PER_PAGE = 100;
+
 type Product = (typeof products)[number];
 
 const CEILING_FRAME_GROUPS = [
@@ -90,6 +93,24 @@ const GYPSUM_ACOUSTIC_GROUPS = [
 
 function groupGypsumAcousticProducts(items: Product[]) {
   return GYPSUM_ACOUSTIC_GROUPS.map((g) => ({
+    label: g.label,
+    items: g.ids
+      .map((id) => items.find((p) => p.id === id))
+      .filter((p): p is Product => p !== undefined),
+  })).filter((section) => section.items.length > 0);
+}
+
+// T-bar panel page only: group the 23 products by SIZE, big sheets first.
+// Built by group membership (in the order below), so it is independent of
+// how products are ordered in src/data/products.ts.
+const TBAR_GROUPS = [
+  { label: "ขนาด 1.20 × 2.40 ม.", ids: [35, 81] },
+  { label: "ขนาด 60 × 120 ซม.", ids: [56, 57, 60, 61, 64, 65, 68, 69, 72, 73] },
+  { label: "ขนาด 60 × 60 ซม.", ids: [45, 55, 58, 59, 62, 63, 66, 67, 70, 71, 80] },
+];
+
+function groupTBarProducts(items: Product[]) {
+  return TBAR_GROUPS.map((g) => ({
     label: g.label,
     items: g.ids
       .map((id) => items.find((p) => p.id === id))
@@ -719,6 +740,8 @@ export default function ProductsClientPage({
     ? CEILING_FRAME_PRODUCTS_PER_PAGE
     : isGypsumAcoustic
     ? GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE
+    : isTBar
+    ? TBAR_PRODUCTS_PER_PAGE
     : PRODUCTS_PER_PAGE;
   const totalPages = Math.ceil(filteredProducts.length / perPage);
   const safePage = Math.min(currentPage, Math.max(1, totalPages));
@@ -836,6 +859,21 @@ export default function ProductsClientPage({
             ) : isGypsumAcoustic ? (
               <div className="space-y-8">
                 {groupGypsumAcousticProducts(paginatedProducts).map((section) => (
+                  <div key={section.label}>
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : isTBar ? (
+              <div className="space-y-8">
+                {groupTBarProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
