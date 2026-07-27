@@ -53,6 +53,28 @@ function groupCeilingFrameProducts(items: Product[]) {
   return sections;
 }
 
+// Acoustic page only: group the 10 products by size. The id order matches the
+// order in src/data/products.ts, so each group stays contiguous. The two
+// ขอบบังใบ (reveal-edge) variants sit last as their own group.
+const ACOUSTIC_GROUPS = [
+  { label: "ขนาด 60×120 ซม.", ids: [1, 2, 82, 3] },
+  { label: "ขนาด 60×60 ซม.", ids: [4, 5, 83, 6] },
+  { label: "รุ่นขอบบังใบ", ids: [42, 77] },
+];
+
+function groupAcousticProducts(items: Product[]) {
+  const labelOf = (id: number) =>
+    ACOUSTIC_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
+  const sections: { label: string; items: Product[] }[] = [];
+  for (const product of items) {
+    const label = labelOf(product.id);
+    const last = sections[sections.length - 1];
+    if (last && last.label === label) last.items.push(product);
+    else sections.push({ label, items: [product] });
+  }
+  return sections;
+}
+
 // Sidebar grouping: these two categories move to the bottom under "หลังคา"
 const ROOF_GROUP_IDS = [3, 4];
 
@@ -689,6 +711,21 @@ export default function ProductsClientPage({
             {isCeilingFrame ? (
               <div className="space-y-8">
                 {groupCeilingFrameProducts(paginatedProducts).map((section) => (
+                  <div key={section.label}>
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : isAcoustic ? (
+              <div className="space-y-8">
+                {groupAcousticProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
