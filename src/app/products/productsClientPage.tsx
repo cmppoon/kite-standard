@@ -32,6 +32,10 @@ const PRODUCTS_PER_PAGE = 12;
 // page 1, so อะไหล่ (6) sits alone on page 2. Other categories stay at 12.
 const CEILING_FRAME_PRODUCTS_PER_PAGE = 11;
 
+// Gypsum sound-reduction page only: high number keeps all products (and their
+// group headings) on ONE page so grouping never splits across pages.
+const GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE = 100;
+
 type Product = (typeof products)[number];
 
 const CEILING_FRAME_GROUPS = [
@@ -65,6 +69,28 @@ const ACOUSTIC_GROUPS = [
 function groupAcousticProducts(items: Product[]) {
   const labelOf = (id: number) =>
     ACOUSTIC_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
+  const sections: { label: string; items: Product[] }[] = [];
+  for (const product of items) {
+    const label = labelOf(product.id);
+    const last = sections[sections.length - 1];
+    if (last && last.label === label) last.items.push(product);
+    else sections.push({ label, items: [product] });
+  }
+  return sections;
+}
+
+// Gypsum sound-reduction page only: group the 14 products by hole pattern.
+// The id order matches src/data/products.ts, so each group stays contiguous.
+const GYPSUM_ACOUSTIC_GROUPS = [
+  { label: "ลายวงกลม", ids: [23, 24, 25, 26] },
+  { label: "ลายธงชาติอังกฤษ", ids: [27, 28, 29, 30] },
+  { label: "ลายสะกดจิต", ids: [31, 32, 33, 34] },
+  { label: "แผ่นใหญ่ 1200×2400", ids: [43, 44] },
+];
+
+function groupGypsumAcousticProducts(items: Product[]) {
+  const labelOf = (id: number) =>
+    GYPSUM_ACOUSTIC_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
   const sections: { label: string; items: Product[] }[] = [];
   for (const product of items) {
     const label = labelOf(product.id);
@@ -181,6 +207,37 @@ const ACOUSTIC_FAQS = [
   {
     q: "มีสต็อกพร้อมส่งและจัดส่งที่ไหนบ้าง?",
     a: "มีสต็อกพร้อมส่ง จัดส่งทั่วประเทศ รองรับทั้งงานโครงการเอกชนและงานราชการครับ กรณีประเภทสินค้าสั่งผลิตไม่เกิน 1-7 วัน ทั้งนี้ขึ้นกับจำนวนครับ",
+  },
+  {
+    q: "ขอราคาโครงการอย่างไร?",
+    a: "โทร 02-415-3676 หรือทัก Line @kaistandard เพื่อขอใบเสนอราคาและคำแนะนำจากทีมงานผู้เชี่ยวชาญกว่า 40 ปี",
+  },
+];
+
+const GYPSUM_ACOUSTIC_FAQS = [
+  {
+    q: "แผ่นยิปซั่มลดเสียงสะท้อนคืออะไร?",
+    a: "เป็นแผ่นฝ้ายิปซั่มที่เจาะรูทั่วแผ่น เมื่อเสียงมากระทบ เสียงส่วนหนึ่งจะลอดผ่านรูเข้าไปแทนการสะท้อนกลับเข้าห้อง จึงช่วยลดเสียงก้องและเสียงสะท้อน ต่างจากฝ้ายิปซั่มธรรมดาที่ผิวเรียบและสะท้อนเสียงกลับ เหมาะกับห้องเพดานสูงหรือพื้นที่กว้างที่มีเสียงก้องมาก",
+  },
+  {
+    q: "ต่างจากแผ่นอะคูสติกใยแร่อย่างไร ควรเลือกแบบไหน?",
+    a: "แผ่นยิปซั่มลดเสียงสะท้อนมีพื้นเป็นยิปซั่ม แข็งแรง ให้ลายเจาะรูสวยงามดูเรียบเนียนเป็นผืนเดียวกัน ส่วนแผ่นอะคูสติกใยแร่น้ำหนักเบาและเน้นดูดซับเสียงเป็นหลัก เลือกตามสไตล์ งบประมาณ และค่าการดูดซับเสียงที่ต้องการ",
+  },
+  {
+    q: "มีลายเจาะรูแบบไหนบ้าง?",
+    a: "มี 3 ลาย: ลายวงกลม (รูกลมเรียงเป็นระเบียบ ดูคลาสสิก), ลายธงชาติอังกฤษ (ลายเส้นไขว้ทันสมัย) และลายสะกดจิต (ลายวงซ้อนสะดุดตา) ทุกลายช่วยลดเสียงสะท้อนได้ เลือกที่ความสวยงามและสไตล์ห้องเป็นหลัก",
+  },
+  {
+    q: "มีขนาดและความหนาอะไรบ้าง?",
+    a: "ขนาด 600×600 มม. และ 600×1200 มม. หนา 9 มม. และ 12 มม. สำหรับระบบทีบาร์ และแผ่นใหญ่ 1200×2400 มม. หนา 9.5 มม. และ 12.5 มม. สำหรับงานฝ้าฉาบเรียบ",
+  },
+  {
+    q: "ใช้กับระบบฝ้าแบบไหนได้บ้าง?",
+    a: "ใช้ได้ทั้งระบบทีบาร์และระบบฉาบเรียบ แนะนำให้บุฉนวนใยแก้วเหนือแผ่นเพื่อเพิ่มประสิทธิภาพการดูดซับเสียง",
+  },
+  {
+    q: "เหมาะกับห้องหรืออาคารแบบไหน?",
+    a: "เหมาะกับโรงเรียน มหาวิทยาลัย โถงอาคาร โรงพยาบาล ห้องประชุม และสำนักงาน โดยเฉพาะพื้นที่เพดานสูงหรือห้องกว้างที่มีเสียงก้อง",
   },
   {
     q: "ขอราคาโครงการอย่างไร?",
@@ -425,6 +482,46 @@ function GypsumAcousticContentSection() {
   );
 }
 
+function GypsumAcousticFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: GYPSUM_ACOUSTIC_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {GYPSUM_ACOUSTIC_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 function GypsumContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -624,6 +721,8 @@ export default function ProductsClientPage({
 
   const perPage = isCeilingFrame
     ? CEILING_FRAME_PRODUCTS_PER_PAGE
+    : isGypsumAcoustic
+    ? GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE
     : PRODUCTS_PER_PAGE;
   const totalPages = Math.ceil(filteredProducts.length / perPage);
   const safePage = Math.min(currentPage, Math.max(1, totalPages));
@@ -738,6 +837,21 @@ export default function ProductsClientPage({
                   </div>
                 ))}
               </div>
+            ) : isGypsumAcoustic ? (
+              <div className="space-y-8">
+                {groupGypsumAcousticProducts(paginatedProducts).map((section) => (
+                  <div key={section.label}>
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
             ) : (
               <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
                 {paginatedProducts.map((product) => (
@@ -790,6 +904,7 @@ export default function ProductsClientPage({
             {isAcoustic && filteredProducts.length > 0 && <AcousticFaqSection />}
             {isServiceHatch && filteredProducts.length > 0 && <ServiceHatchContentSection />}
             {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticContentSection />}
+            {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticFaqSection />}
             {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
             {isCeilingFrame && filteredProducts.length > 0 && <CeilingFrameContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
