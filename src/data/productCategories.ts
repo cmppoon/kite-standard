@@ -69,4 +69,11 @@ export const productCategories = [
     image: "/ฉนวนกันความร้อน.webp",
     description: "",
   },
+   {
+    id: 11,
+    name: "ซีลาย",
+    slug: "ซีลาย",
+    image: "/ซีลาย.webp",
+    description: "โครงคร่าวซีลายสำหรับงานฝ้าเพดานฉาบเรียบ",
+  },
 ];

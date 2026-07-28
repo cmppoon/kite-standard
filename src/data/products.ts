@@ -890,7 +890,7 @@ export const products = [
   },
   {
     id: 48,
-    categoryId: 7,
+    categoryId: 11,
     name: "โครงซีลาย เบอร์ 26 ยาว 4 เมตร (0.60-0.65 กก.)",
     slug: "ซีลาย-0.60-0.65-กก-ขนาด-4-เมตร",
     price: "ราคา 32 บาท ไม่รวม Vat 7%",
@@ -920,7 +920,7 @@ export const products = [
   },
   {
     id: 49,
-    categoryId: 7,
+    categoryId: 11,
     name: "โครงซีลาย เบอร์ 24 ยาว 4 เมตร (0.80-0.85 กก.)",
     slug: "ซีลาย-080-085-กก-ขนาด-4-เมตร",
     price: "ราคา 36 บาท ไม่รวม Vat 7%",
@@ -950,7 +950,7 @@ export const products = [
   },
   {
     id: 95,
-    categoryId: 7,
+    categoryId: 11,
     name: "ซีลาย พลัสลายน์ ตราช้าง ขนาด 4 เมตร (เบอร์ 26)",
     slug: "ซีลาย-พลัสลายน์-ตราช้าง-ขนาด-4-เมตร",
     price: "ราคา 54 บาท ไม่รวม Vat 7%",
@@ -979,7 +979,7 @@ export const products = [
   },
   {
     id: 94,
-    categoryId: 7,
+    categoryId: 11,
     name: "ซีลาย โปรลายน์ ตราช้าง ขนาด 4 เมตร (เบอร์ 24)",
     slug: "ซีลาย-โปรลายน์-ตราช้าง-ขนาด-4-เมตร",
     price: "ราคา 80 บาท ไม่รวม Vat 7%",
@@ -1008,7 +1008,7 @@ export const products = [
   },
   {
     id: 50,
-    categoryId: 7,
+    categoryId: 11,
     name: "ฉากริมฝ้า 1 นิ้ว ยาว 2.40 เมตร",
     slug: "ฉากริม-1-นิ้ว-ยาว-240-เมตร",
     price: "ราคา 16 บาท ไม่รวม Vat 7%",
@@ -1038,7 +1038,7 @@ export const products = [
   },
   {
     id: 97,
-    categoryId: 7,
+    categoryId: 11,
     name: "โครงริมพลัส ตราช้าง ขนาด 2.4 เมตร (เบอร์ 26)",
     slug: "โครงริมพลัส-ตราช้าง-ขนาด-2-4-เมตร",
     price: "ราคา 20 บาท ไม่รวม Vat 7%",
@@ -1066,7 +1066,7 @@ export const products = [
   },
   {
     id: 96,
-    categoryId: 7,
+    categoryId: 11,
     name: "โครงริมโปร ตราช้าง ขนาด 2.4 เมตร (เบอร์ 24)",
     slug: "โครงริมโปร-ตราช้าง-ขนาด-2-4-เมตร",
     price: "ราคา 29.75 บาท ไม่รวม Vat 7%",
@@ -1182,7 +1182,7 @@ export const products = [
   },
   {
     id: 52,
-    categoryId: 7,
+    categoryId: 11,
     name: "ปูนฉาบรอยต่อแผ่นยิปซัม GYPROC ขนาด 25 กก.",
     slug: "ปูนฉาบรอยต่อแผ่นยิปซัม-GYPROC-ขนาด-25-กก",
     price: "ราคา 219 บาท ไม่รวม Vat 7%",
@@ -1193,7 +1193,7 @@ export const products = [
   },
   {
     id: 40,
-    categoryId: 7,
+    categoryId: 11,
     name: "เทปผ้ายิปซัมปิดรอยต่อ 2.5 ซม.",
     slug: "เทปผ้ายิปซัมปิดรอยต่อ-2.5-ซม",
     price: "ราคา 28 บาท +VAT7%",
@@ -1203,7 +1203,7 @@ export const products = [
   },
   {
     id: 53,
-    categoryId: 7,
+    categoryId: 11,
     name: "ผ้าฉาบตาข่าย 3 ซม. ตราผีเสื้อ",
     slug: "ผ้าฉาบตาข่าย-3-ซม-ตราผีเสื้อ",
     price: "ราคา 35 บาท ไม่รวม Vat 7%",
@@ -1214,7 +1214,7 @@ export const products = [
   },
   {
     id: 54,
-    categoryId: 7,
+    categoryId: 11,
     name: "ผ้าฉาบตาข่าย 5 ซม. ตราผีเสื้อ",
     slug: "ผ้าฉาบตาข่าย-5-ซม-ตราผีเสื้อ",
     price: "ราคา 42 บาท ไม่รวม Vat 7%",
@@ -1225,7 +1225,7 @@ export const products = [
   },
   {
     id: 41,
-    categoryId: 7,
+    categoryId: 11,
     name: "สกรูไดวอลล์ขนาด 1 นิ้ว",
     slug: "สกรูไดวอลล์ขนาด-1-นิ้ว",
     price: "ราคา 75 บาท +VAT7%",
@@ -1235,7 +1235,7 @@ export const products = [
   },
   {
     id: 51,
-    categoryId: 7,
+    categoryId: 11,
     name: "ตะปูตอนกรีต",
     slug: "ตะปูตอนกรีต",
     price: "ราคา 85 บาท ไม่รวม Vat 7%",
@@ -1249,7 +1249,7 @@ export const products = [
   },
     {
     id: 100,
-    categoryId: 7,
+    categoryId: 11,
     name: "พุกเหล็ก ขนาด 3/16 นิ้ว",
     slug: "พุกเหล็ก-3-16-นิ้ว",
     price: "ราคา 2 บาท ไม่รวม Vat 7%",
@@ -1266,7 +1266,7 @@ export const products = [
   },
   {
     id: 101,
-    categoryId: 7,
+    categoryId: 11,
     name: "สปริงปรับระดับ",
     slug: "สปริงปรับระดับ",
     price: "ราคา 1.25 บาท ไม่รวม Vat 7%",
@@ -1283,7 +1283,7 @@ export const products = [
   },
   {
     id: 102,
-    categoryId: 7,
+    categoryId: 11,
     name: "ฉาก 2 รู แขวนฝ้าเพดาน",
     slug: "ฉาก-2-รู-แขวนฝ้าเพดาน",
     price: "ราคา 0.80 บาท ไม่รวม Vat 7%",
@@ -1300,7 +1300,7 @@ export const products = [
   },
   {
     id: 103,
-    categoryId: 7,
+    categoryId: 11,
     name: "ตะขอ ป.ปลา หิ้วรางตัวซี",
     slug: "ตะขอ-ป-ปลา-หิ้วรางตัวซี",
     price: "ราคา 1.5 บาท ไม่รวม Vat 7%",
