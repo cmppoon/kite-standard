@@ -25,6 +25,7 @@ const TBAR_CATEGORY_ID = 8;
 const SOUND_ABSORB_CATEGORY_ID = 9;
 
 const ROOF_BATTEN_CATEGORY_ID = 3;
+const CILAI_CATEGORY_ID = 11;
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -39,6 +40,10 @@ const GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE = 100;
 // T-bar panel page only: same reason — keep all products on ONE page.
 const TBAR_PRODUCTS_PER_PAGE = 100;
 
+// ซีลาย page only (category 11): keep all 17 products on ONE page so the
+// two groups (โครงฝ้าฉาบเรียบ + อะไหล่) never split across pages.
+const CILAI_PRODUCTS_PER_PAGE = 100;
+
 type Product = (typeof products)[number];
 
 const CEILING_FRAME_GROUPS = [
@@ -50,6 +55,24 @@ const CEILING_FRAME_GROUPS = [
 function groupCeilingFrameProducts(items: Product[]) {
   const labelOf = (id: number) =>
     CEILING_FRAME_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
+  const sections: { label: string; items: Product[] }[] = [];
+  for (const product of items) {
+    const label = labelOf(product.id);
+    const last = sections[sections.length - 1];
+    if (last && last.label === label) last.items.push(product);
+    else sections.push({ label, items: [product] });
+  }
+  return sections;
+}
+
+const CILAI_GROUPS = [
+  { label: "โครงฝ้าฉาบเรียบ", ids: [48, 49, 95, 94, 50, 97, 96] },
+  { label: "อะไหล่", ids: [52, 40, 53, 54, 41, 51, 100, 101, 102, 103] },
+];
+
+function groupCilaiProducts(items: Product[]) {
+  const labelOf = (id: number) =>
+    CILAI_GROUPS.find((g) => g.ids.includes(id))?.label ?? "อื่นๆ";
   const sections: { label: string; items: Product[] }[] = [];
   for (const product of items) {
     const label = labelOf(product.id);
@@ -725,6 +748,7 @@ export default function ProductsClientPage({
   const isTBar = selectedCategory === TBAR_CATEGORY_ID;
   const isSoundAbsorb = selectedCategory === SOUND_ABSORB_CATEGORY_ID;
   const isRoofBatten = selectedCategory === ROOF_BATTEN_CATEGORY_ID;
+  const isCilai = selectedCategory === CILAI_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -738,6 +762,8 @@ export default function ProductsClientPage({
 
   const perPage = isCeilingFrame
     ? CEILING_FRAME_PRODUCTS_PER_PAGE
+    : isCilai
+    ? CILAI_PRODUCTS_PER_PAGE
     : isGypsumAcoustic
     ? GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE
     : isTBar
@@ -829,6 +855,21 @@ export default function ProductsClientPage({
             {isCeilingFrame ? (
               <div className="space-y-8">
                 {groupCeilingFrameProducts(paginatedProducts).map((section) => (
+                  <div key={section.label}>
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : isCilai ? (
+              <div className="space-y-8">
+                {groupCilaiProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}

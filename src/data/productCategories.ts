@@ -43,9 +43,9 @@ export const productCategories = [
   },
   {
     id: 7,
-    name: "โครงเคร่าฝ้าเพดาน",
-    slug: "โครงเคร่าฝ้าเพดาน",
-    image: "/ซีลาย.webp",
+    name: "ทีบาร์",
+    slug: "ทีบาร์",
+    image: "/ทีเมน.webp",
     description: "",
   },
   {
