@@ -16,6 +16,7 @@ import Link from "next/link";
 const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 const CEILING_FRAME_CATEGORY_ID = 7;
+const CILAI_CATEGORY_ID = 11;
 
 const acousticApplications = [
   { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
@@ -128,6 +129,7 @@ export default async function ProductDetailPage({
   const isAcoustic = product.categoryId === ACOUSTIC_CATEGORY_ID;
   const isGypsumAcoustic = product.categoryId === GYPSUM_ACOUSTIC_CATEGORY_ID;
   const isCeilingFrame = product.categoryId === CEILING_FRAME_CATEGORY_ID;
+  const isCilai = product.categoryId === CILAI_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
 
   return (
@@ -283,7 +285,7 @@ export default async function ProductDetailPage({
         )}
 
         {/* Tabs for non-acoustic / non-gypsum-acoustic / non-ceiling-frame products */}
-        {!isAcoustic && !isGypsumAcoustic && !isCeilingFrame && (product.applications || product.optionalServices) && (
+        {!isAcoustic && !isGypsumAcoustic && !isCeilingFrame && !isCilai && (product.applications || product.optionalServices) && (
           <div className="mt-16">
             <Tabs
               defaultValue={product.applications ? "applications" : "optionalServices"}
@@ -382,8 +384,8 @@ export default async function ProductDetailPage({
           </div>
         )}
 
-        {/* Ceiling frame guide + calculator link + delivery photos (categoryId 7) */}
-        {isCeilingFrame && (
+        {/* Ceiling frame guide + calculator link + delivery photos (categoryId 7 or 11 ซีลาย) */}
+        {(isCeilingFrame || isCilai) && (
           <>
             <div className="mt-12 border-t pt-10">
               <h2 className="mb-6 text-2xl font-semibold">เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?</h2>
@@ -398,10 +400,18 @@ export default async function ProductDetailPage({
                     text: "เหมาะกับอาคารที่เน้นความสวยงามและไม่ต้องการโชว์โครงแผ่น เช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำแผ่นขนาด 120×240 ซม. เพื่อลดเวลาการติดตั้ง",
                   },
                 ].map((card) => (
-                  <div key={card.title} className="rounded-lg border bg-white p-4">
+                  <Link
+                    key={card.title}
+                    href={
+                      card.title === "ระบบฉาบเรียบ"
+                        ? "/products/category/ซีลาย"
+                        : "/products/category/แผ่นฝ้าทีบาร์"
+                    }
+                    className="block rounded-lg border bg-white p-4 transition-shadow hover:border-gray-300 hover:shadow-md"
+                  >
                     <p className="mb-1 text-sm font-semibold text-gray-900">{card.title}</p>
                     <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
-                  </div>
+                  </Link>
                 ))}
               </div>
               <div className="mt-6">
@@ -429,6 +439,38 @@ export default async function ProductDetailPage({
               </div>
             </div>
           </>
+        )}
+
+        {/* ซีลาย FAQ (categoryId 11) */}
+        {isCilai && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-6 text-2xl font-semibold">คำถามที่พบบ่อยเกี่ยวกับซีลาย</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: "ซีลายยาวกี่เมตร?",
+                  a: "ซีลายของไคสแตนดาร์ดยาว 4 เมตรต่อเส้น ทั้งเบอร์ 24 และเบอร์ 26",
+                },
+                {
+                  q: "ซีลายเบอร์ 24 กับเบอร์ 26 ต่างกันอย่างไร?",
+                  a: "เบอร์ 24 หนากว่าและแข็งแรงกว่า น้ำหนัก 0.80-0.85 กก./เส้น รับน้ำหนักแผ่นฝ้าได้ดีกว่า ราคา 36 บาท ส่วนเบอร์ 26 เบากว่าและประหยัดกว่า น้ำหนัก 0.60-0.65 กก./เส้น ราคา 32 บาท เหมาะกับงานที่ต้องการคุมงบ",
+                },
+                {
+                  q: "ซีลายราคาเท่าไหร่?",
+                  a: "ซีลายเบอร์ 26 ราคา 32 บาท/เส้น และเบอร์ 24 ราคา 36 บาท/เส้น (ยังไม่รวม VAT 7%) งานโครงการมีราคาพิเศษ สอบถามโทร 02-415-3676 หรือ Line @kaistandard",
+                },
+                {
+                  q: "ซีลายใช้คู่กับอะไร?",
+                  a: "ใช้คู่กับฉากริม 1 นิ้ว ยาว 2.40 เมตร เพื่อยึดขอบฝ้าเข้ากับผนัง ทำให้ได้ระบบฝ้าเพดานฉาบเรียบครบชุด",
+                },
+              ].map((item) => (
+                <div key={item.q} className="rounded-lg border bg-white p-4">
+                  <p className="mb-1 text-sm font-semibold text-gray-900">{item.q}</p>
+                  <p className="text-sm leading-relaxed text-gray-600">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         )}
 
         {/* Related Products */}
