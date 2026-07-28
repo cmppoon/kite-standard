@@ -106,4 +106,19 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref18.webp",
     caption: "จัดส่งแผ่นอะคูสติก ณ 42 grand residence",
   },
+   {
+    id: 19,
+    image: "/reference/ref19.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ D'oro Coffee อาคารรีเจ้นท์",
+  },
+  {
+    id: 20,
+    image: "/reference/ref20.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ ที่ทำการพุทธมณฑล",
+  },
+  {
+    id: 21,
+    image: "/reference/ref21.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+  },
 ];
