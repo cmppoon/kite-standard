@@ -733,6 +733,65 @@ function RoofBattenFaqSection() {
   );
 }
 
+const CILAI_FAQS = [
+  {
+    q: "ซีลายยาวกี่เมตร?",
+    a: "ซีลายของไคสแตนดาร์ดยาว 4 เมตรต่อเส้น ทั้งเบอร์ 24 และเบอร์ 26",
+  },
+  {
+    q: "ซีลายเบอร์ 24 กับเบอร์ 26 ต่างกันอย่างไร?",
+    a: "เบอร์ 24 หนากว่าและแข็งแรงกว่า น้ำหนัก 0.80-0.85 กก./เส้น รับน้ำหนักแผ่นฝ้าได้ดีกว่า ราคา 36 บาท ส่วนเบอร์ 26 เบากว่าและประหยัดกว่า น้ำหนัก 0.60-0.65 กก./เส้น ราคา 32 บาท เหมาะกับงานที่ต้องการคุมงบ",
+  },
+  {
+    q: "ซีลายราคาเท่าไหร่?",
+    a: "ซีลายเบอร์ 26 ราคา 32 บาท/เส้น และเบอร์ 24 ราคา 36 บาท/เส้น (ยังไม่รวม VAT 7%) งานโครงการมีราคาพิเศษ สอบถามโทร 02-415-3676 หรือ Line @kaistandard",
+  },
+  {
+    q: "ซีลายใช้คู่กับอะไร?",
+    a: "ใช้คู่กับฉากริม 1 นิ้ว ยาว 2.40 เมตร เพื่อยึดขอบฝ้าเข้ากับผนัง ทำให้ได้ระบบฝ้าเพดานฉาบเรียบครบชุด",
+  },
+];
+
+function CilaiFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: CILAI_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {CILAI_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 function SystemChooserBox() {
   const cards = [
     {
@@ -1020,6 +1079,7 @@ export default function ProductsClientPage({
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenFaqSection />}
             {(isCilai || isTBar) && filteredProducts.length > 0 && <SystemChooserBox />}
+            {isCilai && filteredProducts.length > 0 && <CilaiFaqSection />}
           </div>
         </div>
       </div>
