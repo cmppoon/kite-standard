@@ -733,6 +733,38 @@ function RoofBattenFaqSection() {
   );
 }
 
+function SystemChooserBox() {
+  const cards = [
+    {
+      title: "ระบบทีบาร์",
+      text: "เหมาะกับอาคารสำนักงานและอาคารราชการที่ต้องการความสะดวกในการดูแลและติดตั้ง รองรับแผ่นขนาด 60×120 ซม. และ 60×60 ซม.",
+      href: "/products/category/แผ่นฝ้าทีบาร์",
+    },
+    {
+      title: "ระบบฉาบเรียบ",
+      text: "เหมาะกับอาคารที่เน้นความสวยงามและไม่ต้องการโชว์โครงแผ่น เช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำแผ่นขนาด 120×240 ซม. เพื่อลดเวลาการติดตั้ง",
+      href: "/products/category/ซีลาย",
+    },
+  ];
+  return (
+    <div className="mt-12 border-t pt-10">
+      <h2 className="mb-6 text-2xl font-semibold">เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {cards.map((card) => (
+          <Link
+            key={card.title}
+            href={card.href}
+            className="block rounded-lg border bg-white p-4 transition-shadow hover:border-gray-300 hover:shadow-md"
+          >
+            <p className="mb-1 text-sm font-semibold text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function ProductsClientPage({
   selectedCategory,
 }: {
@@ -987,6 +1019,7 @@ export default function ProductsClientPage({
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenFaqSection />}
+            {(isCilai || isTBar) && filteredProducts.length > 0 && <SystemChooserBox />}
           </div>
         </div>
       </div>

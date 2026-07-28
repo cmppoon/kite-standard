@@ -35,6 +35,13 @@ export const productCategories = [
     description: "แผ่นยิปซั่มดูดซับเสียง",
   },
   {
+    id: 11,
+    name: "ซีลาย",
+    slug: "ซีลาย",
+    image: "/ซีลาย.webp",
+    description: "โครงคร่าวซีลายสำหรับงานฝ้าเพดานฉาบเรียบ",
+  },
+  {
     id: 6,
     name: "แผ่นยิปซั่ม",
     slug: "แผ่นยิปซั่ม",
@@ -43,9 +50,9 @@ export const productCategories = [
   },
   {
     id: 7,
-    name: "ทีบาร์",
-    slug: "ทีบาร์",
-    image: "/ทีเมน.webp",
+    name: "โครงเคร่าฝ้าเพดาน",
+    slug: "โครงเคร่าฝ้าเพดาน",
+    image: "/ซีลาย.webp",
     description: "",
   },
   {
@@ -62,18 +69,11 @@ export const productCategories = [
     image: "/acousticfelt.webp",
     description: "แผ่นซับเสียงตกแต่งผนัง",
   },
-    {
+  {
     id: 10,
     name: "ฉนวนกันความร้อน",
     slug: "ฉนวนกันความร้อน",
     image: "/ฉนวนกันความร้อน.webp",
     description: "",
-  },
-   {
-    id: 11,
-    name: "ซีลาย",
-    slug: "ซีลาย",
-    image: "/ซีลาย.webp",
-    description: "โครงคร่าวซีลายสำหรับงานฝ้าเพดานฉาบเรียบ",
   },
 ];
