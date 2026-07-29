@@ -3252,4 +3252,119 @@ export const articles = [
 <\/script>
     `,
   },
+{
+    id: 37,
+    title: "ฉากริมคืออะไร? รู้จักชิ้นส่วนสำคัญของฝ้า T-bar",
+    slug: "ฉากริมคืออะไร",
+    excerpt: "ฉากริม คือ เหล็กฉากรูปตัว L ที่ติดรอบขอบห้องในระบบฝ้า T-bar ทำหน้าที่รับปลายเส้นโครงและเก็บงานขอบให้เรียบร้อย มาดูกันว่ามันสำคัญอย่างไร",
+    image: "/articles/article37.webp",
+    date: "2026-07-29",
+    readTime: "3 นาที",
+    content: `
+<p style="font-size:28px; font-weight:700;">ฉากริมคืออะไร? รู้จักชิ้นส่วนสำคัญของฝ้า T-bar</p>
+
+<p>สวัสดีครับ วันนี้เรามาทำความรู้จักกับ "ฉากริม" ชิ้นส่วนเล็ก ๆ ที่หลายคนมองข้าม แต่ขาดไม่ได้เลยในงานฝ้าเพดานระบบ T-bar</p>
+<p>ฉากริม ที่ติดตั้งวิ่งไปตามผนังรอบ ๆ ห้อง ตรงแนวที่ฝ้าเพดานมาบรรจบกับผนัง เป็นตัวเริ่มต้นและปิดขอบของระบบโครงฝ้า T-bar ทั้งหมด</p>
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉากริมทำหน้าที่อะไร</strong>
+<ul>
+  <li>รับปลายของเส้นหลักทีเมนและทีซอยที่มาจบตรงแนวผนัง</li>
+  <li>กำหนดแนวระดับของฝ้ารอบห้องให้อยู่ในระนาบเดียวกัน</li>
+  <li>เก็บงานขอบระหว่างโครงฝ้ากับผนังให้ดูเรียบร้อย ไม่เห็นช่องว่าง</li>
+</ul>
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉากริมอยู่ตรงไหนในระบบฝ้า T-bar</strong>
+<p>ระบบฝ้า T-bar ประกอบด้วยชิ้นส่วนหลักที่ทำงานร่วมกัน ฉากริมคือชิ้นส่วนที่อยู่รอบขอบห้องเสมอ</p>
+<table style="width:100%; border-collapse:collapse; font-size:15px;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">ชิ้นส่วน</th>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">หน้าที่</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ทีเมน</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เส้นโครงหลักที่รับน้ำหนัก วิ่งตามความยาวห้อง</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ทีซอย</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เส้นเชื่อมระหว่างเส้นหลัก แบ่งช่องฝ้าเป็นตาราง</td>
+    </tr>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ลวดแขวน</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แขวนโครงฝ้าลงมาจากโครงสร้างด้านบน</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ฉากริม</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">เหล็กฉากรอบขอบห้อง รับปลายเส้นและเก็บงานขอบ</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">หน้าตาและขนาดของฉากริม</strong>
+<p>ฉากริมมีหน้าตัดเป็นรูปตัว L มุม 90 องศา หน้ากว้างของแต่ละด้านมักออกแบบให้พอดีกับหน้าเส้น T-bar มาตรฐาน เพื่อให้แนวฝ้าดูต่อเนื่องสวยงาม ส่วนวัสดุและผิวเคลือบ (เช่น ชุบกัลวาไนซ์ หรือพ่นสีขาว) รวมถึงความยาวต่อเส้น จะมีหลายแบบให้เลือกตามลักษณะหน้างาน ถ้าต้องการสเปกและขนาดที่แน่นอน ทักมาสอบถามทีมงานได้เลยครับ</p>
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ข้อควรรู้ตอนติดตั้งฉากริม</strong>
+<ul>
+  <li>ยึดฉากริมเข้ากับผนังด้วยสกรูหรือตะปูตอกคอนกรีตตามระยะที่เหมาะกับชนิดผนัง</li>
+</ul>
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ระบบฝ้า T-bar จำเป็นต้องใช้ฉากริมทุกงานไหม<br /><strong>A:</strong> จำเป็นครับ เพราะฉากริมเป็นตัวรับปลายเส้นหลักและเส้นขวางที่มาจบตรงผนัง ถ้าไม่มี ขอบฝ้าจะไม่มีตัวรองรับและเก็บงานได้ไม่เรียบร้อย</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฉากริมใช้กับผนังแบบไหนได้บ้าง<br /><strong>A:</strong> ใช้ได้ทั้งผนังก่ออิฐฉาบปูนและผนังเบา เพียงเลือกตัวยึดอย่างสกรูหรือตะปูตอกคอนกรีตให้เหมาะกับชนิดผนัง เพื่อให้ยึดแน่นและรองรับขอบฝ้าได้ดี</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฉากริมกับโครงคร่าวฝ้าฉาบเรียบ ใช้แทนกันได้ไหม<br /><strong>A:</strong> ใช้แทนกันไม่ได้ครับ ฉากริมเป็นชิ้นส่วนเฉพาะของระบบฝ้า T-bar ส่วนงานฝ้าฉาบเรียบจะใช้โครงคร่าวฝ้าคนละแบบ ควรเลือกให้ตรงกับระบบฝ้าที่หน้างานใช้</p>
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px;">อยากได้ฉากริมและโครงฝ้า T-bar ที่ใช่สำหรับงานคุณ?</p>
+  <p style="color:#fff;">ทีม KAI Standard พร้อมแนะนำเรื่องขนาด ผิวเคลือบ และระบบโครงฝ้าครบชุด ทักมาคุยกับเราได้เลย</p>
+  <a href="https://line.me/ti/p/@kaistandard"
+     style="background:#fff; color:#1a73e8; padding:10px 24px;
+            border-radius:4px; font-weight:600; display:inline-block; text-decoration:none;">
+    ติดต่อสอบถามได้เลย →
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ระบบฝ้า T-bar จำเป็นต้องใช้ฉากริมทุกงานไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "จำเป็นครับ เพราะฉากริมเป็นตัวรับปลายเส้นหลักและเส้นขวางที่มาจบตรงผนัง ถ้าไม่มี ขอบฝ้าจะไม่มีตัวรองรับและเก็บงานได้ไม่เรียบร้อย"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฉากริมใช้กับผนังแบบไหนได้บ้าง",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้ได้ทั้งผนังก่ออิฐฉาบปูนและผนังเบา เพียงเลือกตัวยึดอย่างสกรูหรือตะปูตอกคอนกรีตให้เหมาะกับชนิดผนัง เพื่อให้ยึดแน่นและรองรับขอบฝ้าได้ดี"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฉากริมกับโครงคร่าวฝ้าฉาบเรียบ ใช้แทนกันได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้แทนกันไม่ได้ครับ ฉากริมเป็นชิ้นส่วนเฉพาะของระบบฝ้า T-bar ส่วนงานฝ้าฉาบเรียบจะใช้โครงคร่าวฝ้าคนละแบบ ควรเลือกให้ตรงกับระบบฝ้าที่หน้างานใช้"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
