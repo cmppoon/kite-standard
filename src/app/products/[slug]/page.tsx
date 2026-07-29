@@ -384,43 +384,70 @@ export default async function ProductDetailPage({
           </div>
         )}
 
+        {/* อะไหล่อุปกรณ์ฝ้าฉาบเรียบ for ซีลาย pages (categoryId 11) */}
+        {isCilai &&
+          (() => {
+            const spareIds = [52, 40, 41, 51, 53, 54, 100, 101, 102, 103];
+            const spares = products
+              .filter((p) => spareIds.includes(p.id) && p.slug !== product.slug)
+              .slice(0, 8);
+            if (spares.length === 0) return null;
+            return (
+              <div className="mt-12 border-t pt-10">
+                <h2 className="mb-6 text-2xl font-semibold">อะไหล่อุปกรณ์ฝ้าฉาบเรียบ</h2>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  {spares.map((item) => (
+                    <Link
+                      key={item.id}
+                      href={`/products/${item.slug}`}
+                      className="group rounded-lg border transition-shadow hover:shadow-md"
+                    >
+                      <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="p-3">
+                        <p className="line-clamp-2 text-sm font-medium">{item.name}</p>
+                        <p className="text-primary mt-1 text-sm font-semibold">{item.price}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+
         {/* Ceiling frame guide + calculator link + delivery photos (categoryId 7 or 11 ซีลาย) */}
         {(isCeilingFrame || isCilai) && (
           <>
             <div className="mt-12 border-t pt-10">
-              <h2 className="mb-6 text-2xl font-semibold">เลือกระบบโครงเคร่าฝ้าเพดานแบบไหนดี?</h2>
+              <h2 className="mb-6 text-2xl font-semibold">ใช้กับฝ้าเพดานแบบไหนดี?</h2>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 {[
                   {
-                    title: "ระบบทีบาร์",
-                    text: "เหมาะกับอาคารสำนักงานและอาคารราชการที่ต้องการความสะดวกในการดูแลและติดตั้ง รองรับแผ่นขนาด 60×120 ซม. และ 60×60 ซม.",
+                    title: "แผ่นยิปซั่มมาตรฐานในระบบฉาบเรียบ",
+                    text: "แผ่นยิปซั่มขนาด 120x240 ซม. ยึดบนโครงซีลายเพื่อทำฝ้าเพดานฉาบเรียบ พื้นผิวเรียบพร้อมฉาบรอยต่อและทาสีทับ เหมาะกับบ้านพักอาศัย สำนักงาน และอาคารทั่วไป",
+                    href: "/products/category/แผ่นยิปซั่ม",
                   },
                   {
-                    title: "ระบบฉาบเรียบ",
-                    text: "เหมาะกับอาคารที่เน้นความสวยงามและไม่ต้องการโชว์โครงแผ่น เช่น โรงพยาบาล ห้างสรรพสินค้า โรงแรม แนะนำแผ่นขนาด 120×240 ซม. เพื่อลดเวลาการติดตั้ง",
+                    title: "แผ่นอะคูสติกขนาด 60ซม.x120ซม. ในระบบฉาบเรียบ",
+                    text: "แผ่นฝ้าอะคูสติก 60x120 ซม. ช่วยลดเสียงสะท้อนในห้อง ติดตั้งในระบบฝ้าฉาบเรียบได้ ค่าดูดซับเสียง NRC สูง เหมาะกับห้องประชุมและสำนักงาน",
+                    href: "/products/category/แผ่นอะคูสติก",
                   },
                 ].map((card) => (
                   <Link
                     key={card.title}
-                    href={
-                      card.title === "ระบบฉาบเรียบ"
-                        ? "/products/category/ซีลาย"
-                        : "/products/category/แผ่นฝ้าทีบาร์"
-                    }
+                    href={card.href}
                     className="block rounded-lg border bg-white p-4 transition-shadow hover:border-gray-300 hover:shadow-md"
                   >
                     <p className="mb-1 text-sm font-semibold text-gray-900">{card.title}</p>
                     <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
                   </Link>
                 ))}
-              </div>
-              <div className="mt-6">
-                <Link
-                  href="/calculator"
-                  className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-700"
-                >
-                  คำนวณปริมาณวัสดุ →
-                </Link>
               </div>
             </div>
             <div className="mt-12 border-t pt-10">
@@ -441,40 +468,10 @@ export default async function ProductDetailPage({
           </>
         )}
 
-        {/* ซีลาย FAQ (categoryId 11) */}
-        {isCilai && (
-          <div className="mt-12 border-t pt-10">
-            <h2 className="mb-6 text-2xl font-semibold">คำถามที่พบบ่อยเกี่ยวกับซีลาย</h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "ซีลายยาวกี่เมตร?",
-                  a: "ซีลายของไคสแตนดาร์ดยาว 4 เมตรต่อเส้น ทั้งเบอร์ 24 และเบอร์ 26",
-                },
-                {
-                  q: "ซีลายเบอร์ 24 กับเบอร์ 26 ต่างกันอย่างไร?",
-                  a: "เบอร์ 24 หนากว่าและแข็งแรงกว่า น้ำหนัก 0.80-0.85 กก./เส้น รับน้ำหนักแผ่นฝ้าได้ดีกว่า ราคา 36 บาท ส่วนเบอร์ 26 เบากว่าและประหยัดกว่า น้ำหนัก 0.60-0.65 กก./เส้น ราคา 32 บาท เหมาะกับงานที่ต้องการคุมงบ",
-                },
-                {
-                  q: "ซีลายราคาเท่าไหร่?",
-                  a: "ซีลายเบอร์ 26 ราคา 32 บาท/เส้น และเบอร์ 24 ราคา 36 บาท/เส้น (ยังไม่รวม VAT 7%) งานโครงการมีราคาพิเศษ สอบถามโทร 02-415-3676 หรือ Line @kaistandard",
-                },
-                {
-                  q: "ซีลายใช้คู่กับอะไร?",
-                  a: "ใช้คู่กับฉากริม 1 นิ้ว ยาว 2.40 เมตร เพื่อยึดขอบฝ้าเข้ากับผนัง ทำให้ได้ระบบฝ้าเพดานฉาบเรียบครบชุด",
-                },
-              ].map((item) => (
-                <div key={item.q} className="rounded-lg border bg-white p-4">
-                  <p className="mb-1 text-sm font-semibold text-gray-900">{item.q}</p>
-                  <p className="text-sm leading-relaxed text-gray-600">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* Related Products */}
-        {(() => {
+        {/* Related Products (non-ซีลาย categories) */}
+        {!isCilai &&
+          (() => {
           const related = products
             .filter((p) => p.categoryId === product.categoryId && p.slug !== product.slug)
             .slice(0, 4);
