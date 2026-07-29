@@ -792,6 +792,38 @@ function CilaiFaqSection() {
   );
 }
 
+function CilaiSystemBox() {
+  const cards = [
+    {
+      title: "แผ่นยิปซั่มมาตรฐานในระบบฉาบเรียบ",
+      text: "แผ่นยิปซั่มขนาด 120x240 ซม. ยึดบนโครงซีลายเพื่อทำฝ้าเพดานฉาบเรียบ พื้นผิวเรียบพร้อมฉาบรอยต่อและทาสีทับ เหมาะกับบ้านพักอาศัย สำนักงาน และอาคารทั่วไป",
+      href: "/products/category/แผ่นยิปซั่ม",
+    },
+    {
+      title: "แผ่นอะคูสติกขนาด 60ซม.x120ซม. ในระบบฉาบเรียบ",
+      text: "แผ่นฝ้าอะคูสติก 60x120 ซม. ช่วยลดเสียงสะท้อนในห้อง ติดตั้งในระบบฝ้าฉาบเรียบได้ ค่าดูดซับเสียง NRC สูง เหมาะกับห้องประชุมและสำนักงาน",
+      href: "/products/category/แผ่นอะคูสติก",
+    },
+  ];
+  return (
+    <div className="mt-12 border-t pt-10">
+      <h2 className="mb-6 text-2xl font-semibold">ใช้กับฝ้าเพดานแบบไหนดี?</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {cards.map((card) => (
+          <Link
+            key={card.title}
+            href={card.href}
+            className="block rounded-lg border bg-white p-4 transition-shadow hover:border-gray-300 hover:shadow-md"
+          >
+            <p className="mb-1 text-sm font-semibold text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SystemChooserBox() {
   const cards = [
     {
@@ -1078,7 +1110,8 @@ export default function ProductsClientPage({
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenFaqSection />}
-            {(isCilai || isTBar) && filteredProducts.length > 0 && <SystemChooserBox />}
+            {isTBar && filteredProducts.length > 0 && <SystemChooserBox />}
+            {isCilai && filteredProducts.length > 0 && <CilaiSystemBox />}
             {isCilai && filteredProducts.length > 0 && <CilaiFaqSection />}
           </div>
         </div>
