@@ -50,8 +50,8 @@ export const productCategories = [
   },
   {
     id: 7,
-    name: "โครงเคร่าฝ้าเพดาน",
-    slug: "โครงเคร่าฝ้าเพดาน",
+    name: "โครงทีบาร์",
+    slug: "โครงทีบาร์",
     image: "/ซีลาย.webp",
     description: "",
   },
