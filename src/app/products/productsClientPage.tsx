@@ -143,6 +143,16 @@ function groupTBarProducts(items: Product[]) {
   })).filter((section) => section.items.length > 0);
 }
 
+// Per-category SEO heading override. If a category id is listed here, the page
+// uses this H1 + subtitle instead of the auto-generated one. Add more later.
+const CATEGORY_HEADINGS: Record<number, { h1: string; subtitle: string }> = {
+  8: {
+    h1: "แผ่นฝ้าทีบาร์ปรุลาย ลดเสียงก้อง ผลิตเอง ราคาโรงงาน",
+    subtitle:
+      "ผู้ผลิตแผ่นฝ้าทีบาร์ปรุลายโดยตรง สร้างลวดลายจากโรงงานของเราเอง บนฐานแผ่นยิปซัมคุณภาพ ช่วยลดเสียงก้องในห้อง น้ำหนักเบา ตัดง่าย จัดส่งทั่วไทย",
+  },
+};
+
 // Sidebar grouping: these two categories move to the bottom under "หลังคา"
 const ROOF_GROUP_IDS = [3, 4];
 
@@ -909,12 +919,14 @@ export default function ProductsClientPage({
           <h1 className="mb-2 text-3xl font-bold md:text-2xl">
             {selectedCategory === -1
               ? "สินค้าของเรา"
-              : categories.find((c) => c.id === selectedCategory)?.name}
+              : CATEGORY_HEADINGS[selectedCategory]?.h1 ??
+                categories.find((c) => c.id === selectedCategory)?.name}
           </h1>
           <p className="text-muted-foreground mb-4 text-sm">
             {selectedCategory === -1
               ? "เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม"
-              : `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
+              : CATEGORY_HEADINGS[selectedCategory]?.subtitle ??
+                `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
           <TrustBar />
