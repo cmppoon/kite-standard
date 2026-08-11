@@ -105,11 +105,11 @@ function groupAcousticProducts(items: Product[]) {
   return sections;
 }
 
-// Gypsum sound-reduction page only: group the 14 products by SIZE, big sheets first.
+// Gypsum sound-reduction page only: group the 16 products by SIZE, big sheets first.
 // File order is sorted by pattern, not size, so this builds sections by group
 // membership (in the order below) rather than by contiguous file position.
 const GYPSUM_ACOUSTIC_GROUPS = [
-  { label: "ขนาด 1.20 × 2.40 ม.", ids: [43, 44] },
+  { label: "ขนาด 1.20 × 2.40 ม.", ids: [43, 44, 35, 81] },
   { label: "ขนาด 60 × 120 ซม.", ids: [25, 26, 29, 30, 33, 34] },
   { label: "ขนาด 60 × 60 ซม.", ids: [23, 24, 27, 28, 31, 32] },
 ];
@@ -123,13 +123,15 @@ function groupGypsumAcousticProducts(items: Product[]) {
   })).filter((section) => section.items.length > 0);
 }
 
-// T-bar panel page only: group the 23 products by SIZE, big sheets first.
+// T-bar panel page only: group the 21 products by SIZE + THICKNESS.
 // Built by group membership (in the order below), so it is independent of
 // how products are ordered in src/data/products.ts.
 const TBAR_GROUPS = [
-  { label: "ขนาด 1.20 × 2.40 ม.", ids: [35, 81] },
-  { label: "ขนาด 60 × 120 ซม.", ids: [56, 57, 60, 61, 64, 65, 68, 69, 72, 73] },
-  { label: "ขนาด 60 × 60 ซม.", ids: [45, 55, 58, 59, 62, 63, 66, 67, 70, 71, 80] },
+  { label: "ขนาด 60 × 60 ซม. หนา 9 มม.", ids: [45, 58, 62, 66, 70] },
+  { label: "ขนาด 60 × 60 ซม. หนา 12 มม.", ids: [55, 59, 63, 67, 71] },
+  { label: "ขนาด 60 × 120 ซม. หนา 9 มม.", ids: [56, 60, 64, 68, 72] },
+  { label: "ขนาด 60 × 120 ซม. หนา 12 มม.", ids: [57, 61, 65, 69, 73] },
+  { label: "ขนาด 60 × 60 ซม.", ids: [80] },
 ];
 
 function groupTBarProducts(items: Product[]) {
