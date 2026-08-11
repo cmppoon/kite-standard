@@ -28,6 +28,13 @@ const acousticApplications = [
   { title: "บ้านพักอาศัย", text: "ลดเสียงสะท้อนในห้องนั่งเล่นและห้องทำงาน ติดตั้งง่ายบนโครงทีบาร์มาตรฐาน" },
 ];
 
+const tbarApplications = [
+  { title: "บ้านพักอาศัย", text: "ลดเสียงก้องในห้องนั่งเล่นและห้องทำงาน พร้อมลวดลายปรุที่เพิ่มมิติให้ฝ้าเพดาน สามารถเพิ่มลูกเล่นเช่นการทาสีทับเพื่อความสวยงามได้อีกด้วย" },
+  { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงสะท้อนในห้องประชุมและออฟฟิศ ทำให้การพูดคุยฟังชัดขึ้น เป็นอีกหนึ่งอาคารที่มีการใช้งานมาก" },
+  { title: "โรงพยาบาล / คลินิก", text: "ช่วยคุมเสียงก้องในพื้นที่ให้บริการ สร้างบรรยากาศเงียบสงบและลดเสียงจอแจในพื้นที่" },
+  { title: "ห้างสรรพสินค้า / ร้านสะดวกซื้อ", text: "ฝ้าปรุลายลดเสียงก้องในพื้นที่ค้าปลีก พร้อมลุคเพดานที่เพิ่มมิติให้กับฝ้าเพดาน เป็นอาคารที่นิยมมากที่สุดสำหรับแผ่นยิปซั่มปรุลาย" },
+];
+
 const getSizeCm = (name: string): { cm: string; mmFull: string; cmShort: string } | null => {
   const match = name.match(/(\d+)\s*x\s*(\d+)(?:\s*x\s*(\d+))?\s*มม/i);
   if (!match) return null;
@@ -345,13 +352,14 @@ export default async function ProductDetailPage({
         )}
 
         {/* Application cards — ทีบาร์ ปรุลาย (categoryId 8) */}
-        {isTBar && product.applications && product.applications.length > 0 && (
+        {isTBar && (
           <div className="mt-12 border-t pt-10">
             <h2 className="mb-6 text-2xl font-semibold">พื้นที่การใช้งาน</h2>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-              {product.applications.map((app) => (
-                <div key={app} className="rounded-lg border bg-white p-4">
-                  <p className="text-sm font-semibold text-gray-900">{app}</p>
+              {tbarApplications.map((app) => (
+                <div key={app.title} className="rounded-lg border bg-white p-4">
+                  <p className="mb-1 text-sm font-semibold text-gray-900">{app.title}</p>
+                  <p className="text-xs leading-relaxed text-gray-500">{app.text}</p>
                 </div>
               ))}
             </div>
