@@ -17,6 +17,7 @@ const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 const CEILING_FRAME_CATEGORY_ID = 7;
 const CILAI_CATEGORY_ID = 11;
+const TBAR_CATEGORY_ID = 8;
 
 const acousticApplications = [
   { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
@@ -89,6 +90,39 @@ function parseGypsumAcousticSpec(product: Product) {
   return { size, thickness, boxCount, model, perfPct };
 }
 
+function parseTBarSpec(product: Product) {
+  const name = product.name;
+
+  const sizeMatch = name.match(/(\d+)\s*x\s*(\d+)/i);
+  const size = sizeMatch
+    ? `${sizeMatch[1]}×${sizeMatch[2]} มม. (${parseInt(sizeMatch[1]) / 10}×${parseInt(sizeMatch[2]) / 10}ซม.)`
+    : "-";
+
+  const thickMatch = name.match(/x\s*(\d+)\s*มม/i);
+  const thickness = thickMatch ? `${thickMatch[1]} มม.` : "-";
+  const thicknessNum = thickMatch ? parseInt(thickMatch[1]) : 0;
+
+  let boxCount = "-";
+  if (thicknessNum === 9) {
+    boxCount = "8 แผ่น / กล่อง";
+  } else if (thicknessNum === 12) {
+    boxCount = "6 แผ่น / กล่อง";
+  }
+
+  const modelMatch = name.match(/KS-(\d+)/);
+  const modelCode = modelMatch ? `KS-${modelMatch[1]}` : "-";
+  const pattern = modelMatch
+    ? modelMatch[1].startsWith("10")
+      ? "ปรุลายหนอน"
+      : modelMatch[1].startsWith("20")
+        ? "ปรุลายมด"
+        : ""
+    : "";
+  const model = pattern ? `${modelCode} · ${pattern}` : modelCode;
+
+  return { size, thickness, boxCount, model };
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -130,7 +164,9 @@ export default async function ProductDetailPage({
   const isGypsumAcoustic = product.categoryId === GYPSUM_ACOUSTIC_CATEGORY_ID;
   const isCeilingFrame = product.categoryId === CEILING_FRAME_CATEGORY_ID;
   const isCilai = product.categoryId === CILAI_CATEGORY_ID;
+  const isTBar = product.categoryId === TBAR_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
+  const tbarSpec = isTBar ? parseTBarSpec(product) : null;
 
   return (
     <main className="bg-background min-h-screen">
@@ -251,6 +287,30 @@ export default async function ProductDetailPage({
                 </div>
               )}
 
+              {/* Spec table — ทีบาร์ ปรุลาย (categoryId 8) */}
+              {isTBar && tbarSpec && (
+                <div>
+                  <h2 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h2>
+                  <table className="w-full table-fixed text-sm">
+                    <tbody>
+                      {[
+                        ["ขนาด", tbarSpec.size],
+                        ["ความหนา", tbarSpec.thickness],
+                        ["รุ่น / ลาย", tbarSpec.model],
+                        ["วัสดุ", "แผ่นยิปซัมปรุลาย เคลือบสีขาวสำเร็จรูป"],
+                        ["จำนวนต่อกล่อง", tbarSpec.boxCount],
+                        ["ระบบฝ้า", "โครงทีบาร์"],
+                      ].map(([label, value]) => (
+                        <tr key={label} className="border-b last:border-0">
+                          <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
+                          <td className="py-2 font-medium">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
               {/* Features */}
               {product.features && product.features.length > 0 && (
                 <div>
@@ -284,8 +344,22 @@ export default async function ProductDetailPage({
           </div>
         )}
 
+        {/* Application cards — ทีบาร์ ปรุลาย (categoryId 8) */}
+        {isTBar && product.applications && product.applications.length > 0 && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-6 text-2xl font-semibold">พื้นที่การใช้งาน</h2>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {product.applications.map((app) => (
+                <div key={app} className="rounded-lg border bg-white p-4">
+                  <p className="text-sm font-semibold text-gray-900">{app}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Tabs for non-acoustic / non-gypsum-acoustic / non-ceiling-frame products */}
-        {!isAcoustic && !isGypsumAcoustic && !isCeilingFrame && !isCilai && (product.applications || product.optionalServices) && (
+        {!isAcoustic && !isGypsumAcoustic && !isCeilingFrame && !isCilai && !isTBar && (product.applications || product.optionalServices) && (
           <div className="mt-16">
             <Tabs
               defaultValue={product.applications ? "applications" : "optionalServices"}
