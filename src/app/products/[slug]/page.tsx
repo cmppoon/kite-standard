@@ -202,7 +202,7 @@ export default async function ProductDetailPage({
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className={`object-cover${isTBar ? " brightness-90" : ""}`}
+                className={`object-cover${isTBar ? " brightness-95" : ""}`}
               />
             </div>
           </div>

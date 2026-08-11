@@ -356,7 +356,7 @@ function ProductCard({ product }: { product: Product }) {
               src={product.image}
               alt={`${product.name}`}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className={`object-cover transition-transform duration-300 group-hover:scale-105${product.categoryId === 8 ? " brightness-95" : ""}`}
             />
           </div>
         </CardHeader>
