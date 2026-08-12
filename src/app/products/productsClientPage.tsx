@@ -129,7 +129,7 @@ function groupGypsumAcousticProducts(items: Product[]) {
 // Built by group membership (in the order below), so it is independent of
 // how products are ordered in src/data/products.ts.
 const TBAR_GROUPS = [
-  { label: "60*60ซม. หนา 9มม.", ids: [45, 58, 62, 66, 70, 80, 104] },
+  { label: "60*60ซม. หนา 9มม.", ids: [45, 58, 62, 66, 70] },
   { label: "60*60ซม. หนา 12มม.", ids: [55, 59, 63, 67, 71] },
   { label: "60*120ซม. หนา 9มม.", ids: [56, 60, 64, 68, 72] },
   { label: "60*120ซม. หนา 12มม.", ids: [57, 61, 65, 69, 73] },
