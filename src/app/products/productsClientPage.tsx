@@ -109,9 +109,11 @@ function groupAcousticProducts(items: Product[]) {
 // File order is sorted by pattern, not size, so this builds sections by group
 // membership (in the order below) rather than by contiguous file position.
 const GYPSUM_ACOUSTIC_GROUPS = [
-  { label: "ขนาด 1.20 × 2.40 ม.", ids: [43, 44, 35, 81] },
-  { label: "ขนาด 60 × 120 ซม.", ids: [25, 26, 29, 30, 33, 34] },
-  { label: "ขนาด 60 × 60 ซม.", ids: [23, 24, 27, 28, 31, 32] },
+  { label: "60*60ซม. หนา 9มม.", ids: [23, 27, 31] },
+  { label: "60*60ซม. หนา 12มม.", ids: [24, 28, 32] },
+  { label: "60*120ซม. หนา 9มม.", ids: [25, 29, 33] },
+  { label: "60*120ซม. หนา 12มม.", ids: [26, 30, 34] },
+  { label: "1.20*2.40ม.", ids: [35, 43, 81, 44] },
 ];
 
 function groupGypsumAcousticProducts(items: Product[]) {
@@ -127,11 +129,11 @@ function groupGypsumAcousticProducts(items: Product[]) {
 // Built by group membership (in the order below), so it is independent of
 // how products are ordered in src/data/products.ts.
 const TBAR_GROUPS = [
-  { label: "ขนาด 60 × 60 ซม. หนา 9 มม.", ids: [45, 58, 62, 66, 70] },
-  { label: "ขนาด 60 × 60 ซม. หนา 12 มม.", ids: [55, 59, 63, 67, 71] },
-  { label: "ขนาด 60 × 120 ซม. หนา 9 มม.", ids: [56, 60, 64, 68, 72] },
-  { label: "ขนาด 60 × 120 ซม. หนา 12 มม.", ids: [57, 61, 65, 69, 73] },
-  { label: "ขนาด 60 × 60 ซม.", ids: [80] },
+  { label: "60*60ซม. หนา 9มม.", ids: [45, 58, 62, 66, 70] },
+  { label: "60*60ซม. หนา 12มม.", ids: [55, 59, 63, 67, 71] },
+  { label: "60*120ซม. หนา 9มม.", ids: [56, 60, 64, 68, 72] },
+  { label: "60*120ซม. หนา 12มม.", ids: [57, 61, 65, 69, 73] },
+  { label: "60*60ซม.", ids: [80] },
 ];
 
 function groupTBarProducts(items: Product[]) {
@@ -342,6 +344,35 @@ const ROOF_BATTEN_FAQS = [
     a: "แปหลังคาเป็นเหล็กรูปพรรณที่ออกแบบมาเพื่อรองรับแผ่นหลังคาโดยเฉพาะ รับน้ำหนักได้ดีและติดตั้งได้รวดเร็วกว่า จึงเป็นตัวเลือกที่นิยมสำหรับอาคาร โรงงาน และโกดังที่ใช้หลังคาเมทัลชีทหรือวัสดุมุงทั่วไป ส่วนเหล็กกล่องมีข้อดีที่ใช้ทำผนังได้ด้วย จึงยืดหยุ่นในการใช้งานมากกว่า",
   },
 ];
+
+function GroupChips({
+  sections,
+}: {
+  sections: { label: string; items: Product[] }[];
+}) {
+  const chips = sections
+    .map((s, i) => ({ label: s.label, i }))
+    .filter((c) => c.label !== "60*60ซม.");
+  if (chips.length < 2) return null;
+  return (
+    <div className="mb-4 flex flex-wrap gap-2">
+      {chips.map((c) => (
+        <button
+          key={c.i}
+          type="button"
+          onClick={() =>
+            document
+              .getElementById(`grp-${c.i}`)
+              ?.scrollIntoView({ behavior: "smooth", block: "start" })
+          }
+          className="border-primary text-primary hover:bg-primary rounded-full border px-3 py-1 text-sm transition hover:text-white"
+        >
+          {c.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function ProductCard({ product }: { product: Product }) {
   return (
@@ -1036,8 +1067,9 @@ export default function ProductsClientPage({
               </div>
             ) : isGypsumAcoustic ? (
               <div className="space-y-8">
-                {groupGypsumAcousticProducts(paginatedProducts).map((section) => (
-                  <div key={section.label}>
+                <GroupChips sections={groupGypsumAcousticProducts(paginatedProducts)} />
+                {groupGypsumAcousticProducts(paginatedProducts).map((section, sIdx) => (
+                  <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
                     </h2>
@@ -1051,8 +1083,9 @@ export default function ProductsClientPage({
               </div>
             ) : isTBar ? (
               <div className="space-y-8">
-                {groupTBarProducts(paginatedProducts).map((section) => (
-                  <div key={section.label}>
+                <GroupChips sections={groupTBarProducts(paginatedProducts)} />
+                {groupTBarProducts(paginatedProducts).map((section, sIdx) => (
+                  <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
                     </h2>
