@@ -1052,8 +1052,9 @@ export default function ProductsClientPage({
               </div>
             ) : isAcoustic ? (
               <div className="space-y-8">
-                {groupAcousticProducts(paginatedProducts).map((section) => (
-                  <div key={section.label}>
+                <GroupChips sections={groupAcousticProducts(paginatedProducts)} />
+                {groupAcousticProducts(paginatedProducts).map((section, sIdx) => (
+                  <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
                     </h2>
