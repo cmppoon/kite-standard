@@ -3462,4 +3462,139 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 39,
+    title: "ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร? เลือกให้ถูกก่อนติดตั้ง",
+    slug: "ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร",
+    excerpt: "ดูดซับเสียงกับกันเสียงไม่เหมือนกัน เลือกผิดอาจเสียค่าก่อสร้างเกินจำเป็น บทความนี้อธิบายความต่างแบบเข้าใจง่าย พร้อมตัวอย่างปัญหาเสียงที่พบบ่อยและวิธีเลือกให้ตรงจุด",
+    image: "/articles/article39.webp",
+    date: "2026-08-13",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร? เลือกให้ถูกก่อนติดตั้ง</p>
+
+<p>หลายคนที่กำลังแก้ปัญหาเรื่องเสียงในอาคาร มักสับสนระหว่างคำว่า "ดูดซับเสียง" กับ "กันเสียง" คิดว่าเป็นเรื่องเดียวกัน แต่จริง ๆ แล้วสองอย่างนี้ทำหน้าที่ต่างกันโดยสิ้นเชิง ถ้าเลือกผิดนอกจากจะแก้ปัญหาไม่ตรงจุดแล้ว ยังเสียค่าก่อสร้างเกินความจำเป็นอีกด้วย</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ดูดซับเสียง คืออะไร</strong>
+<p>การดูดซับเสียง คือการลดเสียงก้องหรือเสียงสะท้อนที่เกิดขึ้น "ภายในห้องเดียวกัน" เวลาเสียงพูดหรือเสียงดนตรีวิ่งไปกระทบผนัง เพดาน หรือพื้นผิวแข็ง เสียงจะสะท้อนกลับมาซ้อนกันจนฟังไม่ชัด กลายเป็นเสียงก้อง วัสดุดูดซับเสียงอย่าง <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติก</a> จะช่วยซับพลังงานเสียงส่วนนี้ ทำให้เสียงในห้องคมชัดขึ้น ฟังสบายหูขึ้น</p>
+<p>เหมาะกับ: ห้องประชุม ออฟฟิศ ร้านอาหาร ร้านกาแฟ ห้องเรียน หรือพื้นที่ที่ต้องการให้เสียงพูดคุยชัดเจนไม่ก้อง (อ่านเพิ่ม: <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a>)</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">กันเสียง (Soundproofing) คืออะไร</strong>
+<p>การกันเสียง คือการ "ปิดกั้น" ไม่ให้เสียงเดินทางผ่านจากห้องหนึ่งไปอีกห้องหนึ่ง หรือจากภายนอกเข้ามาภายใน เช่น ไม่อยากให้เสียงประชุมลอดออกไปนอกห้อง หรือไม่อยากให้เสียงจากถนนเข้ามารบกวน</p>
+<p>การกันเสียงใช้หลักการคนละแบบกับการดูดซับ นั่นคือต้องใช้มวลและความหนาแน่นของวัสดุ การปิดรอยรั่วของอากาศให้สนิท และบางครั้งต้องแยกโครงสร้างผนังออกจากกัน เพื่อไม่ให้เสียงส่งผ่านการสั่นสะเทือน วัสดุที่ใช้จึงมักเป็นวัสดุหนักและแน่น เช่น ผนังหลายชั้น แผ่นยิปซัมหนาพิเศษ หรือฉนวนแน่น ไม่ใช่วัสดุพรุนเบาแบบแผ่นดูดซับเสียง</p>
+<p>หมายเหตุ: ความสามารถในการกันเสียงมักดูจากค่า STC</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เปรียบเทียบ ดูดซับเสียง vs กันเสียง</strong>
+<table style="border-collapse:collapse; width:100%; margin:1rem 0;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">ดูดซับเสียง</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">กันเสียง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">จุดประสงค์</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ลดเสียงก้อง/สะท้อนในห้อง</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ปิดกั้นเสียงระหว่างห้อง/จากภายนอก</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แก้ปัญหา</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงก้อง ฟังไม่ชัด</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงลอด เสียงรบกวนข้ามห้อง</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">หลักการทำงาน</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ซับพลังงานเสียงด้วยวัสดุพรุน/นุ่ม</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ใช้มวล ความหนาแน่น ปิดรอยรั่ว</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">วัสดุที่ใช้</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นอะคูสติก วัสดุซับเสียง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผนังหนา ยิปซัมหลายชั้น ฉนวนแน่น</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ค่าที่ใช้วัด</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">NRC</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">STC</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ติดตั้งที่</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผิวผนัง/ฝ้าภายในห้อง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">โครงสร้างผนัง/ช่องเปิด</td>
+</tr>
+</tbody>
+</table>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ตัวอย่างเสียงก้องที่มักพบเจอ</strong>
+<p>ปัญหากลุ่มนี้เกิดจากเสียงสะท้อนภายในห้อง แก้ได้ด้วยการดูดซับเสียง (แผ่นอะคูสติก)</p>
+<ul>
+<li>เสียงพูดในห้องเรียนหรือห้องสัมมนาที่ฟังไม่ชัด</li>
+<li>เสียงลูกค้าพูดคุยในร้านอาหาร</li>
+<li>เสียงประกาศในโถงหรือล็อบบี้ที่ก้อง</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ตัวอย่างเสียงดังทะลุที่มักพบเจอ</strong>
+<p>ปัญหากลุ่มนี้คือเสียงเดินทางข้ามห้อง</p>
+<ul>
+<li>เสียงสุนัขเห่าจนดังทะลุ</li>
+<li>เสียงจากถนนหรือการจราจรลอดเข้ามาในห้อง</li>
+<li>เสียงจากห้องข้าง ๆ หรือเพื่อนบ้านทะลุผนังเข้ามา</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป เลือกให้ถูกกับปัญหา</strong>
+<ul>
+<li>ปัญหาคือ "เสียงก้อง ประชุมแล้วฟังไม่ชัด" → เลือก ดูดซับเสียง (แผ่นอะคูสติก)</li>
+<li>ปัญหาคือ "เสียงลอดออก/เข้าห้อง รบกวนกัน" → เลือก กันเสียง (แก้ที่โครงสร้าง)</li>
+<li>อยากได้ทั้งเสียงชัดและไม่รบกวนใคร → ใช้ทั้งสองอย่างร่วมกัน</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> แผ่นอะคูสติกกันเสียงได้ไหม?<br /><strong>A:</strong> แผ่นอะคูสติกออกแบบมาเพื่อดูดซับเสียง ลดเสียงก้องภายในห้องเป็นหลัก ไม่ได้ทำหน้าที่กันเสียงปิดกั้นระหว่างห้องโดยตรง ถ้าต้องการกันเสียงลอด ต้องแก้ที่โครงสร้างผนังร่วมด้วย</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ต้องใช้ทั้งดูดซับเสียงและกันเสียงพร้อมกันไหม?<br /><strong>A:</strong> ขึ้นอยู่กับปัญหา ถ้าแค่เสียงก้องใช้ดูดซับอย่างเดียวก็พอ แต่ถ้าต้องการทั้งเสียงชัดและไม่รบกวนห้องข้าง ๆ ควรใช้ทั้งสองอย่างร่วมกัน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ห้องประชุมควรเลือกแบบไหน?<br /><strong>A:</strong> ห้องประชุมส่วนใหญ่มีปัญหาเสียงก้องทำให้ฟังไม่ชัด แผ่นดูดซับเสียงช่วยได้มาก แต่ถ้าเป็นห้องที่ต้องคุยเรื่องลับ ไม่อยากให้เสียงลอดออก ควรเพิ่มการกันเสียงที่ผนังและประตูด้วย</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ไม่แน่ใจว่างานของคุณต้องดูดซับเสียงหรือกันเสียง?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยแนะนำวัสดุให้เหมาะกับหน้างานของคุณได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แผ่นอะคูสติกกันเสียงได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นอะคูสติกออกแบบมาเพื่อดูดซับเสียง ลดเสียงก้องภายในห้องเป็นหลัก ไม่ได้ทำหน้าที่กันเสียงปิดกั้นระหว่างห้องโดยตรง ถ้าต้องการกันเสียงลอด ต้องแก้ที่โครงสร้างผนังร่วมด้วย"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องใช้ทั้งดูดซับเสียงและกันเสียงพร้อมกันไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับปัญหา ถ้าแค่เสียงก้องใช้ดูดซับอย่างเดียวก็พอ แต่ถ้าต้องการทั้งเสียงชัดและไม่รบกวนห้องข้าง ๆ ควรใช้ทั้งสองอย่างร่วมกัน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องประชุมควรเลือกแบบไหน?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ห้องประชุมส่วนใหญ่มีปัญหาเสียงก้องทำให้ฟังไม่ชัด แผ่นดูดซับเสียงช่วยได้มาก แต่ถ้าเป็นห้องที่ต้องคุยเรื่องลับ ไม่อยากให้เสียงลอดออก ควรเพิ่มการกันเสียงที่ผนังและประตูด้วย"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
