@@ -12,6 +12,7 @@ import { ArrowLeft, Check, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import ProductJsonLd from "@/components/ProductJsonLd";
 
 const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
@@ -177,6 +178,7 @@ export default async function ProductDetailPage({
 
   return (
     <main className="bg-background min-h-screen">
+      <ProductJsonLd product={product} slug={slug} />
       <div className="mx-auto max-w-7xl px-4 py-8">
         {/* Breadcrumb */}
         <div className="mb-2">
