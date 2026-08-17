@@ -309,6 +309,9 @@ export default async function ProductDetailPage({
                         ["วัสดุ", "แผ่นยิปซัมปรุลาย เคลือบสีขาวสำเร็จรูป"],
                         ["จำนวนต่อกล่อง", tbarSpec.boxCount],
                         ["ระบบฝ้า", "โครงทีบาร์"],
+                        ["มาตรฐานแผ่น", "BS 1230 และ มอก. 219-2552"],
+                        ["ชนิดแผ่น", "ขอบเรียบ, ขอบลาด (เฉพาะ KS-205)"],
+                        ["การป้องกันไฟ", "ไม่ลามไฟ Class 0 : BS 476 Part 6&7"],
                       ].map(([label, value]) => (
                         <tr key={label} className="border-b last:border-0">
                           <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
