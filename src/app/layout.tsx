@@ -35,9 +35,6 @@ export const metadata: Metadata = {
   creator: "ไคสแตนดาร์ด",
   publisher: "ไคสแตนดาร์ด",
   robots: "index, follow",
-  alternates: {
-    canonical: "https://www.kaistandard.com",
-  },
   openGraph: {
     type: "website",
     locale: "th_TH",
