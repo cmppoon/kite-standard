@@ -11,4 +11,10 @@ export const catalogs = [
     image: "/catalogs/catalog2.webp",
     url: "/catalogs/แผ่นปิดรอยต่อ_สีดำ_KS.pdf",
   },
+  {
+    id: 3,
+    name: "SCG Cylence Zandera : Standard Set Collection",
+    image: "/catalogs/catalog3.webp",
+    url: "/catalogs/SCG Acoustic_Zandera.pdf",
+  },
 ];
