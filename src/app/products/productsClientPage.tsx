@@ -654,6 +654,69 @@ function TBarContentSection() {
   );
 }
 
+const TBAR_FAQS = [
+  {
+    q: "แผ่นฝ้าทีบาร์ปรุลาย ลดเสียงก้อง คืออะไร?",
+    a: "แผ่นฝ้าทีบาร์ผิวปรุลาย (ลายหนอน / ลายมด) ที่ช่วยดูดซับและลดเสียงก้องภายในห้อง ต่างจากฝ้าทีบาร์ผิวเรียบทั่วไปที่สะท้อนเสียงกลับ ทำให้เสียงพูดในห้องชัดขึ้น เหมาะกับออฟฟิศ ห้องประชุม คาเฟ่ และร้านอาหารครับ",
+  },
+  {
+    q: "ฝ้าทีบาร์ปรุลาย ต่างจากฝ้าทีบาร์ธรรมดายังไง?",
+    a: "ผิวปรุลายช่วยลดเสียงสะท้อนและเสียงก้อง ส่วนฝ้าทีบาร์ผิวเรียบเน้นหน้าตาเรียบและทำความสะอาดง่าย แต่ไม่ได้ช่วยเรื่องเสียงครับ ถ้าห้องมีเสียงก้องเยอะ แนะนำแบบปรุลาย",
+  },
+  {
+    q: "ราคาแผ่นฝ้าทีบาร์ของไคสแตนดาร์ดเท่าไหร่?",
+    a: "เริ่มต้นประมาณ 46–115 บาท/แผ่น ขึ้นอยู่กับขนาด (60×60 / 60×120 ซม.) และความหนา (9 / 12 มม.) ยังไม่รวม VAT 7% งานโครงการมีราคาพิเศษ ขอใบเสนอราคาได้ที่ 02-415-3676 หรือ Line @kaistandard",
+  },
+  {
+    q: "เหมาะกับห้องหรืออาคารแบบไหน?",
+    a: "ออฟฟิศ ห้องประชุม คาเฟ่ ร้านอาหาร โชว์รูม สถานศึกษา และอาคารสาธารณะ ทุกที่ที่ต้องการลดเสียงก้อง แต่ไม่แนะนำพื้นที่ที่ชื้นมากครับ",
+  },
+  {
+    q: "ทำไมต้องซื้อฝ้าทีบาร์กับไคสแตนดาร์ด?",
+    a: "เพราะเราเป็นโรงงานผลิตเอง ปรุลายเองทุกแผ่น คุมคุณภาพเอง ได้ราคาโรงงานโดยตรง สั่งได้ตั้งแต่ขั้นต่ำเพียง 1 กล่อง ใช้เวลาผลิตประมาณ 3–7 วัน (ขึ้นอยู่กับจำนวน) พร้อมประสบการณ์กว่า 40 ปี และรับงานโครงการทั่วประเทศครับ",
+  },
+];
+
+function TBarFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: TBAR_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {TBAR_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 function SoundAbsorbContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
@@ -1153,6 +1216,7 @@ export default function ProductsClientPage({
             {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
             {isCeilingFrame && filteredProducts.length > 0 && <CeilingFrameContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
+            {isTBar && filteredProducts.length > 0 && <TBarFaqSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbContentSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
