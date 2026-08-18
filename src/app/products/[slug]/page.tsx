@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/products";
-import { ArrowLeft, Check, Phone } from "lucide-react";
+import { ArrowLeft, Check, Download, ExternalLink, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,6 +19,19 @@ const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 const CEILING_FRAME_CATEGORY_ID = 7;
 const CILAI_CATEGORY_ID = 11;
 const TBAR_CATEGORY_ID = 8;
+
+// Per-product catalog card. Key = product slug. Only products listed here show
+// the catalog card under the CTA buttons. Add more products later as needed.
+const PRODUCT_CATALOGS: Record<
+  string,
+  { image: string; pdf: string; title: string }
+> = {
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม": {
+    image: "/catalogs/catalog3.webp",
+    pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
+    title: "SCG Cylence Zandera",
+  },
+};
 
 const acousticApplications = [
   { title: "ห้องประชุม / สำนักงาน", text: "ลดเสียงก้องในห้องประชุม ทำให้เสียงพูดชัดเจน เหมาะกับห้องที่ต้องฟังอย่างตั้งใจ" },
@@ -175,6 +188,7 @@ export default async function ProductDetailPage({
   const isTBar = product.categoryId === TBAR_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
   const tbarSpec = isTBar ? parseTBarSpec(product) : null;
+  const productCatalog = PRODUCT_CATALOGS[product.slug] ?? null;
 
   return (
     <main className="bg-background min-h-screen">
@@ -239,6 +253,36 @@ export default async function ProductDetailPage({
                   Line @kaistandard
                 </Link>
               </div>
+
+              {/* Product catalog card — only for products in PRODUCT_CATALOGS */}
+              {productCatalog && (
+                <a
+                  href={productCatalog.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-primary mb-6 flex items-center gap-4 rounded-xl border bg-white p-3 transition hover:bg-gray-50"
+                >
+                  <div className="relative h-24 w-[68px] flex-shrink-0 overflow-hidden rounded-md border bg-white">
+                    <Image
+                      src={productCatalog.image}
+                      alt={`แคตตาล็อก ${productCatalog.title}`}
+                      fill
+                      className="object-contain p-1"
+                    />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-muted-foreground text-xs">แคตตาล็อก</p>
+                    <p className="truncate text-sm font-semibold">
+                      {productCatalog.title}
+                    </p>
+                    <span className="text-primary mt-1 inline-flex items-center gap-1.5 text-sm font-medium">
+                      <Download className="h-4 w-4 flex-shrink-0" />
+                      เปิดดูแคตตาล็อกและวิธีการติดตั้ง
+                    </span>
+                  </div>
+                  <ExternalLink className="text-muted-foreground h-5 w-5 flex-shrink-0" />
+                </a>
+              )}
 
               {/* Spec table — acoustic (categoryId 1) */}
               {isAcoustic && (
