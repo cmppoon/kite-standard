@@ -13,6 +13,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import ProductJsonLd from "@/components/ProductJsonLd";
+import ProductGallery from "@/components/ProductGallery";
 
 const ACOUSTIC_CATEGORY_ID = 1;
 const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
@@ -41,6 +42,15 @@ const PRODUCT_CATALOGS: Record<
     pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
     title: "SCG Cylence Zandera",
   },
+};
+
+// Per-product image gallery. Key = product slug. Value = EXTRA images only
+// (image 1 is always the product's own main photo). Only products listed here
+// get click-to-select thumbnails; every other product stays single-image.
+const PRODUCT_GALLERY: Record<string, string[]> = {
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม": ["/zandera.webp"],
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": ["/zandera.webp"],
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม": ["/zandera.webp"],
 };
 
 const acousticApplications = [
@@ -199,6 +209,10 @@ export default async function ProductDetailPage({
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
   const tbarSpec = isTBar ? parseTBarSpec(product) : null;
   const productCatalog = PRODUCT_CATALOGS[product.slug] ?? null;
+  const galleryImages = [
+    product.image,
+    ...(PRODUCT_GALLERY[product.slug] ?? []),
+  ];
 
   return (
     <main className="bg-background min-h-screen">
@@ -221,16 +235,24 @@ export default async function ProductDetailPage({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Product Images */}
           <div className="space-y-4">
-            <div className="relative aspect-[700/600] w-full overflow-hidden rounded-lg">
-              <Image
-                src={product.image}
+            {galleryImages.length > 1 ? (
+              <ProductGallery
+                images={galleryImages}
                 alt={product.name}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className={`object-cover${isTBar ? " brightness-95" : ""}`}
+                dim={isTBar}
               />
-            </div>
+            ) : (
+              <div className="relative aspect-[700/600] w-full overflow-hidden rounded-lg">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className={`object-cover${isTBar ? " brightness-95" : ""}`}
+                />
+              </div>
+            )}
           </div>
 
           {/* Product Info */}
