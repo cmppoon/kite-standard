@@ -31,6 +31,16 @@ const PRODUCT_CATALOGS: Record<
     pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
     title: "SCG Cylence Zandera",
   },
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": {
+    image: "/catalogs/catalog3.webp",
+    pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
+    title: "SCG Cylence Zandera",
+  },
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม": {
+    image: "/catalogs/catalog3.webp",
+    pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
+    title: "SCG Cylence Zandera",
+  },
 };
 
 const acousticApplications = [
