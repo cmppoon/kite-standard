@@ -3597,4 +3597,119 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 40,
+    title: "ห้องดนตรี ใช้ผนังอะไรดี? เข้าใจก่อนว่าผนังต้องทำ 2 หน้าที่",
+    slug: "ห้องดนตรีใช้ผนังอะไรดี",
+    excerpt: "ผนังห้องดนตรีต้องทำ 2 หน้าที่ — กันเสียงรั่วออกนอกห้อง (เรื่องโครงสร้าง) กับปรับเสียงในห้องให้ฟังดี (แผ่นอะคูสติก) เลือกให้ถูกก่อนลงงบ",
+    image: "/articles/article40.webp",
+    date: "2026-08-20",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">ห้องดนตรี ใช้ผนังอะไรดี? เข้าใจก่อนว่าผนังต้องทำ 2 หน้าที่</p>
+
+<p>สวัสดีครับ ใครกำลังจะทำห้องดนตรี ห้องซ้อมดนตรี หรือห้องอัดเล็กๆ ที่บ้าน แล้วสงสัยว่า "ต้องใช้ผนังแบบไหน" บทความนี้มีคำตอบแบบตรงไปตรงมาให้ครับ เพราะจริงๆ แล้วคำว่า "ผนังห้องดนตรี" ซ่อนคำถาม 2 เรื่องที่คนละเรื่องกันเอาไว้ และถ้าเลือกผิดข้อ งบที่ลงไปอาจไม่ได้ผลอย่างที่คิด</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ผนังห้องดนตรีต้องแก้ 2 เรื่อง</strong>
+<p>เวลาพูดถึงผนังห้องดนตรี จริงๆ เรากำลังพูดถึง 2 ปัญหาที่ต้องแก้ด้วยวิธีต่างกัน:</p>
+<p>• <strong>กันเสียงไม่ให้รั่ว</strong> — ไม่ให้เสียงดนตรีดังออกไปกวนห้องข้างๆ หรือเพื่อนบ้าน และไม่ให้เสียงจากข้างนอกเข้ามา</p>
+<p>• <strong>ปรับเสียงในห้องให้ฟังดี</strong> — ลดเสียงก้อง เสียงสะท้อน ให้เสียงเครื่องดนตรีหรือการอัดฟังชัด ไม่อู้อี้</p>
+<p>สองเรื่องนี้ใช้วัสดุและวิธีคนละแบบเลยครับ และนี่คือจุดที่คนเข้าใจผิดกันบ่อยที่สุด</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เรื่องที่ 1: กันเสียงไม่ให้รั่ว</strong>
+<p>ถ้าเป้าหมายคือ "ไม่ให้เสียงรั่ว" ออกไปนอกห้อง เรื่องนี้อยู่ที่ตัวโครงสร้างผนัง ไม่ใช่แผ่นบุผิว หลักการสำคัญมีอยู่ไม่กี่ข้อ:</p>
+<p>• <strong>มวล</strong> — ผนังยิ่งหนักยิ่งกันเสียงได้ดี เช่น ก่ออิฐ/บล็อก หรือผนังเบาที่ติดแผ่นยิปซัม 2 ชั้นทั้งสองด้าน</p>
+<p>• <strong>ใส่ฉนวนในโพรงผนัง</strong> — เช่น ใยหิน/ใยแก้ว ช่วยดูดซับเสียงในช่องว่างระหว่างผนัง</p>
+<p>• <strong>ปิดรอยรั่วให้สนิท</strong> — ยาแนวตามขอบ รอบท่อ รอบปลั๊ก ทุกจุด เพราะรูเล็กๆ รูเดียวก็ทำให้เสียงเข้ามาได้</p>
+<p>ซึ่งการไม่ให้เสียงรั่วต้องคิดตั้งแต่ก่อนก่อสร้างเพราะมักเป็นเรื่องของโครงสร้างมากกว่าวัสดุปิดผิว</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เรื่องที่ 2: ปรับเสียงในห้องให้ฟังดี</strong>
+<p>ห้องดนตรีที่ผนังแข็งเรียบล้วนๆ จะเกิดเสียงสะท้อนไปมา ทำให้เสียงก้อง ฟังไม่ชัด อัดเสียงออกมาก้อง</p>
+<p>แผ่นอะคูสติกจะเข้ามาช่วย โดยติดที่ผิวผนัง (และเพดาน) เพื่อดูดซับเสียงสะท้อน ทำให้เสียงในห้องนิ่งและฟังชัดขึ้น เสริมด้วย bass trap ตามมุมห้องเพื่อจัดการเสียงเบสที่มักสะสมตามมุม</p>
+<p>แผ่นอะคูสติกที่ KAI Standard มีให้เลือก เช่น:</p>
+<p>• <a href="/products/แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x600x9มม" style="color:#1a73e8; text-decoration:underline;"><strong>KS501</strong></a> — แผ่นซับเสียงโพลีเอสเตอร์ แบรนด์ KAI Standard</p>
+<p>• <a href="/products/แผ่นฝ้าอะคูสติก-ks403-ขนาด-600x1200x16มม" style="color:#1a73e8; text-decoration:underline;"><strong>KS403</strong></a> — แผ่นฝ้าอะคูสติก แบรนด์ KAI Standard</p>
+<p>• <a href="/products/แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม" style="color:#1a73e8; text-decoration:underline;"><strong>Zandera (SCG Cylence Zandera)</strong></a> — แผ่นอะคูสติกแบบหุ้มผ้า ดูแผ่นอะคูสติกทั้งหมดของเราได้ที่ <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติก</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เทียบให้เห็นภาพ: กันเสียง vs ปรับอะคูสติก</strong>
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0 1rem; font-size:14px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">กันเสียงรั่ว (Isolation)</th>
+<th style="background:#1a73e8; color:#fff; padding:10px 12px; text-align:left; border-bottom:1px solid #d0d7e3;">ปรับเสียงในห้อง (Acoustic)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">จุดประสงค์</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ไม่ให้เสียงออก/เข้าห้อง</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ลดเสียงก้อง ให้เสียงในห้องฟังชัด</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แก้ที่</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">โครงสร้างผนัง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ผิวผนัง/เพดาน</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">วัสดุหลัก</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ผนังหนา/2 ชั้น, ฉนวน, ยาแนว</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แผ่นอะคูสติก (KS501, KS403, Zandera), bass trap</td>
+</tr>
+</tbody>
+</table>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุปเลือกยังไง</strong>
+<p>• ถ้ากังวลว่าเสียงจะรั่วไปกวนคนอื่น → ต้องเริ่มที่ผนังกันเสียง (โครงสร้าง)</p>
+<p>• ถ้าเสียงในห้องก้อง อู้อี้ อัดไม่ชัด → ใช้แผ่นอะคูสติกดูดซับ</p>
+<p>• ห้องดนตรีจริงจังส่วนใหญ่ ต้องทำทั้งสองอย่าง เพราะติดแผ่นอะคูสติกอย่างเดียวไม่ได้ช่วยไม่ให้เสียงรั่ว และผนังกันเสียงเปล่าๆ ก็ทำให้เสียงในห้องแข็งกระด้าง</p>
+<p>อยากได้ห้องที่เพื่อนบ้านไม่บ่น และเสียงข้างในฟังดี ต้องมองทั้งสองส่วนควบคู่กันครับ อ่านเพิ่มเรื่อง <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a> ได้เลย</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ติดแผ่นอะคูสติกแล้วเสียงจะไม่รั่วออกไปข้างนอกใช่ไหม?<br /><strong>A:</strong> ไม่ใช่ครับ แผ่นอะคูสติกทำหน้าที่ดูดซับเสียงสะท้อนภายในห้องให้ฟังชัดขึ้น ไม่ได้กันเสียงไม่ให้รั่วผ่านผนัง การกันเสียงรั่วต้องแก้ที่โครงสร้างผนัง (มวล + ปิดรอยรั่ว)</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ห้องซ้อมกลองต้องทำผนังแบบไหน?<br /><strong>A:</strong> กลองเป็นเครื่องที่เสียงดังและมีเบสแรง มักต้องทำผนังกันเสียงแบบจริงจัง เช่น ผนังหนา/สองชั้น และในหลายกรณีทำเป็นห้องซ้อนห้องมีช่องอากาศคั่น จากนั้นค่อยเสริมแผ่นอะคูสติกและ bass trap ปรับเสียงในห้อง แนะนำปรึกษาก่อนออกแบบเพราะรายละเอียดขึ้นกับพื้นที่</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ห้องดนตรีเล็กๆ ที่บ้านทำเองได้ไหม?<br /><strong>A:</strong> ห้องเล็กที่เน้นซ้อมเบาๆ หรือทำคอนเทนต์ ปรับเสียงในห้องด้วยแผ่นอะคูสติกทำเองได้ไม่ยาก แต่ถ้าต้องการกันเสียงไม่ให้รบกวนคนอื่นด้วย งานโครงสร้างผนังควรวางแผนตั้งแต่แรกหรือปรึกษาผู้เชี่ยวชาญ ทักมาสอบถามได้ครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+<p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">อยากทำห้องดนตรีให้เสียงดีและไม่รบกวนใคร?</p>
+<p style="color:#fff; margin:0 0 12px;">ทีม KAI Standard ช่วยแนะนำแผ่นอะคูสติกและแนวทางจัดการเสียงในห้องให้เหมาะกับงานของคุณได้</p>
+<a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ติดแผ่นอะคูสติกแล้วเสียงจะไม่รั่วออกไปข้างนอกใช่ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ใช่ แผ่นอะคูสติกทำหน้าที่ดูดซับเสียงสะท้อนภายในห้องให้ฟังชัดขึ้น ไม่ได้กันเสียงไม่ให้รั่วผ่านผนัง การกันเสียงรั่วต้องแก้ที่โครงสร้างผนัง (มวล + ปิดรอยรั่ว)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องซ้อมกลองต้องทำผนังแบบไหน?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "กลองเป็นเครื่องที่เสียงดังและมีเบสแรง มักต้องทำผนังกันเสียงแบบจริงจัง เช่น ผนังหนา/สองชั้น และในหลายกรณีทำเป็นห้องซ้อนห้องมีช่องอากาศคั่น จากนั้นค่อยเสริมแผ่นอะคูสติกและ bass trap ปรับเสียงในห้อง แนะนำปรึกษาก่อนออกแบบเพราะรายละเอียดขึ้นกับพื้นที่"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องดนตรีเล็กๆ ที่บ้านทำเองได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ห้องเล็กที่เน้นซ้อมเบาๆ หรือทำคอนเทนต์ ปรับเสียงในห้องด้วยแผ่นอะคูสติกทำเองได้ไม่ยาก แต่ถ้าต้องการกันเสียงไม่ให้รบกวนคนอื่นด้วย งานโครงสร้างผนังควรวางแผนตั้งแต่แรกหรือปรึกษาผู้เชี่ยวชาญ ทักมาสอบถามได้"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
