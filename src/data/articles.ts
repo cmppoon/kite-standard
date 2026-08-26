@@ -1854,7 +1854,6 @@ export const articles = [
 <thead>
 <tr style="background:#1a73e8; color:#fff;">
 <th style="padding:10px; text-align:left; border:1px solid #d0d7e3;">ประเภทห้อง</th>
-<th style="padding:10px; text-align:left; border:1px solid #d0d7e3;">ขั้นต่ำตามกฎหมาย</th>
 <th style="padding:10px; text-align:left; border:1px solid #d0d7e3;">ความสูงแนะนำ</th>
 <th style="padding:10px; text-align:left; border:1px solid #d0d7e3;">หมายเหตุ</th>
 </tr>
@@ -1862,49 +1861,41 @@ export const articles = [
 <tbody>
 <tr style="background:#eef2f7;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ห้องนอน</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.60 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.60–2.80 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">เผื่อท่อแอร์ ท่อน้ำ</td>
 </tr>
 <tr style="background:#f8f9fc;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ห้องนั่งเล่น</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.60 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.80–3.20 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">โปร่ง โอ่อ่า</td>
 </tr>
 <tr style="background:#eef2f7;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ห้องน้ำ</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.00 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.20–2.40 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">เผื่อพัดลมระบายอากาศ</td>
 </tr>
 <tr style="background:#f8f9fc;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ออฟฟิศ (ฝ้า T-bar)</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.00 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.70–2.80 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">โครงสร้างสูง 3.50+ ม.</td>
 </tr>
 <tr style="background:#eef2f7;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ร้านค้า/Retail</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.00 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.00–3.50 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">โชว์สินค้าได้ดี</td>
 </tr>
 <tr style="background:#f8f9fc;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ห้องประชุม</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.00 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">2.80–3.20 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ต้องคิด acoustic</td>
 </tr>
 <tr style="background:#eef2f7;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ล็อบบี้/โถง</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.50 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">3.50–5.00 ม.</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">สร้างความรู้สึกหรู</td>
 </tr>
 <tr style="background:#f8f9fc;">
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">โกดัง/โรงงาน</td>
-<td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">ตามใช้งาน</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">4.00–6.00 ม.+</td>
 <td style="padding:10px; border:1px solid #d0d7e3; color:#1a1a1a;">เผื่อรถยก เครื่องจักร</td>
 </tr>
