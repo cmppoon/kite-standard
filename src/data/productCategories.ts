@@ -71,7 +71,7 @@ export const productCategories = [
   },
   {
     id: 10,
-    name: "ฉนวนกันความร้อน",
+    name: "ฉนวนกันความร้อน/ฉนวนกันเสียง",
     slug: "ฉนวนกันความร้อน",
     image: "/ฉนวนกันความร้อน.webp",
     description: "",

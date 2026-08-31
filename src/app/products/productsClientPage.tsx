@@ -26,6 +26,7 @@ const SOUND_ABSORB_CATEGORY_ID = 9;
 
 const ROOF_BATTEN_CATEGORY_ID = 3;
 const CILAI_CATEGORY_ID = 11;
+const INSULATION_CATEGORY_ID = 10;
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -151,6 +152,11 @@ const CATEGORY_HEADINGS: Record<number, { h1: string; subtitle: string }> = {
     h1: "แผ่นฝ้าทีบาร์ปรุลาย ลดเสียงก้อง ผลิตเอง ราคาโรงงาน",
     subtitle:
       "ผู้ผลิตแผ่นฝ้าทีบาร์ปรุลายโดยตรง สร้างลวดลายจากโรงงานของเราเอง บนฐานแผ่นยิปซัมคุณภาพ ช่วยลดเสียงก้องในห้อง น้ำหนักเบา ตัดง่าย จัดส่งทั่วไทย",
+  },
+  10: {
+    h1: "ฉนวนกันความร้อน ฉนวนกันเสียง ใยหินและใยแก้ว ราคาโรงงาน",
+    subtitle:
+      "จำหน่ายฉนวนใยหิน SCG Stone Wool และฉนวนใยแก้ว SCG Stay Cool สำหรับงานฝ้าเพดานและผนังเบา กันความร้อน ป้องกันไฟ และดูดซับเสียง ไม่มีส่วนผสมของแร่ใยหิน จัดส่งทั่วไทย",
   },
 };
 
@@ -896,6 +902,73 @@ function CilaiFaqSection() {
   );
 }
 
+const INSULATION_FAQS = [
+  {
+    q: "ฉนวนใยหิน คือแร่ใยหิน (แอสเบสตอส) หรือไม่ อันตรายไหม?",
+    a: "ไม่ใช่ เป็นวัสดุคนละชนิดกัน แต่ชื่อภาษาไทยคล้ายกันจึงทำให้สับสนบ่อย ฉนวนใยหิน (Stone Wool) ผลิตจากหินธรรมชาติหลอมเหลวแล้วปั่นเป็นเส้นใย ส่วนแร่ใยหิน (Asbestos) เป็นแร่ธรรมชาติที่แตกตัวเป็นเส้นใยละเอียดมาก เอกสารข้อมูลทางเทคนิคของ SCG Stone Wool ระบุชัดเจนว่าไม่มีส่วนผสมของแร่ใยหิน (Non-Asbestos)",
+  },
+  {
+    q: "ตอนติดตั้งต้องระวังอะไรบ้าง?",
+    a: "เส้นใยอาจทำให้คันผิวหนังชั่วคราวขณะตัดและติดตั้ง แนะนำให้สวมถุงมือ เสื้อแขนยาว หน้ากากกันฝุ่น และแว่นตา ตัดในบริเวณที่อากาศถ่ายเท และล้างด้วยน้ำเย็นก่อนน้ำอุ่น หลังติดตั้งเสร็จฉนวนจะอยู่หลังฝ้าหรือในผนัง ไม่มีการฟุ้งกระจายออกมา",
+  },
+  {
+    q: "ฉนวนใยหินติดไฟหรือไม่?",
+    a: "ไม่ติดไฟและไม่ลามไฟ SCG Stone Wool ผ่านการทดสอบระดับ Class A ตามมาตรฐาน AS 1530.1:2024 และมีจุดหลอมเหลวมากกว่า 1,000 องศาเซลเซียส",
+  },
+  {
+    q: "ควรเลือกความหนาแน่นเท่าไหร่?",
+    a: "งานฝ้าเพดานและผนังเบาทั่วไปใช้ 40 กก./ลบ.ม. ก็เพียงพอ ค่าต้านทานความร้อนที่ความหนา 50 มม. ใกล้เคียงกันทุกความหนาแน่น (R = 1.4-1.5 m²K/W) ความหนาแน่นที่สูงขึ้นจะทนอุณหภูมิใช้งานได้สูงกว่า คือ 40 กก. ทน 350°C, 60 กก. ทน 450°C, 80 และ 100 กก. ทน 650°C จึงเหมาะกับงานอุตสาหกรรมและงานระบบเครื่องจักรมากกว่า",
+  },
+  {
+    q: "ถ้าอยากกันความร้อนให้ได้มากขึ้น ควรเพิ่มความหนาแน่นหรือความหนา?",
+    a: "ควรเพิ่มความหนา ที่ความหนา 50 มม. ค่าต้านทานความร้อนอยู่ที่ประมาณ 1.4 m²K/W แต่ที่ 75 มม. เพิ่มเป็น 2.1 และที่ 100 มม. เพิ่มเป็น 2.8-3.0 ซึ่งต่างกันชัดเจนกว่าการเพิ่มความหนาแน่นมาก สอบถามความหนาอื่นได้ที่ 02-415-3676 หรือ Line @kaistandard",
+  },
+  {
+    q: "ฉนวนใยหิน ต่างจาก ฉนวนใยแก้ว อย่างไร?",
+    a: "ใยหินมีความหนาแน่นสูงกว่าและทนอุณหภูมิได้สูงกว่ามาก จึงเหมาะกับงานที่ต้องการกันไฟและกันเสียง ส่วนใยแก้วเบากว่าและราคาถูกกว่า เหมาะกับงานกันความร้อนฝ้าเพดานทั่วไป ทางร้านมีทั้งสองแบบ",
+  },
+];
+
+function InsulationFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: INSULATION_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {INSULATION_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 function CilaiSystemBox() {
   const cards = [
     {
@@ -976,6 +1049,7 @@ export default function ProductsClientPage({
   const isSoundAbsorb = selectedCategory === SOUND_ABSORB_CATEGORY_ID;
   const isRoofBatten = selectedCategory === ROOF_BATTEN_CATEGORY_ID;
   const isCilai = selectedCategory === CILAI_CATEGORY_ID;
+  const isInsulation = selectedCategory === INSULATION_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const filteredProducts = products.filter((product) => {
@@ -1223,6 +1297,7 @@ export default function ProductsClientPage({
             {isTBar && filteredProducts.length > 0 && <SystemChooserBox />}
             {isCilai && filteredProducts.length > 0 && <CilaiSystemBox />}
             {isCilai && filteredProducts.length > 0 && <CilaiFaqSection />}
+            {isInsulation && filteredProducts.length > 0 && <InsulationFaqSection />}
           </div>
         </div>
       </div>
