@@ -3793,4 +3793,213 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 42,
+    title: "ฉนวนใยหินคืออะไร ต่างจากแร่ใยหิน (แอสเบสตอส) ยังไง",
+    slug: "ฉนวนใยหินคืออะไร",
+    excerpt: "ฉนวนใยหินคือฉนวนที่ผลิตจากการหลอมหินบะซอลต์ ไม่ใช่แอสเบสตอสอย่างที่หลายคนเข้าใจผิด มาดูคุณสมบัติ สเปกจริง และการใช้งานที่เหมาะสมกัน",
+    image: "/articles/article42.webp",
+    date: "2026-09-01",
+    readTime: "5",
+    content: `
+<p style="font-size:28px; font-weight:700;">ฉนวนใยหินคืออะไร ต่างจากแร่ใยหิน (แอสเบสตอส) ยังไง</p>
+<p>รู้จักวัสดุก่อนเลือกใช้ในงานก่อสร้าง</p>
+
+<p>สวัสดีครับ วันนี้มาพูดถึง "ฉนวนใยหิน" วัสดุที่หลายคนเห็นชื่อแล้วสะดุด เพราะไปนึกถึงแอสเบสตอสที่เป็นข่าวเรื่องอันตรายต่อสุขภาพ ทั้งที่จริงแล้วเป็นคนละวัสดุกันเลยครับ บทความนี้จะอธิบายว่าฉนวนใยหินคืออะไร มีคุณสมบัติยังไง ใช้ตรงไหน และต่างจากแร่ใยหินตรงไหน</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉนวนใยหินคืออะไร</strong>
+<p>ฉนวนใยหิน (Rock Wool หรือ Stone Wool) คือฉนวนที่ผลิตจากหินภูเขาไฟจำพวกหินบะซอลต์ นำมาหลอมด้วยความร้อนสูงแล้วปั่นออกมาเป็นเส้นใยละเอียด ก่อนขึ้นรูปเป็นแผ่นหรือม้วนตามความหนาแน่นที่ต้องการ</p>
+<p>เส้นใยที่พันกันไปมาจะเกิดช่องอากาศเล็ก ๆ จำนวนมากอยู่ภายใน ซึ่งเป็นที่มาของคุณสมบัติหลักสองอย่าง คือกันความร้อน และดูดซับพลังงานเสียงที่วิ่งผ่านเข้าไปในโพรง</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉนวนใยหิน ไม่ใช่ แร่ใยหิน (แอสเบสตอส)</strong>
+<p>เรื่องนี้สำคัญและสับสนกันบ่อยที่สุดครับ ชื่อไทยคล้ายกันมาก แต่เป็นคนละวัสดุ</p>
+<p><strong>แร่ใยหิน (Asbestos)</strong> เป็นแร่ธรรมชาติในกลุ่มซิลิเกต ที่ขุดขึ้นมาจากพื้นดินโดยตรง เส้นใยแตกตัวเป็นฝุ่นละเอียดมากและเป็นอันตรายต่อระบบทางเดินหายใจ จึงถูกจำกัดและควบคุมการใช้งานในหลายประเทศรวมถึงไทย</p>
+<p><strong>ฉนวนใยหิน (Rock Wool)</strong> เป็นวัสดุที่ผลิตขึ้นจากการหลอมหินในโรงงาน ไม่ใช่แร่ธรรมชาติชนิดเดียวกัน และไม่ใช่แอสเบสตอส</p>
+<p>เวลาสั่งของหรือเขียนสเปก แนะนำให้ระบุให้ชัดว่าเป็น "ฉนวนใยหิน Rock Wool" หรือ "Stone Wool" เพื่อไม่ให้เข้าใจผิดกันในหน้างานครับ ส่วนเรื่องการติดตั้ง ถึงจะไม่ใช่แอสเบสตอส แต่เส้นใยก็ยังทำให้ระคายเคืองผิวและทางเดินหายใจได้ ช่างควรใส่ถุงมือ แว่นตา และหน้ากากตามปกติ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คุณสมบัติเด่นของฉนวนใยหิน</strong>
+<p>• <strong>ไม่ลามไฟ</strong> — เป็นวัสดุจากหิน จึงทนความร้อนได้สูงกว่าฉนวนทั่วไปมาก</p>
+<p>• <strong>กันความร้อน</strong> — ช่องอากาศในเส้นใยช่วยชะลอการส่งผ่านความร้อนเข้าสู่ตัวอาคาร</p>
+<p>• <strong>ดูดซับเสียงในโพรง</strong> — ช่วยลดเสียงที่วิ่งผ่านช่องว่างในผนังหรือเหนือฝ้า</p>
+<p>• <strong>ความหนาแน่นให้เลือกหลายระดับ</strong> — เลือกได้ตามงาน ตั้งแต่งานฝ้าทั่วไปจนถึงงานที่ต้องทนอุณหภูมิสูง</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ตัวอย่างสเปกฉนวนใยหินที่มีในตลาด</strong>
+<p>เพื่อให้เห็นภาพชัดขึ้น นี่คือสเปกของ SCG Stone Wool รุ่น TMA ซึ่งเป็นฉนวนใยหินที่ใช้กันทั่วไปในงานก่อสร้างบ้านเรา</p>
+
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">คุณสมบัติ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA40</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA60</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA80</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA100</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ความหนาแน่น (กก./ม.³)</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">40</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">60</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">80</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">100</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ความหนา (มม.)</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">50, 75, 100</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">50, 75, 100</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">50, 75, 100</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">50, 75, 100</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ขนาด (มม.)</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">400×1200<br />600×1200</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">400×1200<br />600×1200</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">400×1200<br />600×1200</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">600×1200</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">อุณหภูมิใช้งานสูงสุด</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">350 °C</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">450 °C</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">650 °C</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">650 °C</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ค่าการนำความร้อนที่ 20 °C (W/mK)</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">0.035</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">0.035</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">0.034</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">0.033</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">สภาพการเผาไหม้</td>
+<td colspan="4" style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">Class A (มาตรฐาน AS 1530.1)</td>
+</tr>
+</tbody>
+</table>
+
+<p>ค่าการนำความร้อนยิ่งต่ำ ยิ่งกันความร้อนได้ดี</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ค่าความต้านทานความร้อน (Thermal Resistance)</strong>
+<p>ค่านี้บอกว่าฉนวนต้านทานความร้อนได้มากแค่ไหน ยิ่งตัวเลขสูงยิ่งดี และจะเพิ่มขึ้นตามความหนาที่เลือกใช้ครับ</p>
+
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">ความหนา (มม.)</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA40</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA60</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA80</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:center; border-bottom:1px solid #d0d7e3;">TMA100</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">50</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">1.4</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">1.4</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">1.4</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">1.5</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">75</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.1</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.1</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.2</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.2</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">100</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.8</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.8</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">2.9</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3; text-align:center;">3.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกความหนาแน่นเท่าไหร่ดี</strong>
+<p>จากตารางจะเห็นว่าความหนาแน่นที่ต่างกัน มีผลชัดที่สุดกับ "อุณหภูมิใช้งานสูงสุด" มากกว่าค่ากันความร้อน เพราะค่าการนำความร้อนของทั้งสี่รุ่นต่างกันเพียงเล็กน้อย</p>
+<p>แปลง่าย ๆ คือ ถ้างานเป็นฝ้าเพดานหรือผนังทั่วไปที่ไม่ได้เจอความร้อนสูงเป็นพิเศษ รุ่นความหนาแน่นต่ำก็เพียงพอ แล้วไปเพิ่ม "ความหนา" แทนจะได้ผลกับการกันความร้อนมากกว่า แต่ถ้าเป็นงานที่อยู่ใกล้แหล่งความร้อนสูง เช่น ห้องเครื่อง งานหุ้มท่อ หรือจุดที่ต้องการทนไฟเป็นพิเศษ ค่อยขยับไปรุ่นความหนาแน่นสูงครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉนวนใยหินใช้ตรงไหนได้บ้าง</strong>
+<p>• <strong>ใต้หลังคาและเหนือฝ้าเพดาน</strong> — ลดความร้อนที่แผ่ลงมาจากหลังคาเข้าสู่พื้นที่ใช้งาน</p>
+<p>• <strong>ในโพรงผนังเบา</strong> — วางไว้ในช่องว่างระหว่างโครงคร่าว ช่วยทั้งกันความร้อนและดูดซับเสียงในโพรง</p>
+<p>• <strong>งานหุ้มท่อและงานระบบ</strong> — จุดที่มีอุณหภูมิสูงและต้องการวัสดุที่ไม่ลามไฟ</p>
+<p>• <strong>ห้องเครื่องและพื้นที่ที่ต้องการทนไฟ</strong> — เลือกรุ่นความหนาแน่นสูงที่รองรับอุณหภูมิใช้งานได้มากกว่า</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฉนวนใยหิน กับ แผ่นอะคูสติก คนละหน้าที่กัน</strong>
+<p>จุดที่ต้องเข้าใจให้ตรงกันก่อนตัดสินใจซื้อครับ</p>
+<p><strong>ฉนวนใยหิน</strong> อยู่ "ข้างใน" โครงสร้าง มองไม่เห็นจากภายนอก ช่วยลดเสียงที่ทะลุผ่านผนังหรือฝ้าได้ก็จริง แต่ต้องทำงานร่วมกับมวลของผนัง การแยกโครงคร่าว และการปิดรอยรั่วให้สนิท ถึงจะได้ผลจริง ใส่ฉนวนอย่างเดียวไม่ได้แปลว่าห้องจะกันเสียงได้</p>
+<p><strong>แผ่นอะคูสติก</strong> อยู่ที่ "ผิวหน้า" ของผนังหรือฝ้า ทำหน้าที่ลดเสียงก้องและเสียงสะท้อนภายในห้องเดียวกัน ให้เสียงพูดคุยฟังชัดขึ้น ไม่อู้อี้</p>
+<p>พูดสั้น ๆ คือ ฉนวนช่วยเรื่องเสียงข้ามห้อง ส่วนแผ่นอะคูสติกช่วยเรื่องเสียงในห้อง งานที่ต้องการทั้งสองอย่าง ก็ใช้ร่วมกันได้ครับ ดูตัวเลือก <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติก</a> ของเรา หรืออ่านเพิ่มว่า <a href="/articles/พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก" style="color:#1a73e8; text-decoration:underline;">พื้นที่แบบไหนที่ขาดไม่ได้สำหรับฝ้าอะคูสติก</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ฉนวนใยหินคือแอสเบสตอสหรือเปล่า?<br /><strong>A:</strong> ไม่ใช่ครับ แอสเบสตอสเป็นแร่ธรรมชาติที่ขุดขึ้นมาใช้โดยตรงและถูกควบคุมการใช้งาน ส่วนฉนวนใยหินเป็นวัสดุที่ผลิตจากการหลอมหินในโรงงาน เป็นคนละวัสดุกัน แค่ชื่อภาษาไทยคล้ายกันจนสับสน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฉนวนใยหินกับฉนวนใยแก้ว เลือกอันไหนดี?<br /><strong>A:</strong> ใยหินมีความหนาแน่นสูงกว่าและทนอุณหภูมิได้สูงกว่า จึงเหมาะกับงานที่ต้องการทนไฟหรืออยู่ใกล้แหล่งความร้อน ส่วนใยแก้วน้ำหนักเบากว่าและติดตั้งง่ายกว่า เหมาะกับงานฝ้าและผนังทั่วไป เลือกตามเงื่อนไขหน้างานได้เลยครับ</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ใส่ฉนวนใยหินแล้วห้องจะหายก้องไหม?<br /><strong>A:</strong> ไม่หายครับ เสียงก้องเกิดจากเสียงสะท้อนไปมาบนพื้นผิวแข็งภายในห้อง ซึ่งต้องแก้ที่ผิวหน้าด้วยวัสดุดูดซับเสียงอย่างแผ่นอะคูสติก ส่วนฉนวนที่ซ่อนอยู่ในผนังหรือเหนือฝ้าจะช่วยเรื่องเสียงที่ทะลุระหว่างห้องมากกว่า</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px;">ไม่แน่ใจว่างานของคุณควรใช้ฉนวนหรือแผ่นอะคูสติก?</p>
+  <p style="color:#fff;">ทีมงาน KAI Standard ช่วยดูหน้างานและแนะนำวัสดุที่เหมาะกับงบและเป้าหมายของคุณได้ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" style="background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none; display:inline-block; margin-top:8px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ฉนวนใยหินคือแอสเบสตอสหรือเปล่า?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ใช่ครับ แอสเบสตอสเป็นแร่ธรรมชาติที่ขุดขึ้นมาใช้โดยตรงและถูกควบคุมการใช้งาน ส่วนฉนวนใยหินเป็นวัสดุที่ผลิตจากการหลอมหินในโรงงาน เป็นคนละวัสดุกัน แค่ชื่อภาษาไทยคล้ายกันจนสับสน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฉนวนใยหินกับฉนวนใยแก้ว เลือกอันไหนดี?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใยหินมีความหนาแน่นสูงกว่าและทนอุณหภูมิได้สูงกว่า จึงเหมาะกับงานที่ต้องการทนไฟหรืออยู่ใกล้แหล่งความร้อน ส่วนใยแก้วน้ำหนักเบากว่าและติดตั้งง่ายกว่า เหมาะกับงานฝ้าและผนังทั่วไป เลือกตามเงื่อนไขหน้างานได้เลยครับ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ใส่ฉนวนใยหินแล้วห้องจะหายก้องไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่หายครับ เสียงก้องเกิดจากเสียงสะท้อนไปมาบนพื้นผิวแข็งภายในห้อง ซึ่งต้องแก้ที่ผิวหน้าด้วยวัสดุดูดซับเสียงอย่างแผ่นอะคูสติก ส่วนฉนวนที่ซ่อนอยู่ในผนังหรือเหนือฝ้าจะช่วยเรื่องเสียงที่ทะลุระหว่างห้องมากกว่า"
+      }
+    }
+  ]
+}
+</script>
+    `,
+  },
 ];
