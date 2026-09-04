@@ -1,5 +1,6 @@
 import { productCategories } from "@/data/productCategories";
 import { products } from "@/data/products";
+import { articles } from "@/data/articles";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -25,5 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages];
+  const articlePages: MetadataRoute.Sitemap = articles.map((article) => ({
+    url: `${baseUrl}/articles/${article.slug}`,
+    lastModified: new Date(article.date),
+  }));
+
+  return [...staticPages, ...categoryPages, ...productPages, ...articlePages];
 }
