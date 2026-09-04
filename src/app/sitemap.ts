@@ -10,10 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}`, lastModified: new Date() },
     { url: `${baseUrl}/about-us`, lastModified: new Date() },
     { url: `${baseUrl}/articles`, lastModified: new Date() },
+    { url: `${baseUrl}/calculator`, lastModified: new Date() },
     { url: `${baseUrl}/catalogs`, lastModified: new Date() },
     { url: `${baseUrl}/contact-us`, lastModified: new Date() },
+    { url: `${baseUrl}/faq`, lastModified: new Date() },
     { url: `${baseUrl}/map`, lastModified: new Date() },
     { url: `${baseUrl}/products`, lastModified: new Date() },
+    { url: `${baseUrl}/reference`, lastModified: new Date() },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = productCategories.map((cat) => ({
