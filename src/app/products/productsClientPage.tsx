@@ -1044,6 +1044,7 @@ export default function ProductsClientPage({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [catOpen, setCatOpen] = useState(false);
   const isAcoustic = selectedCategory === ACOUSTIC_CATEGORY_ID;
   const isServiceHatch = selectedCategory === SERVICE_HATCH_CATEGORY_ID;
   const isGypsumAcoustic = selectedCategory === GYPSUM_ACOUSTIC_CATEGORY_ID;
@@ -1056,16 +1057,25 @@ export default function ProductsClientPage({
   const isInsulation = selectedCategory === INSULATION_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
+  const term = searchTerm.trim().toLowerCase();
+  const isSearching = term.length > 0;
+
   const filteredProducts = products.filter((product) => {
+    // While searching, ignore the category and look at ALL products.
     const matchesCategory =
-      selectedCategory === -1 || product.categoryId === selectedCategory;
-    const matchesSearch = product.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+      isSearching ||
+      selectedCategory === -1 ||
+      product.categoryId === selectedCategory;
+    const matchesSearch =
+      !isSearching ||
+      product.name.toLowerCase().includes(term) ||
+      (product.description || "").toLowerCase().includes(term);
     return matchesCategory && matchesSearch;
   });
 
-  const perPage = isCeilingFrame
+  const perPage = isSearching
+    ? PRODUCTS_PER_PAGE
+    : isCeilingFrame
     ? CEILING_FRAME_PRODUCTS_PER_PAGE
     : isCilai
     ? CILAI_PRODUCTS_PER_PAGE
@@ -1119,35 +1129,58 @@ export default function ProductsClientPage({
             </div>
 
             <div>
-              <h3 className="mb-4 font-semibold">ประเภทสินค้า</h3>
+              {/* Mobile: one collapsed bar. Desktop: the plain heading as before. */}
+              <button
+                type="button"
+                onClick={() => setCatOpen((o) => !o)}
+                aria-expanded={catOpen}
+                className="mb-3 flex w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm font-semibold lg:hidden"
+              >
+                <span>
+                  ประเภทสินค้า —{" "}
+                  {categories.find((c) => c.id === selectedCategory)?.name ??
+                    "ทั้งหมด"}
+                </span>
+                <span
+                  className={`shrink-0 text-gray-400 transition-transform ${
+                    catOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  ▼
+                </span>
+              </button>
 
-              <div className="space-y-2">
-                <CategoryButton
-                  category={ALL_PRODUCTS_ITEM}
-                  selectedCategory={selectedCategory}
-                />
+              <h3 className="mb-4 hidden font-semibold lg:block">ประเภทสินค้า</h3>
+
+              <div className={catOpen ? "block" : "hidden lg:block"}>
+                <div className="space-y-2">
+                  <CategoryButton
+                    category={ALL_PRODUCTS_ITEM}
+                    selectedCategory={selectedCategory}
+                  />
+                </div>
+
+                {CATEGORY_GROUPS.map((group) => {
+                  const GroupIcon = group.icon;
+                  return (
+                    <div key={group.label} className="mt-5">
+                      <div className="mb-2 flex items-center gap-2 rounded-md bg-blue-50 px-3 py-2 text-xs font-medium text-blue-900">
+                        <GroupIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                        <span>{group.label}</span>
+                      </div>
+                      <div className="space-y-2">
+                        {group.items.map((category) => (
+                          <CategoryButton
+                            key={category.id}
+                            category={category}
+                            selectedCategory={selectedCategory}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-
-              {CATEGORY_GROUPS.map((group) => {
-                const GroupIcon = group.icon;
-                return (
-                  <div key={group.label} className="mt-5">
-                    <div className="mb-2 flex items-center gap-2 rounded-md bg-blue-50 px-3 py-2 text-xs font-medium text-blue-900">
-                      <GroupIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
-                      <span>{group.label}</span>
-                    </div>
-                    <div className="space-y-2">
-                      {group.items.map((category) => (
-                        <CategoryButton
-                          key={category.id}
-                          category={category}
-                          selectedCategory={selectedCategory}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
             </div>
           </div>
 
@@ -1156,10 +1189,17 @@ export default function ProductsClientPage({
             <div className="mb-6 flex items-center justify-between">
               <p className="text-muted-foreground">
                 กำลังแสดงสินค้าจำนวน {filteredProducts.length} รายการ
+                {isSearching ? " (ค้นหาจากสินค้าทั้งหมด)" : ""}
               </p>
             </div>
 
-            {isCeilingFrame ? (
+            {isSearching ? (
+              <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                {paginatedProducts.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            ) : isCeilingFrame ? (
               <div className="space-y-8">
                 {groupCeilingFrameProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
