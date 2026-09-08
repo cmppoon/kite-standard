@@ -4188,4 +4188,164 @@ export const articles = [
 </script>
     `,
   },
+{
+    id: 44,
+    title: "แปหลังคาคืออะไร? รู้จักโครงสร้างสำคัญใต้กระเบื้อง พร้อมวิธีเลือกแปสำเร็จรูป",
+    slug: "แปหลังคาคืออะไร",
+    excerpt: "แปหลังคาคืออะไร ทำหน้าที่อะไรในโครงสร้างหลังคา รวมความต่างของแปอลูซิงค์กับแปกัลวาไนซ์ และวิธีเลือกความหนาให้เหมาะกับงาน",
+    image: "/articles/article44.webp",
+    date: "2026-09-08",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">แปหลังคาคืออะไร? รู้จักโครงสร้างสำคัญใต้กระเบื้อง พร้อมวิธีเลือกแปสำเร็จรูป</p>
+
+<p>สวัสดีครับ วันนี้มาพูดถึงชิ้นส่วนที่อยู่ใต้กระเบื้องหลังคาแต่คนมักมองข้าม นั่นคือ "แปหลังคา" ครับ หลายคนเจอคำนี้ตอนคุยกับช่างหรือตอนขอราคา แต่ยังไม่แน่ใจว่ามันคืออะไร ทำหน้าที่อะไร และควรเลือกแบบไหน บทความนี้สรุปให้เข้าใจง่าย ๆ ในที่เดียวครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปหลังคาคืออะไร</strong>
+
+<p>แปหลังคา (Purlin) คือเหล็กที่วางพาดขวางบนจันทัน เรียงเป็นแถวขนานกันไล่จากเชิงชายขึ้นไปหาสันหลังคา หน้าที่หลักคือเป็นตัวรับกระเบื้องหรือแผ่นเมทัลชีทที่วางทับอยู่ด้านบน</p>
+
+<p>ถ้าไล่ลำดับโครงสร้างหลังคาจะประมาณนี้ครับ โครงหลังคาหลักรับน้ำหนักลงสู่เสา จันทันวางพาดตามความลาดเอียง แล้วแปวางขวางบนจันทันอีกชั้นหนึ่ง วัสดุมุงจึงมาเกาะอยู่บนแปเป็นชั้นบนสุด พูดง่าย ๆ คือแปเป็นตัวกลางระหว่างโครงสร้างกับวัสดุมุงครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">หน้าที่ของแปหลังคา</strong>
+
+<p>• <strong>รับน้ำหนักวัสดุมุง</strong> — กระเบื้องหรือแผ่นหลังคาทุกชนิดต้องมีแปรองรับ</p>
+<p>• <strong>ถ่ายน้ำหนักลงจันทัน</strong> — แปกระจายน้ำหนักจากผืนหลังคาลงสู่โครงสร้างหลัก</p>
+<p>• <strong>เป็นจุดยึดวัสดุมุง</strong> — สกรูหรือตะปูขอที่ยึดกระเบื้องจะยิงลงบนแป</p>
+<p>• <strong>คุมความเรียบของผืนหลังคา</strong> — ถ้าแปคดหรือไม่ได้ระดับ วัสดุมุงที่วางทับจะเห็นเป็นคลื่นทันที</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปสำเร็จรูป ต่างจากแปที่ตัดหน้างานยังไง</strong>
+
+<p>สมัยก่อนช่างมักนำเหล็กท่อนยาวมาตัดและขึ้นรูปเองที่หน้างาน ปัจจุบันมีแปสำเร็จรูปที่ขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน พร้อมเคลือบผิวกันสนิมมาแล้วทั้งเส้น</p>
+
+<p>ข้อดีที่เห็นชัดคือหน้างานเร็วขึ้นเพราะไม่ต้องเสียเวลาตัดขึ้นรูป ขนาดหน้าตัดสม่ำเสมอทุกเส้น และผิวเคลือบมาจากโรงงานทั้งเส้น ไม่ใช่การทาทับทีหลัง ส่วนงานที่ยังต้องขึ้นรูปหน้างานมักเป็นงานที่ระยะไม่ลงตัวหรือหลังคารูปทรงพิเศษครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">วัสดุแปหลังคา เลือกแบบไหนดี</strong>
+
+<p>แปสำเร็จรูปแบ่งตามผิวเคลือบ สองแบบที่ถูกถามบ่อยที่สุดคืออลูซิงค์กับกัลวาไนซ์ครับ</p>
+
+<table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:15px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">แปอลูซิงค์</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">แปกัลวาไนซ์</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผิวเคลือบ</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เคลือบอะลูมิเนียมผสมสังกะสี</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เคลือบสังกะสี</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">มักเลือกใช้กับ</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">งานที่ต้องการความทนทานต่อสนิมเป็นพิเศษ</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">งานทั่วไปที่ควบคุมงบประมาณ</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ความหนาที่มีจำหน่าย</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">0.50 / 0.55 / 0.70 / 1.00 มม.</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">0.50 / 0.55 / 0.70 มม.</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ความยาว</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">6 เมตร</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">6 เมตร</td>
+</tr>
+</tbody>
+</table>
+
+<p>นอกจากสองแบบนี้ ยังมีแปสังกะสีจำหน่ายในความหนา 0.55 / 0.70 / 0.85 มม. ยาว 6 เมตรเช่นกันครับ ดูรายการทั้งหมดพร้อมสเปกแต่ละเส้นได้ที่หน้า <a href="/products/category/แปหลังคา แปสำเร็จรูป" style="color:#1a73e8; text-decoration:underline;">แปหลังคา แปสำเร็จรูป</a></p>
+
+<p>ถ้าอยากเจาะลึกเฉพาะแปอลูซิงค์ อ่านต่อได้ที่บทความ <a href="/articles/แปอลูซิงค์คืออะไร" style="color:#1a73e8; text-decoration:underline;">แปอลูซิงค์คืออะไร</a> ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ความหนาแป เลือกยังไงให้เหมาะกับงาน</strong>
+
+<p>ความหนาแปที่ใช้กันอยู่ในช่วง 0.50–1.00 มม. หลักการเลือกไม่ซับซ้อนครับ ยิ่งวัสดุมุงหนักและระยะพาดยาว ยิ่งควรใช้แปที่หนาขึ้น</p>
+
+<p>• <strong>0.50–0.55 มม.</strong> — งานหลังคาทั่วไปที่วัสดุมุงไม่หนักมาก เช่น งานต่อเติม โรงจอดรถ</p>
+<p>• <strong>0.70 มม.</strong> — งานบ้านพักอาศัยที่ต้องการความมั่นใจเพิ่มขึ้น เป็นความหนาที่ถูกเลือกบ่อย</p>
+<p>• <strong>0.85–1.00 มม.</strong> — งานที่วัสดุมุงมีน้ำหนักมาก หรืองานโครงการที่กำหนดสเปกไว้ชัดเจน</p>
+
+<p>ถ้าไม่แน่ใจ แนะนำให้ยึดตามสเปกที่ผู้ออกแบบหรือผู้ผลิตวัสดุมุงกำหนดไว้เป็นหลักครับ เพราะแต่ละงานมีระยะและน้ำหนักไม่เท่ากัน</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> แปหลังคากับจันทัน ต่างกันอย่างไร<br /><strong>A:</strong> จันทันคือเหล็กที่วางพาดตามความลาดเอียงของหลังคา ส่วนแปคือเหล็กที่วางขวางบนจันทันอีกชั้นหนึ่งเพื่อรับวัสดุมุง ทั้งสองอย่างทำงานคนละหน้าที่และใช้แทนกันไม่ได้ครับ</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> แปสำเร็จรูปมีความยาวเท่าไหร่<br /><strong>A:</strong> แปสำเร็จรูปของไคสแตนดาร์ดเป็นความยาวมาตรฐาน 6 เมตรทุกเส้น ทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสีครับ</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> แปหลังคาใช้แทนเหล็กกล่องได้ไหม<br /><strong>A:</strong> เป็นคนละหน้าที่ครับ เหล็กกล่องมักใช้ทำโครงสร้างหลักของหลังคา ส่วนแปสำเร็จรูปออกแบบมาเพื่อวางรับวัสดุมุงโดยเฉพาะ การเลือกใช้ควรอ้างอิงแบบและสเปกของงานนั้น ๆ</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ควรเลือกความหนาเท่าไหร่ถึงจะพอ<br /><strong>A:</strong> ขึ้นอยู่กับน้ำหนักวัสดุมุงและระยะพาดของงานครับ ถ้าไม่มีสเปกกำหนดไว้ แนะนำให้แจ้งรายละเอียดหลังคาเข้ามา ทีมงานช่วยดูให้ได้</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">อยากได้ราคาแปหลังคา หรือไม่แน่ใจว่าควรใช้ความหนาไหน</p>
+  <p style="color:#fff; margin:0 0 12px;">ทักมาคุยกับทีมงานไคสแตนดาร์ดได้เลยครับ มีทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสี พร้อมส่ง</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600; font-size:14px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แปหลังคากับจันทัน ต่างกันอย่างไร",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "จันทันคือเหล็กที่วางพาดตามความลาดเอียงของหลังคา ส่วนแปคือเหล็กที่วางขวางบนจันทันอีกชั้นหนึ่งเพื่อรับวัสดุมุง ทั้งสองอย่างทำงานคนละหน้าที่และใช้แทนกันไม่ได้"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แปสำเร็จรูปมีความยาวเท่าไหร่",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แปสำเร็จรูปของไคสแตนดาร์ดเป็นความยาวมาตรฐาน 6 เมตรทุกเส้น ทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสี"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แปหลังคาใช้แทนเหล็กกล่องได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เป็นคนละหน้าที่ เหล็กกล่องมักใช้ทำโครงสร้างหลักของหลังคา ส่วนแปสำเร็จรูปออกแบบมาเพื่อวางรับวัสดุมุงโดยเฉพาะ การเลือกใช้ควรอ้างอิงแบบและสเปกของงานนั้น ๆ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ควรเลือกความหนาแปเท่าไหร่ถึงจะพอ",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับน้ำหนักวัสดุมุงและระยะพาดของงาน ถ้าไม่มีสเปกกำหนดไว้ แนะนำให้แจ้งรายละเอียดหลังคาเข้ามา ทีมงานช่วยดูให้ได้"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
