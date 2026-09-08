@@ -2,6 +2,7 @@ import ContactUs from "@/components/contactUs";
 import HeroCarousel from "@/components/heroCarousel";
 import OurCustomers from "@/components/ourCustomers";
 import { Button } from "@/components/ui/button";
+import { articles } from "@/data/articles";
 import { productCategories } from "@/data/productCategories";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,10 +15,24 @@ export const metadata = {
 
 const HOMEPAGE_CATEGORY_IDS = [1, 2, 5, 8, 9];
 
+// บทความที่แสดงบนหน้าแรก — แก้ตรงนี้เมื่อต้องการเปลี่ยนบทความ
+// ต้องตรงกับ slug ใน src/data/articles.ts เป๊ะ ๆ
+const HOMEPAGE_ARTICLE_SLUGS = [
+  "แผ่นซับเสียงโพลีเอสเตอร์คืออะไร",
+  "แผ่นอะคูสติกคืออะไร",
+  "ฝ้าห้องประชุมเลือกวัสดุอะไรดี",
+];
+
 export default function HomePage() {
   const homepageCategories = productCategories.filter((c) =>
     HOMEPAGE_CATEGORY_IDS.includes(c.id)
   );
+
+  // เรียงตามลำดับที่เขียนไว้ใน HOMEPAGE_ARTICLE_SLUGS
+  // ถ้า slug ไหนหาไม่เจอ จะข้ามไปเฉย ๆ ไม่ทำให้เว็บพัง
+  const homepageArticles = HOMEPAGE_ARTICLE_SLUGS.map((slug) =>
+    articles.find((a) => a.slug === slug)
+  ).filter((a): a is (typeof articles)[number] => Boolean(a));
 
   return (
     <div className="min-h-screen">
@@ -95,6 +110,48 @@ export default function HomePage() {
       </section>
 
       <OurCustomers />
+
+      {/* Articles Section — compact, sits between customers and contact */}
+      {homepageArticles.length > 0 && (
+        <section className="bg-white py-8">
+          <div className="mx-auto max-w-4xl px-4">
+            <div className="mb-5 text-center">
+              <h2 className="text-primary mb-1 text-xl font-bold md:text-2xl">
+                บทความยอดนิยม
+              </h2>
+              <p className="text-muted-foreground text-sm">
+                ความรู้เรื่องฝ้าเพดานและการลดเสียงก้อง
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              {homepageArticles.map((article) => (
+                <Link
+                  key={article.id}
+                  href={`/articles/${article.slug}`}
+                  className="group flex flex-col overflow-hidden rounded-lg border border-[#c5d9f0] bg-white transition-shadow hover:shadow-md"
+                >
+                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      sizes="33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-2 sm:p-3">
+                    <h3 className="text-primary line-clamp-2 text-[11px] font-bold leading-snug sm:text-sm">
+                      {article.title}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <ContactUs />
     </div>
   );
