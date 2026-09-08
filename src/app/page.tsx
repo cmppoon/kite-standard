@@ -113,25 +113,25 @@ export default function HomePage() {
 
       {/* Articles Section — compact, sits between customers and contact */}
       {homepageArticles.length > 0 && (
-        <section className="bg-white py-8">
-          <div className="mx-auto max-w-4xl px-4">
-            <div className="mb-5 text-center">
-              <h2 className="text-primary mb-1 text-xl font-bold md:text-2xl">
+        <section className="bg-white px-4 py-16">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-12 text-center">
+              <h2 className="text-primary mb-4 text-3xl font-bold md:text-4xl">
                 บทความยอดนิยม
               </h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
                 ความรู้เรื่องฝ้าเพดานและการลดเสียงก้อง
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6">
               {homepageArticles.map((article) => (
                 <Link
                   key={article.id}
                   href={`/articles/${article.slug}`}
                   className="group flex flex-col overflow-hidden rounded-lg border border-[#c5d9f0] bg-white transition-shadow hover:shadow-md"
                 >
-                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                  <div className="relative aspect-square w-full overflow-hidden">
                     <Image
                       src={article.image}
                       alt={article.title}
@@ -140,8 +140,8 @@ export default function HomePage() {
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-2 sm:p-3">
-                    <h3 className="text-primary line-clamp-2 text-[11px] font-bold leading-snug sm:text-sm">
+                  <div className="p-3 sm:p-4">
+                    <h3 className="text-primary line-clamp-2 text-sm font-bold leading-snug sm:text-base">
                       {article.title}
                     </h3>
                   </div>
