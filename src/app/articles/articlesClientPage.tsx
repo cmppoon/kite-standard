@@ -201,6 +201,23 @@ export default function ArticlesClientPage() {
               )}
             </div>
           )}
+
+          {/* รายชื่อบทความทั้งหมด — ลิงก์ถาวรทุกบทความ ไม่ขึ้นกับการแบ่งหน้า */}
+          <div className="mt-16 border-t pt-8">
+            <h2 className="mb-4 text-xl font-semibold">บทความทั้งหมด</h2>
+            <ul className="grid grid-cols-1 gap-x-8 gap-y-2 sm:grid-cols-2">
+              {sortedArticles.map((article) => (
+                <li key={`all-${article.id}`}>
+                  <Link
+                    href={`/articles/${article.slug}`}
+                    className="text-muted-foreground hover:text-primary text-sm hover:underline"
+                  >
+                    {article.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
     </div>
