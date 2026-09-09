@@ -136,4 +136,19 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref24.webp",
     caption: "จัดส่งแผ่นอะคูสติก ณ Sand Dunes Chaolao Beach Resort",
   },
+  {
+    id: 25,
+    image: "/reference/ref25.webp",
+    caption: "จัดส่งแผ่นยิปซั่มปรุลายลดเสียงสะท้อน ณ Big C พิษณุโลก",
+  },
+  {
+    id: 26,
+    image: "/reference/ref26.webp",
+    caption: "จัดส่งแผ่นยิปซั่มปรุลายลดเสียงสะท้อน ณ มหาวิทยาลัยเทคโนโลยีสุรนารี",
+  },
+    {
+    id: 27,
+    image: "/reference/ref27.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ PIA Interior Company Limited.",
+  },
 ];
