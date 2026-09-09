@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { referenceProjects } from "../../data/referenceProjects";
 
 export const metadata: Metadata = {
@@ -7,6 +8,41 @@ export const metadata: Metadata = {
   description:
     "โครงการที่ KAI Standard จัดส่งแผ่นอะคูสติกและแผ่นยิปซั่มลดเสียงสะท้อน ให้กับมหาวิทยาลัย โรงเรียน ธนาคาร และหน่วยงานราชการทั่วประเทศ",
 };
+
+// คำในคำบรรยายภาพ -> หน้าหมวดสินค้า
+// เรียงจากคำยาวที่สุดก่อน เพื่อให้ "ปรุลาย" ไม่ถูกตัดกลางคำ
+const CATEGORY_LINKS: [string, string][] = [
+  [
+    "แผ่นยิปซั่มปรุลายลดเสียงสะท้อน",
+    "/products/category/แผ่นยิปซั่มลดเสียงสะท้อน",
+  ],
+  [
+    "แผ่นยิปซั่มลดเสียงสะท้อน",
+    "/products/category/แผ่นยิปซั่มลดเสียงสะท้อน",
+  ],
+  ["แผ่นอะคูสติก", "/products/category/แผ่นอะคูสติก"],
+];
+
+// ใส่ลิงก์ให้คำสินค้าคำแรกที่เจอในคำบรรยาย ถ้าไม่เจอคำไหนเลย คืนข้อความเดิม
+function linkCaption(caption: string) {
+  for (const [phrase, href] of CATEGORY_LINKS) {
+    const i = caption.indexOf(phrase);
+    if (i === -1) continue;
+    return (
+      <>
+        {caption.slice(0, i)}
+        <Link
+          href={href}
+          className="text-blue-700 underline underline-offset-2 hover:text-blue-900"
+        >
+          {phrase}
+        </Link>
+        {caption.slice(i + phrase.length)}
+      </>
+    );
+  }
+  return caption;
+}
 
 export default function ReferencePage() {
   // เรียงจาก id มากไปน้อย = โครงการล่าสุดขึ้นบนสุดเสมอ
@@ -41,7 +77,7 @@ export default function ReferencePage() {
             </div>
             <div className="p-4">
               <p className="text-sm leading-relaxed text-gray-800">
-                {project.caption}
+                {linkCaption(project.caption)}
               </p>
             </div>
           </article>
