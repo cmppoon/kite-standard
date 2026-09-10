@@ -4348,4 +4348,121 @@ export const articles = [
 <\/script>
     `,
   },
+  {
+    id: 45,
+    title: "ซีลายเบอร์ 24 กับ เบอร์ 26 ต่างกันยังไง?",
+    slug: "ซีลายเบอร์24-ต่างกับ26",
+    excerpt: "ซีลายเบอร์ 24 หนากว่าเบอร์ 26 แต่ตัวเลขที่บอกได้แม่นยำคือน้ำหนักต่อเส้น มาดูความต่างและวิธีเลือกเบอร์ให้เหมาะกับงานฝ้าฉาบเรียบ",
+    image: "/articles/article45.webp",
+    date: "2026-09-10",
+    readTime: "3",
+    content: `
+<p style="font-size:28px; font-weight:700; margin:0 0 4px;">ซีลายเบอร์ 24 กับ เบอร์ 26 ต่างกันยังไง?</p>
+
+<p style="margin:12px 0 0;">"ซีลายเบอร์ 24 กับ เบอร์ 26 ต่างกันยังไง" วันนี้จะอธิบายให้เข้าใจง่าย ๆ พร้อมวิธีเช็กก่อนสั่งของ ไม่ให้ได้ของไม่ตรงสเปกครับ (ถ้ายังไม่รู้จักซีลาย อ่าน <a href="/articles/ซีลายคืออะไร" style="color:#1a73e8; text-decoration:underline;">ซีลายคืออะไร</a> ก่อนได้เลย)</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">"เบอร์" ในซีลาย หมายถึงอะไร</strong>
+<p>"เบอร์" คือตัวเลขที่ใช้เรียกความหนา-บางของเนื้อเหล็กที่ใช้ทำโครง หลักง่าย ๆ คือ <strong>ตัวเลขยิ่งน้อย เหล็กยิ่งหนา</strong> ดังนั้นเบอร์ 24 จะหนากว่าและแข็งแรงกว่าเบอร์ 26</p>
+<p>แต่ "เบอร์" แต่ละโรงงานอาจจะใช้น้ำหนักที่ต่างกันเล็กน้อย ตัวเลขเบอร์จึงไม่ได้บอกว่าเหมือนกันเสมอไป ตัวเลขที่บอกได้แม่นยำคือ <strong>น้ำหนักต่อเส้น</strong>ครับ</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ซีลายเบอร์ 24 กับ เบอร์ 26 ต่างกันยังไง</strong>
+<p>ซีลายทั้งสองเบอร์หน้าตาเหมือนกัน เป็นเหล็กชุบกัลวาไนซ์หน้าตัดรูปตัว C ความยาวเส้นละ 4 เมตร ขนาดหน้าตัดใกล้เคียงกัน ต่างกันที่เนื้อเหล็กหนาไม่เท่ากัน ซึ่งเห็นได้ชัดจากน้ำหนักต่อเส้น</p>
+
+<table style="width:100%; border-collapse:collapse; margin:12px 0; font-size:15px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">เบอร์ 24</th>
+<th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px;">เบอร์ 26</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">น้ำหนักต่อเส้น (ยาว 4 ม.)</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ประมาณ 0.80–0.85 กก.</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ประมาณ 0.60–0.65 กก.</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">เนื้อเหล็ก</td>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">หนากว่า</td>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">บางกว่า</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ความแข็งแรง / รับน้ำหนักแผ่นฝ้า</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">แข็งแรงกว่า แอ่นยากกว่า</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">รับได้น้อยกว่า ต้องคุมระยะโครงให้ดี</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">เหมาะกับ</td>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">งานที่ต้องการความมั่นใจ ฝ้าผืนใหญ่ ฝ้าซ้อนสองชั้น งานโครงการ</td>
+<td style="background:#f8f9fc; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ฝ้าธรรมดา ยิปซัมชั้นเดียว งานที่ต้องคุมงบ</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ราคาต่อเส้น</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">สูงกว่า</td>
+<td style="background:#eef2f7; color:#1a1a1a; border-bottom:1px solid #d0d7e3; padding:10px 12px;">ประหยัดกว่า</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกเบอร์ไหนดี</strong>
+<p><strong>เลือกเบอร์ 24 เมื่อ</strong><br />
+- ฝ้าผืนใหญ่ ระยะแขวนห่าง หรือมีการซ้อนแผ่นยิปซัมสองชั้น<br />
+- มีของหนักฝากไว้บนฝ้า เช่น ดวงโคม ช่องเซอร์วิส งานระบบ<br />
+- เป็นงานโครงการที่ต้องส่งมอบและรับประกันงาน ไม่อยากเสี่ยงฝ้าแอ่นทีหลัง</p>
+<p><strong>เลือกเบอร์ 26 เมื่อ</strong><br />
+- ฝ้าห้องขนาดปกติ ยิปซัมชั้นเดียว ไม่มีของหนักแขวน<br />
+- ต้องคุมงบ และช่างคุมระยะโครงตามมาตรฐานได้แน่นอน</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> เบอร์ยิ่งน้อย ยิ่งหนาจริงไหม?<br /><strong>A:</strong> จริงครับ เบอร์ 24 หนากว่าเบอร์ 26 เสมอ</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าบ้านทั่วไปใช้เบอร์ 26 ได้ไหม?<br /><strong>A:</strong> ได้ครับ ถ้าเป็นฝ้ายิปซัมชั้นเดียว ห้องขนาดปกติ ไม่มีของหนักแขวน และช่างคุมระยะโครงตามมาตรฐาน แต่ถ้าเป็นฝ้าผืนใหญ่หรือซ้อนแผ่นสองชั้น แนะนำเบอร์ 24 จะปลอดภัยกว่า</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ซีลายเบอร์ 24 กับ 26 ราคาต่างกันเท่าไหร่?<br /><strong>A:</strong> โดยทั่วไปเบอร์ 24 ราคาจะสูงกว่าเบอร์ 26 ครับ โดยราคาขึ้นอยู่กับน้ำหนักต่อเส้น ปริมาณที่สั่ง และช่วงเวลา แนะนำทักมาทาง LINE เพื่อขอราคาล่าสุดพร้อมใบเสนอราคาได้เลยครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+<p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 6px;">ต้องการซีลายสำหรับงานฝ้าฉาบเรียบ?</p>
+<p style="color:#fff; margin:0 0 14px;">ทีมงาน KAI Standard ช่วยเลือกเบอร์และน้ำหนักให้เหมาะกับหน้างานของคุณ มีสต็อกพร้อมส่ง พร้อมใบเสนอราคา</p>
+<a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "เบอร์ยิ่งน้อย ยิ่งหนาจริงไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "จริงครับ เบอร์ 24 หนากว่าเบอร์ 26 เสมอ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าบ้านทั่วไปใช้เบอร์ 26 ได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ ถ้าเป็นฝ้ายิปซัมชั้นเดียว ห้องขนาดปกติ ไม่มีของหนักแขวน และช่างคุมระยะโครงตามมาตรฐาน แต่ถ้าเป็นฝ้าผืนใหญ่หรือซ้อนแผ่นสองชั้น แนะนำเบอร์ 24 จะปลอดภัยกว่า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ซีลายเบอร์ 24 กับ 26 ราคาต่างกันเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โดยทั่วไปเบอร์ 24 ราคาจะสูงกว่าเบอร์ 26 ครับ โดยราคาขึ้นอยู่กับน้ำหนักต่อเส้น ปริมาณที่สั่ง และช่วงเวลา แนะนำทักมาทาง LINE เพื่อขอราคาล่าสุดพร้อมใบเสนอราคาได้เลยครับ"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
