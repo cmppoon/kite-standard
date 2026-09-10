@@ -20,6 +20,7 @@ const GYPSUM_ACOUSTIC_CATEGORY_ID = 5;
 const CEILING_FRAME_CATEGORY_ID = 7;
 const CILAI_CATEGORY_ID = 11;
 const TBAR_CATEGORY_ID = 8;
+const SOUND_ABSORB_CATEGORY_ID = 9;
 
 // Per-product catalog card. Key = product slug. Only products listed here show
 // the catalog card under the CTA buttons. Add more products later as needed.
@@ -51,6 +52,115 @@ const PRODUCT_GALLERY: Record<string, string[]> = {
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม": ["/zandera.webp"],
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": ["/zandera.webp"],
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม": ["/zandera.webp"],
+};
+
+// Spec table for แผ่นซับเสียง (categoryId 9). Key = product slug.
+// Values are written out per product on purpose — NOT parsed from the product
+// name — so renaming a product can never make the table show a wrong number.
+// A product not listed here simply shows no table.
+const SOUND_ABSORB_SPECS: Record<string, { label: string; value: string }[]> = {
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x600x9มม": [
+    { label: "ขนาด", value: "600×600×9 มม. (60×60ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.36 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "1,111 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "ใยโพลีเอสเตอร์ (PET) รีไซเคิล" },
+    {
+      label: "ค่าดูดซับเสียง NRC",
+      value: "0.80 ทดสอบที่ 9 มม. (SGS EN ISO 354) | Class B",
+    },
+    {
+      label: "การลามไฟ",
+      value: "ASTM E84 Class A และ EN13501 Class B",
+    },
+    { label: "การติดตั้ง", value: "ติดผนังด้วยกาว ใช้ภายในอาคาร" },
+    { label: "มาตรฐานการผลิต", value: "ISO 9001:2015" },
+  ],
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม": [
+    { label: "ขนาด", value: "600×1200×9 มม. (60×120ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.72 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "972 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "ใยโพลีเอสเตอร์ (PET) รีไซเคิล" },
+    {
+      label: "ค่าดูดซับเสียง NRC",
+      value: "0.80 ทดสอบที่ 9 มม. (SGS EN ISO 354) | Class B",
+    },
+    {
+      label: "การลามไฟ",
+      value: "ASTM E84 Class A และ EN13501 Class B",
+    },
+    { label: "การติดตั้ง", value: "ติดผนังด้วยกาว ใช้ภายในอาคาร" },
+    { label: "มาตรฐานการผลิต", value: "ISO 9001:2015" },
+  ],
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x2400x9มม": [
+    { label: "ขนาด", value: "600×2400×9 มม. (60×240ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "1.44 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "833 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "ใยโพลีเอสเตอร์ (PET) รีไซเคิล" },
+    {
+      label: "ค่าดูดซับเสียง NRC",
+      value: "0.80 ทดสอบที่ 9 มม. (SGS EN ISO 354) | Class B",
+    },
+    {
+      label: "การลามไฟ",
+      value: "ASTM E84 Class A และ EN13501 Class B",
+    },
+    { label: "การติดตั้ง", value: "ติดผนังด้วยกาว ใช้ภายในอาคาร" },
+    { label: "มาตรฐานการผลิต", value: "ISO 9001:2015" },
+  ],
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม": [
+    { label: "ขนาด", value: "300×300×25 มม. (30×30ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.09 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "2,322 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "กลาสวูลขึ้นรูปแผ่นแข็ง หุ้มผ้า" },
+    { label: "การติดตั้ง", value: "บุผนังตกแต่ง ใช้ภายในอาคาร" },
+    { label: "การสั่งซื้อ", value: "สินค้าสั่งผลิต ใช้เวลาประมาณ 2-3 สัปดาห์" },
+  ],
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": [
+    { label: "ขนาด", value: "600×600×25 มม. (60×60ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.36 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "1,664 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "กลาสวูลขึ้นรูปแผ่นแข็ง หุ้มผ้า" },
+    { label: "การติดตั้ง", value: "บุผนังตกแต่ง ใช้ภายในอาคาร" },
+    { label: "การสั่งซื้อ", value: "สินค้าสั่งผลิต ใช้เวลาประมาณ 2-3 สัปดาห์" },
+  ],
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม": [
+    { label: "ขนาด", value: "600×1200×25 มม. (60×120ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.72 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "1,665 บาท (ไม่รวม VAT 7%)" },
+    { label: "วัสดุ", value: "กลาสวูลขึ้นรูปแผ่นแข็ง หุ้มผ้า" },
+    { label: "การติดตั้ง", value: "บุผนังตกแต่ง ใช้ภายในอาคาร" },
+    { label: "การสั่งซื้อ", value: "สินค้าสั่งผลิต ใช้เวลาประมาณ 2-3 สัปดาห์" },
+  ],
+  "แผ่นซับเสียง-scg-zandera-scenera-300x300": [
+    { label: "ขนาด", value: "300×300×25 มม. (30×30ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.09 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "2,833 บาท (ไม่รวม VAT 7%)" },
+    { label: "น้ำหนัก", value: "0.34 กก. / แผ่น" },
+    { label: "วัสดุ", value: "ใยแก้วขึ้นรูปแผ่นแข็ง หุ้มผ้าเคลือบกันน้ำ" },
+    { label: "ค่าดูดซับเสียง NRC", value: "0.75 (ดูดซับเสียงเฉลี่ย 75%)" },
+    { label: "สี", value: "เลือกได้ 17 สี" },
+    { label: "การลามไฟ", value: "ไม่ลามไฟ ตามมาตรฐาน SCG" },
+  ],
+  "แผ่นซับเสียง-scg-zandera-scenera-600x600": [
+    { label: "ขนาด", value: "600×600×25 มม. (60×60ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.36 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "2,106 บาท (ไม่รวม VAT 7%)" },
+    { label: "น้ำหนัก", value: "1.26 กก. / แผ่น" },
+    { label: "วัสดุ", value: "ใยแก้วขึ้นรูปแผ่นแข็ง หุ้มผ้าเคลือบกันน้ำ" },
+    { label: "ค่าดูดซับเสียง NRC", value: "0.75 (ดูดซับเสียงเฉลี่ย 75%)" },
+    { label: "สี", value: "เลือกได้ 17 สี" },
+    { label: "การลามไฟ", value: "ไม่ลามไฟ ตามมาตรฐาน SCG" },
+  ],
+  "แผ่นซับเสียง-scg-zandera-scenera-600x1200": [
+    { label: "ขนาด", value: "600×1200×25 มม. (60×120ซม.)" },
+    { label: "พื้นที่ต่อแผ่น", value: "0.72 ตร.ม." },
+    { label: "ราคาเฉลี่ยต่อ ตร.ม.", value: "2,106 บาท (ไม่รวม VAT 7%)" },
+    { label: "น้ำหนัก", value: "2.47 กก. / แผ่น" },
+    { label: "วัสดุ", value: "ใยแก้วขึ้นรูปแผ่นแข็ง หุ้มผ้าเคลือบกันน้ำ" },
+    { label: "ค่าดูดซับเสียง NRC", value: "0.75 (ดูดซับเสียงเฉลี่ย 75%)" },
+    { label: "สี", value: "เลือกได้ 17 สี" },
+    { label: "การลามไฟ", value: "ไม่ลามไฟ ตามมาตรฐาน SCG" },
+  ],
 };
 
 const acousticApplications = [
@@ -206,8 +316,12 @@ export default async function ProductDetailPage({
   const isCeilingFrame = product.categoryId === CEILING_FRAME_CATEGORY_ID;
   const isCilai = product.categoryId === CILAI_CATEGORY_ID;
   const isTBar = product.categoryId === TBAR_CATEGORY_ID;
+  const isSoundAbsorb = product.categoryId === SOUND_ABSORB_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
   const tbarSpec = isTBar ? parseTBarSpec(product) : null;
+  const soundAbsorbSpec = isSoundAbsorb
+    ? (SOUND_ABSORB_SPECS[product.slug] ?? null)
+    : null;
   const productCatalog = PRODUCT_CATALOGS[product.slug] ?? null;
   const galleryImages = [
     product.image,
@@ -392,6 +506,23 @@ export default async function ProductDetailPage({
                         <tr key={label} className="border-b last:border-0">
                           <td className="text-muted-foreground w-[45%] py-2 pr-4">{label}</td>
                           <td className="py-2 font-medium">{value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Spec table — แผ่นซับเสียง (categoryId 9) */}
+              {isSoundAbsorb && soundAbsorbSpec && (
+                <div>
+                  <h2 className="mb-3 text-lg font-semibold">ข้อมูลจำเพาะ</h2>
+                  <table className="w-full table-fixed text-sm">
+                    <tbody>
+                      {soundAbsorbSpec.map((row) => (
+                        <tr key={row.label} className="border-b last:border-0">
+                          <td className="text-muted-foreground w-[45%] py-2 pr-4">{row.label}</td>
+                          <td className="py-2 font-medium">{row.value}</td>
                         </tr>
                       ))}
                     </tbody>
