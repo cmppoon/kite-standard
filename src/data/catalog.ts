@@ -17,4 +17,10 @@ export const catalogs = [
     image: "/catalogs/catalog3.webp",
     url: "/catalogs/SCG Acoustic_Zandera.pdf",
   },
+  {
+    id: 4,
+    name: "แคตตาล็อกแผ่นอะคูสติก KS-401 / KS-403",
+    image: "/catalogs/catalog4.webp",
+    url: "/catalogs/catalog-acoustic-2026.pdf",
+  },
 ];
