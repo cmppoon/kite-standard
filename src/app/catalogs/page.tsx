@@ -27,14 +27,16 @@ export default function Page() {
       <section className="mx-auto max-w-3xl px-4 py-16">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {catalogs.map((catalog) => (
-            <Link
+            <Card
               key={catalog.id}
-              href={catalog.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              className="group p-0 transition-shadow hover:shadow-lg"
             >
-              <Card className="group p-0 transition-shadow hover:shadow-lg">
-                <CardHeader className="p-0">
+              <CardHeader className="p-0">
+                <Link
+                  href={catalog.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="relative h-96 overflow-hidden rounded-t-lg">
                     <Image
                       src={catalog.image || "/placeholder.svg"}
@@ -43,17 +45,30 @@ export default function Page() {
                       className="object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
-                </CardHeader>
-                <CardContent className="p-4 pt-0">
-                  <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
-                  <div className="flex items-center justify-center">
-                    <span className="border-primary text-primary group-hover:bg-primary flex-1 rounded-md border px-3 py-1 text-center text-sm transition-colors group-hover:text-white">
-                      ดูรายละเอียด
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+                </Link>
+              </CardHeader>
+              <CardContent className="p-4 pt-0">
+                <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
+                <div className="flex flex-col gap-2">
+                  <Link
+                    href={catalog.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border-primary text-primary hover:bg-primary rounded-md border px-3 py-1 text-center text-sm transition-colors hover:text-white"
+                  >
+                    ดูรายละเอียด
+                  </Link>
+                  {catalog.categoryUrl && (
+                    <Link
+                      href={catalog.categoryUrl}
+                      className="bg-primary rounded-md px-3 py-1 text-center text-sm text-white transition-opacity hover:opacity-90"
+                    >
+                      {catalog.categoryLabel}
+                    </Link>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </section>
