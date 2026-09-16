@@ -31,4 +31,12 @@ export const catalogs = [
     categoryUrl: "/products/category/แผ่นอะคูสติก",
     categoryLabel: "ดูสินค้าแผ่นอะคูสติก",
   },
+  {
+    id: 5,
+    name: "แคตตาล็อกแผ่นซับเสียง KS-501",
+    image: "/catalogs/catalog5.webp",
+    url: "/catalogs/catalog-ks501.pdf",
+    categoryUrl: "/products/แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม",
+    categoryLabel: "ดูสินค้าแผ่นซับเสียง KS-501",
+  },
 ];
