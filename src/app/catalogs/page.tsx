@@ -29,7 +29,7 @@ export default function Page() {
           {catalogs.map((catalog) => (
             <Card
               key={catalog.id}
-              className="group p-0 transition-shadow hover:shadow-lg"
+              className="group flex h-full flex-col p-0 transition-shadow hover:shadow-lg"
             >
               <CardHeader className="p-0">
                 <Link
@@ -47,9 +47,9 @@ export default function Page() {
                   </div>
                 </Link>
               </CardHeader>
-              <CardContent className="p-4 pt-0">
+              <CardContent className="flex flex-1 flex-col p-4 pt-0">
                 <CardTitle className="mb-2 text-lg">{catalog.name}</CardTitle>
-                <div className="flex flex-col gap-2">
+                <div className="mt-auto flex flex-col gap-2">
                   <Link
                     href={catalog.url}
                     target="_blank"
