@@ -67,6 +67,18 @@ const PRODUCT_GALLERY: Record<string, string[]> = {
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม": ["/zandera.webp"],
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": ["/zandera.webp"],
   "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม": ["/zandera.webp"],
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x600x9มม": [
+    "/ks501-colors.webp",
+    "/ks501-panels.webp",
+  ],
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม": [
+    "/ks501-colors.webp",
+    "/ks501-panels.webp",
+  ],
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x2400x9มม": [
+    "/ks501-colors.webp",
+    "/ks501-panels.webp",
+  ],
 };
 
 // Spec table for แผ่นซับเสียง (categoryId 9). Key = product slug.
