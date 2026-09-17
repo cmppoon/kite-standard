@@ -1,5 +1,21 @@
 export const catalogs = [
   {
+    id: 4,
+    name: "แคตตาล็อกแผ่นอะคูสติก KS-401 / KS-403",
+    image: "/catalogs/catalog4.webp",
+    url: "/catalogs/catalog-acoustic-2026.pdf",
+    categoryUrl: "/products/category/แผ่นอะคูสติก",
+    categoryLabel: "ดูสินค้าแผ่นอะคูสติก",
+  },
+  {
+    id: 5,
+    name: "แคตตาล็อกแผ่นซับเสียง KS-501",
+    image: "/catalogs/catalog5.webp",
+    url: "/catalogs/catalog-ks501.pdf",
+    categoryUrl: "/products/แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม",
+    categoryLabel: "ดูสินค้าแผ่นซับเสียง KS-501",
+  },
+  {
     id: 1,
     name: "แคตตาล็อกสินค้าทั้งหมด",
     image: "/catalogs/catalog1.webp",
@@ -22,21 +38,5 @@ export const catalogs = [
     url: "/catalogs/SCG Acoustic_Zandera.pdf",
     categoryUrl: "/products/category/แผ่นซับเสียง",
     categoryLabel: "ดูสินค้าแผ่นซับเสียง",
-  },
-  {
-    id: 4,
-    name: "แคตตาล็อกแผ่นอะคูสติก KS-401 / KS-403",
-    image: "/catalogs/catalog4.webp",
-    url: "/catalogs/catalog-acoustic-2026.pdf",
-    categoryUrl: "/products/category/แผ่นอะคูสติก",
-    categoryLabel: "ดูสินค้าแผ่นอะคูสติก",
-  },
-  {
-    id: 5,
-    name: "แคตตาล็อกแผ่นซับเสียง KS-501",
-    image: "/catalogs/catalog5.webp",
-    url: "/catalogs/catalog-ks501.pdf",
-    categoryUrl: "/products/แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม",
-    categoryLabel: "ดูสินค้าแผ่นซับเสียง KS-501",
   },
 ];

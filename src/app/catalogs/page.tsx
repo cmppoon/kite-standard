@@ -24,8 +24,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-16">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <section className="mx-auto max-w-3xl px-4 py-16 lg:max-w-5xl">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {catalogs.map((catalog) => (
             <Card
               key={catalog.id}
