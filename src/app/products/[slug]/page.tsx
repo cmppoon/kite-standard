@@ -43,6 +43,21 @@ const PRODUCT_CATALOGS: Record<
     pdf: "/catalogs/SCG Acoustic_Zandera.pdf",
     title: "SCG Cylence Zandera",
   },
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x600x9มม": {
+    image: "/catalogs/catalog5.webp",
+    pdf: "/catalogs/catalog-ks501.pdf",
+    title: "แผ่นซับเสียง KS-501",
+  },
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม": {
+    image: "/catalogs/catalog5.webp",
+    pdf: "/catalogs/catalog-ks501.pdf",
+    title: "แผ่นซับเสียง KS-501",
+  },
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x2400x9มม": {
+    image: "/catalogs/catalog5.webp",
+    pdf: "/catalogs/catalog-ks501.pdf",
+    title: "แผ่นซับเสียง KS-501",
+  },
 };
 
 // Per-product image gallery. Key = product slug. Value = EXTRA images only
