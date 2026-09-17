@@ -20,6 +20,8 @@ const CATEGORY_LINKS: [string, string][] = [
     "แผ่นยิปซั่มลดเสียงสะท้อน",
     "/products/category/แผ่นยิปซั่มลดเสียงสะท้อน",
   ],
+  ["แผ่นซับเสียง KS-501", "/products/category/แผ่นซับเสียง"],
+  ["แผ่นซับเสียง", "/products/category/แผ่นซับเสียง"],
   ["แผ่นอะคูสติก", "/products/category/แผ่นอะคูสติก"],
 ];
 

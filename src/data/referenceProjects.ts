@@ -151,4 +151,19 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref27.webp",
     caption: "จัดส่งแผ่นอะคูสติก ณ PIA Interior Company Limited.",
   },
+    {
+    id: 28,
+    image: "/reference/ref28.webp",
+    caption: "ส่งแผ่นซับเสียง KS-501 ณ เทคโนธานี ห้องประชุมยูเรก้า",
+  },
+  {
+    id: 29,
+    image: "/reference/ref29.webp",
+    caption: "ส่งแผ่นอะคูสติก ณ ศูนย์ศึกษาและพัฒนาชุมชนองครักษ์",
+  },
+  {
+    id: 30,
+    image: "/reference/ref30.webp",
+    caption: "ส่งแผ่นยิปซั่มลดเสียงสะท้อน ณ The Old Siam",
+  },
 ];
