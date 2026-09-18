@@ -22,6 +22,28 @@ const CILAI_CATEGORY_ID = 11;
 const TBAR_CATEGORY_ID = 8;
 const SOUND_ABSORB_CATEGORY_ID = 9;
 
+// Acoustic product pages only: the 8 project photos shown under the page.
+// Images are the same files used on /reference, so the photo and the project
+// name can never drift apart. Hovering a photo shows the project name.
+// To swap a project: change image + name to another entry from
+// src/data/referenceProjects.ts.
+const ACOUSTIC_PROJECT_PHOTOS: { image: string; name: string }[] = [
+  { image: "/reference/ref06.webp", name: "ธนาคารออมสิน สำนักงานใหญ่" },
+  { image: "/reference/ref22.webp", name: "กรมทางหลวง" },
+  { image: "/reference/ref01.webp", name: "ราชวิทยาลัยจุฬาภรณ์" },
+  { image: "/reference/ref02.webp", name: "มหาวิทยาลัยมหิดล กาญจนบุรี" },
+  {
+    image: "/reference/ref21.webp",
+    name: "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+  },
+  { image: "/reference/ref23.webp", name: "มหาวิทยาลัยศรีนครินทรวิโรฒ" },
+  {
+    image: "/reference/ref17.webp",
+    name: "Fisher & Paykel Appliances (Thailand)",
+  },
+  { image: "/reference/ref24.webp", name: "Sand Dunes Chaolao Beach Resort" },
+];
+
 // Per-product catalog card. Key = product slug. Only products listed here show
 // the catalog card under the CTA buttons. Add more products later as needed.
 const PRODUCT_CATALOGS: Record<
@@ -664,19 +686,37 @@ export default async function ProductDetailPage({
           </div>
         )}
 
-        {/* Delivery photo grid — acoustic (categoryId 1) */}
+        {/* Project photo grid — acoustic (categoryId 1).
+            Photos come from /reference so each one carries a real project name.
+            Name shows on hover (desktop) and stays visible on mobile. */}
         {isAcoustic && (
           <div className="mt-12 border-t pt-10">
-            <h2 className="mb-6 text-2xl font-semibold">ภาพสินค้าที่ส่งแล้ว</h2>
+            <div className="mb-6 flex items-center justify-between gap-4">
+              <h2 className="text-2xl font-semibold">โครงการที่จัดส่งแผ่นอะคูสติก</h2>
+              <Link
+                href="/reference"
+                className="border-primary text-primary hover:bg-primary shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:text-white"
+              >
+                ดูผลงานอื่นๆ
+              </Link>
+            </div>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                <div key={n} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              {ACOUSTIC_PROJECT_PHOTOS.map((item) => (
+                <div
+                  key={item.image}
+                  className="group relative aspect-[4/3] overflow-hidden rounded-lg"
+                >
                   <Image
-                    src={`/products/อะคูสติก/delivered/delivery-${n}.webp`}
-                    alt={`ภาพสินค้าที่ส่งแล้ว ${n}`}
+                    src={item.image}
+                    alt={`จัดส่งแผ่นอะคูสติก ณ ${item.name}`}
                     fill
                     className="object-cover"
                   />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2 opacity-100 transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100">
+                    <p className="text-xs leading-snug font-medium text-white">
+                      {item.name}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
