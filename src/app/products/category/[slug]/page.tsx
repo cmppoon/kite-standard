@@ -12,6 +12,14 @@ export async function generateMetadata({
 
   const canonicalUrl = `https://www.kaistandard.com/products/category/${slug}`;
 
+  // Custom Google title per category. Key = category name.
+  // Categories not listed here keep the default "<name> ราคาโรงงาน".
+  // NOTE: "เริ่ม 65 บาท" must match the cheapest acoustic sheet price
+  // (600x600x12มม.). If that price changes, update this line too.
+  const titleMap: Record<string, string> = {
+    "แผ่นอะคูสติก": "แผ่นอะคูสติก ฝ้าอะคูสติก ราคาโรงงาน เริ่ม 65 บาท",
+  };
+
   const descriptionMap: Record<string, string> = {
     "แผ่นอะคูสติก":
       "แผ่นอะคูสติก ราคา 65-263 บาท/แผ่น เหมาะสำหรับห้องประชุม สำนักงาน โรงแรม มหาวิทยาลัย NRC 0.55-0.65 สต็อกพร้อมส่ง โทร 02-415-3676",
@@ -44,7 +52,7 @@ export async function generateMetadata({
 
   return {
     title: category
-      ? `${category.name} ราคาโรงงาน`
+      ? titleMap[categoryName] ?? `${category.name} ราคาโรงงาน`
       : "สินค้า | ไคสแตนดาร์ด",
     description,
     alternates: {
