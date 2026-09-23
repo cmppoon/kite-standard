@@ -1,6 +1,16 @@
 import ProductsClientPage from "@/app/products/productsClientPage";
 import { productCategories } from "@/data/productCategories";
+import { permanentRedirect } from "next/navigation";
 import React from "react";
+
+// Old category addresses that must permanently point to the current page.
+// Key = old slug (decoded Thai). Value = current category slug.
+// /products/category/แปหลังคา used to open "all products" (110 items) and
+// Google indexed it as a duplicate. It now sends people and Google to the
+// real แป page. Add more old slugs here later if needed.
+const OLD_CATEGORY_REDIRECTS: Record<string, string> = {
+  "แปหลังคา": "แปหลังคา แปสำเร็จรูป",
+};
 
 export async function generateMetadata({
   params,
@@ -75,6 +85,15 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
+  // Old address → permanent redirect to the current category page.
+  const redirectTo = OLD_CATEGORY_REDIRECTS[decodeURIComponent(slug)];
+  if (redirectTo) {
+    permanentRedirect(
+      `/products/category/${encodeURIComponent(redirectTo)}`,
+    );
+  }
+
   const category = getCategoryBySlug(slug);
 
   return <ProductsClientPage selectedCategory={category ? category.id : -1} />;
