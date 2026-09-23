@@ -28,6 +28,9 @@ export async function generateMetadata({
   // (600x600x12มม.). If that price changes, update this line too.
   const titleMap: Record<string, string> = {
     "แผ่นอะคูสติก": "แผ่นอะคูสติก ฝ้าอะคูสติก ราคาโรงงาน เริ่ม 65 บาท",
+    // NOTE: "80-209 บาท" must match the cheapest / most expensive แป price
+    // in src/data/products.ts. If แป prices change, update this line too.
+    "แปหลังคา แปสำเร็จรูป": "แปสำเร็จรูป แปหลังคา ราคา 80-209 บาท",
   };
 
   const descriptionMap: Record<string, string> = {

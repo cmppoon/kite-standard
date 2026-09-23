@@ -148,6 +148,11 @@ function groupTBarProducts(items: Product[]) {
 // Per-category SEO heading override. If a category id is listed here, the page
 // uses this H1 + subtitle instead of the auto-generated one. Add more later.
 const CATEGORY_HEADINGS: Record<number, { h1: string; subtitle: string }> = {
+  3: {
+    h1: "แปหลังคา แปสำเร็จรูป",
+    subtitle:
+      "แปสำเร็จรูป ยาว 6 เมตร ราคา 80–209 บาท/เส้น มีกัลวาไนซ์ อลูซิงค์ สังกะสี ส่งทั่วประเทศ",
+  },
   8: {
     h1: "แผ่นฝ้าทีบาร์ปรุลาย ลดเสียงก้อง ผลิตเอง ราคาโรงงาน",
     subtitle:
@@ -158,6 +163,15 @@ const CATEGORY_HEADINGS: Record<number, { h1: string; subtitle: string }> = {
     subtitle:
       "จำหน่ายฉนวนใยหิน SCG Stone Wool และฉนวนใยแก้ว SCG Stay Cool สำหรับงานฝ้าเพดานและผนังเบา กันความร้อน ป้องกันไฟ และดูดซับเสียง ไม่มีส่วนผสมของแร่ใยหิน จัดส่งทั่วไทย",
   },
+};
+
+// Subtitle-only override (H1 stays the category name). Used where the default
+// subtitle ("…เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล…") does not fit.
+// If a product price in these categories changes, update the numbers here too.
+const CATEGORY_SUBTITLES: Record<number, string> = {
+  2: "ช่องเซอร์วิสฝ้าเพดานฉาบเรียบ แบบธรรมดาและทนชื้น ขนาด 30×30 ถึง 60×120 ซม. ราคา 220–735 บาท ส่งทั่วประเทศ",
+  4: "แผ่นปิดรอยต่อหลังคา Fastech กันน้ำรั่วซึม หน้ากว้าง 10–30 ซม. ราคา 125–1,000 บาท ส่งทั่วประเทศ",
+  9: "แผ่นซับเสียงบุผนัง KS-501 โพลีเอสเตอร์ และ SCG Cylence Zandera ราคา 209–1,517 บาท/แผ่น ลดเสียงก้องในห้อง ส่งทั่วประเทศ",
 };
 
 // Sidebar grouping: these two categories move to the bottom under "หลังคา"
@@ -351,6 +365,14 @@ const ROOF_BATTEN_FAQS = [
   {
     q: "แปหลังคา กับ เหล็กกล่อง ต่างกันยังไง?",
     a: "แปหลังคาเป็นเหล็กรูปพรรณที่ออกแบบมาเพื่อรองรับแผ่นหลังคาโดยเฉพาะ รับน้ำหนักได้ดีและติดตั้งได้รวดเร็วกว่า จึงเป็นตัวเลือกที่นิยมสำหรับอาคาร โรงงาน และโกดังที่ใช้หลังคาเมทัลชีทหรือวัสดุมุงทั่วไป ส่วนเหล็กกล่องมีข้อดีที่ใช้ทำผนังได้ด้วย จึงยืดหยุ่นในการใช้งานมากกว่า",
+  },
+  {
+    q: "ราคาแปหลังคาเท่าไหร่?",
+    a: "แปสำเร็จรูปยาว 6 เมตร ราคา 80–209 บาท/เส้น ไม่รวม VAT หนา 0.55 มม. เริ่ม 89 บาท หนา 0.70 มม. เริ่ม 99 บาท งานโครงการสอบถามราคาพิเศษได้",
+  },
+  {
+    q: "แปสำเร็จรูปยาวกี่เมตร?",
+    a: "ยาวมาตรฐาน 6 เมตรทุกรุ่น และสั่งตัดความยาวพิเศษได้ สอบถามทีมงาน",
   },
 ];
 
@@ -799,10 +821,12 @@ function RoofBattenContentSection() {
     <div className="mt-10 border-t pt-8">
       <h2 className="mb-3 text-xl font-semibold">แปหลังคาคืออะไร? เลือกใช้ยังไง?</h2>
       <p className="text-muted-foreground text-sm leading-relaxed">
-        แปหลังคา คือเหล็กโครงสร้างที่ติดตั้งบนจันทัน ทำหน้าที่รองรับแผ่นหลังคาหรือเมทัลชีท
-        ให้ยึดแน่นและกระจายน้ำหนักอย่างสม่ำเสมอ เลือกความหนาให้เหมาะกับระยะห่างจันทัน
-        และน้ำหนักหลังคา ยิ่งหนายิ่งรับแรงได้มาก เหมาะทั้งงานบ้านพักอาศัยและงานโครงการ
-        โดยเฉพาะโรงงานที่ต้องการควบคุมค่าก่อสร้าง
+        แปหลังคา คือเหล็กที่ติดตั้งบนจันทัน รองรับแผ่นหลังคาหรือเมทัลชีทและกระจายน้ำหนัก
+        เลือกความหนาตามระยะห่างจันทันและน้ำหนักหลังคา ยิ่งหนายิ่งรับแรงได้มาก
+        แปสำเร็จรูปของเรายาว 6 เมตร หนา 0.50–1.00 มม. อ่านเพิ่มเติม:{" "}
+        <Link href="/articles/แปหลังคาคืออะไร" className="text-primary underline">
+          แปหลังคาคืออะไร
+        </Link>
       </p>
     </div>
   );
@@ -1106,6 +1130,7 @@ export default function ProductsClientPage({
             {selectedCategory === -1
               ? "เลือกชมประเภทสินค้าที่หลากหลายและครอบคลุมสำหรับการใช้งานในที่พักอาศัย อาคารพาณิชย์ และอุตสาหกรรม"
               : CATEGORY_HEADINGS[selectedCategory]?.subtitle ??
+                CATEGORY_SUBTITLES[selectedCategory] ??
                 `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
