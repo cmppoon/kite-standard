@@ -21,6 +21,16 @@ const CEILING_FRAME_CATEGORY_ID = 7;
 const CILAI_CATEGORY_ID = 11;
 const TBAR_CATEGORY_ID = 8;
 const SOUND_ABSORB_CATEGORY_ID = 9;
+const ROOF_BATTEN_CATEGORY_ID = 3;
+
+// แป product pages only: put the price in the Google title.
+// The number is read from product.price in products.ts, so the title always
+// matches the price on the page. If no number is found, the old title is used.
+const getRoofBattenTitle = (name: string, price: unknown): string | null => {
+  const m = String(price ?? "").match(/\d[\d,]*/);
+  if (!m) return null;
+  return `${formatTitle(name)} ราคา ${m[0]} บาท | ไคสแตนดาร์ด`;
+};
 
 // Acoustic product pages only: the 8 project photos shown under the page.
 // Images are the same files used on /reference, so the photo and the project
@@ -335,7 +345,10 @@ export async function generateMetadata({
   const canonicalUrl = `https://www.kaistandard.com/products/${slug}`;
 
   return {
-    title: `${formatTitle(product.name)} | ไคสแตนดาร์ด ราคาโรงงาน`,
+    title:
+      (product.categoryId === ROOF_BATTEN_CATEGORY_ID
+        ? getRoofBattenTitle(product.name, product.price)
+        : null) ?? `${formatTitle(product.name)} | ไคสแตนดาร์ด ราคาโรงงาน`,
     description: product.description
       ? `${product.description} สอบถามราคาโทร 02-415-3676`
       : `${formatTitle(product.name)} คุณภาพสูง ราคาโรงงาน จากไคสแตนดาร์ด ประสบการณ์กว่า 40 ปี สอบถามราคาโทร 02-415-3676`,
