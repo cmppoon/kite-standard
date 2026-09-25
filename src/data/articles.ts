@@ -111,7 +111,73 @@ export const articles = [
 <p><span style="font-weight: 400;">.</span></p>
 <p><span style="font-weight: 400;">.</span></p>
 <p><span style="font-weight: 400;">ปัญหาเพดานยุ่งยากๆ เลยแทบไม่เจอกับฝ้าทีบาร์ครับ!</span></p>
-<p><span style="font-weight: 400;">ถ้าใครกำลังมองหาวัสดุ KAIBOY ก็มีทั้ง แผ่นยิปซัม, ยิปซั่มบอร์ด, แผ่นฝ้าอะคูสติก และอุปกรณ์ฝ้า ครบชุดพร้อมใช้เลยนะครับ 🙂</span></p>`,
+<p><span style="font-weight: 400;">ถ้าใครกำลังมองหาวัสดุ KAIBOY ก็มีทั้ง แผ่นยิปซัม, ยิปซั่มบอร์ด, แผ่นฝ้าอะคูสติก และอุปกรณ์ฝ้า ครบชุดพร้อมใช้เลยนะครับ 🙂</span></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฝ้าทีบาร์ใช้อะไรบ้าง ราคาเท่าไหร่</strong>
+<ul>
+<li><a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a>: ทีเมน 1 นิ้ว 45 บาท, ทีซอย 1 นิ้ว 10 บาท</li>
+<li><a href="/products/category/แผ่นฝ้าทีบาร์" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าทีบาร์ปรุลาย</a> ลดเสียงก้อง ขนาด 600x600 มม. เริ่มต้น 46 บาท/แผ่น</li>
+<li><a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น สำหรับห้องที่ต้องการลดเสียงก้องมากขึ้น</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาไม่รวม VAT 7%</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฝ้าทีบาร์ กับ ฝ้าฉาบเรียบ</strong>
+<p>ฝ้าฉาบเรียบใช้โครงซีลายแล้วฉาบรอยต่อให้เรียบเป็นผืนเดียว ดูเรียบร้อยกว่า แต่ซ่อมงานระบบยากกว่าเพราะต้องเจาะเปิดฝ้า อ่านความต่างเพิ่มได้ที่ <a href="/articles/ซีลายคืออะไร" style="color:#1a73e8; text-decoration:underline;">ซีลายคืออะไร</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>ฝ้าทีบาร์ยกแผ่นซ่อมได้ ไม่ต้องรื้อทั้งห้อง</li>
+<li>ซ่อนสายไฟ ท่อแอร์ และงานระบบได้ แต่ยังเข้าถึงได้ง่าย</li>
+<li>เปลี่ยนแผ่นได้หลายแบบ ทั้งยิปซั่ม ปรุลาย และอะคูสติก</li>
+<li>เป็นระบบสำเร็จรูป ทำงานเร็ว</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> โครงทีบาร์ราคาเท่าไหร่?<br /><strong>A:</strong> ทีเมน 1 นิ้ว ราคา 45 บาท และทีซอย 1 นิ้ว ราคา 10 บาท ไม่รวม VAT</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าทีบาร์ใช้แผ่นอะไรได้บ้าง?<br /><strong>A:</strong> ใช้ได้ทั้งแผ่นฝ้าทีบาร์ปรุลายลดเสียงก้อง (เริ่มต้น 46 บาท/แผ่น) และแผ่นฝ้าอะคูสติก (เริ่มต้น 65 บาท/แผ่น) ขนาด 600x600 และ 600x1200 มม.</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าทีบาร์ต่างจากฝ้าฉาบเรียบอย่างไร?<br /><strong>A:</strong> ฝ้าทีบาร์ยกแผ่นออกซ่อมงานระบบได้ทันที ส่วนฝ้าฉาบเรียบเป็นผืนเดียวดูเรียบกว่า แต่ต้องเจาะเปิดฝ้าเวลาซ่อม</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">อยากได้ของครบชุดสำหรับฝ้าทีบาร์?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยคำนวณโครงและแผ่นให้ครบตามขนาดห้องได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "โครงทีบาร์ราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ทีเมน 1 นิ้ว ราคา 45 บาท และทีซอย 1 นิ้ว ราคา 10 บาท ไม่รวม VAT"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าทีบาร์ใช้แผ่นอะไรได้บ้าง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้ได้ทั้งแผ่นฝ้าทีบาร์ปรุลายลดเสียงก้อง (เริ่มต้น 46 บาท/แผ่น) และแผ่นฝ้าอะคูสติก (เริ่มต้น 65 บาท/แผ่น) ขนาด 600x600 และ 600x1200 มม."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าทีบาร์ต่างจากฝ้าฉาบเรียบอย่างไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ฝ้าทีบาร์ยกแผ่นออกซ่อมงานระบบได้ทันที ส่วนฝ้าฉาบเรียบเป็นผืนเดียวดูเรียบกว่า แต่ต้องเจาะเปิดฝ้าเวลาซ่อม"
+      }
+    }
+  ]
+}
+</script>
+    `,
   },
    {
     id: 6,
@@ -131,7 +197,71 @@ export const articles = [
 <p>[ห้องเรียน]<br />หนึ่งในห้องที่พบบ่อยโดยเฉพาะห้องใหญ่ ๆ ที่เป็นผนังทึบทั้งหมด พอคนสอนพูดก็ฟังไม่รู้เรื่อง จับใจความ และจบด้วยการกลับไปอ่านหนังสือเองจนดึก โรงเรียนหรือมหาลัยควรมีระบบกันเสียงก้องเพื่อประสิทธิภาพของนักเรียนและผู้สอนครับ</p>
 <p>&nbsp;</p>
 <p>[ศูนย์ราชการ / โถงต้อนรับ]<br />พื้นที่กว้าง เพดานสูง ดูสวยก็จริง แต่เรื่องเสียงนี่อีกเรื่องเลยครับ เวลาเสียงคนเยอะ ๆ มันตีกันมั่วมาก เจ้าหน้าที่ต้องพูดดังจนเหนื่อย การที่ต้องต้อนรับแต่ต้องพูดหลายครั้งก็ทำให้เกิดการบริการที่ไม่น่าพึงพอใจได้ครับ</p>
-<p>ท่านไหนต้องปรึกษาเรื่องเสียงก้อง สามารถปรึกษาไคสบอยได้ทุกเมื่อเลยนะครับ ไม่มีค่าใช้จ่าย!</p>`,
+<p>ท่านไหนต้องปรึกษาเรื่องเสียงก้อง สามารถปรึกษาไคสบอยได้ทุกเมื่อเลยนะครับ ไม่มีค่าใช้จ่าย!</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แก้เสียงก้องด้วยอะไร</strong>
+<p>เสียงก้องแก้ได้ด้วยวัสดุดูดซับเสียงบนฝ้าและผนัง ซึ่งต่างจากการกันเสียงทะลุห้อง อ่านความต่าง <a href="/articles/ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร" style="color:#1a73e8; text-decoration:underline;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร</a></p>
+<ul>
+<li><a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> NRC 0.55–0.65 ขึ้นไป เริ่มต้น 65 บาท/แผ่น</li>
+<li><a href="/products/category/แผ่นยิปซั่มลดเสียงสะท้อน" style="color:#1a73e8; text-decoration:underline;">แผ่นยิปซั่มลดเสียงสะท้อน</a> เจาะรูลวดลาย เริ่มต้น 175 บาท/แผ่น</li>
+<li><a href="/products/category/แผ่นซับเสียง" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียงติดผนัง KS-501</a> NRC 0.80 (ทดสอบที่ 9 มม.) เริ่มต้น 400 บาท/แผ่น</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาขนาด 600x600 มม. ไม่รวม VAT 7%</p>
+<p>กำลังทำห้องประชุม อ่านต่อ <a href="/articles/ฝ้าห้องประชุมเลือกวัสดุอะไรดี" style="color:#1a73e8; text-decoration:underline;">ฝ้าห้องประชุมเลือกวัสดุอะไรดี</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>ห้องที่มักมีปัญหาเสียงก้อง: ห้องประชุม ห้องเรียน และโถงต้อนรับ</li>
+<li>เสียงก้องแก้ด้วยวัสดุดูดซับเสียง ไม่ใช่วัสดุกันเสียง</li>
+<li>เริ่มจากเปลี่ยนฝ้าเป็นฝ้าอะคูสติก ถ้ายังก้องค่อยเสริมแผ่นซับเสียงที่ผนัง</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> เสียงก้องในห้องเกิดจากอะไร?<br /><strong>A:</strong> เกิดจากเสียงวิ่งไปกระทบผนัง เพดาน หรือพื้นผิวแข็ง แล้วสะท้อนกลับมาซ้อนกันจนฟังไม่ชัด</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แก้เสียงก้องในห้องประชุมใช้อะไรดี?<br /><strong>A:</strong> ใช้วัสดุดูดซับเสียง เช่น แผ่นฝ้าอะคูสติก (NRC 0.55–0.65 ขึ้นไป เริ่มต้น 65 บาท/แผ่น) และถ้ายังก้องอยู่ให้เสริมแผ่นซับเสียงติดผนัง KS-501 (NRC 0.80)</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> วัสดุกันเสียงช่วยแก้เสียงก้องได้ไหม?<br /><strong>A:</strong> ไม่ตรงจุด วัสดุกันเสียงทำหน้าที่ปิดกั้นเสียงไม่ให้ทะลุระหว่างห้อง ส่วนเสียงก้องต้องแก้ด้วยวัสดุดูดซับเสียงภายในห้อง</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ห้องของคุณเสียงก้องอยู่ไหม?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยแนะนำวัสดุลดเสียงก้องให้เหมาะกับห้องของคุณได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "เสียงก้องในห้องเกิดจากอะไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เกิดจากเสียงวิ่งไปกระทบผนัง เพดาน หรือพื้นผิวแข็ง แล้วสะท้อนกลับมาซ้อนกันจนฟังไม่ชัด"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แก้เสียงก้องในห้องประชุมใช้อะไรดี?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้วัสดุดูดซับเสียง เช่น แผ่นฝ้าอะคูสติก (NRC 0.55–0.65 ขึ้นไป เริ่มต้น 65 บาท/แผ่น) และถ้ายังก้องอยู่ให้เสริมแผ่นซับเสียงติดผนัง KS-501 (NRC 0.80)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "วัสดุกันเสียงช่วยแก้เสียงก้องได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ตรงจุด วัสดุกันเสียงทำหน้าที่ปิดกั้นเสียงไม่ให้ทะลุระหว่างห้อง ส่วนเสียงก้องต้องแก้ด้วยวัสดุดูดซับเสียงภายในห้อง"
+      }
+    }
+  ]
+}
+</script>
+    `,
   },
   {
     id: 7,
@@ -186,7 +316,73 @@ export const articles = [
    <p>ทำไมแผ่นยิปซั่มดูดซับเสียงต้องมี "ลวดลาย"?</p>
 <p>.</p>
 <p>เรามักจะเห็นแผ่นฝ้าหรือผนังยิปซั่มที่มีการ "ฉลุลาย" เป็นรูกลมบ้าง รูเหลี่ยมบ้าง หรือลายหนอนกราฟิกที่ดูแปลกตา<br />พี่ๆหลายคนอาจเข้าใจว่าเป็นเพียงเพื่อความสวยงาม แต่ในการลดเสียงสะท้อลวดลายเหล่านี้คือ "หัวใจสำคัญ"<br />ที่ช่วยเปลี่ยนห้องที่ก้องกังวลให้กลายเป็นพื้นที่ที่เงียบสงบและเสียงไม่ก้องครับ</p>
-<p>.<br />โดยปกติแล้ว "เสียง" คือพลังงานที่เดินทางเป็นคลื่น เมื่อมันวิ่งไปกระทบกับผนังที่แข็งและเรียบ คลื่นเสียงจะกระดอนกลับทันที<br />เหมือนลูกบอลที่พุ่งชนกำแพง ทำให้เกิดอาการ "เสียงก้อง" หรือ "เสียงสะท้อน" ครับ</p>`,
+<p>.<br />โดยปกติแล้ว "เสียง" คือพลังงานที่เดินทางเป็นคลื่น เมื่อมันวิ่งไปกระทบกับผนังที่แข็งและเรียบ คลื่นเสียงจะกระดอนกลับทันที<br />เหมือนลูกบอลที่พุ่งชนกำแพง ทำให้เกิดอาการ "เสียงก้อง" หรือ "เสียงสะท้อน" ครับ</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ลวดลายช่วยลดเสียงก้องได้อย่างไร</strong>
+<p>รูที่เจาะบนแผ่นเปิดทางให้เสียงบางส่วนผ่านเข้าไปในช่องว่างเหนือฝ้า แทนที่จะกระดอนกลับเข้ามาในห้องทั้งหมด เสียงที่สะท้อนกลับจึงน้อยลง ห้องก็ก้องน้อยลง ต่างจากแผ่นยิปซั่มผิวเรียบที่สะท้อนเสียงกลับเกือบทั้งหมด</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ลวดลายที่มีให้เลือก</strong>
+<ul>
+<li><a href="/products/category/แผ่นยิปซั่มลดเสียงสะท้อน" style="color:#1a73e8; text-decoration:underline;">แผ่นยิปซั่มลดเสียงสะท้อน</a> เจาะรูลายวงกลม, ลายธงชาติอังกฤษ, ลายสะกดจิต ขนาด 600x600 มม. เริ่มต้น 175 บาท/แผ่น</li>
+<li>ลายปรุลายหนอน ขนาด 1200x2400x9 มม. ราคา 345 บาท/แผ่น</li>
+<li><a href="/products/category/แผ่นฝ้าทีบาร์" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าทีบาร์ปรุลาย</a> ลดเสียงก้อง KS-101 ขนาด 600x600 มม. เริ่มต้น 46 บาท/แผ่น สำหรับวางบนโครงทีบาร์</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาไม่รวม VAT 7%</p>
+<p>ถ้าต้องการลดเสียงก้องมากกว่านี้ ดู <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> ที่มีค่า NRC ระบุชัด หรืออ่านเพิ่ม <a href="/articles/ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร" style="color:#1a73e8; text-decoration:underline;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>ลวดลายบนแผ่นยิปซั่มไม่ได้มีไว้สวยอย่างเดียว แต่ช่วยลดเสียงสะท้อน</li>
+<li>แผ่นยิปซั่มผิวเรียบสะท้อนเสียงกลับเกือบทั้งหมด</li>
+<li>มีทั้งแบบแผ่นใหญ่และแบบวางบนโครงทีบาร์ให้เลือก</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> แผ่นยิปซั่มลดเสียงสะท้อนต่างจากแผ่นยิปซั่มธรรมดาอย่างไร?<br /><strong>A:</strong> แผ่นยิปซั่มลดเสียงสะท้อนเจาะรูเป็นลวดลาย ให้เสียงบางส่วนผ่านเข้าช่องว่างเหนือฝ้า เสียงจึงสะท้อนกลับน้อยลง ส่วนแผ่นยิปซั่มธรรมดาผิวเรียบสะท้อนเสียงกลับเกือบทั้งหมด</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นยิปซั่มลดเสียงสะท้อนราคาเท่าไหร่?<br /><strong>A:</strong> ขนาด 600x600 มม. เริ่มต้น 175 บาท/แผ่น ลายปรุลายหนอน 1200x2400x9 มม. ราคา 345 บาท/แผ่น และแผ่นฝ้าทีบาร์ปรุลาย KS-101 ขนาด 600x600 มม. เริ่มต้น 46 บาท/แผ่น ไม่รวม VAT</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> มีลวดลายอะไรให้เลือกบ้าง?<br /><strong>A:</strong> มีลายวงกลม ลายธงชาติอังกฤษ ลายสะกดจิต และลายปรุลายหนอน</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">เลือกลายไม่ถูก?</p>
+  <p style="color:#fff; margin:0 0 12px;">ส่งรูปห้องมาให้ทีมงาน KAI Standard ช่วยแนะนำลายและรุ่นที่เหมาะได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แผ่นยิปซั่มลดเสียงสะท้อนต่างจากแผ่นยิปซั่มธรรมดาอย่างไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นยิปซั่มลดเสียงสะท้อนเจาะรูเป็นลวดลาย ให้เสียงบางส่วนผ่านเข้าช่องว่างเหนือฝ้า เสียงจึงสะท้อนกลับน้อยลง ส่วนแผ่นยิปซั่มธรรมดาผิวเรียบสะท้อนเสียงกลับเกือบทั้งหมด"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นยิปซั่มลดเสียงสะท้อนราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขนาด 600x600 มม. เริ่มต้น 175 บาท/แผ่น ลายปรุลายหนอน 1200x2400x9 มม. ราคา 345 บาท/แผ่น และแผ่นฝ้าทีบาร์ปรุลาย KS-101 ขนาด 600x600 มม. เริ่มต้น 46 บาท/แผ่น ไม่รวม VAT"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "มีลวดลายอะไรให้เลือกบ้าง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "มีลายวงกลม ลายธงชาติอังกฤษ ลายสะกดจิต และลายปรุลายหนอน"
+      }
+    }
+  ]
+}
+</script>
+    `,
   },
   {
     id: 10,
@@ -210,6 +406,73 @@ export const articles = [
 <p>เมื่อแปะแผ่นเข้าที่แล้ว ให้ใช้ "แม็กยิงเก็บมุมทั้ง 4 ด้าน" เพื่อเป็นการเสริมแรงยึด</p>
 <p>&nbsp;</p>
 <p>แต่มีข้อควรระวังนะครับ คือห้ามโป๊วรอยต่อเพราะแผ่นอะคูสติกมีรูพรุนขนาดเล็ก เพื่อดูดซับเสียง การไปโป๊วปิดรอยต่อหรืออุดรูเหล่านั้น จะทำให้แผ่นเสียคุณสมบัติในการลดเสียงสะท้อนครับ</p>
+
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ใช้แผ่นรุ่นไหนติดบนฝ้าฉาบเรียบ</strong>
+<p><a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> KS-401 ติดตั้งได้ทั้งบนโครงทีบาร์และบนฝ้าฉาบเรียบ มีให้เลือก 3 ความหนา ยิ่งหนาค่า NRC (ค่าดูดซับเสียง) ยิ่งสูง</p>
+<ul>
+<li>หนา 12 มม. NRC 0.55–0.60 ขนาด 600x600 มม. ราคา 65 บาท / 600x1200 มม. ราคา 110 บาท</li>
+<li>หนา 14 มม. NRC 0.60–0.65 ขนาด 600x600 มม. ราคา 80 บาท / 600x1200 มม. ราคา 135 บาท</li>
+<li>หนา 16 มม. NRC 0.65 ขึ้นไป ขนาด 600x600 มม. ราคา 95 บาท / 600x1200 มม. ราคา 155 บาท</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาต่อแผ่น ไม่รวม VAT 7%</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ถ้ายังไม่มีฝ้ายิปซั่มเดิม</strong>
+<p>วิธีทากาวติดต้องมีฝ้ายิปซั่มเดิมรองรับ ถ้าเป็นงานใหม่ที่ยังไม่มีฝ้า ให้วางแผ่นฝ้าอะคูสติกบน <a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a> แทน ยกแผ่นออกซ่อมงานระบบได้ง่ายกว่า อ่านเพิ่ม <a href="/articles/ทำไมฝ้าทีบาร์ถึงเป็นตัวเลือกยอดฮิต" style="color:#1a73e8; text-decoration:underline;">ทำไมฝ้าทีบาร์ถึงเป็นตัวเลือกยอดฮิต</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>ฝ้าอะคูสติกติดบนฝ้าฉาบเรียบได้ โดยทากาวหลังแผ่นแล้วยิงแม็กเก็บมุม</li>
+<li>ต้องมีฝ้ายิปซั่มเดิมรองรับ ไม่แนะนำให้ยึดกับโครงโดยตรง</li>
+<li>ห้ามโป๊วรอยต่อ เพราะจะอุดรูที่ใช้ดูดซับเสียง</li>
+<li>ถ้าเป็นงานใหม่ ใช้แผ่นฝ้าอะคูสติกบนโครงทีบาร์แทน</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ติดแผ่นฝ้าอะคูสติกบนฝ้ายิปซั่มเดิมได้ไหม?<br /><strong>A:</strong> ได้ ทำความสะอาดฝ้าเดิม ทากาวที่หลังแผ่นอะคูสติกให้ทั่ว วางให้ชิดกัน แล้วยิงแม็กเก็บมุมทั้ง 4 ด้าน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ต้องโป๊วรอยต่อแผ่นอะคูสติกไหม?<br /><strong>A:</strong> ไม่ควรโป๊ว เพราะแผ่นอะคูสติกมีรูพรุนเล็ก ๆ ไว้ดูดซับเสียง การโป๊วหรืออุดรูจะทำให้แผ่นลดเสียงสะท้อนได้น้อยลง</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นฝ้าอะคูสติกสำหรับติดฝ้าฉาบเรียบราคาเท่าไหร่?<br /><strong>A:</strong> แผ่นฝ้าอะคูสติก KS-401 ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น ไม่รวม VAT</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">อยากรู้ว่าต้องใช้แผ่นกี่แผ่น?</p>
+  <p style="color:#fff; margin:0 0 12px;">บอกขนาดห้อง ทีมงาน KAI Standard ช่วยคำนวณจำนวนแผ่นและแนะนำรุ่นให้ได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ติดแผ่นฝ้าอะคูสติกบนฝ้ายิปซั่มเดิมได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ ทำความสะอาดฝ้าเดิม ทากาวที่หลังแผ่นอะคูสติกให้ทั่ว วางให้ชิดกัน แล้วยิงแม็กเก็บมุมทั้ง 4 ด้าน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องโป๊วรอยต่อแผ่นอะคูสติกไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ควรโป๊ว เพราะแผ่นอะคูสติกมีรูพรุนเล็ก ๆ ไว้ดูดซับเสียง การโป๊วหรืออุดรูจะทำให้แผ่นลดเสียงสะท้อนได้น้อยลง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นฝ้าอะคูสติกสำหรับติดฝ้าฉาบเรียบราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นฝ้าอะคูสติก KS-401 ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น ไม่รวม VAT"
+      }
+    }
+  ]
+}
+</script>
     `,
   },
   {
@@ -227,16 +490,122 @@ export const articles = [
 <p>&nbsp;</p>
 <p>1. ฝ้ายิปซั่มฉาบเรียบ</p>
 <p>หากห้องประชุมของเป็นห้องขนาดเล็ก สําหรับนั่งคุยกัน 2-3 คน และต้องการประหยัดค่าก่อสร้าง แผ่นยิปซั่มก็เพียงพอสําหรับฝ้าห้องประชุมครับ แต่ควรเสริมด้วยพรมหรือเฟอร์นิเจอร์เพื่อลดเสียงสะท้อนครับ</p>
+<p>ราคาเริ่มต้น 99 บาท/แผ่น (120x240 ซม. หนา 9 มม. ไม่รวม VAT) ดูทุกรุ่นที่ <a href="/products/category/แผ่นยิปซั่ม" style="color:#1a73e8; text-decoration:underline;">แผ่นยิปซั่ม</a></p>
 <p>&nbsp;</p>
 <p>2. แผ่นยิปซั่มลดเสียงสะท้อน</p>
 <p>เป็นวัสดุที่นิยมสําหรับห้องประชุม ด้วยราคาที่ไม่สูงมากและได้ลวดลายที่เป็นเอกลักษณ์ อีกทั้งวิธีติดตั้งใกล้เคียงกับยิปซั่มอีกด้วยครับ หนึ่งในคุณสมบัติที่สําคัญและเหมาะกับห้องประชุมมากๆก็คือลดเสียงก้องขณะคุยกันนั่นเองครับ</p>
+<p>ราคาเริ่มต้น 175 บาท/แผ่น (600x600 มม. ไม่รวม VAT) ดูทุกลายที่ <a href="/products/category/แผ่นยิปซั่มลดเสียงสะท้อน" style="color:#1a73e8; text-decoration:underline;">แผ่นยิปซั่มลดเสียงสะท้อน</a></p>
 <p>&nbsp;</p>
 <p>3.แผ่นโพลีเอสเตอร์ซับเสียง</p>
 <p>ผลิตจากเส้นใยโพลีเอสเตอร์ความหนาแน่นสูง สามารถลดเสียงสะท้อนได้มากแต่อาจแลกมากับราคาที่สูงกว่าฝ้าห้องประชุมอื่น อย่างไรก็ตามหากต้องเสียงก้องที่น้อยที่สุด แผ่นโพลีเอสเตอร์ เป็นหนึ่งในตัวเลือกที่ดีที่สุดครับ</p>
+<p>แผ่นซับเสียง KS-501 เป็นแผ่นติดผนัง ใช้เสริมจากฝ้า ค่า NRC 0.80 (ทดสอบที่ 9 มม.) ราคาเริ่มต้น 400 บาท/แผ่น (600x600 มม. ไม่รวม VAT) ดูที่ <a href="/products/category/แผ่นซับเสียง" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียง</a> หรืออ่านเพิ่ม <a href="/articles/แผ่นซับเสียงโพลีเอสเตอร์คืออะไร" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียงโพลีเอสเตอร์คืออะไร</a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>เห็นมั้ยครับว่าฝ้าห้องประชุมนั้นมีหลากหลายแบบให้เลือกใช้ ทั้งนี้ขึ้นกับความสวยงามและคุณสมบัติการลดเสียงสะท้อนที่ต้องการครับ</p>
 <p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แผ่นฝ้าอะคูสติก อีกหนึ่งตัวเลือกยอดนิยม</strong>
+<p><a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> ผลิตจากใยแร่ มีรูพรุนช่วยดูดซับเสียง ใช้กับโครงฝ้าทีบาร์ได้ทันที ค่า NRC 0.55–0.65 ขึ้นไปตามความหนา (12 / 14 / 16 มม.) ราคาเริ่มต้น 65 บาท/แผ่น (600x600 มม. ไม่รวม VAT) อยากรู้ว่า NRC คืออะไร อ่านเพิ่ม <a href="/articles/แผ่นฝ้าอะคูสติก-nrc-0.50-หมายถึงอะไร" style="color:#1a73e8; text-decoration:underline;">ค่า NRC หมายถึงอะไร</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เทียบ 4 วัสดุฝ้าห้องประชุม</strong>
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; margin:0.75rem 0;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">วัสดุ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ลดเสียงก้อง</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ราคาเริ่มต้น/แผ่น</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ราคาเริ่มต้น/ตร.ม.</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">เหมาะกับ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ยิปซั่มฉาบเรียบ</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ไม่ได้ออกแบบมาเพื่อลดเสียงก้อง</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">99 บาท</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">~34 บาท</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ห้องเล็ก งบจำกัด</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ยิปซั่มลดเสียงสะท้อน</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ช่วยลดเสียงก้อง</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">175 บาท</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">~120 บาท</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ห้องประชุมทั่วไป อยากได้ลวดลาย</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นฝ้าอะคูสติก</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">NRC 0.55–0.65+</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">65 บาท</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">~153 บาท</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ห้องประชุมทุกขนาด ฝ้าทีบาร์</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นซับเสียง KS-501 (ติดผนัง)</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">NRC 0.80</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">400 บาท</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">~833 บาท</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสริมผนัง ห้องที่ยังก้องอยู่</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:14px; color:#555;">ราคาไม่รวม VAT 7% เป็นราคาเฉพาะแผ่น ไม่รวมโครงและค่าแรง ราคาต่อ ตร.ม. คำนวณจากขนาดแผ่นที่คุ้มที่สุดของแต่ละแบบ</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป เลือกฝ้าห้องประชุมยังไง</strong>
+<ul>
+<li>งบจำกัด ห้องเล็ก → ยิปซั่มฉาบเรียบ + พรมหรือเฟอร์นิเจอร์</li>
+<li>อยากได้ลวดลายและลดเสียงก้อง → ยิปซั่มลดเสียงสะท้อน</li>
+<li>อยากลดเสียงก้องได้ดีในราคาคุ้ม → แผ่นฝ้าอะคูสติก</li>
+<li>ห้องยังก้องอยู่ → เสริมแผ่นซับเสียงติดผนัง KS-501</li>
+</ul>
+<p>ยังสับสนระหว่างลดเสียงก้องกับกันเสียงทะลุ อ่านเพิ่ม <a href="/articles/ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร" style="color:#1a73e8; text-decoration:underline;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ห้องประชุมเล็ก ใช้ฝ้าแบบไหนประหยัดที่สุด?<br /><strong>A:</strong> แผ่นยิปซั่มฉาบเรียบ ราคาเริ่มต้น 99 บาท/แผ่น (120x240 ซม. ไม่รวม VAT) แต่ยิปซั่มธรรมดาไม่ได้ช่วยลดเสียงก้อง ควรเสริมพรมหรือเฟอร์นิเจอร์ในห้อง</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นฝ้าอะคูสติกสำหรับห้องประชุมราคาเท่าไหร่?<br /><strong>A:</strong> แผ่นฝ้าอะคูสติก KS-401 ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น (ไม่รวม VAT) ยิ่งหนาค่า NRC ยิ่งสูง รุ่น 16 มม. มีค่า NRC 0.65 ขึ้นไป</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ห้องประชุมเสียงก้องมาก ควรใช้อะไร?<br /><strong>A:</strong> เริ่มจากฝ้าที่ดูดซับเสียงได้ เช่น แผ่นฝ้าอะคูสติกหนา 16 มม. (NRC 0.65 ขึ้นไป) ถ้ายังก้องอยู่ ให้เสริมแผ่นซับเสียงติดผนัง KS-501 (NRC 0.80) ที่ผนังฝั่งที่เสียงสะท้อน</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ไม่แน่ใจว่าห้องประชุมของคุณควรใช้ฝ้าแบบไหน?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยแนะนำวัสดุและคำนวณจำนวนแผ่นให้ได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ห้องประชุมเล็ก ใช้ฝ้าแบบไหนประหยัดที่สุด?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นยิปซั่มฉาบเรียบ ราคาเริ่มต้น 99 บาท/แผ่น (120x240 ซม. ไม่รวม VAT) แต่ยิปซั่มธรรมดาไม่ได้ช่วยลดเสียงก้อง ควรเสริมพรมหรือเฟอร์นิเจอร์ในห้อง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นฝ้าอะคูสติกสำหรับห้องประชุมราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นฝ้าอะคูสติก KS-401 ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น (ไม่รวม VAT) ยิ่งหนาค่า NRC ยิ่งสูง รุ่น 16 มม. มีค่า NRC 0.65 ขึ้นไป"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องประชุมเสียงก้องมาก ควรใช้อะไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เริ่มจากฝ้าที่ดูดซับเสียงได้ เช่น แผ่นฝ้าอะคูสติกหนา 16 มม. (NRC 0.65 ขึ้นไป) ถ้ายังก้องอยู่ ให้เสริมแผ่นซับเสียงติดผนัง KS-501 (NRC 0.80) ที่ผนังฝั่งที่เสียงสะท้อน"
+      }
+    }
+  ]
+}
+</script>
     `,
   },
 {
@@ -317,6 +686,70 @@ export const articles = [
 <p>อาคารโชว์รูม พื้นที่ที่ต้องการความคมชัดของเสียง การใช้ฝ้าอะคูสติกจึงเป็นเรื่องที่ขาดไม่ได้ครับ และโชว์รูมเองเป็นพื้นที่โชว์สินค้า การตะแบงเสียงเพื่อให้พูดคุยกันชัดๆก็ไม่ใช่เรื่องที่เหมาะสมใช่มั้ยล่ะครับ การควบคุมเสียงสะท้อนจึงเป็นหนึ่งในคีย์สำคัญของโชว์รูมครับ</p>
 <p>&nbsp;</p>
 <p>หากใครกำลังมองหาวัสดุหรือกำลังทำสเปกงานโครงการ อย่าลืมลองพิจารณาเลือกใช้ฝ้าอะคูสติกในพื้นที่เหล่านี้นะครับ รับรองว่าช่วยยกระดับมาตรฐานและเพิ่มมูลค่าให้งานโครงการได้มากเลยล่ะครับ</p>
+
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ห้องแบบไหน ใช้ความหนาเท่าไหร่</strong>
+<p><a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> ยิ่งหนา ค่า NRC (ค่าดูดซับเสียง) ยิ่งสูง</p>
+<ul>
+<li>หนา 12 มม. NRC 0.55–0.60 ราคาเริ่มต้น 65 บาท/แผ่น</li>
+<li>หนา 14 มม. NRC 0.60–0.65 ราคาเริ่มต้น 80 บาท/แผ่น</li>
+<li>หนา 16 มม. NRC 0.65 ขึ้นไป ราคาเริ่มต้น 95 บาท/แผ่น</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาขนาด 600x600 มม. ไม่รวม VAT 7% อยากรู้ว่า NRC คืออะไร อ่าน <a href="/articles/แผ่นฝ้าอะคูสติก-nrc-0.50-หมายถึงอะไร" style="color:#1a73e8; text-decoration:underline;">ค่า NRC หมายถึงอะไร</a></p>
+<p>ดูตัวอย่างโครงการจริงที่ใช้ฝ้าอะคูสติกได้ที่หน้า <a href="/reference" style="color:#1a73e8; text-decoration:underline;">ผลงาน</a> และถ้ากำลังทำห้องประชุม อ่านต่อ <a href="/articles/ฝ้าห้องประชุมเลือกวัสดุอะไรดี" style="color:#1a73e8; text-decoration:underline;">ฝ้าห้องประชุมเลือกวัสดุอะไรดี</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>ฝ้าอะคูสติกควรมีในพื้นที่ที่คนพูดคุยเยอะและต้องการฟังชัด</li>
+<li>4 พื้นที่หลัก: ออฟฟิศและห้องประชุม, ห้องเรียน, โรงพยาบาล, โชว์รูม</li>
+<li>ยิ่งหนา ยิ่งดูดซับเสียงได้มาก เลือกความหนาตามปัญหาเสียงก้องของห้อง</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ฝ้าอะคูสติกเหมาะกับพื้นที่แบบไหน?<br /><strong>A:</strong> พื้นที่ที่คนพูดคุยเยอะและต้องการฟังให้ชัด เช่น ออฟฟิศ ห้องประชุม ห้องเรียน ห้องสมุด โถงโรงพยาบาล และโชว์รูม</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าอะคูสติกแต่ละความหนามีค่า NRC เท่าไหร่?<br /><strong>A:</strong> แผ่นฝ้าอะคูสติก KS-401 หนา 12 มม. NRC 0.55–0.60, หนา 14 มม. NRC 0.60–0.65 และหนา 16 มม. NRC 0.65 ขึ้นไป</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ฝ้าอะคูสติกราคาเท่าไหร่?<br /><strong>A:</strong> เริ่มต้น 65 บาท/แผ่น สำหรับขนาด 600x600x12 มม. ไม่รวม VAT ส่วนขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">กำลังทำสเปกงานโครงการ?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยแนะนำรุ่นและความหนาให้เหมาะกับพื้นที่ได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ฝ้าอะคูสติกเหมาะกับพื้นที่แบบไหน?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "พื้นที่ที่คนพูดคุยเยอะและต้องการฟังให้ชัด เช่น ออฟฟิศ ห้องประชุม ห้องเรียน ห้องสมุด โถงโรงพยาบาล และโชว์รูม"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าอะคูสติกแต่ละความหนามีค่า NRC เท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แผ่นฝ้าอะคูสติก KS-401 หนา 12 มม. NRC 0.55–0.60, หนา 14 มม. NRC 0.60–0.65 และหนา 16 มม. NRC 0.65 ขึ้นไป"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าอะคูสติกราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "เริ่มต้น 65 บาท/แผ่น สำหรับขนาด 600x600x12 มม. ไม่รวม VAT ส่วนขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น"
+      }
+    }
+  ]
+}
+</script>
     `,
   },
 {
@@ -4743,6 +5176,125 @@ export const articles = [
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "ความเสี่ยงหลักคือระบบไม่ตรงกัน ควรตรวจสอบระบบที่ใช้ว่าเป็นเมตริกหรือยิปซั่ม ก่อนสั่งผลิตทุกครั้ง"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
+  {
+    id: 48,
+    title: "ซ่อมงานฝ้าต้องดูอะไรบ้าง? เช็คลิสต์ก่อนสั่งของมาซ่อม",
+    slug: "ซ่อมงานฝ้าต้องดูอะไรบ้าง",
+    excerpt: "ก่อนสั่งแผ่นฝ้ามาซ่อม ต้องหาต้นเหตุ เช็คโครง ดูว่าฝ้าเดิมเป็นระบบไหน และจดสเปกแผ่นเดิมให้ครบ พร้อมวิธีแก้เมื่อหาแผ่นรุ่นเดิมไม่เจอ",
+    image: "/articles/article48.webp",
+    date: "2026-09-25",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">ซ่อมงานฝ้าต้องดูอะไรบ้าง? เช็คลิสต์ก่อนสั่งของมาซ่อม</p>
+
+<p>สวัสดีครับ ฝ้าเพดานที่ใช้มานานมักมีปัญหาให้ต้องซ่อม ทั้งคราบน้ำ แผ่นแอ่น หรือรอยต่อร้าว หลายคนรีบซื้อแผ่นใหม่มาเปลี่ยนเลย แต่พอซ่อมเสร็จไม่นานก็เสียซ้ำ หรือแผ่นใหม่เข้ากับของเดิมไม่ได้ บทความนี้สรุปสิ่งที่ต้องเช็คก่อนสั่งวัสดุ จะได้ซ่อมครั้งเดียวจบครับ</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">1. หาต้นเหตุก่อน อย่าเพิ่งเปลี่ยนแผ่น</strong>
+<p>ฝ้าส่วนใหญ่ไม่ได้เสียเอง แต่เสียเพราะมีอะไรบางอย่างอยู่ข้างบน ต้นเหตุที่เจอบ่อยคือ</p>
+<ul>
+<li>หลังคารั่ว หรือรางน้ำรั่ว น้ำซึมลงมาโดนแผ่นฝ้า</li>
+<li>ท่อน้ำทิ้งแอร์หยด หรือท่อน้ำประปารั่วเหนือฝ้า</li>
+<li>ความชื้นสะสม เพราะใต้หลังคาไม่มีทางระบายอากาศ</li>
+</ul>
+<p>ถ้าไม่แก้ต้นเหตุก่อน แผ่นใหม่ที่เปลี่ยนเข้าไปก็จะเป็นคราบและแอ่นซ้ำในจุดเดิม</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">2. เช็คโครงฝ้าว่ายังดีอยู่ไหม</strong>
+<p>ลองยกแผ่นฝ้าขึ้นดูโครงด้านบน สิ่งที่ต้องดูคือ</p>
+<ul>
+<li>โครงแอ่นหรือตกท้องช้าง ฝ้าไม่เรียบเป็นแนวเดียวกัน</li>
+<li>โครงเป็นสนิม โดยเฉพาะจุดที่เคยโดนน้ำ</li>
+<li>ลวดแขวนหรือตัวยึดหลุด ทำให้โครงห้อยลงมา</li>
+</ul>
+<p>ถ้าโครงเสีย การเปลี่ยนแค่แผ่นฝ้าจะไม่ช่วย ต้องแก้โครงก่อน ไม่อย่างนั้นแผ่นใหม่ก็จะวางไม่เรียบหรือหล่นลงมาได้</p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">3. ฝ้าเดิมเป็นระบบไหน ซ่อมไม่เหมือนกัน</strong>
+<p>ฝ้าในบ้านและอาคารส่วนใหญ่มี 2 แบบ วิธีซ่อมและของที่ต้องใช้ต่างกันมาก</p>
+<table style="width:100%; border-collapse:collapse; margin:16px 0;">
+<thead><tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ฝ้าฉาบเรียบ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ฝ้าทีบาร์</th>
+</tr></thead>
+<tbody>
+<tr style="background:#eef2f7;"><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">หน้าตา</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เรียบต่อเนื่อง ไม่เห็นรอยต่อ</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เห็นเส้นโครงเป็นตาราง</td></tr>
+<tr style="background:#f8f9fc;"><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">วิธีซ่อม</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ตัดส่วนที่เสียออก ปะแผ่นใหม่ แล้วฉาบรอยต่อ</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ยกแผ่นเก่าออก วางแผ่นใหม่ลงไปแทน</td></tr>
+<tr style="background:#eef2f7;"><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ของที่ต้องใช้</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นยิปซัม เทปปิดรอยต่อ ปูนฉาบรอยต่อ สี</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นฝ้าขนาดและขอบตรงกับของเดิม</td></tr>
+<tr style="background:#f8f9fc;"><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">จุดที่ต้องระวัง</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ฉาบรอยต่อไม่ดี จะเห็นรอยปะหรือร้าวซ้ำ</td><td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">แผ่นใหม่ลายหรือสีไม่ตรงกับแผ่นเดิม</td></tr>
+</tbody></table>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">4. จดสเปกแผ่นเดิมให้ครบก่อนสั่ง</strong>
+<p>ความผิดพลาดที่เจอบ่อยที่สุดคือสั่งแผ่นมาแล้วใส่ไม่ได้ ก่อนสั่งให้เช็คแผ่นเดิม 4 อย่างนี้</p>
+<ul>
+<li><strong>ขนาดแผ่น</strong> วัดกว้าง x ยาว จากแผ่นจริง</li>
+<li><strong>แบบขอบ</strong> เป็นขอบตรงวางบนโครง หรือขอบบังใบที่แผ่นยื่นต่ำกว่าโครง อ่านเพิ่มได้ที่ <a href="/articles/ฝ้าเพดานขอบบังใบคืออะไร" style="color:#1a73e8; text-decoration:underline;">ฝ้าเพดานขอบบังใบคืออะไร</a></li>
+<li><strong>ลายผิวหน้า</strong> ถ่ายรูปใกล้ ๆ ให้เห็นลายชัด</li>
+<li><strong>สี</strong> ถ่ายรูปในแสงธรรมชาติ ไม่ใช่แสงไฟ</li>
+</ul>
+<p>อีกเรื่องที่ต้องรู้คือ โครงทีบาร์ในไทยมีทั้งระบบเมตริกและระบบยิปซัม ซึ่งระยะช่องโครงไม่เท่ากัน แผ่นที่ขนาดดูใกล้กันจึงอาจใส่ช่องไม่พอดี ถ้าไม่แน่ใจว่าแผ่นแบบไหนเข้ากับโครงเดิม ดูเพิ่มได้ที่ <a href="/articles/ฝ้าบังใบใช้กับโครงอะไรได้บ้าง" style="color:#1a73e8; text-decoration:underline;">ฝ้าบังใบใช้กับโครงอะไรได้บ้าง</a></p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">5. ปัญหาพบบ่อย: หาวัสดุฝ้าเก่าไม่เจอ</strong>
+<p>ปัญหานี้เจอบ่อยมากกับ<strong>แผ่นอะคูสติก</strong>และ<strong>ฝ้าลวดลาย</strong> เพราะรุ่นเดิมอาจเลิกผลิตไปแล้ว หรือลายเดิมไม่มีขายในตลาด แผ่นเก่าที่ใช้มาหลายปีก็มักจะสีซีดหรือเหลืองลง ต่อให้ได้รุ่นเดิมมา สีก็อาจไม่ตรงกันแล้ว</p>
+<p>ทางแก้ที่ช่างนิยมใช้มีดังนี้</p>
+<ul>
+<li><strong>สลับแผ่นจากจุดที่ไม่มีคนเห็น</strong> ถอดแผ่นเก่าจากห้องเก็บของหรือมุมที่ไม่เด่น มาใส่แทนจุดที่เสีย แล้วเอาแผ่นใหม่ไปใส่ในจุดที่ไม่มีคนเห็นแทน</li>
+<li><strong>เปลี่ยนทั้งโซน</strong> ถ้าหาลายเดิมไม่ได้จริง ๆ เปลี่ยนทั้งห้องหรือทั้งแนวเป็นลายใหม่ จะดูตั้งใจกว่าการมีแผ่นต่างลายแผ่นเดียวกลางฝ้า</li>
+<li><strong>หาลายที่ใกล้เคียงที่สุด</strong> ส่งรูปและขนาดแผ่นเดิมให้ร้านช่วยดูว่ามีรุ่นไหนใกล้เคียงบ้าง</li>
+</ul>
+<p>ถ้าต้องการดูแผ่นอะคูสติกที่มีอยู่ตอนนี้ ดูได้ที่ <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">หมวดแผ่นอะคูสติก</a></p>
+
+<p>&nbsp;</p>
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ซ่อมฝ้าทีบาร์เองได้ไหม หรือต้องใช้ช่าง?<br /><strong>A:</strong> ถ้าโครงยังดีและแค่เปลี่ยนแผ่น ฝ้าทีบาร์ยกแผ่นเก่าออกแล้ววางแผ่นใหม่ได้เองไม่ยาก แต่ถ้าเป็นฝ้าฉาบเรียบ หรือโครงแอ่นต้องแก้โครงด้วย ควรให้ช่างทำ เพราะต้องใช้ฝีมือในการฉาบและปรับระดับ</p>
+<p> </p>
+<p><strong>Q:</strong> ควรสั่งแผ่นฝ้าเผื่อไว้ไหม?<br /><strong>A:</strong> ควรสั่งเผื่อไว้เล็กน้อยแล้วเก็บไว้ในที่แห้ง ครั้งหน้าถ้าต้องซ่อมจะได้แผ่นลายและสีเดียวกันทันที ไม่ต้องเจอปัญหาหาของรุ่นเดิมไม่เจอ</p>
+<p> </p>
+<p><strong>Q:</strong> ฝ้าทีบาร์เดิมเป็นแผ่นอะคูสติก เปลี่ยนเป็นแผ่นยิปซัมแทนได้ไหม?<br /><strong>A:</strong> ถ้าขนาดและขอบตรงกับช่องโครงก็วางได้ แต่ผิวหน้าและการซับเสียงจะต่างกัน ถ้าเปลี่ยนแค่บางแผ่นในห้องเดียวกันจะเห็นความต่างชัด และห้องอาจก้องขึ้นในจุดนั้น</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+<p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 8px;">หาแผ่นฝ้ามาซ่อมไม่เจอ?</p>
+<p style="color:#fff; margin:0 0 12px;">ส่งรูปฝ้าเดิมพร้อมขนาดแผ่นมาทาง LINE ทีมงานช่วยดูให้ว่าต้องสั่งแผ่น โครง หรือวัสดุแบบไหน</p>
+<a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ซ่อมฝ้าทีบาร์เองได้ไหม หรือต้องใช้ช่าง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ถ้าโครงยังดีและแค่เปลี่ยนแผ่น ฝ้าทีบาร์ยกแผ่นเก่าออกแล้ววางแผ่นใหม่ได้เองไม่ยาก แต่ถ้าเป็นฝ้าฉาบเรียบ หรือโครงแอ่นต้องแก้โครงด้วย ควรให้ช่างทำ เพราะต้องใช้ฝีมือในการฉาบและปรับระดับ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ควรสั่งแผ่นฝ้าเผื่อไว้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ควรสั่งเผื่อไว้เล็กน้อยแล้วเก็บไว้ในที่แห้ง ครั้งหน้าถ้าต้องซ่อมจะได้แผ่นลายและสีเดียวกันทันที ไม่ต้องเจอปัญหาหาของรุ่นเดิมไม่เจอ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ฝ้าทีบาร์เดิมเป็นแผ่นอะคูสติก เปลี่ยนเป็นแผ่นยิปซัมแทนได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ถ้าขนาดและขอบตรงกับช่องโครงก็วางได้ แต่ผิวหน้าและการซับเสียงจะต่างกัน ถ้าเปลี่ยนแค่บางแผ่นในห้องเดียวกันจะเห็นความต่างชัด และห้องอาจก้องขึ้นในจุดนั้น"
       }
     }
   ]
