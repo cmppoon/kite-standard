@@ -54,10 +54,10 @@ export default function HomePage() {
         <div className="relative z-10 mx-auto flex max-w-3xl justify-center">
           <Button
             asChild
-            className="rounded-3xl bg-[#02C300] px-8 py-7 text-white hover:bg-[#02C300]/90"
+            className="rounded-3xl bg-[#02C300] px-8 py-7 text-white hover:bg-[#02C300]/90 md:rounded-[2.5rem] md:px-12 md:py-8"
           >
             <Link href="https://line.me/R/ti/p/@kaistandard">
-              <span className="text-lg font-bold">
+              <span className="text-lg font-bold md:text-[22px]">
                 ขอใบเสนอราคาด่วนภายใน 15 นาที
               </span>
             </Link>
@@ -96,9 +96,9 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="mt-3 text-center">
-                  <h3 className="text-primary text-sm font-bold leading-tight sm:text-base">
+                  <h2 className="text-primary text-sm font-bold leading-tight sm:text-base">
                     {category.name}
-                  </h3>
+                  </h2>
                   <p className="text-muted-foreground mt-1 text-xs leading-snug">
                     {category.description}
                   </p>
