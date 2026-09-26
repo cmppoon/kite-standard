@@ -349,7 +349,17 @@ const SOUND_ABSORB_FAQS = [
   },
 ];
 
-const ROOF_BATTEN_FAQS = [
+// แป FAQ item. Optional extras (แป FAQ only):
+// - priceTable: true → shows the price boxes (built from products.ts) under the answer
+// - link → shows "อ่านเพิ่มเติม: <label>" under the answer
+type RoofBattenFaq = {
+  q: string;
+  a: string;
+  priceTable?: boolean;
+  link?: { href: string; label: string };
+};
+
+const ROOF_BATTEN_FAQS: RoofBattenFaq[] = [
   {
     q: "แปหลังคาอลูซิงค์กับกัลวาไนซ์ ต่างกันอย่างไร?",
     a: "อลูซิงค์เคลือบอะลูมิเนียม-สังกะสี ทนสนิมและการกัดกร่อนได้ดีกว่า เหมาะกับงานที่ต้องการอายุการใช้งานยาว ส่วนกัลวาไนซ์เคลือบสังกะสี ราคาย่อมเยากว่า เหมาะกับงานทั่วไป เลือกตามงบและสภาพหน้างาน",
@@ -368,11 +378,21 @@ const ROOF_BATTEN_FAQS = [
   },
   {
     q: "ราคาแปหลังคาเท่าไหร่?",
-    a: "แปสำเร็จรูปยาว 6 เมตร ราคา 80–209 บาท/เส้น ไม่รวม VAT หนา 0.55 มม. เริ่ม 89 บาท หนา 0.70 มม. เริ่ม 99 บาท งานโครงการสอบถามราคาพิเศษได้",
+    a: "แปสำเร็จรูปยาว 6 เมตร ราคาต่อเส้น ไม่รวม VAT แยกตามชนิดและความหนาตามตารางด้านล่าง งานโครงการสอบถามราคาพิเศษได้",
+    priceTable: true,
   },
   {
     q: "แปสำเร็จรูปยาวกี่เมตร?",
     a: "ยาวมาตรฐาน 6 เมตรทุกรุ่น และสั่งตัดความยาวพิเศษได้ สอบถามทีมงาน",
+  },
+  {
+    q: "แปหลังคาอยู่ส่วนไหนของหลังคา?",
+    a: "แปวางขวางอยู่บนจันทัน เรียงเป็นแถวขนานกันไล่จากเชิงชายขึ้นไปจนถึงสันหลังคา ทำหน้าที่รับกระเบื้องหรือแผ่นเมทัลชีทที่มุงอยู่ด้านบน และเป็นจุดที่ยิงสกรูยึดวัสดุมุงหลังคา ถ้าแปไม่ได้ระดับ ผืนหลังคาที่วางทับจะเป็นคลื่นให้เห็นทันที",
+  },
+  {
+    q: "แปสำเร็จรูป ต่างจากแปที่ตัดหน้างานยังไง?",
+    a: "แปสำเร็จรูปขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน 6 เมตร ขนาดหน้าตัดเท่ากันทุกเส้น และเคลือบผิวกันสนิมมาแล้วทั้งเส้น ไม่ต้องตัดขึ้นรูปหรือทาสีกันสนิมเพิ่มที่หน้างาน งานหลังคาจึงเสร็จเร็วขึ้น ถ้าหน้างานต้องการความยาวพิเศษ สั่งตัดได้",
+    link: { href: "/articles/แปอลูซิงค์คืออะไร", label: "แปอลูซิงค์คืออะไร" },
   },
 ];
 
@@ -854,7 +874,6 @@ function getRoofBattenPriceGroups() {
 }
 
 function RoofBattenContentSection() {
-  const priceGroups = getRoofBattenPriceGroups();
   return (
     <div className="mt-10 border-t pt-8">
       <h2 className="mb-3 text-xl font-semibold">แปหลังคาคืออะไร? เลือกใช้ยังไง?</h2>
@@ -866,57 +885,48 @@ function RoofBattenContentSection() {
           แปหลังคาคืออะไร
         </Link>
       </p>
-
-      {priceGroups.length > 0 && (
-        <div className="mt-6">
-          <h3 className="mb-3 text-lg font-semibold">
-            ราคาแปหลังคา แยกตามชนิด (ยาว 6 เมตร ราคาต่อเส้น ไม่รวม VAT)
-          </h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {priceGroups.map((group) => (
-              <div key={group.coating} className="rounded-lg border bg-white p-4">
-                <p className="mb-2 text-sm font-semibold text-gray-900">
-                  ราคาแป{group.coating}
-                </p>
-                <ul className="space-y-1">
-                  {group.rows.map((row) => (
-                    <li key={row.slug}>
-                      <Link
-                        href={`/products/${row.slug}`}
-                        className="flex justify-between gap-3 text-sm text-gray-600 hover:text-primary"
-                      >
-                        <span>{row.label}</span>
-                        <span className="font-medium">{row.price}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <h3 className="mt-6 mb-2 text-lg font-semibold">แปหลังคาอยู่ส่วนไหนของหลังคา?</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        แปวางขวางอยู่บนจันทัน เรียงเป็นแถวขนานกันไล่จากเชิงชายขึ้นไปจนถึงสันหลังคา
-        ทำหน้าที่รับกระเบื้องหรือแผ่นเมทัลชีทที่มุงอยู่ด้านบน
-        และเป็นจุดที่ยิงสกรูยึดวัสดุมุงหลังคา ถ้าแปไม่ได้ระดับ
-        ผืนหลังคาที่วางทับจะเป็นคลื่นให้เห็นทันที
-      </p>
-
-      <h3 className="mt-6 mb-2 text-lg font-semibold">แปสำเร็จรูป ต่างจากแปที่ตัดหน้างานยังไง?</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        แปสำเร็จรูปขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน 6 เมตร
-        ขนาดหน้าตัดเท่ากันทุกเส้น และเคลือบผิวกันสนิมมาแล้วทั้งเส้น
-        ไม่ต้องตัดขึ้นรูปหรือทาสีกันสนิมเพิ่มที่หน้างาน งานหลังคาจึงเสร็จเร็วขึ้น
-        ถ้าหน้างานต้องการความยาวพิเศษ สั่งตัดได้ อ่านเรื่องแปอลูซิงค์เพิ่มเติม:{" "}
-        <Link href="/articles/แปอลูซิงค์คืออะไร" className="text-primary underline">
-          แปอลูซิงค์คืออะไร
-        </Link>
-      </p>
     </div>
   );
+}
+
+function RoofBattenPriceBoxes() {
+  const priceGroups = getRoofBattenPriceGroups();
+  if (priceGroups.length === 0) return null;
+  return (
+    <div className="grid grid-cols-1 gap-3 px-4 pb-4 sm:grid-cols-3">
+      {priceGroups.map((group) => (
+        <div key={group.coating} className="rounded-lg border bg-white p-3">
+          <p className="mb-2 text-sm font-semibold text-gray-900">
+            ราคาแป{group.coating}
+          </p>
+          <ul className="space-y-1">
+            {group.rows.map((row) => (
+              <li key={row.slug}>
+                <Link
+                  href={`/products/${row.slug}`}
+                  className="flex justify-between gap-3 text-sm text-gray-600 hover:text-primary"
+                >
+                  <span>{row.label}</span>
+                  <span className="font-medium">{row.price}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// Plain-text version of the price boxes, for the FAQ data Google reads.
+function getRoofBattenPriceText() {
+  return getRoofBattenPriceGroups()
+    .map(
+      (g) =>
+        `แป${g.coating}: ` +
+        g.rows.map((r) => `${r.label} ${r.price}`).join(", ")
+    )
+    .join(" | ");
 }
 
 function RoofBattenFaqSection() {
@@ -928,7 +938,9 @@ function RoofBattenFaqSection() {
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: item.priceTable
+          ? `${item.a} ${getRoofBattenPriceText()}`
+          : item.a,
       },
     })),
   };
@@ -947,7 +959,16 @@ function RoofBattenFaqSection() {
             </summary>
             <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
               {item.a}
+              {item.link && (
+                <>
+                  {" "}อ่านเพิ่มเติม:{" "}
+                  <Link href={item.link.href} className="text-primary underline">
+                    {item.link.label}
+                  </Link>
+                </>
+              )}
             </p>
+            {item.priceTable && <RoofBattenPriceBoxes />}
           </details>
         ))}
       </div>
