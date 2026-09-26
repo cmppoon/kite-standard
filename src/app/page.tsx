@@ -96,7 +96,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="mt-3 text-center">
-                  <h2 className="text-primary text-sm font-bold leading-tight sm:text-base">
+                  <h2 className="text-primary text-sm font-bold leading-tight sm:text-base md:text-lg">
                     {category.name}
                   </h2>
                   <p className="text-muted-foreground mt-1 text-xs leading-snug md:text-sm">
