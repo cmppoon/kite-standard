@@ -441,18 +441,6 @@ export default async function ProductDetailPage({
                 {product.price}
               </div>
 
-              {/* แป only: link to the แป category page (all thicknesses + prices) */}
-              {isRoofBatten && (
-                <div className="mb-4">
-                  <Link
-                    href={ROOF_BATTEN_CATEGORY_URL}
-                    className="text-primary text-sm font-medium underline underline-offset-4 hover:opacity-80"
-                  >
-                    ดูราคาแปหลังคาทุกความหนา →
-                  </Link>
-                </div>
-              )}
-
               <p className="text-muted-foreground text-md mb-6">
                 {product.description}
               </p>
@@ -867,7 +855,18 @@ export default async function ProductDetailPage({
           if (related.length === 0) return null;
           return (
             <div className="mt-16">
-              <h2 className="mb-6 text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
+              <div className="mb-6 flex items-center justify-between gap-4">
+                <h2 className="text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
+                {/* แป only: blue button to the แป category page (all thicknesses + prices) */}
+                {isRoofBatten && (
+                  <Link
+                    href={ROOF_BATTEN_CATEGORY_URL}
+                    className="bg-primary text-primary-foreground shrink-0 rounded-md px-4 py-2 text-sm font-semibold transition hover:opacity-90"
+                  >
+                    ดูราคาแปหลังคาทุกความหนา →
+                  </Link>
+                )}
+              </div>
               <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                 {related.map((item) => (
                   <Link
