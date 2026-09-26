@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/products";
+import { productCategories } from "@/data/productCategories";
 import { ArrowLeft, Check, Download, ExternalLink, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -26,6 +27,14 @@ const ROOF_BATTEN_CATEGORY_ID = 3;
 // แป product pages only: link back to the แป category page (all thicknesses +
 // prices). Same address the /products menu and the แปหลังคาคืออะไร article use.
 const ROOF_BATTEN_CATEGORY_URL = "/products/category/แปหลังคา แปสำเร็จรูป";
+
+// Shorter names for the "ดู<ชื่อหมวด>ทั้งหมด →" button, where the category name
+// is too long. Key = categoryId. Categories not listed use their full name.
+const CATEGORY_BUTTON_NAMES: Record<number, string> = {
+  4: "แผ่นปิดรอยต่อ",
+  5: "ยิปซั่มลดเสียงก้อง",
+  10: "ฉนวนกันเสียง",
+};
 
 // แป product pages only: put the price in the Google title.
 // The number is read from product.price in products.ts, so the title always
@@ -381,6 +390,22 @@ export default async function ProductDetailPage({
   const isTBar = product.categoryId === TBAR_CATEGORY_ID;
   const isSoundAbsorb = product.categoryId === SOUND_ABSORB_CATEGORY_ID;
   const isRoofBatten = product.categoryId === ROOF_BATTEN_CATEGORY_ID;
+  // Button next to "สินค้าที่เกี่ยวข้อง" (and ซีลาย's อะไหล่ heading): goes to
+  // this product's category page. แป keeps its own price wording; every other
+  // category uses its name from productCategories.ts ("ดู<ชื่อหมวด>ทั้งหมด →").
+  const productCategory = productCategories.find(
+    (c) => c.id === product.categoryId
+  );
+  const categoryButton = isRoofBatten
+    ? { href: ROOF_BATTEN_CATEGORY_URL, label: "ดูราคาแปหลังคาทุกความหนา →" }
+    : productCategory
+      ? {
+          href: `/products/category/${productCategory.slug}`,
+          label: `ดู${CATEGORY_BUTTON_NAMES[product.categoryId] ?? productCategory.name}ทั้งหมด →`,
+        }
+      : null;
+  const categoryButtonClass =
+    "border-primary text-primary hover:bg-primary shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:text-white";
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
   const tbarSpec = isTBar ? parseTBarSpec(product) : null;
   const soundAbsorbSpec = isSoundAbsorb
@@ -771,7 +796,14 @@ export default async function ProductDetailPage({
             if (spares.length === 0) return null;
             return (
               <div className="mt-12 border-t pt-10">
-                <h2 className="mb-6 text-2xl font-semibold">อะไหล่อุปกรณ์ฝ้าฉาบเรียบ</h2>
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <h2 className="text-2xl font-semibold">อะไหล่อุปกรณ์ฝ้าฉาบเรียบ</h2>
+                  {categoryButton && (
+                    <Link href={categoryButton.href} className={categoryButtonClass}>
+                      {categoryButton.label}
+                    </Link>
+                  )}
+                </div>
                 <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
                   {spares.map((item) => (
                     <Link
@@ -857,13 +889,9 @@ export default async function ProductDetailPage({
             <div className="mt-16">
               <div className="mb-6 flex items-center justify-between gap-4">
                 <h2 className="text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
-                {/* แป only: blue button to the แป category page (all thicknesses + prices) */}
-                {isRoofBatten && (
-                  <Link
-                    href={ROOF_BATTEN_CATEGORY_URL}
-                    className="border-primary text-primary hover:bg-primary shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:text-white"
-                  >
-                    ดูราคาแปหลังคาทุกความหนา →
+                {categoryButton && (
+                  <Link href={categoryButton.href} className={categoryButtonClass}>
+                    {categoryButton.label}
                   </Link>
                 )}
               </div>
