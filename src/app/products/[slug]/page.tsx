@@ -36,13 +36,13 @@ const CATEGORY_BUTTON_NAMES: Record<number, string> = {
   10: "ฉนวนกันเสียง",
 };
 
-// แป product pages only: put the price in the Google title.
+// All product pages: put the price in the Google title.
 // The number is read from product.price in products.ts, so the title always
-// matches the price on the page. If no number is found, the old title is used.
-const getRoofBattenTitle = (name: string, price: unknown): string | null => {
-  const m = String(price ?? "").match(/\d[\d,]*/);
+// matches the price on the page. If no number is found, the plain name is used.
+const getPriceTitle = (name: string, price: unknown): string | null => {
+  const m = String(price ?? "").match(/\d[\d,]*(?:\.\d+)?/);
   if (!m) return null;
-  return `${formatTitle(name)} ราคา ${m[0]} บาท | ไคสแตนดาร์ด`;
+  return `${formatTitle(name)} ราคา ${m[0]} บาท`;
 };
 
 // Acoustic product pages only: the 8 project photos shown under the page.
@@ -359,9 +359,7 @@ export async function generateMetadata({
 
   return {
     title:
-      (product.categoryId === ROOF_BATTEN_CATEGORY_ID
-        ? getRoofBattenTitle(product.name, product.price)
-        : null) ?? `${formatTitle(product.name)} | ไคสแตนดาร์ด ราคาโรงงาน`,
+      getPriceTitle(product.name, product.price) ?? formatTitle(product.name),
     description: product.description
       ? `${product.description} สอบถามราคาโทร 02-415-3676`
       : `${formatTitle(product.name)} คุณภาพสูง ราคาโรงงาน จากไคสแตนดาร์ด ประสบการณ์กว่า 40 ปี สอบถามราคาโทร 02-415-3676`,
