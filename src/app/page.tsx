@@ -99,7 +99,7 @@ export default function HomePage() {
                   <h2 className="text-primary text-sm font-bold leading-tight sm:text-base">
                     {category.name}
                   </h2>
-                  <p className="text-muted-foreground mt-1 text-xs leading-snug">
+                  <p className="text-muted-foreground mt-1 text-xs leading-snug md:text-sm">
                     {category.description}
                   </p>
                 </div>

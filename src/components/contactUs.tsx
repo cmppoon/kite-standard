@@ -38,7 +38,7 @@ export default function ContactUs({
               >
                 02-415-3676
               </a>
-              <p className="text-muted-foreground text-[10px] leading-tight">
+              <p className="text-muted-foreground text-[10px] leading-tight md:text-sm">
                 จันทร์ - เสาร์
                 <br />
                 08:00 - 17:00
@@ -65,7 +65,7 @@ export default function ContactUs({
               >
                 @kaistandard
               </a>
-              <p className="text-muted-foreground text-[10px] leading-tight">
+              <p className="text-muted-foreground text-[10px] leading-tight md:text-sm">
                 สอบถามราคาพิเศษ
               </p>
             </CardContent>
@@ -84,7 +84,7 @@ export default function ContactUs({
               >
                 Email
               </a>
-              <p className="text-muted-foreground text-[10px] leading-tight">
+              <p className="text-muted-foreground text-[10px] leading-tight md:text-sm">
                 ขอใบเสนอราคา
               </p>
             </CardContent>
@@ -111,7 +111,7 @@ export default function ContactUs({
               >
                 Facebook
               </a>
-              <p className="text-muted-foreground text-[10px] leading-tight">
+              <p className="text-muted-foreground text-[10px] leading-tight md:text-sm">
                 ข่าวสารเรื่องฝ้าเพดาน
               </p>
             </CardContent>
@@ -138,7 +138,7 @@ export default function ContactUs({
               >
                 YouTube
               </a>
-              <p className="text-muted-foreground text-[10px] leading-tight">
+              <p className="text-muted-foreground text-[10px] leading-tight md:text-sm">
                 ความรู้ดีๆ
                 <br />
                 สำหรับฝ้าเพดาน
