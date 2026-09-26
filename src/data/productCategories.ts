@@ -11,7 +11,7 @@ export const productCategories = [
     name: "ช่องเซอร์วิส",
     slug: "ช่องเซอร์วิส",
     image: "/ช่องเซอร์วิส.webp",
-    description: "ช่องเปิดฝ้าเพดานจากโรงงาน",
+    description: "ช่องเปิดฝ้าเพดาน",
   },
   {
     id: 3,
