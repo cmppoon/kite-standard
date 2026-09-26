@@ -23,6 +23,10 @@ const TBAR_CATEGORY_ID = 8;
 const SOUND_ABSORB_CATEGORY_ID = 9;
 const ROOF_BATTEN_CATEGORY_ID = 3;
 
+// แป product pages only: link back to the แป category page (all thicknesses +
+// prices). Same address the /products menu and the แปหลังคาคืออะไร article use.
+const ROOF_BATTEN_CATEGORY_URL = "/products/category/แปหลังคา แปสำเร็จรูป";
+
 // แป product pages only: put the price in the Google title.
 // The number is read from product.price in products.ts, so the title always
 // matches the price on the page. If no number is found, the old title is used.
@@ -376,6 +380,7 @@ export default async function ProductDetailPage({
   const isCilai = product.categoryId === CILAI_CATEGORY_ID;
   const isTBar = product.categoryId === TBAR_CATEGORY_ID;
   const isSoundAbsorb = product.categoryId === SOUND_ABSORB_CATEGORY_ID;
+  const isRoofBatten = product.categoryId === ROOF_BATTEN_CATEGORY_ID;
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
   const tbarSpec = isTBar ? parseTBarSpec(product) : null;
   const soundAbsorbSpec = isSoundAbsorb
@@ -435,6 +440,19 @@ export default async function ProductDetailPage({
               <div className="text-primary mb-4 text-3xl font-bold">
                 {product.price}
               </div>
+
+              {/* แป only: link to the แป category page (all thicknesses + prices) */}
+              {isRoofBatten && (
+                <div className="mb-4">
+                  <Link
+                    href={ROOF_BATTEN_CATEGORY_URL}
+                    className="text-primary text-sm font-medium underline underline-offset-4 hover:opacity-80"
+                  >
+                    ดูราคาแปหลังคาทุกความหนา →
+                  </Link>
+                </div>
+              )}
+
               <p className="text-muted-foreground text-md mb-6">
                 {product.description}
               </p>
