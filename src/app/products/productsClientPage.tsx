@@ -816,7 +816,45 @@ function SoundAbsorbFaqSection() {
   );
 }
 
+// แป category page only: price list grouped by coating, built straight from
+// products.ts (categoryId 3). Prices and links update by themselves when a
+// product is added or a price changes — nothing is typed in here by hand.
+const ROOF_BATTEN_COATINGS = ["อลูซิงค์", "กัลวาไนซ์", "สังกะสี"];
+
+function getRoofBattenPriceGroups() {
+  const groups: {
+    coating: string;
+    rows: { label: string; price: string; slug: string }[];
+  }[] = [];
+  for (const p of products) {
+    if (p.categoryId !== ROOF_BATTEN_CATEGORY_ID) continue;
+    const coating =
+      ROOF_BATTEN_COATINGS.find((c) => p.name.includes(c)) ?? "อื่นๆ";
+    const thick = p.name.match(/(\d+(?:\.\d+)?)\s*มม/);
+    // Some names drop the decimal point ("055 มม") — show it as 0.55.
+    const thickText = thick
+      ? /^0\d{2}$/.test(thick[1])
+        ? `0.${thick[1].slice(1)}`
+        : thick[1]
+      : null;
+    const priceNum = String(p.price ?? "").match(/\d[\d,]*/);
+    const row = {
+      label: thickText ? `หนา ${thickText} มม.` : p.name,
+      price: priceNum ? `${priceNum[0]} บาท` : String(p.price ?? ""),
+      slug: p.slug,
+    };
+    let group = groups.find((g) => g.coating === coating);
+    if (!group) {
+      group = { coating, rows: [] };
+      groups.push(group);
+    }
+    group.rows.push(row);
+  }
+  return groups;
+}
+
 function RoofBattenContentSection() {
+  const priceGroups = getRoofBattenPriceGroups();
   return (
     <div className="mt-10 border-t pt-8">
       <h2 className="mb-3 text-xl font-semibold">แปหลังคาคืออะไร? เลือกใช้ยังไง?</h2>
@@ -826,6 +864,55 @@ function RoofBattenContentSection() {
         แปสำเร็จรูปของเรายาว 6 เมตร หนา 0.50–1.00 มม. อ่านเพิ่มเติม:{" "}
         <Link href="/articles/แปหลังคาคืออะไร" className="text-primary underline">
           แปหลังคาคืออะไร
+        </Link>
+      </p>
+
+      {priceGroups.length > 0 && (
+        <div className="mt-6">
+          <h3 className="mb-3 text-lg font-semibold">
+            ราคาแปหลังคา แยกตามชนิด (ยาว 6 เมตร ราคาต่อเส้น ไม่รวม VAT)
+          </h3>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {priceGroups.map((group) => (
+              <div key={group.coating} className="rounded-lg border bg-white p-4">
+                <p className="mb-2 text-sm font-semibold text-gray-900">
+                  ราคาแป{group.coating}
+                </p>
+                <ul className="space-y-1">
+                  {group.rows.map((row) => (
+                    <li key={row.slug}>
+                      <Link
+                        href={`/products/${row.slug}`}
+                        className="flex justify-between gap-3 text-sm text-gray-600 hover:text-primary"
+                      >
+                        <span>{row.label}</span>
+                        <span className="font-medium">{row.price}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <h3 className="mt-6 mb-2 text-lg font-semibold">แปหลังคาอยู่ส่วนไหนของหลังคา?</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        แปวางขวางอยู่บนจันทัน เรียงเป็นแถวขนานกันไล่จากเชิงชายขึ้นไปจนถึงสันหลังคา
+        ทำหน้าที่รับกระเบื้องหรือแผ่นเมทัลชีทที่มุงอยู่ด้านบน
+        และเป็นจุดที่ยิงสกรูยึดวัสดุมุงหลังคา ถ้าแปไม่ได้ระดับ
+        ผืนหลังคาที่วางทับจะเป็นคลื่นให้เห็นทันที
+      </p>
+
+      <h3 className="mt-6 mb-2 text-lg font-semibold">แปสำเร็จรูป ต่างจากแปที่ตัดหน้างานยังไง?</h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        แปสำเร็จรูปขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน 6 เมตร
+        ขนาดหน้าตัดเท่ากันทุกเส้น และเคลือบผิวกันสนิมมาแล้วทั้งเส้น
+        ไม่ต้องตัดขึ้นรูปหรือทาสีกันสนิมเพิ่มที่หน้างาน งานหลังคาจึงเสร็จเร็วขึ้น
+        ถ้าหน้างานต้องการความยาวพิเศษ สั่งตัดได้ อ่านเรื่องแปอลูซิงค์เพิ่มเติม:{" "}
+        <Link href="/articles/แปอลูซิงค์คืออะไร" className="text-primary underline">
+          แปอลูซิงค์คืออะไร
         </Link>
       </p>
     </div>
