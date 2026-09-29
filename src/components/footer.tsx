@@ -128,7 +128,7 @@ export default function Footer() {
                   </span>
                 </a>
               </li>
-              <li>จันทร์ - เสาร์ 07:00 - 17:00</li>
+              <li>จันทร์ - เสาร์ 08:00 - 17:00</li>
             </ul>
           </div>
         </div>
