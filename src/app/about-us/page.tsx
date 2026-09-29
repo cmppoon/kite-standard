@@ -29,10 +29,10 @@ const jsonLd = {
   "email": "sattawatt.sura@hotmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "YOUR_STREET_ADDRESS",
+    "streetAddress": "165, 167, 169, 171, 316, 318, 320, 324 ถนนบางบอน 1",
     "addressLocality": "บางบอน",
     "addressRegion": "กรุงเทพมหานคร",
-    "postalCode": "YOUR_POSTCODE",
+    "postalCode": "10150",
     "addressCountry": "TH"
   },
   "openingHoursSpecification": [{
