@@ -5327,4 +5327,169 @@ export const articles = [
 <\/script>
     `,
   },
+{
+    id: 49,
+    title: "แปกัลวาไนซ์คืออะไร ราคาต่อเส้นเท่าไหร่ เลือกความหนาไหนดี",
+    slug: "แปกัลวาไนซ์คืออะไร",
+    excerpt: "แปกัลวาไนซ์คือแปหลังคาสำเร็จรูปจากเหล็กเคลือบกันสนิม ยาว 6 เมตร สรุปราคาต่อเส้น ข้อดี และวิธีเลือกความหนา 0.50 / 0.55 / 0.70 มม. ให้เหมาะกับงาน",
+    image: "/articles/article49.webp",
+    date: "2026-09-29",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">แปกัลวาไนซ์คืออะไร ราคาต่อเส้นเท่าไหร่ เลือกความหนาไหนดี</p>
+
+<p>สวัสดีครับ ถ้ากำลังหาแปสำหรับงานหลังคา คำว่า "แปกัลวาไนซ์" น่าจะผ่านตามาบ้าง บทความนี้สรุปให้ครบว่าแปกัลวาไนซ์คืออะไร มีข้อดีอะไร ราคาต่อเส้นเท่าไหร่ และควรเลือกความหนาไหนให้เหมาะกับงาน</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปกัลวาไนซ์คืออะไร?</strong>
+<p>แปกัลวาไนซ์ คือแปหลังคาสำเร็จรูปที่ผลิตจากเหล็กเคลือบกันสนิม ยาวเส้นละ 6 เมตร ใช้วางพาดบนจันทัน เพื่อรองรับและยึดแผ่นหลังคา เช่น เมทัลชีท หรือกระเบื้องลอนคู่</p>
+<p>ถ้าอยากเข้าใจพื้นฐานของแปก่อน อ่านเพิ่มได้ที่ <a href="/articles/แปหลังคาคืออะไร" style="color:#1a73e8; text-decoration:underline;">แปหลังคาคืออะไร</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ข้อดีของแปกัลวาไนซ์</strong>
+<ul>
+  <li><strong>น้ำหนักเบา</strong> — ขนย้ายและยกขึ้นหลังคาได้สะดวก</li>
+  <li><strong>ยึดด้วยสกรู ไม่ต้องเชื่อม</strong> — ช่างทำงานได้เร็ว ไม่ต้องใช้เครื่องเชื่อมหน้างาน</li>
+  <li><strong>ยาว 6 เมตร พร้อมใช้</strong> — ความยาวมาตรฐาน คำนวณจำนวนได้ง่าย</li>
+  <li><strong>ราคาเหมาะกับโครงการที่ต้องการประหยัดต้นทุน</strong></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ราคาแปกัลวาไนซ์ต่อเส้น</strong>
+<table style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ความหนา</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ความยาว</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ราคา/เส้น</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ดูสินค้า</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.50 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">6 เมตร</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">80 บาท</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;"><a href="/products/แปหลังคากัลวาไนซ์-0.50-มม-ยาว-6-เมตร" style="color:#1a73e8; text-decoration:underline;">แปกัลวาไนซ์ 0.50 มม.</a></td>
+    </tr>
+    <tr style="background:#f8f9fc;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.55 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">6 เมตร</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">89 บาท</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;"><a href="/products/แปหลังคากัลวาไนซ์-0.55-มม-ยาว-6-เมตร" style="color:#1a73e8; text-decoration:underline;">แปกัลวาไนซ์ 0.55 มม.</a></td>
+    </tr>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.70 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">6 เมตร</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">99 บาท</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;"><a href="/products/แปหลังคากัลวาไนซ์-0.70-มม-ยาว-6-เมตร" style="color:#1a73e8; text-decoration:underline;">แปกัลวาไนซ์ 0.70 มม.</a></td>
+    </tr>
+  </tbody>
+</table>
+<p>* ราคายังไม่รวม VAT และอาจปรับตามต้นทุนเหล็ก เช็คราคาล่าสุดได้ที่หน้าสินค้า หรือดูแปทุกรุ่นได้ที่ <a href="/products/category/แปหลังคา แปสำเร็จรูป" style="color:#1a73e8; text-decoration:underline;">หมวดแปหลังคา แปสำเร็จรูป</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกความหนาไหนดี?</strong>
+<table style="width:100%; border-collapse:collapse;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; width:28%;">ความหนา</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">เหมาะกับงาน</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.50 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">งานต่อเติม เช่น หลังคาโรงรถ กันสาด หรืองานที่ต้องคุมงบ</td>
+    </tr>
+    <tr style="background:#f8f9fc;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.55 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">บ้านพักอาศัยทั่วไป เป็นความหนายอดนิยม</td>
+    </tr>
+    <tr style="background:#eef2f7;">
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">0.70 มม.</td>
+      <td style="padding:10px; color:#1a1a1a; border-bottom:1px solid #d0d7e3;">หนาที่สุดของแปกัลวาไนซ์ เหมาะกับโรงงาน โกดัง หรือหลังคาช่วงกว้าง</td>
+    </tr>
+  </tbody>
+</table>
+<p>ถ้ามีแบบจากวิศวกรหรือผู้ออกแบบ ให้ยึดความหนาตามแบบเป็นหลักครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ใช้กับหลังคาแบบไหนได้บ้าง?</strong>
+<p>แปกัลวาไนซ์ใช้ได้กับหลังคาเมทัลชีท และกระเบื้องลอนคู่ ส่วนระยะห่างแปขึ้นกับชนิดและความยาวของแผ่นหลังคา ให้ยึดตามคู่มือติดตั้งของผู้ผลิตแผ่นหลังคาที่เลือกใช้ อ่านเรื่องระยะแปเพิ่มเติมได้ที่ <a href="/articles/แปหลังคาคืออะไร" style="color:#1a73e8; text-decoration:underline;">แปหลังคาคืออะไร</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ซื้อแปกัลวาไนซ์ที่ไหนดี?</strong>
+<p>ไคสแตนดาร์ด ตั้งอยู่ที่เขตบางบอน กรุงเทพฯ มีแปกัลวาไนซ์ครบทั้ง 3 ความหนาในสต็อก จัดส่งทั่วไทยผ่านขนส่งเอกชน และรับงานโครงการ ส่งจำนวนที่ต้องการมาทาง LINE ทีมงานพร้อมออกใบเสนอราคาให้ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+  <li>แปกัลวาไนซ์ คือแปหลังคาสำเร็จรูปจากเหล็กเคลือบกันสนิม ยาว 6 เมตร</li>
+  <li>จุดเด่น: น้ำหนักเบา ยึดสกรูได้ ไม่ต้องเชื่อม ราคาเหมาะกับโครงการที่ต้องการประหยัดต้นทุน</li>
+  <li>ราคา 80 / 89 / 99 บาทต่อเส้น (0.50 / 0.55 / 0.70 มม.) ยังไม่รวม VAT</li>
+  <li>บ้านทั่วไปนิยม 0.55 มม. งานโรงงานหรือช่วงกว้างเลือก 0.70 มม.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> แปกัลวาไนซ์ราคาต่อเส้นเท่าไหร่?<br /><strong>A:</strong> ความหนา 0.50 มม. 80 บาท, 0.55 มม. 89 บาท และ 0.70 มม. 99 บาท ต่อเส้นยาว 6 เมตร ราคายังไม่รวม VAT และอาจปรับตามต้นทุน เช็คราคาล่าสุดได้ที่หน้าสินค้าหรือทาง LINE</p>
+<p> </p>
+<p><strong>Q:</strong> แปกัลวาไนซ์ยาวกี่เมตร?<br /><strong>A:</strong> ยาว 6 เมตรต่อเส้น ทุกความหนา</p>
+<p> </p>
+<p><strong>Q:</strong> แปกัลวาไนซ์ความหนาไหนนิยมที่สุด?<br /><strong>A:</strong> 0.55 มม. เป็นความหนายอดนิยมสำหรับบ้านพักอาศัยทั่วไป</p>
+<p> </p>
+<p><strong>Q:</strong> แปกัลวาไนซ์ใช้กับกระเบื้องลอนคู่ได้ไหม?<br /><strong>A:</strong> ได้ครับ ใช้ได้ทั้งกระเบื้องลอนคู่และเมทัลชีท โดยระยะห่างแปให้ยึดตามคู่มือของผู้ผลิตแผ่นหลังคา</p>
+<p> </p>
+<p><strong>Q:</strong> ส่งต่างจังหวัดได้ไหม?<br /><strong>A:</strong> ได้ครับ จัดส่งทั่วไทยผ่านขนส่งเอกชน สอบถามค่าส่งได้ทาง LINE @kaistandard</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 8px;">ต้องการแปกัลวาไนซ์สำหรับหน้างาน?</p>
+  <p style="color:#fff; margin:0 0 12px;">แจ้งความหนาและจำนวนที่ต้องการทาง LINE @kaistandard หรือโทร 02-415-3676 ทีมงานพร้อมออกใบเสนอราคาให้ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none; font-size:14px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แปกัลวาไนซ์ราคาต่อเส้นเท่าไหร่?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ความหนา 0.50 มม. 80 บาท, 0.55 มม. 89 บาท และ 0.70 มม. 99 บาท ต่อเส้นยาว 6 เมตร ราคายังไม่รวม VAT และอาจปรับตามต้นทุน เช็คราคาล่าสุดได้ที่หน้าสินค้าหรือทาง LINE" }
+    },
+    {
+      "@type": "Question",
+      "name": "แปกัลวาไนซ์ยาวกี่เมตร?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ยาว 6 เมตรต่อเส้น ทุกความหนา" }
+    },
+    {
+      "@type": "Question",
+      "name": "แปกัลวาไนซ์ความหนาไหนนิยมที่สุด?",
+      "acceptedAnswer": { "@type": "Answer", "text": "0.55 มม. เป็นความหนายอดนิยมสำหรับบ้านพักอาศัยทั่วไป" }
+    },
+    {
+      "@type": "Question",
+      "name": "แปกัลวาไนซ์ใช้กับกระเบื้องลอนคู่ได้ไหม?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ได้ครับ ใช้ได้ทั้งกระเบื้องลอนคู่และเมทัลชีท โดยระยะห่างแปให้ยึดตามคู่มือของผู้ผลิตแผ่นหลังคา" }
+    },
+    {
+      "@type": "Question",
+      "name": "ส่งต่างจังหวัดได้ไหม?",
+      "acceptedAnswer": { "@type": "Answer", "text": "ได้ครับ จัดส่งทั่วไทยผ่านขนส่งเอกชน สอบถามค่าส่งได้ทาง LINE @kaistandard" }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
