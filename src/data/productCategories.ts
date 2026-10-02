@@ -28,6 +28,13 @@ export const productCategories = [
     description: "",
   },
   {
+    id: 12,
+    name: "รางน้ำตะเข้",
+    slug: "รางน้ำตะเข้",
+    image: "/รางน้ำตะเข้.webp",
+    description: "รางน้ำตะเข้ สันตะเข้ อลูซิงค์ และสีน้ำตาล",
+  },
+  {
     id: 5,
     name: "ยิปซั่มลดเสียงสะท้อน",
     slug: "แผ่นยิปซั่มลดเสียงสะท้อน",
