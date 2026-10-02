@@ -172,10 +172,11 @@ const CATEGORY_SUBTITLES: Record<number, string> = {
   2: "ช่องเซอร์วิสฝ้าเพดานฉาบเรียบ แบบธรรมดาและทนชื้น ขนาด 30×30 ถึง 60×120 ซม. ราคา 220–735 บาท ส่งทั่วประเทศ",
   4: "แผ่นปิดรอยต่อหลังคา Fastech กันน้ำรั่วซึม หน้ากว้าง 10–30 ซม. ราคา 125–1,000 บาท ส่งทั่วประเทศ",
   9: "แผ่นซับเสียงบุผนัง KS-501 โพลีเอสเตอร์ และ SCG Cylence Zandera ราคา 209–1,517 บาท/แผ่น ลดเสียงก้องในห้อง ส่งทั่วประเทศ",
+  12: "รางน้ำตะเข้ สันตะเข้ อลูซิงค์ และสีน้ำตาล เหล็กเบอร์ 28 กว้าง 40 ซม. ยาว 2 เมตร ราคา 210–215 บาท/เส้น พร้อมขาตัวยูยึดราง",
 };
 
-// Sidebar grouping: these two categories move to the bottom under "หลังคา"
-const ROOF_GROUP_IDS = [3, 4];
+// Sidebar grouping: these categories move to the bottom under "หลังคา"
+const ROOF_GROUP_IDS = [3, 4, 12];
 
 const allCategories = productCategories.map((category) => ({
   id: category.id,
