@@ -166,4 +166,19 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref30.webp",
     caption: "ส่งแผ่นยิปซั่มลดเสียงสะท้อน ณ The Old Siam",
   },
+  {
+    id: 31,
+    image: "/reference/ref31.webp",
+    caption: "จัดส่งแผ่นฝ้าอะคูสติก ณ โรงพยาบาลศิริราช",
+  },
+  {
+    id: 32,
+    image: "/reference/ref32.webp",
+    caption: "จัดส่งแผ่นฝ้าอะคูสติก ณ ไทยซัมมิท ทาวเวอร์",
+  },
+  {
+    id: 33,
+    image: "/reference/ref33.webp",
+    caption: "จัดส่งแผ่นฝ้าอะคูสติก ณ โรงเรียนอัสสัมชัญ (บางรัก)",
+  },
 ];
