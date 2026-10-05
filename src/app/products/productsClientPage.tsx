@@ -1298,8 +1298,8 @@ export default function ProductsClientPage({
                   const GroupIcon = group.icon;
                   return (
                     <div key={group.label} className="mt-5">
-                      <div className="mb-2 flex items-center gap-2 rounded-md bg-blue-50 px-3 py-2 text-xs font-medium text-blue-900">
-                        <GroupIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                      <div className="mb-2 flex items-center gap-2 rounded-md bg-blue-50 px-3 py-2.5 text-sm font-bold text-blue-900">
+                        <GroupIcon className="h-[18px] w-[18px] shrink-0" aria-hidden="true" />
                         <span>{group.label}</span>
                       </div>
                       <div className="space-y-2">
