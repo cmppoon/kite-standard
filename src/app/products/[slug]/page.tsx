@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +8,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { products } from "@/data/products";
 import { productCategories } from "@/data/productCategories";
-import { ArrowLeft, Check, Download, ExternalLink, Phone } from "lucide-react";
+import { Check, Download, ExternalLink, Phone } from "lucide-react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -402,6 +401,14 @@ export default async function ProductDetailPage({
           label: `ดู${CATEGORY_BUTTON_NAMES[product.categoryId] ?? productCategory.name}ทั้งหมด →`,
         }
       : null;
+  // Breadcrumb at the top of the page: หน้าแรก › สินค้า › <หมวด> › <สินค้า>.
+  // Uses the same category address as the button above, so the two never differ.
+  const breadcrumbCategory = categoryButton
+    ? {
+        href: categoryButton.href,
+        name: productCategory?.name ?? "แปหลังคา แปสำเร็จรูป",
+      }
+    : null;
   const categoryButtonClass =
     "border-primary text-primary hover:bg-primary shrink-0 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:text-white";
   const gypsumSpec = isGypsumAcoustic ? parseGypsumAcousticSpec(product) : null;
@@ -419,19 +426,39 @@ export default async function ProductDetailPage({
     <main className="bg-background min-h-screen">
       <ProductJsonLd product={product} slug={slug} />
       <div className="mx-auto max-w-7xl px-4 py-8">
-        {/* Breadcrumb */}
-        <div className="mb-2">
-          <Button
-            variant="ghost"
-            asChild
-            className="border-primary hover:bg-primary mb-4 hover:text-white"
-          >
-            <Link href="/products">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              กลับสู่หน้าสินค้าทั้งหมด
-            </Link>
-          </Button>
-        </div>
+        {/* Breadcrumb: หน้าแรก › สินค้า › หมวด › สินค้า */}
+        <nav aria-label="breadcrumb" className="mb-6 text-sm">
+          <ol className="text-muted-foreground flex flex-wrap items-center gap-x-2 gap-y-1">
+            <li>
+              <Link href="/" className="hover:text-primary hover:underline">
+                หน้าแรก
+              </Link>
+            </li>
+            <li aria-hidden="true">›</li>
+            <li>
+              <Link href="/products" className="hover:text-primary hover:underline">
+                สินค้า
+              </Link>
+            </li>
+            {breadcrumbCategory && (
+              <>
+                <li aria-hidden="true">›</li>
+                <li>
+                  <Link
+                    href={breadcrumbCategory.href}
+                    className="text-primary font-medium hover:underline"
+                  >
+                    {breadcrumbCategory.name}
+                  </Link>
+                </li>
+              </>
+            )}
+            <li aria-hidden="true">›</li>
+            <li aria-current="page" className="text-foreground line-clamp-1">
+              {product.name}
+            </li>
+          </ol>
+        </nav>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Product Images */}
