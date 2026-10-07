@@ -27,6 +27,53 @@ const ROOF_BATTEN_CATEGORY_ID = 3;
 // prices). Same address the /products menu and the แปหลังคาคืออะไร article use.
 const ROOF_BATTEN_CATEGORY_URL = "/products/category/แปหลังคา แปสำเร็จรูป";
 
+// แปอลูซิงค์ only: spacing table + "วิธีการติดตั้ง" tab.
+// Key = product id. Value = the thickness row to highlight in the table
+// (null = page shows the table with no highlighted row, e.g. 0.50 มม.
+// which is not in the catalog table). Data from KAI catalog 2024.
+const ALUZINC_BATTEN_IDS: Record<number, string | null> = {
+  111: null, // แปสำเร็จรูป อลูซิงค์ 0.50 มม.
+  14: "0.55",
+  15: "0.70",
+  16: "1.00",
+};
+
+const BATTEN_SIZE_LINE =
+  "ขนาดแปสำเร็จรูป: ฐาน 65 · สัน 25 · สูง 25 · ปีก 14 มม. · ยาว 6 เมตร";
+
+const BATTEN_SPAN_HEADERS = [
+  "60–80 ซม.",
+  "80–100 ซม.",
+  "100–120 ซม.",
+  "120–140 ซม.",
+  "140–160 ซม.",
+  "180–200 ซม.",
+];
+
+// ok = ใช้งานได้, warn = ไม่แนะนำ, no = ไม่ควรใช้, na = – (no data in catalog)
+type SpanCell = "ok" | "warn" | "no" | "na";
+const BATTEN_SPAN_ROWS: { thickness: string; cells: SpanCell[] }[] = [
+  { thickness: "0.55", cells: ["ok", "ok", "ok", "no", "no", "na"] },
+  { thickness: "0.70", cells: ["ok", "ok", "ok", "warn", "no", "na"] },
+  { thickness: "1.00", cells: ["ok", "ok", "ok", "ok", "ok", "ok"] },
+];
+
+const SPAN_CELL_TEXT: Record<SpanCell, { text: string; className: string }> = {
+  ok: { text: "ใช้งานได้", className: "text-green-700" },
+  warn: { text: "ไม่แนะนำ", className: "text-amber-700" },
+  no: { text: "ไม่ควรใช้", className: "text-red-700" },
+  na: { text: "–", className: "text-gray-400" },
+};
+
+const BATTEN_INSTALL_STEPS = [
+  "แปตัวล่างสุดห่างจากไม้บัวเชิงชาย 30 ซม.",
+  "แปตัวบนสุดห่างจากกึ่งกลางอกไก่ 2–3 ซม. หรือแปคู่บนสุดห่างกัน 4–6 ซม.",
+  "วางแปให้มุมฉากขึ้นบน ด้านมุมเอียงลงล่าง ยึดตัวบนสุดและล่างสุดก่อน",
+  "ระยะห่างแปประมาณ 32–34 ซม. หรือตามมาตรฐานผู้ผลิตกระเบื้อง",
+  "ยึดแปกับจันทันด้วยสกรูปลายสว่าน (สว่านรอบต่ำ ~2,500 รอบ/นาที หัวไขควงแฉกเบอร์ 2)",
+  "ต่อความยาวให้ทับกันประมาณ 15 ซม. กึ่งกลางรอยทับอยู่บนจันทัน ไม่ให้รอยต่ออยู่แนวเดียวกัน",
+];
+
 // Shorter names for the "ดู<ชื่อหมวด>ทั้งหมด →" button, where the category name
 // is too long. Key = categoryId. Categories not listed use their full name.
 const CATEGORY_BUTTON_NAMES: Record<number, string> = {
@@ -387,6 +434,11 @@ export default async function ProductDetailPage({
   const isTBar = product.categoryId === TBAR_CATEGORY_ID;
   const isSoundAbsorb = product.categoryId === SOUND_ABSORB_CATEGORY_ID;
   const isRoofBatten = product.categoryId === ROOF_BATTEN_CATEGORY_ID;
+  const isAluzincBatten =
+    isRoofBatten && product.id in ALUZINC_BATTEN_IDS;
+  const battenHighlight = isAluzincBatten
+    ? ALUZINC_BATTEN_IDS[product.id]
+    : null;
   // Button next to "สินค้าที่เกี่ยวข้อง" (and ซีลาย's อะไหล่ heading): goes to
   // this product's category page. แป keeps its own price wording; every other
   // category uses its name from productCategories.ts ("ดู<ชื่อหมวด>ทั้งหมด →").
@@ -663,6 +715,61 @@ export default async function ProductDetailPage({
           </div>
         </div>
 
+        {/* Spacing table — แปอลูซิงค์ only (ids in ALUZINC_BATTEN_IDS) */}
+        {isAluzincBatten && (
+          <div className="mt-12">
+            <h2 className="mb-2 text-xl font-semibold">
+              เลือกความหนาตามระยะห่างจันทัน
+            </h2>
+            <p className="mb-3 text-gray-700">{BATTEN_SIZE_LINE}</p>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[640px] border-collapse text-sm">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="border px-2 py-2 text-left font-semibold">
+                      ความหนา
+                    </th>
+                    {BATTEN_SPAN_HEADERS.map((h) => (
+                      <th
+                        key={h}
+                        className="border px-2 py-2 text-center font-semibold"
+                      >
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {BATTEN_SPAN_ROWS.map((row) => {
+                    const isCurrent = row.thickness === battenHighlight;
+                    return (
+                      <tr
+                        key={row.thickness}
+                        className={isCurrent ? "bg-amber-50 font-semibold" : ""}
+                      >
+                        <td className="border px-2 py-2 text-left">
+                          {row.thickness} มม.
+                        </td>
+                        {row.cells.map((cell, i) => (
+                          <td
+                            key={i}
+                            className={`border px-2 py-2 text-center ${SPAN_CELL_TEXT[cell].className}`}
+                          >
+                            {SPAN_CELL_TEXT[cell].text}
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-2 text-xs text-gray-500">
+              ตารางนี้สำหรับแปอลูซิงค์เท่านั้น
+            </p>
+          </div>
+        )}
+
         {/* Application cards — acoustic only */}
         {isAcoustic && (
           <div className="mt-12 border-t pt-10">
@@ -707,6 +814,9 @@ export default async function ProductDetailPage({
                 {product.optionalServices && (
                   <TabsTrigger value="optionalServices">บริการเสริม</TabsTrigger>
                 )}
+                {isAluzincBatten && (
+                  <TabsTrigger value="installation">วิธีการติดตั้ง</TabsTrigger>
+                )}
               </TabsList>
               {product.applications && (
                 <TabsContent value="applications" className="mt-8">
@@ -747,6 +857,23 @@ export default async function ProductDetailPage({
                           </div>
                         ))}
                       </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              )}
+              {isAluzincBatten && (
+                <TabsContent value="installation" className="mt-8">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="text-2xl leading-none font-semibold tracking-tight">วิธีการติดตั้ง</CardTitle>
+                      <CardDescription>วิธีติดตั้งแปสำเร็จรูปกับกระเบื้องหลังคา</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <ol className="list-decimal space-y-2 pl-5">
+                        {BATTEN_INSTALL_STEPS.map((step) => (
+                          <li key={step}>{step}</li>
+                        ))}
+                      </ol>
                     </CardContent>
                   </Card>
                 </TabsContent>
@@ -910,8 +1037,10 @@ export default async function ProductDetailPage({
             .filter((p) => p.categoryId === product.categoryId && p.slug !== product.slug)
             .slice(0, 4);
           if (related.length === 0) return null;
+          // data-nosnippet: stops Google from using these cards (other products'
+          // prices) as this page's search snippet or title.
           return (
-            <div className="mt-16">
+            <div className="mt-16" data-nosnippet="">
               <div className="mb-6 flex items-center justify-between gap-4">
                 <h2 className="text-2xl font-semibold">สินค้าที่เกี่ยวข้อง</h2>
                 {categoryButton && (
