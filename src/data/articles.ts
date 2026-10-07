@@ -5822,4 +5822,179 @@ export const articles = [
 <\/script>
     `,
   },
+{
+    id: 52,
+    title: "แปสำเร็จรูป vs เหล็กกล่อง ทำโครงหลังคาแบบไหนดี? เทียบให้ชัดก่อนสั่งของ",
+    slug: "แปสำเร็จรูป-vs-เหล็กกล่อง",
+    excerpt: "แปสำเร็จรูปกับเหล็กกล่อง ใช้ทำแปหลังคาต่างกันยังไง เทียบวิธียึด ผิวเหล็ก น้ำหนัก การรับน้ำหนัก และงานที่เหมาะ พร้อมวิธีเลือกให้ตรงกับหลังคาของคุณ",
+    image: "/articles/article52.webp",
+    date: "2026-10-07",
+    readTime: "5",
+    content: `
+<p style="font-size:28px; font-weight:700;">แปสำเร็จรูป vs เหล็กกล่อง ทำโครงหลังคาแบบไหนดี? เทียบให้ชัดก่อนสั่งของ</p>
+
+<p>สวัสดีครับ เวลาจะทำหลังคาใหม่หรือต่อเติม คำถามที่เจอบ่อยมากคือ "จะใช้แปสำเร็จรูป หรือใช้เหล็กกล่องดี" บทความนี้เทียบให้เห็นชัด ๆ ว่าสองแบบต่างกันตรงไหน และงานแบบไหนเหมาะกับแบบไหนครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">โครงหลังคามีหลายชั้น เทียบกันตรงไหนกันแน่?</strong>
+
+<p>โครงหลังคาเหล็กโดยทั่วไปแบ่งได้เป็น 3 ชั้น คือ โครงหลักที่ถ่ายน้ำหนักลงเสา จันทันที่วางพาดตามความลาดเอียง และแปที่วางขวางบนจันทันเพื่อรับวัสดุมุง</p>
+
+<p>เหล็กกล่องใช้ได้หลายชั้น ทั้งทำโครงหลัก ทำจันทัน และทำแป ส่วนแปสำเร็จรูปออกแบบมาสำหรับชั้นแปโดยเฉพาะ ดังนั้นการเทียบที่ถูกต้องคือ "ชั้นแป จะใช้แปสำเร็จรูปหรือเหล็กกล่อง" ไม่ใช่การเทียบทั้งโครงหลังคาครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปสำเร็จรูปคืออะไร?</strong>
+
+<p>แปสำเร็จรูปคือแปเหล็กที่ขึ้นรูปมาจากโรงงาน เคลือบผิวมาแล้ว เช่น อลูซิงค์หรือกัลวาไนซ์ ความยาวมาตรฐาน 6 เมตร ส่วนใหญ่ยึดกับจันทันด้วยสกรู ถ้าอยากเข้าใจพื้นฐานก่อน อ่านเพิ่มได้ที่ <a href="/articles/แปหลังคาคืออะไร" style="color:#1a73e8; text-decoration:underline;">แปหลังคาคืออะไร</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ตารางเทียบ แปสำเร็จรูป vs เหล็กกล่อง</strong>
+
+<table style="width:100%; border-collapse:collapse; margin:16px 0; font-size:15px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">หัวข้อ</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">แปสำเร็จรูป</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">เหล็กกล่อง (ใช้เป็นแป)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">การยึดแปกับจันทัน</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ส่วนใหญ่ยึดด้วยสกรู</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ส่วนใหญ่ยึดด้วยการเชื่อม</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">การยึดแผ่นหลังคากับแป</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ยิงสกรูยึดแผ่นหลังคาได้</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ยิงสกรูยึดแผ่นหลังคาได้</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผิวเหล็ก</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เคลือบมาจากโรงงานทั้งเส้น</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">มีทั้งเหล็กดำที่ต้องทาสีกันสนิม และแบบชุบกัลวาไนซ์ ทั้งสองแบบต้องทาซ่อมตรงรอยเชื่อม</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">น้ำหนัก</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">น้ำหนักเบา</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ส่วนใหญ่หนักกว่า ขึ้นกับขนาดและความหนาที่เลือก</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เครื่องมือหลักตอนยึดแป</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">สว่านยิงสกรู</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ตู้เชื่อม และทาสีหลังเชื่อม</td>
+</tr>
+<tr>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">การรับน้ำหนัก / ระยะพาด</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เหมาะกับระยะจันทันที่ไม่ห่างมาก</td>
+<td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เหมาะกับระยะพาดยาวหรือวัสดุมุงหนัก (ขึ้นกับขนาดที่เลือก)</td>
+</tr>
+<tr>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">งานที่เหมาะ</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">บ้านพัก งานต่อเติม โรงจอดรถ หลังคาเมทัลชีทหรือลอนคู่</td>
+<td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">งานที่ระยะจันทันห่าง หลังคาหนัก หรือแบบกำหนดให้ใช้เหล็กกล่อง</td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกแบบไหนดี?</strong>
+
+<p>ไม่มีแบบไหนดีกว่ากันในทุกงานครับ ขึ้นอยู่กับลักษณะงานเป็นหลัก</p>
+
+<p>• <strong>แปสำเร็จรูป</strong> — เหมาะกับงานบ้านพัก งานต่อเติม หรือโรงจอดรถ ที่ระยะจันทันไม่ห่างมาก และอยากได้แปที่เคลือบผิวมาพร้อมใช้</p>
+<p>• <strong>เหล็กกล่อง</strong> — เหมาะกับงานที่ระยะจันทันห่าง วัสดุมุงมีน้ำหนักมาก หรือผู้ออกแบบกำหนดไว้ในแบบ</p>
+
+<p>ถ้ายังไม่แน่ใจ ให้ยึดตามแบบและสเปกของวิศวกร หรือคู่มือของผู้ผลิตวัสดุมุงเป็นหลักครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ใช้ร่วมกันได้ไหม?</strong>
+
+<p>ได้ครับ และเป็นแบบที่เจอบ่อย คือใช้เหล็กกล่องหรือเหล็กตัวซีทำโครงหลักและจันทัน แล้ววางแปสำเร็จรูปด้านบนเพื่อรับวัสดุมุง ดูแปสำเร็จรูปทุกขนาดได้ที่ <a href="/products/category/แปหลังคา แปสำเร็จรูป" style="color:#1a73e8; text-decoration:underline;">แปหลังคา แปสำเร็จรูป</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> แปสำเร็จรูปใช้แทนเหล็กกล่องได้ทุกงานไหม<br /><strong>A:</strong> ไม่ทุกงานครับ แปสำเร็จรูปใช้แทนได้เฉพาะชั้นแป ไม่ได้ใช้ทำโครงหลักหรือจันทัน และถ้าระยะจันทันห่างหรือหลังคาหนัก ควรเช็คแบบก่อนเสมอ</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> แปสำเร็จรูปต้องเชื่อมไหม<br /><strong>A:</strong> โดยทั่วไปไม่ต้องเชื่อมครับ แปสำเร็จรูปส่วนใหญ่ยึดกับจันทันด้วยสกรู</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ใช้เหล็กกล่องทำแป ยิงสกรูยึดเมทัลชีทได้ไหม<br /><strong>A:</strong> ได้ครับ ไม่ว่าจะใช้เหล็กกล่องหรือแปสำเร็จรูป แผ่นหลังคาก็ยึดลงบนแปด้วยสกรูเหมือนกัน ส่วนที่ต่างกันคือวิธียึดตัวแปเข้ากับจันทัน</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> แปสำเร็จรูปยาวเส้นละเท่าไหร่<br /><strong>A:</strong> แปสำเร็จรูปของไคสแตนดาร์ดยาวมาตรฐาน 6 เมตรทุกเส้น ทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสีครับ</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Q:</strong> ความหนาแปสำเร็จรูปควรเลือกเท่าไหร่<br /><strong>A:</strong> ขึ้นอยู่กับน้ำหนักวัสดุมุงและระยะพาดของงานครับ อ่านวิธีเลือกความหนาได้ที่ <a href="/articles/แปกัลวาไนซ์คืออะไร" style="color:#1a73e8; text-decoration:underline;">แปกัลวาไนซ์คืออะไร</a></p>
+
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ยังไม่แน่ใจว่างานของคุณควรใช้แปแบบไหน?</p>
+  <p style="color:#fff; margin:0 0 12px;">ส่งแบบหรือรายละเอียดหลังคามาทาง LINE ทีมงานไคสแตนดาร์ดช่วยดูให้ได้ครับ มีแปสำเร็จรูปทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสี</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600; font-size:14px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แปสำเร็จรูปใช้แทนเหล็กกล่องได้ทุกงานไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่ทุกงานครับ แปสำเร็จรูปใช้แทนได้เฉพาะชั้นแป ไม่ได้ใช้ทำโครงหลักหรือจันทัน และถ้าระยะจันทันห่างหรือหลังคาหนัก ควรเช็คแบบก่อนเสมอ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แปสำเร็จรูปต้องเชื่อมไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โดยทั่วไปไม่ต้องเชื่อมครับ แปสำเร็จรูปส่วนใหญ่ยึดกับจันทันด้วยสกรู"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ใช้เหล็กกล่องทำแป ยิงสกรูยึดเมทัลชีทได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ ไม่ว่าจะใช้เหล็กกล่องหรือแปสำเร็จรูป แผ่นหลังคาก็ยึดลงบนแปด้วยสกรูเหมือนกัน ส่วนที่ต่างกันคือวิธียึดตัวแปเข้ากับจันทัน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แปสำเร็จรูปยาวเส้นละเท่าไหร่",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "แปสำเร็จรูปของไคสแตนดาร์ดยาวมาตรฐาน 6 เมตรทุกเส้น ทั้งอลูซิงค์ กัลวาไนซ์ และสังกะสีครับ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ความหนาแปสำเร็จรูปควรเลือกเท่าไหร่",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับน้ำหนักวัสดุมุงและระยะพาดของงานครับ อ่านวิธีเลือกความหนาได้ที่ แปกัลวาไนซ์คืออะไร"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
