@@ -25,6 +25,78 @@ export const articles = [
 <p>หลัง Checklist 4 ข้อนี้แล้ว พี่ๆอย่าลืมกดติดตาม KAIBOY ด้วยนะครับ KAIBOY มีไอเดียกับTipการตกแต่งฝ้ามาฝากพี่ๆอีกเยอะเลยครับ</p>
 
 <p>อ่านต่อ: <a href="/articles/ฝ้าเพดานควรสูงเท่าไหร่" style="color:#1a73e8; text-decoration:underline;">ฝ้าเพดานควรสูงเท่าไหร่</a> / <a href="/articles/ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร" style="color:#1a73e8; text-decoration:underline;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">วัสดุที่เกี่ยวกับ 4 ข้อนี้</strong>
+<ul>
+<li>ความสูงฝ้า: ดูแนวทางที่ <a href="/articles/ฝ้าเพดานควรสูงเท่าไหร่" style="color:#1a73e8; text-decoration:underline;">ฝ้าเพดานควรสูงเท่าไหร่</a> และ <a href="/articles/ฝ้าสูง-VS-ฝ้าต่ำ-เลือกแบบไหนดีกว่ากัน" style="color:#1a73e8; text-decoration:underline;">ฝ้าสูง VS ฝ้าต่ำ</a></li>
+<li>ประหยัดพลังงาน: ใส่ฉนวนเหนือฝ้า อ่านที่ <a href="/articles/ฉนวนใยหินคืออะไร" style="color:#1a73e8; text-decoration:underline;">ฉนวนใยหินคืออะไร</a></li>
+<li>งานระบบบนฝ้า: เผื่อ <a href="/products/category/ช่องเซอร์วิส" style="color:#1a73e8; text-decoration:underline;">ช่องเซอร์วิส</a> ไว้เปิดซ่อม หรือใช้ <a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a> ที่ยกแผ่นออกได้</li>
+<li>เสียงก้อง: ใช้ <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก</a> หรือ <a href="/products/category/แผ่นยิปซั่มลดเสียงสะท้อน" style="color:#1a73e8; text-decoration:underline;">แผ่นยิปซั่มลดเสียงสะท้อน</a></li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>เลือกความสูงฝ้าให้เหมาะกับประเภทห้อง</li>
+<li>ฝ้าและฉนวนช่วยลดค่าแอร์</li>
+<li>วางแผนไฟ กล้อง และอุปกรณ์ Smart home ก่อนปิดฝ้า และเผื่อช่องเซอร์วิส</li>
+<li>รู้ก่อนว่าปัญหาคือเสียงก้องหรือเสียงจากข้างห้อง แล้วค่อยเลือกวัสดุ</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> ฝ้าเพดานควรสูงเท่าไหร่?<br /><strong>A:</strong> ขึ้นกับประเภทห้อง ห้องนอนไม่ควรสูงเกินไปเพราะอาจรู้สึกอึดอัด ส่วนห้องโถงหรือห้องประชุมใหญ่ทำฝ้าสูงได้มากกว่า</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ทำฝ้าช่วยประหยัดค่าแอร์ได้ไหม?<br /><strong>A:</strong> ได้ ฝ้าช่วยลดปริมาตรห้องที่แอร์ต้องทำความเย็น และถ้าใส่ฉนวนเหนือฝ้าจะช่วยกันความร้อนจากหลังคาได้อีกชั้น</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ควรเผื่อช่องเซอร์วิสบนฝ้าไหม?<br /><strong>A:</strong> ควรเผื่อไว้ โดยเฉพาะฝ้าฉาบเรียบ เพื่อให้เปิดเข้าไปดูสายไฟ ท่อแอร์ หรืองานระบบได้โดยไม่ต้องเจาะฝ้า</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ห้องเสียงก้องควรใช้วัสดุอะไร?<br /><strong>A:</strong> ใช้วัสดุดูดซับเสียง เช่น แผ่นฝ้าอะคูสติก หรือแผ่นยิปซั่มลดเสียงสะท้อน ส่วนเสียงจากข้างห้องต้องใช้วัสดุกันเสียงซึ่งเป็นคนละแบบ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">กำลังวางแผนทำฝ้าอยู่?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยแนะนำวัสดุและคำนวณจำนวนให้ตามขนาดห้องได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ฝ้าเพดานควรสูงเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นกับประเภทห้อง ห้องนอนไม่ควรสูงเกินไปเพราะอาจรู้สึกอึดอัด ส่วนห้องโถงหรือห้องประชุมใหญ่ทำฝ้าสูงได้มากกว่า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ทำฝ้าช่วยประหยัดค่าแอร์ได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ ฝ้าช่วยลดปริมาตรห้องที่แอร์ต้องทำความเย็น และถ้าใส่ฉนวนเหนือฝ้าจะช่วยกันความร้อนจากหลังคาได้อีกชั้น"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ควรเผื่อช่องเซอร์วิสบนฝ้าไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ควรเผื่อไว้ โดยเฉพาะฝ้าฉาบเรียบ เพื่อให้เปิดเข้าไปดูสายไฟ ท่อแอร์ หรืองานระบบได้โดยไม่ต้องเจาะฝ้า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องเสียงก้องควรใช้วัสดุอะไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้วัสดุดูดซับเสียง เช่น แผ่นฝ้าอะคูสติก หรือแผ่นยิปซั่มลดเสียงสะท้อน ส่วนเสียงจากข้างห้องต้องใช้วัสดุกันเสียงซึ่งเป็นคนละแบบ"
+      }
+    }
+  ]
+}
+</script>
 `,
   },
   {
@@ -299,22 +371,102 @@ export const articles = [
     title: "แผ่นอะคูสติกคืออะไร?",
     slug: "แผ่นอะคูสติกคืออะไร",
     excerpt:
-      "แผนอะคูสติกทำไมถึงต้องใช้ในห้องที่เสียงก้องและมีเสียงสะท้อน",
+      "แผ่นอะคูสติกทำไมถึงต้องใช้ในห้องที่เสียงก้องและมีเสียงสะท้อน",
     image: "/articles/article8.png",
     date: "2025-02-15",
     readTime: "4",
     content: `
    <p>แผ่นฝ้าอะคูสติก... คืออะไร? ทำไมต้องมีติดไว้ถ้าไม่อยากให้เสียงก้อง!</p>
 <p>เวลาเราทำออฟฟิศหรือห้องใหม่ หลายคนมักจะมองข้ามเรื่องเสียงไปครับ พอเข้าใช้งานจริงถึงเพิ่งรู้ว่า "เสียงมันก้องจนคุยไม่รู้เรื่อง" ปัญหานี้แก้ได้ด้วยสิ่งที่เรียกว่า "แผ่นฝ้าอะคูสติก" ครับ</p>
-<p>แผ่นฝ้าอะคูสติก คืออะไร?<br />คือแผ่นวัสดุที่ทำมาจาก Mineral Fiber ที่มีคุณสมบัติส่วนลดเสียงสะท้อน มักใช้ร่วมกับโครงทีบาร์ หรือ หากต้องการความสวยงามก็สามารถติดตั้งระบบฉาบเรียบได้เหมือนกันครับ</p>
+<p>แผ่นฝ้าอะคูสติก คืออะไร?<br />คือแผ่นวัสดุที่ทำมาจาก Mineral Fiber ที่มีคุณสมบัติช่วยลดเสียงสะท้อน มักใช้ร่วมกับโครงทีบาร์ หรือ หากต้องการความสวยงามก็สามารถติดตั้งระบบฉาบเรียบได้เหมือนกันครับ</p>
 <p><br />ทำไมต้องใช้?</p>
 <p>เพราะแผ่นอะคูสติกนั้นช่วยลดเสียงสะท้อน ปัญหาที่มักเกิดขึ้นในห้องประชุม ห้องสัมมนานั่นเองครับ<br />โดยค่าคุณสมบัติหลักที่เราต้องให้ความสนใจคือค่า NRC ค่าที่บ่งบอกความสามารถในการลดเสียงสะท้อนครับ</p>
 <p>.</p>
 <p>ห้องหรืออาคารแบบไหนที่เหมาะ?</p>
-<p>เหมาะกับอาคารที่มีครใช้งานเยอะและมีการใช้เสียงโต้ตอบกันครับเช่น อาคารสำนักงาน ห้องประชุม โรงพยาบาล ธนาคาร เป็นต้นครับ</p>
+<p>เหมาะกับอาคารที่มีคนใช้งานเยอะและมีการใช้เสียงโต้ตอบกันครับเช่น อาคารสำนักงาน ห้องประชุม โรงพยาบาล ธนาคาร เป็นต้นครับ</p>
 <p>แต่ให้หลีกเลี่ยงการใช้ในห้องที่มีความชื้นสูงครับ</p>
 <p>อ่านต่อ: <a href="/articles/แผ่นฝ้าอะคูสติก-nrc-0.50-หมายถึงอะไร" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก NRC 0.50 หมายถึงอะไร</a> / <a href="/articles/แผ่นอะคูสติกต่างกับยิปซั่มยังไง" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติกต่างกับยิปซั่มยังไง</a> / <a href="/articles/ฝ้าอะคูสติกติดตั้งระบบฉาบเรียบได้มั้ย" style="color:#1a73e8; text-decoration:underline;">ฝ้าอะคูสติกติดตั้งระบบฉาบเรียบได้มั้ย</a></p>
-<p>ดูสินค้า: <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติกทั้งหมด</a> / <a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a></p>`,
+<p>ดูสินค้า: <a href="/products/category/แผ่นอะคูสติก" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติกทั้งหมด</a> / <a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แผ่นอะคูสติกราคาเท่าไหร่</strong>
+<ul>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x600x12มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x600x12 มม.</a> 65 บาท/แผ่น</li>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x600x14มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x600x14 มม.</a> 80 บาท/แผ่น</li>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x600x16มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x600x16 มม.</a> 95 บาท/แผ่น</li>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x1200x12มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x1200x12 มม.</a> 110 บาท/แผ่น</li>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x1200x14มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x1200x14 มม.</a> 135 บาท/แผ่น</li>
+<li><a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600x1200x16มม" style="color:#1a73e8; text-decoration:underline;">แผ่นฝ้าอะคูสติก 600x1200x16 มม.</a> 155 บาท/แผ่น</li>
+</ul>
+<p style="font-size:14px; color:#555;">ราคาไม่รวม VAT 7%</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ใช้กับโครงอะไร</strong>
+<p>แผ่นอะคูสติกส่วนใหญ่วางบน <a href="/products/category/โครงทีบาร์" style="color:#1a73e8; text-decoration:underline;">โครงทีบาร์</a> ยกแผ่นออกซ่อมงานระบบได้ง่าย ถ้าอยากให้ฝ้าดูเรียบขึ้นมีรุ่นขอบบังใบ ขนาด <a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600-x-600-x-16มม.-ขอบบังใบ" style="color:#1a73e8; text-decoration:underline;">600x600x16 มม.</a> และ <a href="/products/แผ่นฝ้าอะคูสติก-ขนาด-600-x-1200-x-16มม.-ขอบบังใบ" style="color:#1a73e8; text-decoration:underline;">600x1200x16 มม.</a> อ่านเพิ่มที่ <a href="/articles/ฝ้าบังใบใช้กับโครงอะไรได้บ้าง" style="color:#1a73e8; text-decoration:underline;">ฝ้าบังใบใช้กับโครงอะไรได้บ้าง</a></p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">สรุป</strong>
+<ul>
+<li>แผ่นอะคูสติกทำจาก Mineral Fiber ช่วยลดเสียงสะท้อนและเสียงก้องในห้อง</li>
+<li>ดูค่า NRC เพื่อเทียบความสามารถในการลดเสียงสะท้อน</li>
+<li>เหมาะกับออฟฟิศ ห้องประชุม โรงพยาบาล ธนาคาร</li>
+<li>มีขนาด 600x600 และ 600x1200 มม. หนา 12, 14, 16 มม.</li>
+<li>ไม่แนะนำในห้องที่ความชื้นสูง</li>
+</ul>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> แผ่นอะคูสติกราคาเท่าไหร่?<br /><strong>A:</strong> ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น ราคาไม่รวม VAT 7%</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นอะคูสติกมีความหนากี่มิล?<br /><strong>A:</strong> มีให้เลือก 12, 14 และ 16 มม. ทั้งขนาด 600x600 และ 600x1200 มม.</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นอะคูสติกใช้กับโครงอะไร?<br /><strong>A:</strong> ใช้กับโครงทีบาร์เป็นหลัก ยกแผ่นออกซ่อมงานระบบได้ง่าย ถ้าต้องการให้ฝ้าดูเรียบขึ้นมีรุ่นขอบบังใบให้เลือก</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> แผ่นอะคูสติกใช้ในห้องที่มีความชื้นได้ไหม?<br /><strong>A:</strong> ไม่แนะนำ แผ่นอะคูสติก Mineral Fiber ควรหลีกเลี่ยงห้องที่มีความชื้นสูง</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ไม่แน่ใจว่าห้องคุณต้องใช้แผ่นอะคูสติกกี่แผ่น?</p>
+  <p style="color:#fff; margin:0 0 12px;">ทีมงาน KAI Standard ช่วยคำนวณจำนวนแผ่นและโครงให้ตามขนาดห้องได้</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แผ่นอะคูสติกราคาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขนาด 600x600 มม. เริ่มต้น 65 บาท/แผ่น และขนาด 600x1200 มม. เริ่มต้น 110 บาท/แผ่น ราคาไม่รวม VAT 7%"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นอะคูสติกมีความหนากี่มิล?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "มีให้เลือก 12, 14 และ 16 มม. ทั้งขนาด 600x600 และ 600x1200 มม."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นอะคูสติกใช้กับโครงอะไร?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ใช้กับโครงทีบาร์เป็นหลัก ยกแผ่นออกซ่อมงานระบบได้ง่าย ถ้าต้องการให้ฝ้าดูเรียบขึ้นมีรุ่นขอบบังใบให้เลือก"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "แผ่นอะคูสติกใช้ในห้องที่มีความชื้นได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่แนะนำ แผ่นอะคูสติก Mineral Fiber ควรหลีกเลี่ยงห้องที่มีความชื้นสูง"
+      }
+    }
+  ]
+}
+</script>
+`,
   },
   {
     id: 9,
