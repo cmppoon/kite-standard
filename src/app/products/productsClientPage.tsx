@@ -657,14 +657,93 @@ function GypsumAcousticFaqSection() {
   );
 }
 
+// NOTE: prices below are typed by hand from products.ts (all +VAT 7%).
+// If a gypsum price changes, update GYPSUM_PRICES, GYPSUM_FAQS and the
+// Google title/description in src/app/products/category/[slug]/page.tsx.
+const GYPSUM_PRICES = [
+  { type: "แผ่นยิปซั่มชนิดธรรมดา 9 มม.", price: "99 / 125 / 140 บาท", note: "บิ๊กบี 99 บาท / 125 บาท / ตราช้าง 140 บาท" },
+  { type: "แผ่นยิปซั่มชนิดธรรมดา 12 มม.", price: "160 บาท", note: "" },
+  { type: "แผ่นยิปซั่มชนิดทนชื้น 9 มม.", price: "170 บาท", note: "" },
+  { type: "แผ่นยิปซั่มชนิดทนชื้น 12 มม.", price: "190 บาท", note: "" },
+];
+
+const GYPSUM_FAQS = [
+  {
+    q: "แผ่นยิปซั่ม 120x240 ราคาเท่าไหร่?",
+    a: "แผ่นยิปซั่มขนาด 120x240 ซม. ราคา 99-190 บาท/แผ่น (ไม่รวม VAT 7%) ชนิดธรรมดา 9 มม. ราคา 99-140 บาท ชนิดธรรมดา 12 มม. ราคา 160 บาท ชนิดทนชื้น 9 มม. ราคา 170 บาท และชนิดทนชื้น 12 มม. ราคา 190 บาท",
+  },
+  {
+    q: "แผ่นยิปซั่มชนิดธรรมดากับชนิดทนชื้นต่างกันอย่างไร?",
+    a: "ชนิดธรรมดาเหมาะกับฝ้าเพดานและผนังภายในอาคารทั่วไป ส่วนชนิดทนชื้นทนความชื้นได้เป็นพิเศษ เหมาะกับห้องครัว ห้องน้ำ หรือพื้นที่ที่มีความชื้นบ่อยครั้ง ช่วยให้ฝ้าคงทนและสวยงามได้นานกว่า",
+  },
+  {
+    q: "แผ่นยิปซั่ม 9 มม. กับ 12 มม. ใช้ต่างกันอย่างไร?",
+    a: "แผ่นหนา 9 มม. น้ำหนักเบา นิยมใช้ทำฝ้าเพดานฉาบเรียบ ส่วนแผ่นหนา 12 มม. หนาและแข็งแรงกว่า นิยมใช้กับงานผนังหรืองานที่ต้องการความแข็งแรงมากขึ้น ทั้งสองความหนามีขนาด 120x240 ซม.",
+  },
+];
+
 function GypsumContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
-      <h2 className="mb-3 text-xl font-semibold">แผ่นยิปซั่มคืออะไร?</h2>
+      <h2 className="mb-3 text-xl font-semibold">แผ่นยิปซั่ม 120x240 ราคาเท่าไหร่?</h2>
+      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+        แผ่นยิปซั่มขนาด 120x240 ซม. ราคา 99-190 บาท/แผ่น (ไม่รวม VAT 7%)
+        มีทั้งชนิดธรรมดาและชนิดทนชื้น หนา 9 มม. และ 12 มม.
+      </p>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {GYPSUM_PRICES.map((row) => (
+          <div key={row.type} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{row.type}</p>
+            <p className="text-sm text-gray-700">ราคา {row.price}/แผ่น</p>
+            {row.note && <p className="mt-1 text-xs text-gray-500">{row.note}</p>}
+          </div>
+        ))}
+      </div>
+      <h2 className="mb-3 mt-8 text-xl font-semibold">แผ่นยิปซั่มคืออะไร?</h2>
       <p className="text-muted-foreground text-sm leading-relaxed">
         วัสดุตกแต่งภายใน ใช้สำหรับปิดผิวโครงเคร่าฝ้าเพดานหรือผนัง ติดตั้งได้ง่าย
         มีทั้งรูปแบบธรรมดาและทนชื้น นิยมใช้กับอาคารทั่วไป สำนักงาน หรือบ้าน
       </p>
+    </div>
+  );
+}
+
+function GypsumFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: GYPSUM_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {GYPSUM_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </div>
   );
 }
@@ -1465,6 +1544,7 @@ export default function ProductsClientPage({
             {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticContentSection />}
             {isGypsumAcoustic && filteredProducts.length > 0 && <GypsumAcousticFaqSection />}
             {isGypsum && filteredProducts.length > 0 && <GypsumContentSection />}
+            {isGypsum && filteredProducts.length > 0 && <GypsumFaqSection />}
             {isCeilingFrame && filteredProducts.length > 0 && <CeilingFrameContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarFaqSection />}
