@@ -6397,4 +6397,122 @@ export const articles = [
 <\/script>
     `,
   },
+  {
+    id: 55,
+    title: "เสียงดังทะลุเข้าห้องนอน ทำยังไงดี?",
+    slug: "ห้องนอนเสียงดังทำยังไงดี",
+    excerpt: "นอนไม่หลับเพราะเสียงดัง? เช็คให้เจอว่าเสียงเข้ามาทางหน้าต่าง ผนัง หรือฝ้า แล้วแก้ให้ตรงจุด",
+    image: "/articles/article55.webp",
+    date: "2026-10-22",
+    readTime: "4",
+    content: `
+<p style="font-size:28px; font-weight:700;">เสียงดังทะลุเข้าห้องนอน ทำยังไงดี?</p>
+<p>“นอนไม่หลับเพราะเสียงดังแก้ยังไง?”<br />คำถามยอดฮิตของเจ้าบ้าน ทั้งบ้านที่ติดถนน คอนโดที่ได้ยินเสียงห้องข้างๆ หรือหลังคาเมทัลชีทที่ฝนตกทีไรก็ดังจนนอนไม่ได้ วันนี้ไคสแตนดาร์ดจะมาบอกวิธีแก้ปัญหาเสียงดังให้ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เสียงเข้าห้องนอนได้ทางไหนบ้าง</strong>
+<ul>
+  <li><strong>หน้าต่างและประตู</strong> จุดที่เสียงรั่วเข้ามาง่ายที่สุด โดยเฉพาะห้องที่ติดถนน</li>
+  <li><strong>ผนัง</strong> เสียงจากห้องข้างๆ ผ่านผนังเข้ามา เจอบ่อยในคอนโดและทาวน์โฮม</li>
+  <li><strong>ฝ้าและหลังคา</strong> เสียงฝน เสียงจากชั้นบน ผ่านลงมาทางฝ้า</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เสียงแบบไหน แก้ยังไง</strong>
+<table style="width:100%; border-collapse:collapse; margin-top:8px; font-size:14px;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">ปัญหาเสียง</th>
+      <th style="background:#1a73e8; color:#fff; padding:10px; text-align:left; border-bottom:1px solid #d0d7e3;">วิธีแก้ที่ตรงจุด</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงจากถนน / นอกบ้าน</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">อุดรอยรั่วรอบหน้าต่างและประตู เปลี่ยนกระจกให้หนาขึ้น ใช้ผ้าม่านหนา หรือปลูกแผงต้นไม้ส่วนที่ติดถนน</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงจากห้องข้างๆ</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ใส่ฉนวนในผนัง หรือทำผนังเบาเพิ่มอีกชั้นพร้อมฉนวน</td>
+    </tr>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เสียงจากฝ้า / หลังคา / ชั้นบน</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">วางฉนวนเหนือฝ้า เช่น <a href="/articles/ฉนวนใยหินคืออะไร" style="color:#1a73e8; text-decoration:underline;">ฉนวนใยหิน</a> ฉนวนกันความร้อนใต้หลังคา</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">หน้าต่างและประตู เช็คก่อนเป็นอันดับแรก</strong>
+<p>เสียงเล็ดลอดเข้ามาได้ทุกช่องว่าง ลองดูขอบหน้าต่างและช่องใต้ประตู ถ้ามีรอยรั่ว เสียงจะผ่านเข้ามาง่ายมาก การอุดรอยรั่วเป็นวิธีที่ทำได้เร็วและเห็นผลก่อน ถ้ายังไม่พอค่อยเปลี่ยนกระจกหรือใช้ผ้าม่านหนาเพิ่ม</p>
+<p>การปลูกต้นไม้เองก็ช่วยได้เช่นกัน เลือกประเภทที่พุ่มไม้เยอะ จะช่วยลดเสียงภายนอกได้ดี</p>
+<img src="/articles/article55-1.webp" alt="แนวพุ่มไม้หนาปลูกริมรั้วบ้านฝั่งติดถนน ช่วยลดเสียงรบกวนจากภายนอก" style="width:100%; height:auto; margin:12px 0;" />
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ผนัง ถ้าได้ยินเสียงห้องข้างๆ</strong>
+<p>ผนังเบาที่ข้างในกลวง เสียงจะผ่านได้ง่ายกว่าผนังก่ออิฐ การใส่ฉนวนเข้าไปในผนังช่วยลดเสียงที่ผ่านมาได้มาก ถ้าไม่อยากรื้อผนังเดิม สามารถทำผนังเบาเพิ่มอีกชั้นพร้อมใส่ฉนวนได้</p>
+<img src="/articles/article55-2.webp" alt="ผนังเบาที่ใส่ฉนวนไว้ด้านใน ช่วยลดเสียงจากห้องข้างๆ" style="width:100%; height:auto; margin:12px 0;" />
+<p>หรือหากอยากให้เกิดงานก่อสร้างน้อยที่สุด นำวัสดุปิดผิวงานแห้งปูคลุมผนังเดิมก็สามารถช่วยได้บ้าง แต่ได้ผลน้อยกว่าฉนวน</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ฝ้าและหลังคา ถ้าฝนตกแล้วดังทั้งคืน</strong>
+<p>บ้านที่ใช้หลังคาเมทัลชีทหรือฝ้าที่ข้างบนโล่ง เสียงฝนจะลงมาถึงห้องได้เต็มๆ การวางฉนวนเหนือฝ้าช่วยลดเสียงที่ผ่านลงมา และยังช่วยกันความร้อนจากหลังคาได้ด้วย อ่านรายละเอียดเพิ่มเติมได้ที่ <a href="/articles/ฉนวนใยหินคืออะไร" style="color:#1a73e8; text-decoration:underline;">ฉนวนใยหินคืออะไร</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> ควรแก้ที่ฝ้าหรือผนังก่อน?<br /><strong>A:</strong> ขึ้นอยู่กับว่าเสียงมาจากทางไหน ถ้าเป็นเสียงฝนหรือเสียงจากชั้นบน ให้เริ่มที่ฝ้า ถ้าเป็นเสียงห้องข้างๆ หรือถนน ให้เริ่มที่ผนัง หน้าต่าง และประตู</p>
+<p> </p>
+<p><strong>Q:</strong> ไม่อยากรื้อผนัง มีทางแก้ไหม?<br /><strong>A:</strong> มีครับ เริ่มจากอุดรอยรั่วรอบประตูหน้าต่างและใช้ผ้าม่านหนา หรือนำวัสดุปิดที่มีความหนาแน่นกรุเพิ่มเช่น <a href="/products/category/แผ่นซับเสียง" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียงโพลีเอสเตอร์</a> แผ่นพลาสวูด เป็นต้น</p>
+<p> </p>
+<p><strong>Q:</strong> ผ้าม่านหนาช่วยลดเสียงได้จริงไหม?<br /><strong>A:</strong> ช่วยได้บางส่วน โดยเฉพาะเสียงที่มาทางหน้าต่าง แต่ถ้ายังมีรอยรั่วรอบกรอบหน้าต่าง เสียงก็ยังเข้ามาได้ ควรอุดรอยรั่วควบคู่กันไปครับ</p>
+
+<p>&nbsp;</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="font-weight:600; font-size:16px; color:#fff; margin:0 0 8px;">ห้องนอนเสียงดัง ไม่รู้จะเริ่มแก้ตรงไหน?</p>
+  <p style="color:#fff; margin:0 0 12px;">ส่งรูปห้องหรือเล่าปัญหามาได้เลย ทีมงานช่วยแนะนำวัสดุที่ตรงกับปัญหาให้ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none; font-size:14px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ควรแก้ที่ฝ้าหรือผนังก่อน?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นอยู่กับว่าเสียงมาจากทางไหน ถ้าเป็นเสียงฝนหรือเสียงจากชั้นบน ให้เริ่มที่ฝ้า ถ้าเป็นเสียงห้องข้างๆ หรือถนน ให้เริ่มที่ผนัง หน้าต่าง และประตู"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ไม่อยากรื้อผนัง มีทางแก้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "มีครับ เริ่มจากอุดรอยรั่วรอบประตูหน้าต่างและใช้ผ้าม่านหนา หรือนำวัสดุปิดที่มีความหนาแน่นกรุเพิ่มเช่น แผ่นซับเสียงโพลีเอสเตอร์ แผ่นพลาสวูด เป็นต้น"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ผ้าม่านหนาช่วยลดเสียงได้จริงไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ช่วยได้บางส่วน โดยเฉพาะเสียงที่มาทางหน้าต่าง แต่ถ้ายังมีรอยรั่วรอบกรอบหน้าต่าง เสียงก็ยังเข้ามาได้ ควรอุดรอยรั่วควบคู่กันไปครับ"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
