@@ -45,6 +45,10 @@ const TBAR_PRODUCTS_PER_PAGE = 100;
 // two groups (โครงฝ้าฉาบเรียบ + อะไหล่) never split across pages.
 const CILAI_PRODUCTS_PER_PAGE = 100;
 
+// แป page only (category 3): keep all products on ONE page so the two length
+// groups (ยาว 6 เมตร + ยาว 3 เมตร) never split across pages.
+const ROOF_BATTEN_PRODUCTS_PER_PAGE = 100;
+
 type Product = (typeof products)[number];
 
 const CEILING_FRAME_GROUPS = [
@@ -106,6 +110,17 @@ function groupAcousticProducts(items: Product[]) {
   return sections;
 }
 
+// แป page only: group by LENGTH, 6 m first, then 3 m. Built from the product
+// name ("ยาว 3 เมตร"), so a new 3 m or 6 m product joins its group by itself.
+// Order inside each group follows src/data/products.ts.
+function groupRoofBattenProducts(items: Product[]) {
+  const isThreeMetre = (p: Product) => p.name.includes("ยาว 3 เมตร");
+  return [
+    { label: "แปหลังคา ยาว 6 เมตร", items: items.filter((p) => !isThreeMetre(p)) },
+    { label: "แปหลังคา ยาว 3 เมตร", items: items.filter(isThreeMetre) },
+  ].filter((section) => section.items.length > 0);
+}
+
 // Gypsum sound-reduction page only: group the 16 products by SIZE, big sheets first.
 // File order is sorted by pattern, not size, so this builds sections by group
 // membership (in the order below) rather than by contiguous file position.
@@ -151,7 +166,7 @@ const CATEGORY_HEADINGS: Record<number, { h1: string; subtitle: string }> = {
   3: {
     h1: "แปหลังคา แปสำเร็จรูป",
     subtitle:
-      "แปสำเร็จรูป ยาว 6 เมตร ราคา 80–209 บาท/เส้น มีกัลวาไนซ์ อลูซิงค์ สังกะสี ส่งทั่วประเทศ",
+      "แปสำเร็จรูป ยาว 3 และ 6 เมตร ราคา 48–209 บาท/เส้น มีกัลวาไนซ์ อลูซิงค์ สังกะสี ส่งทั่วประเทศ",
   },
   8: {
     h1: "แผ่นฝ้าทีบาร์ปรุลาย ลดเสียงก้อง ผลิตเอง ราคาโรงงาน",
@@ -379,12 +394,12 @@ const ROOF_BATTEN_FAQS: RoofBattenFaq[] = [
   },
   {
     q: "ราคาแปหลังคาเท่าไหร่?",
-    a: "แปสำเร็จรูปยาว 6 เมตร ราคาต่อเส้น ไม่รวม VAT แยกตามชนิดและความหนาตามตารางด้านล่าง งานโครงการสอบถามราคาพิเศษได้",
+    a: "แปสำเร็จรูปยาว 3 และ 6 เมตร ราคาต่อเส้น ไม่รวม VAT แยกตามชนิดและความหนาตามตารางด้านล่าง งานโครงการสอบถามราคาพิเศษได้",
     priceTable: true,
   },
   {
     q: "แปสำเร็จรูปยาวกี่เมตร?",
-    a: "ยาวมาตรฐาน 6 เมตรทุกรุ่น และสั่งตัดความยาวพิเศษได้ สอบถามทีมงาน",
+    a: "มี 2 ความยาว ยาว 6 เมตรมีทุกรุ่น และยาว 3 เมตร (อลูซิงค์และกัลวาไนซ์ หนา 0.50 มม.) ขนย้ายง่าย เหมาะกับงานช่วงสั้น เช่น รั้วเมทัลชีท และสั่งตัดความยาวพิเศษได้ สอบถามทีมงาน",
   },
   {
     q: "แปหลังคาอยู่ส่วนไหนของหลังคา?",
@@ -392,7 +407,7 @@ const ROOF_BATTEN_FAQS: RoofBattenFaq[] = [
   },
   {
     q: "แปสำเร็จรูป ต่างจากแปที่ตัดหน้างานยังไง?",
-    a: "แปสำเร็จรูปขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน 6 เมตร ขนาดหน้าตัดเท่ากันทุกเส้น และเคลือบผิวมาจากโรงงานทั้งเส้น ไม่ต้องตัดขึ้นรูปที่หน้างาน งานหลังคาจึงเสร็จเร็วขึ้น ถ้าหน้างานต้องการความยาวพิเศษ สั่งตัดได้",
+    a: "แปสำเร็จรูปขึ้นรูปมาจากโรงงานเป็นความยาวมาตรฐาน 6 เมตร หรือ 3 เมตร ขนาดหน้าตัดเท่ากันทุกเส้น และเคลือบผิวมาจากโรงงานทั้งเส้น ไม่ต้องตัดขึ้นรูปที่หน้างาน งานหลังคาจึงเสร็จเร็วขึ้น ถ้าหน้างานต้องการความยาวพิเศษ สั่งตัดได้",
     link: { href: "/articles/แปอลูซิงค์คืออะไร", label: "แปอลูซิงค์คืออะไร" },
   },
 ];
@@ -939,7 +954,9 @@ function getRoofBattenPriceGroups() {
       : null;
     const priceNum = String(p.price ?? "").match(/\d[\d,]*/);
     const row = {
-      label: thickText ? `หนา ${thickText} มม.` : p.name,
+      label: thickText
+        ? `หนา ${thickText} มม.${p.name.includes("ยาว 3 เมตร") ? " (ยาว 3 ม.)" : ""}`
+        : p.name,
       price: priceNum ? `${priceNum[0]} บาท` : String(p.price ?? ""),
       slug: p.slug,
     };
@@ -960,7 +977,7 @@ function RoofBattenContentSection() {
       <p className="text-muted-foreground text-sm leading-relaxed">
         แปหลังคา คือเหล็กที่ติดตั้งบนจันทัน รองรับแผ่นหลังคาหรือเมทัลชีทและกระจายน้ำหนัก
         เลือกความหนาตามระยะห่างจันทันและน้ำหนักหลังคา ยิ่งหนายิ่งรับแรงได้มาก
-        แปสำเร็จรูปของเรายาว 6 เมตร หนา 0.50–1.00 มม. อ่านเพิ่มเติม:{" "}
+        แปสำเร็จรูปของเรายาว 3 และ 6 เมตร หนา 0.50–1.00 มม. อ่านเพิ่มเติม:{" "}
         <Link href="/articles/แปหลังคาคืออะไร" className="text-primary underline">
           แปหลังคาคืออะไร
         </Link>
@@ -1295,6 +1312,8 @@ export default function ProductsClientPage({
     ? GYPSUM_ACOUSTIC_PRODUCTS_PER_PAGE
     : isTBar
     ? TBAR_PRODUCTS_PER_PAGE
+    : isRoofBatten
+    ? ROOF_BATTEN_PRODUCTS_PER_PAGE
     : PRODUCTS_PER_PAGE;
   const totalPages = Math.ceil(filteredProducts.length / perPage);
   const safePage = Math.min(currentPage, Math.max(1, totalPages));
@@ -1478,6 +1497,22 @@ export default function ProductsClientPage({
               <div className="space-y-8">
                 <GroupChips sections={groupTBarProducts(paginatedProducts)} />
                 {groupTBarProducts(paginatedProducts).map((section, sIdx) => (
+                  <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
+                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                      {section.label}
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {section.items.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : isRoofBatten ? (
+              <div className="space-y-8">
+                <GroupChips sections={groupRoofBattenProducts(paginatedProducts)} />
+                {groupRoofBattenProducts(paginatedProducts).map((section, sIdx) => (
                   <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
                     <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
                       {section.label}
