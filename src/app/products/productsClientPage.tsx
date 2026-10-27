@@ -348,8 +348,8 @@ const SOUND_ABSORB_FAQS = [
     a: "แนะนำเลือกสินค้าที่มีค่า STC สูง อาทิเช่น ฉนวนกันเสียง SCG รุ่น Cylence Zoundblock",
   },
   {
-    q: "มีขนาด สี และราคาเท่าไหร่?",
-    a: "มี 3 ขนาด: 60x60, 60x120, 60x240 ซม. หนา 9มม. ราคา 400 / 700 / 1,200 บาท (+VAT 7%) เฉดสีนอกเหนือจากขาว ดำ เทา โปรดสอบถามพนักงานขาย",
+    q: "แผ่นซับเสียงราคาเท่าไหร่ มีขนาดและสีอะไรบ้าง?",
+    a: "KS-501 มี 3 ขนาด: 60x60, 60x120, 60x240 ซม. หนา 9มม. ราคา 400 / 700 / 1,200 บาท (+VAT 7%) มีให้เลือก 54 สี สอบถามเฉดสีกับพนักงานขาย และ KS-502 รุ่นราคาประหยัด สีดำ ขนาดเดียวกัน ราคา 350 / 625 / 1,050 บาท (+VAT 7%)",
   },
   {
     q: "แผ่นซับเสียงติดตั้งอย่างไร?",
@@ -872,14 +872,94 @@ function SoundAbsorbContentSection() {
         แผ่นซับเสียงโพลีเอสเตอร์ (Polyester / PET Acoustic Panel) เป็นวัสดุซับเสียงที่ทำจากเส้นใยโพลีเอสเตอร์ (PET)
         อัดขึ้นรูปเป็นแผ่น ผิวสัมผัสนุ่มแบบสักหลาด (เฟลท์) เนื้อในมีรูพรุนจำนวนมาก
         เมื่อเสียงเดินทางมากระทบ เนื้อวัสดุจะเก็บพลังงานเสียงส่วนหนึ่งเอาไว้แทนการสะท้อนกลับ
-        ผลคือเสียงก้องและเสียงสะท้อนภายในห้องลดลง รุ่น KS-501 ของไคสแตนดาร์ดให้ค่าดูดซับเสียง NRC 0.80 (Class B)
-        มีให้เลือกทั้งสีขาว เทา ดำ และหลายขนาด เหมาะกับทั้งงานตกแต่งผนังและการควบคุมเสียงภายในห้อง
+        ผลคือเสียงก้องและเสียงสะท้อนภายในห้องลดลง รุ่น KS-501 ของไคสแตนดาร์ดให้ค่าดูดซับเสียง NRC 0.80 (ระดับการดูดซับเสียง Class B)
+        มีให้เลือก 54 สี และ 3 ขนาด เหมาะกับทั้งงานตกแต่งผนังและการควบคุมเสียงภายในห้อง
+        ใช้ทำผนังซับเสียงในห้องประชุม ออฟฟิศ และบ้าน ติดกาวบนผนังเดิมได้เลย
+        หากต้องการรุ่นราคาประหยัด มี KS-502 วัสดุใยโพลีเอสเตอร์ (PET) เหมือนกัน ความหนาแน่น 1,350 gsm สีดำ ราคาเริ่ม 350 บาท
       </p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {[
-          { title: "ห้องประชุม / สำนักงาน", text: "เหมาะสำหรับการประชุมหรือสำนักงาน บุผนังช่วยลดเสียงก้องในห้องประชุมและออฟฟิศ โดยเฉพาะออฟฟิศแบบเปิด ค่าดูดซับเสียง NRC 0.80 ทำให้เสียงพูดชัดขึ้น มีสีขาว เทา ดำ เลือกให้เข้ากับโทนออฟฟิศสไตล์โมเดิร์น" },
+          { title: "ห้องประชุม / สำนักงาน", text: "เหมาะสำหรับการประชุมหรือสำนักงาน บุผนังช่วยลดเสียงก้องในห้องประชุมและออฟฟิศ โดยเฉพาะออฟฟิศแบบเปิด ค่าดูดซับเสียง NRC 0.80 ทำให้เสียงพูดชัดขึ้น มีให้เลือก 54 สี เลือกให้เข้ากับโทนออฟฟิศสไตล์โมเดิร์น" },
           { title: "โฮมเธียเตอร์ / ห้องฟังเพลง / ห้องอัดคอนเทนต์", text: "เหมาะกับห้องดูหนัง ฟังเพลง และห้องไลฟ์สดที่ต้องการเสียงคมชัด ติดตั้งง่ายด้วยกาว เหมาะกับงาน DIY หรือการไลฟ์สตรีมในห้องขนาดเล็กอีกด้วย" },
           { title: "คาเฟ่ / ร้านค้า / โชว์รูม", text: "สลับสีแผ่นสร้างลวดลายบนผนังได้อิสระ ทั้งซับเสียงและเป็นของตกแต่ง ผลิตจากใยโพลีเอสเตอร์รีไซเคิล สำหรับร้านค้าและคาเฟ่ที่มีเสียงคนจอแจตลอด ช่วยลดเสียงก้องได้มาก" },
+        ].map((card) => (
+          <div key={card.title} className="rounded-lg border bg-white p-4">
+            <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
+            <p className="text-xs leading-relaxed text-gray-500">{card.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// แผ่นซับเสียง page only: "starting price" line above the product grid.
+// Each starting price is read from products.ts (lowest price of the products
+// whose name contains the key), so it updates by itself when a price changes.
+const SOUND_ABSORB_PRICE_ROWS = [
+  { key: "KS-502", label: "KS-502 รุ่นประหยัด" },
+  { key: "KS-501", label: "KS-501 54 สี" },
+  { key: "Zandera", label: "SCG Zandera หุ้มผ้า" },
+];
+
+function getSoundAbsorbStartPrice(key: string) {
+  const prices = products
+    .filter((p) => p.categoryId === SOUND_ABSORB_CATEGORY_ID && p.name.includes(key))
+    .map((p) => {
+      const m = String(p.price ?? "").match(/\d[\d,]*/);
+      return m ? Number(m[0].replace(/,/g, "")) : NaN;
+    })
+    .filter((n) => !Number.isNaN(n));
+  return prices.length > 0 ? Math.min(...prices) : null;
+}
+
+function SoundAbsorbPriceLine() {
+  const rows = SOUND_ABSORB_PRICE_ROWS.map((r) => ({
+    ...r,
+    price: getSoundAbsorbStartPrice(r.key),
+  })).filter((r) => r.price !== null);
+  if (rows.length === 0) return null;
+  return (
+    <div className="mb-6 rounded-lg border bg-white px-4 py-3">
+      <p className="mb-2 text-sm font-semibold text-gray-900">
+        แผ่นซับเสียงติดผนัง ราคาเริ่มต้น (ไม่รวม VAT 7%)
+      </p>
+      <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-gray-700">
+        {rows.map((r) => (
+          <span key={r.key}>
+            {r.label} เริ่ม{" "}
+            <span className="text-primary font-semibold">
+              {r.price!.toLocaleString("en-US")} บาท
+            </span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// แผ่นซับเสียง page only: SCG Zandera section, sits under the KS-501 section.
+// NOTE: prices below are typed by hand from products.ts (all +VAT 7%).
+// If a Zandera price changes, update this block too.
+function ZanderaContentSection() {
+  return (
+    <div className="mt-10 border-t pt-8">
+      <h2 className="mb-3 text-xl font-semibold">แผ่นซับเสียง SCG Cylence Zandera แบบหุ้มผ้า</h2>
+      <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+        แผ่นซับเสียง SCG รุ่น Cylence Zandera ผลิตจากใยแก้วอัดขึ้นรูปเป็นแผ่นแข็ง หุ้มผ้า หนา 25 มม.
+        ใช้บุผนังตกแต่งและลดเสียงก้องภายในห้อง เหมาะกับห้องนั่งเล่น โฮมเธียเตอร์ ห้องประชุม
+        ห้องอัดเสียง และห้องคาราโอเกะ มี 2 รุ่นให้เลือก
+      </p>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {[
+          {
+            title: "Cylence Zandera รุ่นมาตรฐาน",
+            text: "ขนาด 30x30 / 60x60 / 60x120 ซม. ราคา 209 / 599 / 1,199 บาท/แผ่น (+VAT 7%) สินค้าสั่งผลิต ใช้เวลาประมาณ 2-3 สัปดาห์",
+          },
+          {
+            title: "Cylence Zandera (Scenera Collection)",
+            text: "ผ้าเคลือบสารกันน้ำ เช็ดทำความสะอาดได้ ค่าดูดซับเสียง NRC 0.75 มีให้เลือก 17 สี ขนาด 30x30 / 60x60 / 60x120 ซม. ราคา 255 / 758 / 1,517 บาท/แผ่น (+VAT 7%)",
+          },
         ].map((card) => (
           <div key={card.title} className="rounded-lg border bg-white p-4">
             <p className="mb-1 text-sm font-medium text-gray-900">{card.title}</p>
@@ -1425,6 +1505,8 @@ export default function ProductsClientPage({
               </p>
             </div>
 
+            {isSoundAbsorb && !isSearching && <SoundAbsorbPriceLine />}
+
             {isSearching ? (
               <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
                 {paginatedProducts.map((product) => (
@@ -1584,6 +1666,7 @@ export default function ProductsClientPage({
             {isTBar && filteredProducts.length > 0 && <TBarContentSection />}
             {isTBar && filteredProducts.length > 0 && <TBarFaqSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbContentSection />}
+            {isSoundAbsorb && filteredProducts.length > 0 && <ZanderaContentSection />}
             {isSoundAbsorb && filteredProducts.length > 0 && <SoundAbsorbFaqSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenContentSection />}
             {isRoofBatten && filteredProducts.length > 0 && <RoofBattenFaqSection />}
