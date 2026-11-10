@@ -27,6 +27,7 @@ const SOUND_ABSORB_CATEGORY_ID = 9;
 const ROOF_BATTEN_CATEGORY_ID = 3;
 const CILAI_CATEGORY_ID = 11;
 const INSULATION_CATEGORY_ID = 10;
+const ROOF_INSULATION_CATEGORY_ID = 13;
 
 const PRODUCTS_PER_PAGE = 12;
 
@@ -1283,6 +1284,86 @@ function InsulationFaqSection() {
   );
 }
 
+const ROOF_INSULATION_FAQS = [
+  {
+    q: "ฉนวนกันความร้อนหลังคา FSO-G, CRB-G และ Super Cool-G ต่างกันยังไง?",
+    a: "ทั้ง 3 รุ่นเป็นฉนวนใยแก้ว SCG สำหรับงานหลังคา มาตรฐาน มอก. 487-2568 ต่างกันที่การปิดผิว FSO-G ปิดอลูมิเนียมฟอยล์เสริมแรง 3 ทาง 1 ด้าน CRB-G ปิด 2 ด้าน และ Super Cool-G หุ้มฟอยล์รอบด้านครับ",
+  },
+  {
+    q: "ฉนวนกันความร้อนหลังคา 1 ม้วนปูได้กี่ ตร.ม.?",
+    a: "FSO-G และ CRB-G หนา 25 มม. ม้วน 1x30 ม. ปูได้ 30 ตร.ม. หนา 50 มม. ม้วน 1x15 ม. ปูได้ 15 ตร.ม. ส่วน Super Cool-G ม้วน 1x10 ม. ปูได้ 10 ตร.ม. ต่อม้วนครับ",
+  },
+  {
+    q: "ราคาฉนวนกันความร้อนใต้หลังคาเท่าไหร่?",
+    a: "ราคาต่อม้วน ไม่รวม VAT 7% — Super Cool-G หนา 25 มม. 999 บาท / 50 มม. 1,350 บาท, FSO-G หนา 25 มม. 2,250 บาท / 50 มม. 1,700 บาท, CRB-G หนา 25 มม. 3,150 บาท / 50 มม. 2,200 บาท สอบถามราคาโครงการทาง Line @kaistandard หรือโทร 02-415-3676 ครับ",
+  },
+  {
+    q: "ฉนวนหนา 25 มม. กับ 50 มม. เท่ากับกี่นิ้ว?",
+    a: "หนา 25 มม. ประมาณ 1 นิ้ว และหนา 50 มม. ประมาณ 2 นิ้วครับ",
+  },
+  {
+    q: "ความหนาแน่น 12 และ 16 กก./ลบ.ม. คืออะไร?",
+    a: "คือน้ำหนักใยแก้วต่อ 1 ลูกบาศก์เมตร ตัวเลขยิ่งสูง เนื้อใยแก้วยิ่งแน่นครับ",
+  },
+];
+
+const ROOF_INSULATION_LINKS = [
+  { label: "ฉนวน Stay Cool / ฉนวนใยหิน ปูบนฝ้า", href: "/products/category/ฉนวนกันความร้อน" },
+  { label: "แปหลังคา แปสำเร็จรูป", href: "/products/category/แปหลังคา แปสำเร็จรูป" },
+];
+
+function RoofInsulationFaqSection() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: ROOF_INSULATION_FAQS.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  return (
+    <div className="mt-10 border-t pt-8">
+      <div className="mb-8 flex flex-wrap items-center gap-2 text-sm">
+        <span className="text-gray-500">ดูเพิ่ม:</span>
+        {ROOF_INSULATION_LINKS.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="rounded-md border px-3 py-1.5 text-blue-700 hover:bg-gray-50"
+          >
+            {link.label} →
+          </Link>
+        ))}
+      </div>
+      <h2 className="mb-4 text-xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+      <div className="space-y-3">
+        {ROOF_INSULATION_FAQS.map((item) => (
+          <details key={item.q} className="group rounded-lg border bg-white">
+            <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+              <span>{item.q}</span>
+              <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                ▼
+              </span>
+            </summary>
+            <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+    </div>
+  );
+}
+
 function CilaiSystemBox() {
   const cards = [
     {
@@ -1365,6 +1446,7 @@ export default function ProductsClientPage({
   const isRoofBatten = selectedCategory === ROOF_BATTEN_CATEGORY_ID;
   const isCilai = selectedCategory === CILAI_CATEGORY_ID;
   const isInsulation = selectedCategory === INSULATION_CATEGORY_ID;
+  const isRoofInsulation = selectedCategory === ROOF_INSULATION_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
 
   const term = searchTerm.trim().toLowerCase();
@@ -1675,6 +1757,7 @@ export default function ProductsClientPage({
             {isCilai && filteredProducts.length > 0 && <CilaiSystemBox />}
             {isCilai && filteredProducts.length > 0 && <CilaiFaqSection />}
             {isInsulation && filteredProducts.length > 0 && <InsulationFaqSection />}
+            {isRoofInsulation && filteredProducts.length > 0 && <RoofInsulationFaqSection />}
           </div>
         </div>
       </div>
