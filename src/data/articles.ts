@@ -6761,4 +6761,126 @@ export const articles = [
 <\/script>
     `,
   },
+  {
+    id: 59,
+    title: "หลังคาเมทัลชีทใช้แปแบบไหนดี?",
+    slug: "แปหลังคาเมทัลชีท",
+    excerpt: "หลังคาเมทัลชีทใช้แปแบบไหน หนาเท่าไหร่ดี? สรุปชนิดแปสำเร็จรูป วิธีเลือกความหนาตามระยะห่างจันทัน และความต่างของแปยาว 3 เมตรกับ 6 เมตร",
+    image: "/articles/article59.webp",
+    date: "2026-11-11",
+    readTime: "3",
+    content: `
+<p style="font-size:28px; font-weight:700;">หลังคาเมทัลชีทใช้แปแบบไหนดี?</p>
+
+<p>ถ้ากำลังจะมุงหลังคาเมทัลชีท คำถามที่มักเจอคือ "ต้องใช้แปแบบไหน หนาเท่าไหร่" วันนี้ไคสแตนดาร์ดจะสรุปวิธีเลือกแปแบบง่ายๆ ทั้งชนิดวัสดุของแปหลังคาและความหนาตามระยะห่างจันทันครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">หลังคาเมทัลชีทต้องใช้แปไหม?</strong>
+<p>ควรต้องใช้ครับ แปคือเหล็กที่วางพาดขวางบนจันทัน ทำหน้าที่รองรับแผ่นเมทัลชีทและเป็นจุดยึดสกรูของแผ่นหลังคา ถ้าไม่มีแป แผ่นหลังคาก็ไม่มีที่ให้ยึดครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปสำเร็จรูปมีแบบไหนบ้าง?</strong>
+<p>แปสำเร็จรูปที่ใช้กับหลังคาเมทัลชีทนิยม 2 แบบนี้ครับ</p>
+<ul>
+  <li><strong>แปอลูซิงค์</strong> — เคลือบโลหะผสมอะลูมิเนียม-สังกะสี ทนต่ออากาศชื้นและฝนแบบเมืองไทย เหมาะกับงานที่ต้องการอายุใช้งานยาว รวมถึงพื้นที่ริมทะเลด้วยครับ</li>
+  <li><strong>แปกัลวาไนซ์</strong> — เคลือบกัลวาไนซ์ ราคาเหมาะกับโครงการที่ต้องการประหยัดต้นทุน นิยมใช้กับโครงการที่มีงบประมาณจำกัด หรือไม่ overspec</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">เลือกความหนาแปตามระยะห่างจันทัน</strong>
+<p>ตัวที่ใช้ตัดสินความหนาคือระยะห่างของจันทัน จันทันยิ่งห่าง แปยิ่งต้องหนาขึ้น ตารางด้านล่างมาจากแคตตาล็อก <strong>ใช้กับแปอลูซิงค์เท่านั้น</strong> ครับ</p>
+<table style="width:100%; border-collapse:collapse; margin:0.5rem 0; font-size:14px;">
+  <thead>
+    <tr>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">แปอลูซิงค์หนา</th>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ใช้ได้</th>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ไม่แนะนำ</th>
+      <th style="background:#1a73e8; color:#fff; text-align:left; padding:10px 12px; border-bottom:1px solid #d0d7e3;">ไม่ควรใช้</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.55 มม.</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">จันทันห่าง 60–120 ซม.</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">–</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">120–160 ซม.</td>
+    </tr>
+    <tr>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">0.70 มม.</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">จันทันห่าง 60–120 ซม.</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">120–140 ซม.</td>
+      <td style="background:#f8f9fc; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">140–160 ซม.</td>
+    </tr>
+    <tr>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">1.00 มม.</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">จันทันห่าง 60–200 ซม.</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">–</td>
+      <td style="background:#eef2f7; color:#1a1a1a; padding:10px 12px; border-bottom:1px solid #d0d7e3;">–</td>
+    </tr>
+  </tbody>
+</table>
+<p>ถ้าใช้แปกัลวาไนซ์ แปสังกะสี หรือแปอลูซิงค์ 0.50 มม. ตารางนี้ใช้แทนกันไม่ได้ แนะนำให้ทักสอบถามทีมงานก่อนสั่งครับ</p>
+<p>ส่วนระยะห่างระหว่างแปแต่ละเส้น ให้ทำตามคำแนะนำของผู้ผลิตแผ่นเมทัลชีทที่ใช้ครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">แปยาว 3 เมตร กับ 6 เมตร ใช้ต่างกันยังไง?</strong>
+<ul>
+  <li><strong>ยาว 6 เมตร</strong> — มีครบทุกแบบ ทุกความหนา เหมาะกับหลังคาที่ยาว เพราะต่อแปน้อยครั้งกว่า ข้อเสียคือยากต่อการขนส่งกว่า</li>
+  <li><strong>ยาว 3 เมตร</strong> — มีเฉพาะความหนา 0.50 มม. (อลูซิงค์และกัลวาไนซ์) เส้นสั้น ขนย้ายสะดวก เหมาะกับงานหลังคาช่วงสั้นหรือทำรั้วเมทัลชีทก็สะดวก</li>
+</ul>
+<p>ถ้าต้องต่อแป ให้ต่อทับกันประมาณ 15 ซม. บนจันทัน วางรอยต่อให้สลับกัน และยึดด้วยสกรูปลายสว่านครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+<p><strong>Q:</strong> หลังคาเมทัลชีทใช้แปหนาเท่าไหร่?<br /><strong>A:</strong> ขึ้นกับระยะห่างจันทันครับ สำหรับแปอลูซิงค์ ถ้าจันทันห่าง 60–120 ซม. ใช้ 0.55 หรือ 0.70 มม. ได้ ถ้าห่างเกิน 120 ซม. (สูงสุด 200 ซม.) ควรใช้ 1.00 มม.</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ระยะห่างแปสำหรับหลังคาเมทัลชีทควรเท่าไหร่?<br /><strong>A:</strong> ให้ทำตามคำแนะนำของผู้ผลิตแผ่นเมทัลชีทที่ใช้ครับ เพราะแต่ละรุ่นกำหนดไว้ไม่เท่ากัน</p>
+<p>&nbsp;</p>
+<p><strong>Q:</strong> ต่อแปยังไง?<br /><strong>A:</strong> นิยมต่อทับกันประมาณ 15 ซม. บนจันทัน วางรอยต่อสลับกัน และยึดด้วยสกรูปลายสว่านครับ</p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 8px;">อยากดูราคาแปทุกขนาด?</p>
+  <p style="color:#fff; margin:0 0 12px;">ดูราคาแปสำเร็จรูปทุกความหนาได้ที่<a href="/products/category/แปหลังคา แปสำเร็จรูป" style="color:#fff; text-decoration:underline;">หน้าแปหลังคา</a> หรือทักไลน์ @kaistandard ถามความหนาที่เหมาะกับหน้างานได้เลยครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; text-decoration:none; font-weight:600;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "หลังคาเมทัลชีทใช้แปหนาเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ขึ้นกับระยะห่างจันทันครับ สำหรับแปอลูซิงค์ ถ้าจันทันห่าง 60–120 ซม. ใช้ 0.55 หรือ 0.70 มม. ได้ ถ้าห่างเกิน 120 ซม. (สูงสุด 200 ซม.) ควรใช้ 1.00 มม."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ระยะห่างแปสำหรับหลังคาเมทัลชีทควรเท่าไหร่?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ให้ทำตามคำแนะนำของผู้ผลิตแผ่นเมทัลชีทที่ใช้ครับ เพราะแต่ละรุ่นกำหนดไว้ไม่เท่ากัน"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต่อแปยังไง?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "นิยมต่อทับกันประมาณ 15 ซม. บนจันทัน วางรอยต่อสลับกัน และยึดด้วยสกรูปลายสว่านครับ"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
