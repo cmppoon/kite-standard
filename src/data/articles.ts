@@ -6993,4 +6993,119 @@ export const articles = [
 <\/script>
     `,
   },
+  {
+    id: 61,
+    title: "ห้องไลฟ์สด ทำไมต้องผนังซับเสียง?",
+    slug: "ห้องไลฟ์สดทำไมต้องผนังซับเสียง",
+    excerpt: "ห้องไลฟ์สดเสียงก้อง ฟังไม่ชัด? ผนังซับเสียงช่วยอะไรได้ ช่วยอะไรไม่ได้ ผนังด้านไหนควรติดก่อน และเลือกวัสดุแบบไหนดี",
+    image: "/articles/article61.webp",
+    date: "2026-11-18",
+    readTime: "3",
+    content: `
+<p style="font-size:28px; font-weight:700;">ห้องไลฟ์สด ทำไมต้องผนังซับเสียง?</p>
+
+<p>หนึ่งในห้องที่ลูกค้ามักถามหาแผ่นซับเสียงมากที่สุดก็คือ ห้องไลฟ์สด เพราะแม้ว่าไมค์จะเสียงดีแค่ไหน แต่หลายครั้งเสียงที่ลูกค้าได้ยินก็ยังอู้อี้ ก้อง</p>
+<p>มาดูกันครับว่าแผ่นซับเสียงช่วยอะไรได้บ้าง และข้อเข้าใจผิดบางข้อที่ต้องรู้ก่อนสั่งซื้อครับ</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ผนังซับเสียงช่วยอะไร และช่วยอะไรไม่ได้</strong>
+<p><strong>ช่วยได้:</strong> ลดเสียงก้องและเสียงสะท้อนในห้อง เสียงพูดที่ออกไมค์จะชัดขึ้น เสียงที่ออกไปฟังง่ายขึ้นมาก</p>
+<p><strong>ช่วยไม่ได้:</strong> กันเสียงจากข้างนอก เช่น เสียงรถ เสียงข้างบ้าน และกันเสียงไลฟ์ไม่ให้ดังออกไปรบกวนห้องข้าง ๆ เพราะแผ่นซับเสียงทำหน้าที่ดูดซับเสียงสะท้อนในห้อง ไม่ได้ทำหน้าที่กั้นเสียง (แต่สามารถลดความดังได้เล็กน้อย)</p>
+<p>ถ้าปัญหาหลักคือเสียงจากข้างนอกเข้ามา ต้องดูเรื่องผนังและช่องรั่ว เช่น ประตู หน้าต่าง เพิ่มด้วย อ่านความต่างของ 2 เรื่องนี้ได้ที่ <a href="/articles/ดูดซับเสียง-กันเสียง-ต่างกันอย่างไร" style="color:#1a73e8; text-decoration:underline;">ดูดซับเสียง กับ กันเสียง ต่างกันอย่างไร?</a></p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">ผนังแต่ละด้านควรแบบไหนดี</strong>
+<p><strong>ผนังที่หันหน้าพูดใส่ (ฝั่งกล้อง)</strong> ผนังด้านนี้รับเสียงพูดเป็นด้านแรก แล้วสะท้อนกลับเข้าไมค์ตรง ๆ จึงเป็นจุดที่ควรติดแผ่นซับเสียงก่อน และเพราะอยู่หลังกล้อง ไม่ติดเข้าไปในภาพ จึงเลือกแผ่นโดยเน้นการใช้งานได้เต็มที่</p>
+<p><strong>ผนังหลังคนไลฟ์ = ฉากหลังในกล้อง</strong> ฉากหลังที่ดีควรเรียบง่าย สบายตา ไม่รก คนดูจะได้โฟกัสที่คนไลฟ์และสินค้า ไม่หลุดไปมองของรอบห้อง อาจใช้สีเขียวหรือฟ้า เพื่อทำการไดคัทฉากหลังได้ง่าย</p>
+<p><strong>ผนังด้านข้าง</strong> ถ้าผนังซ้ายและขวาขนานกัน เสียงจะเด้งไปมาระหว่าง 2 ฝั่ง ถ้าติด 2 ด้านแรกแล้วยังก้องอยู่ ค่อยเพิ่มแผ่นซับเสียงที่ผนังด้านข้าง ไม่จำเป็นต้องติดเต็มทั้ง 2 ฝั่ง</p>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">วัสดุผนังควรเป็นอะไรดี</strong>
+<p><strong>1. แผ่นซับเสียง PET (โพลีเอสเตอร์)</strong> น้ำหนักเบา ตัดและติดเองได้ เหมาะกับห้องไลฟ์ที่อยากแก้เฉพาะจุด ไม่ต้องรื้อห้อง ดูรุ่นได้ที่ <a href="/products/category/แผ่นซับเสียง" style="color:#1a73e8; text-decoration:underline;">แผ่นซับเสียง</a></p>
+<p>ข้อดีคือ ผนังที่ติดแผ่นซับเสียงทำหน้าที่เป็นฉากหลังไปในตัว ไม่ต้องหาฉากแยก แผ่น PET มีหลายสีและพิมพ์ลายได้ เลือกสีให้เข้ากับแบรนด์ร้าน หรือจับคู่ 2-3 สีให้ฉากดูมีมิติ ภาพในไลฟ์ก็ดูเป็นร้านจริงจังขึ้น</p>
+<p><strong>2. ถ้างบจำกัด</strong> ใช้แผ่นอะคูสติก (แผ่นฝ้าใยแร่) ติดผนังแทนได้ ราคาประหยัดกว่า แต่จะเห็นรอยต่อระหว่างแผ่นชัดกว่า</p>
+<p><strong>3. ถ้ามีงบประมาณ แผ่นอะคูสติกหุ้มผ้า</strong> แผ่นใยแก้วแข็งหุ้มผ้า มีสีให้เลือกหลายสี ดูพรีเมียม เหมาะกับผนังหลังคนไลฟ์ที่อยากให้ฉากดูหรูขึ้นอีกระดับ แต่ข้อเสียคือตัดแต่งหน้างานได้ยาก ควรวัดพื้นที่ผนังให้ชัดก่อนสั่ง อ่านเพิ่มเติมได้ที่ <a href="/articles/แผ่นอะคูสติกหุ้มผ้าคืออะไร" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติกหุ้มผ้า คืออะไร</a></p>
+
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; font-size:14px;">
+<thead>
+<tr>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ผนัง</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">หน้าที่</th>
+<th style="background:#1a73e8; color:#fff; padding:10px; text-align:left;">ติดแผ่นซับเสียงเมื่อไหร่</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#eef2f7;">
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผนังที่หันหน้าพูดใส่</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">รับเสียงพูดก่อน สะท้อนกลับเข้าไมค์</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ติดก่อน</td>
+</tr>
+<tr style="background:#f8f9fc;">
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผนังหลังคนไลฟ์</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ฉากหลังในกล้อง + ซับเสียง</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ติดพร้อมกันหรือถัดมา</td>
+</tr>
+<tr style="background:#eef2f7;">
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ผนังด้านข้าง</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">ลดเสียงเด้งระหว่างซ้าย-ขวา</td>
+<td style="color:#1a1a1a; padding:10px; border-bottom:1px solid #d0d7e3;">เพิ่มถ้ายังก้อง</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>&nbsp;</p>
+
+<strong style="font-size:17px; display:block; margin:1.75rem 0 0.75rem;">คำถามที่พบบ่อย</strong>
+
+<p><strong>Q:</strong> แผ่นซับเสียงติดเองได้ไหม?<br /><strong>A:</strong> ได้ครับ แผ่น PET น้ำหนักเบา ตัดได้ เหมาะกับการติดเองในพื้นที่ไม่ใหญ่ อย่างผนังห้องไลฟ์ ติดได้โดยใช้กาวตะปูหรือกาวสองหน้า</p>
+<p> </p>
+<p><strong>Q:</strong> ต้องติดเต็มผนังไหม?<br /><strong>A:</strong> ไม่จำเป็นครับ เริ่มจากผนังฝั่งที่หันหน้าพูดใส่ก่อน แล้วค่อยเพิ่มถ้ายังก้องอยู่</p>
+<p> </p>
+<p><strong>Q:</strong> ห้องไลฟ์ต้องทำฝ้าอะคูสติกด้วยไหม?<br /><strong>A:</strong> ถ้าติดผนังแล้วยังก้องอยู่ หรือกำลังจะทำฝ้าใหม่อยู่แล้ว ฝ้าอะคูสติกช่วยลดเสียงก้องได้ทั่วทั้งห้อง อ่านความต่างระหว่างแผ่นติดผนังกับแผ่นฝ้าได้ที่ <a href="/articles/แผ่นอะคูสติกติดผนังต่างกับฝ้ายังไง" style="color:#1a73e8; text-decoration:underline;">แผ่นอะคูสติกติดผนัง กับ แผ่นฝ้าอะคูสติก ต่างกันยังไง?</a></p>
+
+<div style="background:#1a73e8; padding:20px 24px; border-radius:6px; margin-top:24px;">
+  <p style="color:#fff; font-weight:600; font-size:16px; margin:0 0 8px;">ห้องไลฟ์เสียงก้อง อยากแก้ให้ตรงจุด?</p>
+  <p style="color:#fff; margin:0 0 14px;">ส่งรูปห้องมาทาง LINE ทีมงานช่วยแนะนำรุ่นที่เหมาะกับห้องให้ครับ</p>
+  <a href="https://line.me/ti/p/@kaistandard" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#fff; color:#1a73e8; padding:10px 24px; border-radius:4px; font-weight:600; text-decoration:none; font-size:14px;">ติดต่อสอบถามได้เลย →</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "แผ่นซับเสียงติดเองได้ไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ได้ครับ แผ่น PET น้ำหนักเบา ตัดได้ เหมาะกับการติดเองในพื้นที่ไม่ใหญ่ อย่างผนังห้องไลฟ์ ติดได้โดยใช้กาวตะปูหรือกาวสองหน้า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องติดเต็มผนังไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่จำเป็นครับ เริ่มจากผนังฝั่งที่หันหน้าพูดใส่ก่อน แล้วค่อยเพิ่มถ้ายังก้องอยู่"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ห้องไลฟ์ต้องทำฝ้าอะคูสติกด้วยไหม?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ถ้าติดผนังแล้วยังก้องอยู่ หรือกำลังจะทำฝ้าใหม่อยู่แล้ว ฝ้าอะคูสติกช่วยลดเสียงก้องได้ทั่วทั้งห้อง"
+      }
+    }
+  ]
+}
+<\/script>
+    `,
+  },
 ];
