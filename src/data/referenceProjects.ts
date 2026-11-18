@@ -181,4 +181,19 @@ export const referenceProjects: ReferenceProject[] = [
     image: "/reference/ref33.webp",
     caption: "จัดส่งแผ่นฝ้าอะคูสติก ณ โรงเรียนอัสสัมชัญ (บางรัก)",
   },
+  {
+    id: 34,
+    image: "/reference/ref34.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ มหาวิทยาลัยราชภัฏธนบุรี",
+  },
+  {
+    id: 35,
+    image: "/reference/ref35.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ วิสดอม วัลเล่ย์",
+  },
+  {
+    id: 36,
+    image: "/reference/ref36.webp",
+    caption: "จัดส่งแผ่นอะคูสติก ณ บ้านพักบางแค",
+  },
 ];
