@@ -414,17 +414,26 @@ const ROOF_BATTEN_FAQS: RoofBattenFaq[] = [
   },
 ];
 
+// oneRow = on phones the size buttons stay on one row you can swipe sideways.
 function GroupChips({
   sections,
+  oneRow = false,
 }: {
   sections: { label: string; items: Product[] }[];
+  oneRow?: boolean;
 }) {
   const chips = sections
     .map((s, i) => ({ label: s.label, i }))
     .filter((c) => c.label !== "60*60ซม.");
   if (chips.length < 2) return null;
   return (
-    <div className="mb-4 flex flex-wrap gap-2">
+    <div
+      className={
+        oneRow
+          ? "-mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0"
+          : "mb-4 flex flex-wrap gap-2"
+      }
+    >
       {chips.map((c) => (
         <button
           key={c.i}
@@ -434,7 +443,11 @@ function GroupChips({
               .getElementById(`grp-${c.i}`)
               ?.scrollIntoView({ behavior: "smooth", block: "start" })
           }
-          className="border-primary text-primary hover:bg-primary rounded-full border px-3 py-1 text-sm transition hover:text-white"
+          className={`border-primary text-primary hover:bg-primary rounded-full border py-1 transition hover:text-white ${
+            oneRow
+              ? "shrink-0 whitespace-nowrap px-2.5 text-xs sm:px-3 sm:text-sm"
+              : "px-3 text-sm"
+          }`}
         >
           {c.label}
         </button>
@@ -443,15 +456,33 @@ function GroupChips({
   );
 }
 
-function ProductCard({ product }: { product: Product }) {
+// compact = acoustic page only: on phones the card becomes a horizontal row
+// (small image left, text right). From sm (640px) up it is the normal card.
+function ProductCard({
+  product,
+  compact = false,
+}: {
+  product: Product;
+  compact?: boolean;
+}) {
   return (
     <Link
       href={`/products/${product.slug}`}
       className="group flex h-full flex-col rounded-lg border transition-shadow hover:shadow-lg"
     >
-      <Card className="group flex h-full flex-col gap-2 py-0 transition-shadow hover:shadow-lg">
-        <CardHeader className="p-0">
-          <div className="relative aspect-[700/600] w-full overflow-hidden rounded-t-lg">
+      <Card
+        className={`group flex h-full gap-2 py-0 transition-shadow hover:shadow-lg ${
+          compact ? "flex-row gap-0 sm:flex-col sm:gap-2" : "flex-col"
+        }`}
+      >
+        <CardHeader className={compact ? "w-28 shrink-0 p-0 sm:w-auto" : "p-0"}>
+          <div
+            className={
+              compact
+                ? "relative aspect-square w-full overflow-hidden rounded-l-lg sm:aspect-[700/600] sm:rounded-l-none sm:rounded-t-lg"
+                : "relative aspect-[700/600] w-full overflow-hidden rounded-t-lg"
+            }
+          >
             <Image
               src={product.image}
               alt={`${product.name}`}
@@ -460,18 +491,45 @@ function ProductCard({ product }: { product: Product }) {
             />
           </div>
         </CardHeader>
-        <CardContent className="flex flex-1 flex-col p-4">
-          <CardTitle className="mb-2 line-clamp-2 text-lg">
+        <CardContent
+          className={`flex flex-1 flex-col ${compact ? "min-w-0 p-3 sm:p-4" : "p-4"}`}
+        >
+          <CardTitle
+            className={
+              compact
+                ? "mb-1 line-clamp-2 text-base sm:mb-2 sm:text-lg"
+                : "mb-2 line-clamp-2 text-lg"
+            }
+          >
             {product.name}
           </CardTitle>
-          <CardDescription className="mb-3 line-clamp-5 text-sm">
+          {/* Full description stays in the page for Google; on phones it is only clipped to 2 lines. */}
+          <CardDescription
+            className={
+              compact
+                ? "mb-1 line-clamp-2 text-xs sm:mb-3 sm:line-clamp-5 sm:text-sm"
+                : "mb-3 line-clamp-5 text-sm"
+            }
+          >
             {product.description}
           </CardDescription>
-          <div className="mt-auto pt-2">
-            <div className="text-primary mb-4 text-lg font-semibold">
+          <div className={compact ? "mt-auto pt-1 sm:pt-2" : "mt-auto pt-2"}>
+            <div
+              className={
+                compact
+                  ? "text-primary text-base font-semibold sm:mb-4 sm:text-lg"
+                  : "text-primary mb-4 text-lg font-semibold"
+              }
+            >
               {product.price}
             </div>
-            <div className="flex items-center justify-end">
+            <div
+              className={
+                compact
+                  ? "hidden items-center justify-end sm:flex"
+                  : "flex items-center justify-end"
+              }
+            >
               <span className="border-primary text-primary group-hover:bg-primary rounded-md border px-3 py-1 text-sm transition-colors group-hover:text-white">
                 ดูรายละเอียด
               </span>
@@ -483,33 +541,78 @@ function ProductCard({ product }: { product: Product }) {
   );
 }
 
-function TrustBar() {
+// compact = acoustic page only: on phones the 4 boxes become one row of small labels.
+function TrustBar({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
+    <div
+      className={
+        compact
+          ? "mb-3 flex flex-wrap gap-1.5 sm:mb-4 sm:grid sm:grid-cols-4 sm:gap-2"
+          : "mb-4 grid grid-cols-2 gap-2 sm:grid-cols-4"
+      }
+    >
       {[
         { val: "40+ ปี", sub: "ประสบการณ์" },
         { val: "ราคาโรงงาน", sub: "ผู้ผลิตและผู้จัดจำหน่าย" },
         { val: "ส่งทั่วไทย", sub: "สต็อกพร้อมส่ง" },
         { val: "รับโครงการ", sub: "ทุกขนาด" },
       ].map((item) => (
-        <div key={item.val} className="rounded-lg border bg-white px-3 py-2 text-center">
-          <p className="text-sm font-medium text-gray-900">{item.val}</p>
-          <p className="text-xs text-gray-500">{item.sub}</p>
+        <div
+          key={item.val}
+          className={
+            compact
+              ? "rounded-full bg-gray-100 px-2.5 py-1 text-center sm:rounded-lg sm:border sm:bg-white sm:px-3 sm:py-2"
+              : "rounded-lg border bg-white px-3 py-2 text-center"
+          }
+        >
+          <p
+            className={
+              compact
+                ? "text-xs font-medium text-gray-800 sm:text-sm sm:text-gray-900"
+                : "text-sm font-medium text-gray-900"
+            }
+          >
+            {item.val}
+          </p>
+          <p className={compact ? "hidden text-xs text-gray-500 sm:block" : "text-xs text-gray-500"}>
+            {item.sub}
+          </p>
         </div>
       ))}
     </div>
   );
 }
 
-function ProjectBar() {
+// compact = acoustic page only: on phones text and button sit on one row.
+function ProjectBar({ compact = false }: { compact?: boolean }) {
   return (
-    <div className="mb-6 flex flex-col items-start gap-3 rounded-lg border bg-white px-4 py-3 sm:flex-row sm:items-center">
-      <p className="flex-1 text-sm text-gray-700">
-        ราคาพิเศษสำหรับงานโครงการ — ติดต่อรับใบเสนอราคา
+    <div
+      className={
+        compact
+          ? "mb-4 flex flex-row items-center gap-2 rounded-lg border bg-white px-3 py-2 sm:mb-6 sm:gap-3 sm:px-4 sm:py-3"
+          : "mb-6 flex flex-col items-start gap-3 rounded-lg border bg-white px-4 py-3 sm:flex-row sm:items-center"
+      }
+    >
+      {/* Phones (acoustic): one line only; the rest of the sentence stays in the page, hidden on phones. */}
+      <p
+        className={
+          compact
+            ? "min-w-0 flex-1 truncate text-xs text-gray-700 sm:whitespace-normal sm:text-sm"
+            : "flex-1 text-sm text-gray-700"
+        }
+      >
+        ราคาพิเศษสำหรับงานโครงการ
+        <span className={compact ? "hidden sm:inline" : undefined}>
+          {" "}— ติดต่อรับใบเสนอราคา
+        </span>
       </p>
       <Link
         href="https://line.me/R/ti/p/@kaistandard"
-        className="shrink-0 rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
+        className={
+          compact
+            ? "shrink-0 rounded-md bg-green-600 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-green-700 sm:px-4 sm:py-2 sm:text-sm"
+            : "shrink-0 rounded-md bg-green-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-green-700"
+        }
       >
         ขอราคาโครงการ
       </Link>
@@ -1448,6 +1551,8 @@ export default function ProductsClientPage({
   const isInsulation = selectedCategory === INSULATION_CATEGORY_ID;
   const isRoofInsulation = selectedCategory === ROOF_INSULATION_CATEGORY_ID;
   const isCategoryPage = selectedCategory !== -1;
+  // Phone layout (small labels, one-row search, product rows) on every product page.
+  const compactMobile = true;
 
   const term = searchTerm.trim().toLowerCase();
   const isSearching = term.length > 0;
@@ -1504,12 +1609,19 @@ export default function ProductsClientPage({
                 `${categories.find((c) => c.id === selectedCategory)?.name} คุณภาพสูง ราคาโรงงาน เหมาะสำหรับห้องประชุม สำนักงาน โรงพยาบาล และโครงการก่อสร้าง ส่งทั่วประเทศ`}
           </p>
 
-          <TrustBar />
-          <ProjectBar />
+          <TrustBar compact={compactMobile} />
+          <ProjectBar compact={compactMobile} />
         </div>
 
-        <div className="flex flex-col gap-8 lg:flex-row">
-          <div className="space-y-6 lg:w-72">
+        <div className={`flex flex-col lg:flex-row ${compactMobile ? "gap-4 lg:gap-8" : "gap-8"}`}>
+          {/* Acoustic page on phones: search box and category button share one row. */}
+          <div
+            className={
+              compactMobile
+                ? "grid grid-cols-2 items-start gap-2 lg:block lg:w-72 lg:space-y-6"
+                : "space-y-6 lg:w-72"
+            }
+          >
             <div className="relative">
               <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 transform" />
               <Input
@@ -1523,16 +1635,20 @@ export default function ProductsClientPage({
               />
             </div>
 
-            <div>
+            <div className={compactMobile ? "contents lg:block" : undefined}>
               {/* Mobile: one collapsed bar. Desktop: the plain heading as before. */}
               <button
                 type="button"
                 onClick={() => setCatOpen((o) => !o)}
                 aria-expanded={catOpen}
-                className="mb-3 flex w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm font-semibold lg:hidden"
+                className={
+                  compactMobile
+                    ? "flex h-9 w-full items-center justify-between gap-1 rounded-lg border bg-white px-3 text-sm font-semibold lg:hidden"
+                    : "mb-3 flex w-full items-center justify-between rounded-lg border bg-white px-4 py-3 text-sm font-semibold lg:hidden"
+                }
               >
-                <span>
-                  ประเภทสินค้า —{" "}
+                <span className={compactMobile ? "truncate" : undefined}>
+                  {compactMobile ? null : <>ประเภทสินค้า —{" "}</>}
                   {categories.find((c) => c.id === selectedCategory)?.name ??
                     "ทั้งหมด"}
                 </span>
@@ -1547,7 +1663,11 @@ export default function ProductsClientPage({
 
               <h3 className="mb-4 hidden font-semibold lg:block">ประเภทสินค้า</h3>
 
-              <div className={catOpen ? "block" : "hidden lg:block"}>
+              <div
+                className={`${catOpen ? "block" : "hidden lg:block"}${
+                  compactMobile ? " col-span-2 mt-1 lg:mt-0" : ""
+                }`}
+              >
                 <div className="space-y-2">
                   <CategoryButton
                     category={ALL_PRODUCTS_ITEM}
@@ -1581,8 +1701,10 @@ export default function ProductsClientPage({
 
           {/* Products Grid */}
           <div className="flex-1">
-            <div className="mb-6 flex items-center justify-between">
-              <p className="text-muted-foreground">
+            <div
+              className={`flex items-center justify-between ${compactMobile ? "mb-3 lg:mb-6" : "mb-6"}`}
+            >
+              <p className={compactMobile ? "text-muted-foreground text-sm lg:text-base" : "text-muted-foreground"}>
                 กำลังแสดงสินค้าจำนวน {filteredProducts.length} รายการ
                 {isSearching ? " (ค้นหาจากสินค้าทั้งหมด)" : ""}
               </p>
@@ -1591,109 +1713,109 @@ export default function ProductsClientPage({
             {isSoundAbsorb && !isSearching && <SoundAbsorbPriceLine />}
 
             {isSearching ? (
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                 {paginatedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} compact />
                 ))}
               </div>
             ) : isCeilingFrame ? (
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {groupCeilingFrameProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : isCilai ? (
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 {groupCilaiProducts(paginatedProducts).map((section) => (
                   <div key={section.label}>
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : isAcoustic ? (
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <GroupChips sections={groupAcousticProducts(paginatedProducts)} />
                 {groupAcousticProducts(paginatedProducts).map((section, sIdx) => (
                   <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : isGypsumAcoustic ? (
-              <div className="space-y-8">
-                <GroupChips sections={groupGypsumAcousticProducts(paginatedProducts)} />
+              <div className="space-y-6 sm:space-y-8">
+                <GroupChips sections={groupGypsumAcousticProducts(paginatedProducts)} oneRow />
                 {groupGypsumAcousticProducts(paginatedProducts).map((section, sIdx) => (
                   <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : isTBar ? (
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <GroupChips sections={groupTBarProducts(paginatedProducts)} />
                 {groupTBarProducts(paginatedProducts).map((section, sIdx) => (
                   <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : isRoofBatten ? (
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <GroupChips sections={groupRoofBattenProducts(paginatedProducts)} />
                 {groupRoofBattenProducts(paginatedProducts).map((section, sIdx) => (
                   <div key={section.label} id={`grp-${sIdx}`} className="scroll-mt-24">
-                    <h2 className="bg-primary text-primary-foreground mb-4 rounded-md px-4 py-2.5 text-lg font-semibold">
+                    <h2 className="bg-primary text-primary-foreground mb-3 rounded-md px-4 py-2 text-base font-semibold sm:mb-4 sm:py-2.5 sm:text-lg">
                       {section.label}
                     </h2>
-                    <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                       {section.items.map((product) => (
-                        <ProductCard key={product.id} product={product} />
+                        <ProductCard key={product.id} product={product} compact />
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-6 md:grid-cols-3">
                 {paginatedProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} compact />
                 ))}
               </div>
             )}
