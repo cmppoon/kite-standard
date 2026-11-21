@@ -972,7 +972,7 @@ function TBarFaqSection() {
 function SoundAbsorbContentSection() {
   return (
     <div className="mt-10 border-t pt-8">
-      <h2 className="mb-3 text-xl font-semibold">แผ่นซับเสียงโพลีเอสเตอร์คืออะไร และเลือกแบบไหนดี?</h2>
+      <h2 className="mb-3 text-xl font-semibold">แผ่นซับเสียงติดผนัง เลือกแบบไหนดี?</h2>
       <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
         แผ่นซับเสียงโพลีเอสเตอร์ (Polyester / PET Acoustic Panel) เป็นวัสดุซับเสียงที่ทำจากเส้นใยโพลีเอสเตอร์ (PET)
         อัดขึ้นรูปเป็นแผ่น ผิวสัมผัสนุ่มแบบสักหลาด (เฟลท์) เนื้อในมีรูพรุนจำนวนมาก
@@ -994,6 +994,16 @@ function SoundAbsorbContentSection() {
           </div>
         ))}
       </div>
+      <p className="mt-4 text-sm text-gray-700">
+        อ่านเพิ่มเติม:{" "}
+        <Link href="/articles/แผ่นซับเสียงแบบไหนดี" className="text-primary underline">
+          แผ่นซับเสียงแบบไหนดี
+        </Link>
+        {" · "}
+        <Link href="/articles/แผ่นซับเสียงโพลีเอสเตอร์คืออะไร" className="text-primary underline">
+          แผ่นซับเสียงโพลีเอสเตอร์คืออะไร
+        </Link>
+      </p>
     </div>
   );
 }

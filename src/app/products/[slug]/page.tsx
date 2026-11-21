@@ -91,6 +91,92 @@ const getPriceTitle = (name: string, price: unknown): string | null => {
   return `${formatTitle(name)} ราคา ${m[0]} บาท`;
 };
 
+// Shorter Google titles for แผ่นอะคูสติก + แผ่นซับเสียง products (approved
+// 21 Nov 2026). Key = product slug. Value = title WITHOUT the price —
+// " ราคา <n> บาท" is added from product.price, so the title always matches
+// the price on the page. Products not listed here keep the old title.
+const SHORT_TITLES: Record<string, string> = {
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x600x12มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x60 ซม. หนา 12 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x600x14มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x60 ซม. หนา 14 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x600x16มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x60 ซม. หนา 16 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x12มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x120 ซม. หนา 12 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x14มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x120 ซม. หนา 14 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600x1200x16มม":
+    "แผ่นฝ้าอะคูสติก KS-401 60x120 ซม. หนา 16 มม.",
+  "แผ่นฝ้าอะคูสติก-ks403-ขนาด-600x600x16มม":
+    "แผ่นฝ้าอะคูสติก KS-403 60x60 ซม. หนา 16 มม.",
+  "แผ่นฝ้าอะคูสติก-ks403-ขนาด-600x1200x16มม":
+    "แผ่นฝ้าอะคูสติก KS-403 60x120 ซม. หนา 16 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600-x-600-x-16มม.-ขอบบังใบ":
+    "แผ่นฝ้าอะคูสติก KS-401 ขอบบังใบ 60x60 ซม. หนา 16 มม.",
+  "แผ่นฝ้าอะคูสติก-ขนาด-600-x-1200-x-16มม.-ขอบบังใบ":
+    "แผ่นฝ้าอะคูสติก KS-401 ขอบบังใบ 60x120 ซม. หนา 16 มม.",
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x600x9มม":
+    "แผ่นซับเสียงติดผนัง KS-501 60x60 ซม. หนา 9 มม.",
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x1200x9มม":
+    "แผ่นซับเสียงติดผนัง KS-501 60x120 ซม. หนา 9 มม.",
+  "แผ่นซับเสียงโพลีเอสเตอร์-ks501-ขนาด-600x2400x9มม":
+    "แผ่นซับเสียงติดผนัง KS-501 60x240 ซม. หนา 9 มม.",
+  "แผ่นซับเสียงติดผนัง-ks502-ขนาด-600x600x9มม":
+    "แผ่นซับเสียงติดผนัง KS-502 60x60 ซม. หนา 9 มม.",
+  "แผ่นซับเสียงติดผนัง-ks502-ขนาด-600x1200x9มม":
+    "แผ่นซับเสียงติดผนัง KS-502 60x120 ซม. หนา 9 มม.",
+  "แผ่นซับเสียงติดผนัง-ks502-ขนาด-600x2400x9มม":
+    "แผ่นซับเสียงติดผนัง KS-502 60x240 ซม. หนา 9 มม.",
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-300x300x25มม":
+    "แผ่นซับเสียง SCG Cylence Zandera 30x30 ซม.",
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม":
+    "แผ่นซับเสียง SCG Cylence Zandera 60x60 ซม.",
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x1200x25มม":
+    "แผ่นซับเสียง SCG Cylence Zandera 60x120 ซม.",
+  "แผ่นซับเสียง-scg-zandera-scenera-300x300":
+    "แผ่นซับเสียง SCG Cylence Zandera Scenera 30x30 ซม.",
+  "แผ่นซับเสียง-scg-zandera-scenera-600x600":
+    "แผ่นซับเสียง SCG Cylence Zandera Scenera 60x60 ซม.",
+  "แผ่นซับเสียง-scg-zandera-scenera-600x1200":
+    "แผ่นซับเสียง SCG Cylence Zandera Scenera 60x120 ซม.",
+};
+
+const getShortTitle = (slug: string, price: unknown): string | null => {
+  const base = SHORT_TITLES[slug];
+  if (!base) return null;
+  const m = String(price ?? "").match(/\d[\d,]*(?:\.\d+)?/);
+  return m ? `${base} ราคา ${m[0]} บาท` : base;
+};
+
+// Extra NRC line under the price + FAQ block, per product. Key = product slug.
+// Facts from the SCG Acoustic Cylence Zandera catalog (sent 21 Nov 2026).
+const PRODUCT_NRC_LINE: Record<string, string> = {
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม":
+    "ค่าดูดซับเสียง (NRC) 0.75 · หนา 25 มม.",
+};
+
+const PRODUCT_FAQS: Record<string, { q: string; a: string }[]> = {
+  "แผ่นซับเสียง-scg-cylence-zandera-ขนาด-600x600x25มม": [
+    {
+      q: "Zandera ดูดซับเสียงได้แค่ไหน?",
+      a: "NRC 0.75 คือดูดซับเสียงได้ประมาณ 75% ช่วงเสียงพูดคุย (500–2,000 Hz) ดูดซับได้ 0.84–0.94 แต่เสียงทุ้มต่ำ (125 Hz) ดูดซับได้น้อย",
+    },
+    {
+      q: "Zandera ทำจากอะไร ติดไฟไหม?",
+      a: "ทำจากใยแก้ว (กลาสวูล) อัดเป็นแผ่นแข็ง ไม่ติดไฟ หุ้มด้วยผ้าตกแต่ง ขอบ 4 ด้านเคลือบพิเศษ",
+    },
+    {
+      q: "ห้องแบบไหนต้องติดแผ่นซับเสียงกี่เปอร์เซ็นต์ของผนัง?",
+      a: "SCG แนะนำ: ห้องประชุม 30% · ห้องฟังเพลง 50% · ห้องซ้อมดนตรี 60% · ห้องโฮมเธียเตอร์ 70%",
+    },
+    {
+      q: "สั่ง Zandera ต้องรอนานไหม?",
+      a: "Zandera เป็นสินค้าสั่งผลิตทุกครั้ง ใช้เวลาประมาณ 2–3 สัปดาห์",
+    },
+  ],
+};
+
 // Acoustic product pages only: the 8 project photos shown under the page.
 // Images are the same files used on /reference, so the photo and the project
 // name can never drift apart. Hovering a photo shows the project name.
@@ -405,7 +491,9 @@ export async function generateMetadata({
 
   return {
     title:
-      getPriceTitle(product.name, product.price) ?? formatTitle(product.name),
+      getShortTitle(product.slug, product.price) ??
+      getPriceTitle(product.name, product.price) ??
+      formatTitle(product.name),
     description: product.description
       ? `${product.description} สอบถามราคาโทร 02-415-3676`
       : `${formatTitle(product.name)} คุณภาพสูง ราคาโรงงาน จากไคสแตนดาร์ด ประสบการณ์กว่า 40 ปี สอบถามราคาโทร 02-415-3676`,
@@ -469,6 +557,19 @@ export default async function ProductDetailPage({
     ? (SOUND_ABSORB_SPECS[product.slug] ?? null)
     : null;
   const productCatalog = PRODUCT_CATALOGS[product.slug] ?? null;
+  const nrcLine = PRODUCT_NRC_LINE[product.slug] ?? null;
+  const productFaqs = PRODUCT_FAQS[product.slug] ?? null;
+  const productFaqSchema = productFaqs
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: productFaqs.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: { "@type": "Answer", text: item.a },
+        })),
+      }
+    : null;
   const galleryImages = [
     product.image,
     ...(PRODUCT_GALLERY[product.slug] ?? []),
@@ -542,6 +643,11 @@ export default async function ProductDetailPage({
               <div className="text-primary mb-4 text-3xl font-bold">
                 {product.price}
               </div>
+              {nrcLine && (
+                <p className="mb-4 text-base font-medium text-gray-700">
+                  {nrcLine}
+                </p>
+              )}
 
               <p className="text-muted-foreground text-md mb-6">
                 {product.description}
@@ -1029,6 +1135,32 @@ export default async function ProductDetailPage({
           </>
         )}
 
+
+        {/* FAQ — only for products listed in PRODUCT_FAQS */}
+        {productFaqs && productFaqSchema && (
+          <div className="mt-12 border-t pt-10">
+            <h2 className="mb-4 text-2xl font-semibold">คำถามที่พบบ่อย (FAQ)</h2>
+            <div className="space-y-3">
+              {productFaqs.map((item) => (
+                <details key={item.q} className="group rounded-lg border bg-white">
+                  <summary className="flex cursor-pointer items-center justify-between gap-3 p-4 text-sm font-medium text-gray-900 [&::-webkit-details-marker]:hidden">
+                    <span>{item.q}</span>
+                    <span className="shrink-0 text-gray-400 transition-transform group-open:rotate-180">
+                      ▼
+                    </span>
+                  </summary>
+                  <p className="px-4 pb-4 text-sm leading-relaxed text-gray-500">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(productFaqSchema) }}
+            />
+          </div>
+        )}
 
         {/* Related Products (non-ซีลาย categories) */}
         {!isCilai &&
